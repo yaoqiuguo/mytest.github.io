@@ -19,7 +19,6 @@
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="topbanner"><a href="https://github.com/Tencent/rapidjson" title="RapidJSON GitHub"><i class="githublogo"></i></a></div>
-<p>sssssssssss</p>
 <!-- end header part -->
 <!-- 制作者 Doxygen 1.9.1 -->
 </div><!-- top -->
@@ -44,29 +43,29 @@ $(document).ready(function(){initNavTree('auto_demo.html',''); initResizable(); 
 <div class="title">auto_demo </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md392"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md881"></a>
 1. 案例简介</h1>
 <p>阿里在云栖大会上发布第一款机器人“小蛮驴”，瞬间激起千层浪。 无人车，智能物流，机器人等一些概念又火热了一把。 借“小蛮驴”的东风以及火热的HaaS，我们推出了更加亲民的“小小蛮驴”，丰富HaaS的场景打造，吸引更多的开发者和企业来加入HaaS的生态建设。 <img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/106133/1616395304747-a2cfc5fe-b74f-43d6-b66a-5d65f76f8784.png#align=left&amp;display=inline&amp;height=292&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=1264&amp;originWidth=2248&amp;size=7069041&amp;status=done&amp;style=none&amp;width=519" alt="image.png" class="inline"/> </p>
-<h1><a class="anchor" id="autotoc_md393"></a>
+<h1><a class="anchor" id="autotoc_md882"></a>
 2. 基础知识</h1>
-<h2><a class="anchor" id="autotoc_md394"></a>
+<h2><a class="anchor" id="autotoc_md883"></a>
 2.1  HaaS100开发板</h2>
 <p><b>HaaS100</b> 是一款物联网场景中的标准开发板，并配套嵌入到硬件中的软件驱动及功能模块，为用户提供物联网设备高效开发服务。 <img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/113837/1607656919362-55ec2c19-a0dd-4d1d-ac95-2052ffeedd7f.png#align=left&amp;display=inline&amp;height=295&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=443&amp;originWidth=443&amp;size=130743&amp;status=done&amp;style=none&amp;width=295" alt="image.png" class="inline"/> HaaS100核心板有着丰富的外设接口，如下所示：</p>
 <p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/106133/1607655121564-f799e873-94f0-485d-8d1c-95ba5cafaf5f.png#align=left&amp;display=inline&amp;height=352&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=886&amp;originWidth=586&amp;size=232115&amp;status=done&amp;style=none&amp;width=233" alt="image.png" class="inline"/></p>
 <p>详细的资料参考<a href="https://help.aliyun.com/document_detail/184186.html?spm=a2c4g.11186623.6.645.718015814zDYZt">HaaS 100 硬件规格</a>。 </p>
-<h2><a class="anchor" id="autotoc_md395"></a>
+<h2><a class="anchor" id="autotoc_md884"></a>
 2.2 驱动电机</h2>
 <p>驱动电机芯片是小车最重要的模块之一，2A的强大输出电流为小车提供满满的动力。 在驱动模块接口的定义中包括： IN1和IN2是控制小车的左电机，IN3和IN4是控制小车的右电机，ENA和ENB引脚为输出使能管脚，高电平有效，IN1、IN2、IN3和IN4可以通过PWM脉冲调速。 <b>电机控制：</b> IN1高电平，IN2低电平，左电机正传； IN1低电平，IN2高电平，左电机反传； IN3高电平，IN4低电平，右电机正传； IN3低电平，IN4高电平，右电机反传。 </p>
-<h2><a class="anchor" id="autotoc_md396"></a>
+<h2><a class="anchor" id="autotoc_md885"></a>
 2.3 超声波测距模块</h2>
 <p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/106133/1604469941791-97eb9651-b1fe-4983-88ce-785f0e1e24cc.png#align=left&amp;display=inline&amp;height=195&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=224&amp;originWidth=306&amp;size=121415&amp;status=done&amp;style=none&amp;width=266" alt="image.png" class="inline"/> 超声波测距一般有4个管脚： GND：接公共地 VCC：供5V电源 Trigger：触发控制，信号输入引脚 Echo：回响信号输出引脚 超声波测距原理是当发送的超声波遇到物体被发射回来，被接收端接收，然后通过发送信号到接收到回响的信号时间间隔可以测算出距离。 <img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/106133/1604471428556-e1c9fadf-3e93-4715-9b15-80dd5f33dc32.png#align=left&amp;display=inline&amp;height=231&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=301&amp;originWidth=529&amp;size=74124&amp;status=done&amp;style=none&amp;width=406" alt="image.png" class="inline"/> 测距过程如下：HaaS100给Trigger引脚至少10uS的脉冲触发信号，这时候超声波模块发射8个40KHz的方波，然后模块自动检测是否有信号返回。若检测到回响信号，会通过Echo引脚输出一个高电平脉冲，脉冲的宽度就是超声波从发射到返回的时间t。假设小车距离障碍物距离L，2L=vt，L=vt/2，其中v声音的传播速度340m/s。 </p>
-<h2><a class="anchor" id="autotoc_md397"></a>
+<h2><a class="anchor" id="autotoc_md886"></a>
 2.4 红外避障模块</h2>
 <p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/106133/1604472600417-ceadf30e-19b0-477c-b308-572b940d4199.png#align=left&amp;display=inline&amp;height=144&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=287&amp;originWidth=357&amp;size=152067&amp;status=done&amp;style=none&amp;width=178.5" alt="image.png" class="inline"/> 红外避障原理就是当障碍物靠近的时候，红外接收到的发射光强度越来越大，所以增大了输出的模拟信号，模拟信号接入比较器，经过比较器处理，输出数字信号。读取数字信号电平，就可以判断前方是否有障碍物。 </p>
-<h2><a class="anchor" id="autotoc_md398"></a>
+<h2><a class="anchor" id="autotoc_md887"></a>
 2.5 测速模块</h2>
 <p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/106133/1604473859445-25af0aaf-e883-4024-b681-69506e128181.png#align=left&amp;display=inline&amp;height=190&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=190&amp;originWidth=211&amp;size=74467&amp;status=done&amp;style=none&amp;width=211" alt="image.png" class="inline"/> 测速模块主要原理是由码盘结合光电传感器，传感器一端为发射光，另一端接收光，通过测量单位时间内脉冲个数得出小车的速度，本模块采用施密特触发器输出的信号非常稳定(&#160;去抖)。</p>
-<h1><a class="anchor" id="autotoc_md399"></a>
+<h1><a class="anchor" id="autotoc_md888"></a>
 3. 物料清单</h1>
 <p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/106133/1604460555294-d7a45285-1ce1-4e86-9703-6995da520091.png#align=left&amp;display=inline&amp;height=262&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=660&amp;originWidth=1432&amp;size=1060798&amp;status=done&amp;style=none&amp;width=568" alt="image.png" class="inline"/> <b>智能车底板电路</b></p>
 <ul>
@@ -86,10 +85,10 @@ $(document).ready(function(){initNavTree('auto_demo.html',''); initResizable(); 
 <li>电池座接口</li>
 <li>HaaS连接接口 | <b>物料</b> | <b>规格</b> | <b>购买链接</b> | | :&mdash;: | :&mdash;: | :&mdash;: | | HaaS100开发板 | | 阿里云<a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.16.13123b209835rz&amp;id=627354125244&amp;ns=1&amp;abbucket=16">天猫链接</a> | | 智能车套件 | 提供完整一套小车配件，结合HaaS100，可以实现云端钉控制 | 微雪<a href="https://www.waveshare.net/shop/AlphaBot.htm">微雪链接</a> |</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md400"></a>
+<h1><a class="anchor" id="autotoc_md889"></a>
 4. 案例实现</h1>
 <p>本案例实现了小车模型中的电机控制部分，其他模块部分开发者可以自己研究摸索。 </p>
-<h2><a class="anchor" id="autotoc_md401"></a>
+<h2><a class="anchor" id="autotoc_md890"></a>
 4.1 硬件连接</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -107,12 +106,12 @@ $(document).ready(function(){initNavTree('auto_demo.html',''); initResizable(); 
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter"><b>ENB</b>   </td><td class="markdownTableBodyCenter"><b>GPIO25</b>   </td><td class="markdownTableBodyCenter"><b>O</b>   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md402"></a>
+<h2><a class="anchor" id="autotoc_md891"></a>
 4.2 软件设计</h2>
-<h3><a class="anchor" id="autotoc_md403"></a>
+<h3><a class="anchor" id="autotoc_md892"></a>
 4.2.1 云端创建产品</h3>
 <p>参考<a href="https://blog.csdn.net/HaaSTech/article/details/110505659">《一步步打造能手机远程管理的HaaS花卉养植系统》</a>等系列文章，一步步在物联网平台创建产品、对应的物模型以及设备。也可以通过载入<a href="https://github.com/alibaba/AliOS-Things/blob/dev_3.1.0_haas/application/miniapp/pages/HaasCar/HaasCar.TSL.json">TSL文件</a>，一键生成物模型。 创建了HaaS电动车的产品名称，然后定义了前进、后退、暂停、左转、右转等物模型属性。 <img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/106133/1607526392432-d1239385-56fd-4039-8187-37cd8489eb56.png#align=left&amp;display=inline&amp;height=365&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=1624&amp;originWidth=2620&amp;size=629143&amp;status=done&amp;style=none&amp;width=589" alt="image.png" class="inline"/> 按照一步步操作，云端创建产品、物模型以及设备以后，我们可以获取对应的三元组信息。 </p>
-<h3><a class="anchor" id="autotoc_md404"></a>
+<h3><a class="anchor" id="autotoc_md893"></a>
 4.2.2 设备端代码</h3>
 <p>1、 配置初始化 HaaS100设备端电动小车参考代码的路径在：/solution/auto_demo/data_model_basic_demo.c下。 从物联网云平台创建的产品时候，可以获取调试设备的三元组信息。如下所示： </p><div class="fragment"><div class="line"><span class="comment">//三元组信息初始化</span></div>
 <div class="line"><span class="keywordtype">int</span> demo_main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
@@ -234,7 +233,7 @@ $(document).ready(function(){initNavTree('auto_demo.html',''); initResizable(); 
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md405"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md894"></a>
 4.2.3 小程序开发</h3>
 <p>1、 云端钉一体小程序SDK获取 </p><div class="fragment"><div class="line">git clone -b dev_3.1.0_haas https://github.com/alibaba/AliOS-Things.git</div>
 </div><!-- fragment --><p> SDK相关代码及操作readme在application/miniapp/目录下。 2、 SDK目录结构 / ├─ lib (存放依赖库的文件夹，用户无需关心) │ &#160; &#160;├─ @alicloud/pop-core &#160; &#160; （<a href="https://github.com/aliyun/openapi-core-nodejs-sdk">https://github.com/aliyun/openapi-core-nodejs-sdk</a>） │ &#160; &#160;├─ kitx │ &#160; &#160;└─ iot-packet.js &#160; &#160; &#160; &#160; &#160; &#160; &#160;（封装给用户的文件） ├─ pages &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;（页面文件夹，用户在这里自定义页面，示例持续更新中） │ &#160; &#160;└─ index &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;（首页 选择进入不同示例） │ &#160; &#160; &#160; &#160; &#160; &#160; ├─ index.axml &#160; &#160; &#160; &#160; │ &#160; &#160; &#160; &#160; &#160; &#160; ├─ index.js &#160; &#160; &#160; &#160; &#160; │ &#160; &#160; &#160; &#160; &#160; &#160; ├─ index.acss │ &#160; &#160; &#160; &#160; &#160; &#160; └─ index.json │ &#160; &#160;└─ HaasCar &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;（示例1 HaaS小小蛮驴） │ &#160; &#160; &#160; &#160; &#160; &#160; ├─ HaasCar.axml &#160; &#160;（页面布局文件） │ &#160; &#160; &#160; &#160; &#160; &#160; ├─ HaasCar.js &#160; &#160; &#160; &#160;（控制逻辑，用户在这里定义交互行为） │ &#160; &#160; &#160; &#160; &#160; &#160; ├─ HaasCar.acss &#160; &#160;（页面样式） │ &#160; &#160; &#160; &#160; &#160; &#160; ├─ HaasCar.json &#160; &#160; &#160;（页面配置，用于配置页面标题等） │ &#160; &#160; &#160; &#160; &#160; &#160; └─ HaasCar.TSL.json （示例对应的TSL文件，用户可以在物联网平台上导入该文件生成物模型） │ &#160; &#160;└─ HaasFlower &#160; &#160; &#160; &#160; &#160; &#160; &#160;（示例2 HaaS养花，目录结构同 HaasCar） ├─ app.js &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;（注册小程序，在这里进行全局参数配置，如 AccessKey） ├─ app.acss &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; （小程序全局样式） ├─ app.json &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; （小程序全局配置，可以在这里设置小程序打开的默认页面） └─ others</p>
@@ -263,7 +262,7 @@ $(document).ready(function(){initNavTree('auto_demo.html',''); initResizable(); 
 <li>DeviceName ProducKey</li>
 </ul>
 <p>这两个参数在<a href="#jSkOe">创建设备</a>时生成。 4、 编译验证 点击小程序IDE右上角“真机调试”按钮，等待二维码生成后，使用钉钉APP扫码，即可发起小程序。 <img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/256836/1605585495799-64ecf7b0-ae07-44db-8d2a-d2219316295b.png#align=left&amp;display=inline&amp;height=98&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=156&amp;originWidth=948&amp;size=18271&amp;status=done&amp;style=none&amp;width=594" alt="image.png" class="inline"/> <img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/113837/1607657559548-26507376-e4f9-4f1b-b425-6ead23fcde4b.png#align=left&amp;display=inline&amp;height=339&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=678&amp;originWidth=338&amp;size=403202&amp;status=done&amp;style=none&amp;width=169" alt="image.png" class="inline"/> </p>
-<h2><a class="anchor" id="autotoc_md406"></a>
+<h2><a class="anchor" id="autotoc_md895"></a>
 4.3 编译，烧入，运行</h2>
 <p>编译命令 </p><div class="fragment"><div class="line">...进入到目录/solution/auto_demo</div>
 <div class="line">aos make</div>
@@ -274,7 +273,7 @@ $(document).ready(function(){initNavTree('auto_demo.html',''); initResizable(); 
 <div class="line">password:88888888</div>
 <div class="line">netmgr -t wifi -c HaaS-test 88888888</div>
 </div><!-- fragment --><p> 运行打印信息 <img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/106133/1616137413179-c03526f3-268b-430c-ae5e-671b6a6e0b24.png#align=left&amp;display=inline&amp;height=403&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=1224&amp;originWidth=1836&amp;size=616976&amp;status=done&amp;style=none&amp;width=604" alt="image.png" class="inline"/> </p>
-<h1><a class="anchor" id="autotoc_md407"></a>
+<h1><a class="anchor" id="autotoc_md896"></a>
 5. 总结</h1>
 <p>这么丰富详细的操作步骤，开发者朋友是不是也用了1小时就打造出自己的小小蛮驴电动小车了呢^_^</p>
 <p>我相信有上面这么详细的一步步说明，大家都自己独立完成了电动小车的打造，并且实现了云端钉控制。大家以此为出发点，挖掘越多有意思的智能硬件，通过借助HaaS这样丰富的生态，让很多不智能的设备也很容易的智能化起来。 </p>
@@ -283,10 +282,8 @@ $(document).ready(function(){initNavTree('auto_demo.html',''); initResizable(); 
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
-<div style="height: 80px;width: 100%;background: #ff0000;">sdfklfdklsjfdjkslkjfldkjdfls</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    我是hello
   </ul>
 </div>
 </body>

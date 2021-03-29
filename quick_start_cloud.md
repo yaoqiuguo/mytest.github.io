@@ -1,4 +1,6 @@
 
+@page quick_start_cloud HaaS100快速上云
+
 # 1. 概括
 本文档介绍如何通过AliOS Things3.3快速连接到阿里云物联网云平台，并进行数据交互。
 

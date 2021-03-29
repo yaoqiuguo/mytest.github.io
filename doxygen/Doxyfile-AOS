@@ -864,29 +864,62 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  =  \
-                         ../manual/component.md \
+INPUT                  = ../manual/component.md \
                          ../manual/mainpage.md \
                          ../manual/solution.md \
                          ../../components/a2sa/README.md \
+                         ../../components/ai_agent/README.md \
+                         ../../components/alicloud/README.md \
+                         ../../components/amp/README.md \
                          ../../components/aostools/README.md \
+                         ../../components/ble_host/README.md \
+                         ../../components/ble_netconfig/README.md \
+                         ../../components/cjson/README.md \
                          ../../components/cli/README.md \
                          ../../components/cplusplus/README.md \
+                         ../../components/debug/README.md \
                          ../../components/epoll/README.md \
+                         ../../components/fatfs/README.md \
+                         ../../components/freetype/README.md \
                          ../../components/http/README.md \
                          ../../components/init/README.md \
                          ../../components/jsoncpp/README.md \
+                         ../../components/libc_stub/README.md \
+                         ../../components/linksdk/README.md \
+                         ../../components/littlefs/README.md \
                          ../../components/lwip/README.md \
                          ../../components/mbedtls/README.md \
+                         ../../components/modbus/README.md \
                          ../../components/netmgr/README.md \
+                         ../../components/ota/README.md \
                          ../../components/posix/README.md \
                          ../../components/select/README.md \
+                         ../../components/py_engine/README.md \
+                         ../../components/ramfs/README.md \
+                         ../../components/SDL2/README.md \
+                         ../../components/select/README.md \
+                         ../../components/sensor/README.md \
                          ../../components/sntp/README.md \
+                         ../../components/trace/README.md \
+                         ../../components/uagent/README.md \
+                         ../../components/ucamera/README.md \
+                         ../../components/ucloud_ai/README.md \
+                         ../../components/udata/README.md \
+                         ../../components/udisplay/README.md \
+                         ../../components/ugraphics/README.md \
+                         ../../components/ulog/README.md \
+                         ../../components/uvoice/README.md \
                          ../../components/vfs/README.md \
                          ../../components/osal_aos/README.md \
+                         ../../solutions/audio_demo/README.md \
                          ../../solutions/auto_demo/README.md \
+                         ../../solutions/eduk1_demo/README.md \
                          ../../solutions/flower_demo/README.md \
                          ../../solutions/helloworld_demo/README.md \
+                         ../../solutions/linksdk_demo/README.md \
+                         ../../solutions/linksdk_gateway_demo/README.md \
+                         ../../solutions/ota_demo/README.md \
+                         ../../solutions/py_engine_demo/README.md \
                          ../../solutions/rfid_demo/README.md \
                          ../../components/a2sa/include/sound_mixer.h \
                          ../../components/a2sa/include/sound_pcm.h \
@@ -897,7 +930,11 @@ INPUT                  =  \
                          ../../components/kv/include/aos/kv.h \
                          ../../components/netmgr/include/netmgr.h \
                          ../../components/sntp/include/sntp/sntp.h \
-                         ../../components/osal_aos/include/aos/kernel.h 
+                         ../../components/osal_aos/include/aos/kernel.h \
+                         ../HaaS_EDU_K1_Quick_Start.md \
+                         ../HaaS100_Quick_Start.md \
+                         ../quick_start_cloud.md \
+                         ../README.md
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses

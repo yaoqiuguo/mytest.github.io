@@ -1,3 +1,5 @@
+@page HaaS100_Quick_Start HaaS100快速开始
+
 本文向开发者展示在HaaS100开发板上快速上手AliOS-Things 3.3.
 具体操作分为三步：
 

@@ -1,3 +1,4 @@
+@page HaaS_EDU_K1_Quick_Start HaaS EDU K1快速开始
 
 具体操作分为三步：
 
