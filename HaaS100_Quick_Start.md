@@ -14,10 +14,6 @@
 
 Visual Studio Code(下称VS Code) 是一款广泛使用的IDE工具。请根据环境下载对应版本并安装。
 
-- **串口工具**
-
-串口工具用于日志查看，请根据环境下载安装对应的串口工具。
-
 
 
 ## 1.2 配置VS Code
@@ -53,6 +49,11 @@ aos-tools主要于编译AliOS-Things代码和镜像烧录。alios-studio安装�
 ## 2.1 开始创建
 点击左下角的"+"图标开始创建工程
 ![image.png](https://img.alicdn.com/imgextra/i2/O1CN01xmJW0b25z1BVejS40_!!6000000007596-2-tps-796-275.png#align=left&display=inline&height=138&id=KS37Y&margin=%5Bobject%20Object%5D&name=image.png&originHeight=275&originWidth=796&size=35109&status=done&style=none&width=398)
+
+然后设置内测参数，包括ssh域账号和代码分支，域账号为申请的账号名，分支名为dev_aos
+![image.png](https://img.alicdn.com/imgextra/i4/O1CN01tzEYEI1XLuQddHMUK_!!6000000002908-2-tps-1200-120.png#align=left&display=inline&height=138&id=KS37Y&margin=%5Bobject%20Object%5D&name=image.png&originHeight=275&originWidth=796&size=35109&status=done&style=none&width=398)
+![image.png](https://img.alicdn.com/imgextra/i3/O1CN01OsuGtp1NZ3dsIzHwM_!!6000000001583-2-tps-1194-166.png#align=left&display=inline&height=138&id=KS37Y&margin=%5Bobject%20Object%5D&name=image.png&originHeight=275&originWidth=796&size=35109&status=done&style=none&width=398)
+
 ## 2.2 选择解决方案和开发板
 随后VS Code会依次提示“请选择解决方案”和“请选择开发板”:
 
@@ -93,15 +94,7 @@ aos-tools主要于编译AliOS-Things代码和镜像烧录。alios-studio安装�
 ![image.png](https://img.alicdn.com/imgextra/i3/O1CN01Foj1sU1HIDNnvs6gM_!!6000000000734-2-tps-1402-196.png#align=left&display=inline&height=98&id=FUsoz&margin=%5Bobject%20Object%5D&name=image.png&originHeight=219&originWidth=1563&size=35567&status=done&style=none&width=701)
 ## 3.3 查看日志
 
-- 打开串口工具, 配置串口端口号，并配置波特率至1500000
+- 点击VS Code的monitor按钮, 配置串口端口号，并配置波特率至1500000，点击HaaS开发板Reset按键后，就可以在串口工具中看到日志打印了。
 
-![image.png](https://img.alicdn.com/imgextra/i3/O1CN01TLVJH01ReKfK4EXYS_!!6000000002136-2-tps-672-674.png#align=left&display=inline&height=337&id=pUJpU&margin=%5Bobject%20Object%5D&name=image.png&originHeight=674&originWidth=672&size=60690&status=done&style=none&width=336)
-
-- 点击HaaS开发板Reset按键后，就可以在串口工具中看到日志打印了
-
-![image.png](https://img.alicdn.com/imgextra/i3/O1CN01VFRCpR1O57Mo5gMiO_!!6000000001653-2-tps-436-568.png#align=left&display=inline&height=433&id=5jiRM&margin=%5Bobject%20Object%5D&name=image.png&originHeight=568&originWidth=436&size=42188&status=done&style=none&width=332)
-
-
-
-
+![image.png](https://img.alicdn.com/imgextra/i1/O1CN01WFJrEO2AI25lZacbI_!!6000000008179-2-tps-1066-374.png#align=left&display=inline&height=337&id=pUJpU&margin=%5Bobject%20Object%5D&name=image.png&originHeight=674&originWidth=672&size=60690&status=done&style=none&width=336)
 
