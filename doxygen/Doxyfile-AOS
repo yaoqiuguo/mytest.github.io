@@ -865,11 +865,39 @@ WARN_LOGFILE           =
 # Note: If this tag is empty the current directory is searched.
 
 INPUT                  =  \
-                         ../../components/kv/README.md \
-                         ../../components/osal_aos/include/aos \
                          ../manual/component.md \
                          ../manual/mainpage.md \
-                         ../manual/solution.md
+                         ../manual/solution.md \
+                         ../../components/a2sa/README.md \
+                         ../../components/aostools/README.md \
+                         ../../components/cli/README.md \
+                         ../../components/cplusplus/README.md \
+                         ../../components/epoll/README.md \
+                         ../../components/http/README.md \
+                         ../../components/init/README.md \
+                         ../../components/jsoncpp/README.md \
+                         ../../components/lwip/README.md \
+                         ../../components/mbedtls/README.md \
+                         ../../components/netmgr/README.md \
+                         ../../components/posix/README.md \
+                         ../../components/select/README.md \
+                         ../../components/sntp/README.md \
+                         ../../components/vfs/README.md \
+                         ../../components/osal_aos/README.md \
+                         ../../solutions/auto_demo/README.md \
+                         ../../solutions/flower_demo/README.md \
+                         ../../solutions/helloworld_demo/README.md \
+                         ../../solutions/rfid_demo/README.md \
+                         ../../components/a2sa/include/sound_mixer.h \
+                         ../../components/a2sa/include/sound_pcm.h \
+                         ../../components/cli/include/aos/cli.h \
+                         ../../components/cplusplus/include/*.h \
+                         ../../components/http/include/httpclient.h \
+                         ../../components/init/include/aos/init.h \
+                         ../../components/kv/include/aos/kv.h \
+                         ../../components/netmgr/include/netmgr.h \
+                         ../../components/sntp/include/sntp/sntp.h \
+                         ../../components/osal_aos/include/aos/kernel.h 
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
