@@ -43,15 +43,15 @@ $(document).ready(function(){initNavTree('ai_agent.html',''); initResizable(); }
 <div class="title">ai_agent </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md22"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md34"></a>
 概述</h1>
 <p>AI Agent作为AI的代理引擎框架，支持不同推理引擎的注册，对用户提供统一的接口，简化用户操作，目前注册的AI引擎为ucloud_ai云端推理引擎，用户可以根据需要注册其他推理引擎。</p>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md35"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md36"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── include</div>
 <div class="line">│   ├── aiagent_common.h         # aiagent模型定义头文件</div>
@@ -68,25 +68,25 @@ $(document).ready(function(){initNavTree('ai_agent.html',''); initResizable(); }
 <div class="line">    │   └── ucloud_ai_engine.c   # ucloud ai引擎注册实例</div>
 <div class="line">    └── example</div>
 <div class="line">        └── aiagent_example.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md25"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md37"></a>
 依赖组件</h2>
 <ul>
 <li>ai_agent</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md26"></a>
+<h1><a class="anchor" id="autotoc_md38"></a>
 常用配置</h1>
 <div class="fragment"><div class="line">def_config:                      # 组件的可配置项</div>
 <div class="line">  CONFIG_UCLOUD_AI_ENGINE_ENABLE: 1</div>
 </div><!-- fragment --> <blockquote class="doxtable">
 <p>配置AI引擎为ucloud ai推理引擎 </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md27"></a>
+<h1><a class="anchor" id="autotoc_md39"></a>
 API说明</h1>
-<p>aiagent_aos_api</p>
-<h1><a class="anchor" id="autotoc_md28"></a>
+<p><a class="el" href="group__aiagent__aos__api.html">Aiagent_aos_api</a></p>
+<h1><a class="anchor" id="autotoc_md40"></a>
 使用示例</h1>
 <p>示例代码参考example/aiagent_example.c，以运行ucloud_ai_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md29"></a>
+<h2><a class="anchor" id="autotoc_md41"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>ai_agent组件的package.yaml中添加example </p>
@@ -98,7 +98,7 @@ API说明</h1>
 </blockquote>
 <div class="fragment"><div class="line">/*init network service*/</div>
 <div class="line">netmgr_service_init(NULL);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md30"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md42"></a>
 云端功能开通</h2>
 <blockquote class="doxtable">
 <p>登陆https://vision.aliyun.com开通如下功能： </p>
@@ -114,7 +114,7 @@ API说明</h1>
 </blockquote>
 <div class="fragment"><div class="line">1. 创建Bucket时地域选择“上海”</div>
 <div class="line">2. 读写权限选择“公共读”</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md31"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md43"></a>
 aiconfig.h中配置OSS信息</h2>
 <div class="fragment"><div class="line">OSS_ACCESS_KEY &quot;&lt;Your-Access-Key&gt;&quot;</div>
 <div class="line">OSS_ACCESS_SECRET &quot;&lt;Your-Access-Secret&gt;&quot;</div>
@@ -123,7 +123,7 @@ aiconfig.h中配置OSS信息</h2>
 <div class="line"> </div>
 <div class="line">KEY以及SECRET获取链接: https://usercenter.console.aliyun.com/#/accesskey</div>
 <div class="line">ENDPOINT使用默认即可，BUCKET请使用你创建好的Bucket名称</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md32"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md44"></a>
 添加ai_agent组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
@@ -131,126 +131,126 @@ aiconfig.h中配置OSS信息</h2>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - ai_agent: dev_aos # helloworld_demo中引入ai_agent组件</div>
 <div class="line">  - netmgr: dev_aos # helloworld_demo中引入netmgr组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md33"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md45"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/ucloud_ai_demo &amp;&amp; aos make</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md34"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md46"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
 <p>此外，本组件例子中使用到到图片存放在代码中hardware/chip/haas1000/prebuild/data目录，除烧录helloworld demo image外，需额外使用如下命令烧录littlefs文件系统: </p><div class="fragment"><div class="line">aos burn -f hardware/chip/haas1000/release/write_flash_tool/ota_bin/littlefs.bin#0xB32000</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md35"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md47"></a>
 ucloud_ai示例测试</h2>
-<h3><a class="anchor" id="autotoc_md36"></a>
+<h3><a class="anchor" id="autotoc_md48"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 0  # 人脸比对</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md37"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md49"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 1  # 人物动漫化</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md38"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md50"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 2  # 表情识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md39"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md51"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 3  # 目标检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md40"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md52"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 4  # 主体检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md41"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md53"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 5  # 通用分割</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md42"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md54"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 6  # 面部分割</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md43"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md55"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 7  # 身份证证明识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md44"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md56"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 8  # 身份证反面识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md45"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md57"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 9  # 银行卡识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md46"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md58"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 10  # 文本识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md47"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md59"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 11  # 垃圾分类</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md48"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md60"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 12  # 水果检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md49"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md61"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 13  # 图像人体擦除</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md50"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md62"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">aiagent -m 14  # 风格迁移</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md51"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md63"></a>
 注意事项</h1>
 <p>NA</p>
-<h1><a class="anchor" id="autotoc_md52"></a>
+<h1><a class="anchor" id="autotoc_md64"></a>
 FAQ</h1>
 <p>NA </p>
 </div></div><!-- contents -->

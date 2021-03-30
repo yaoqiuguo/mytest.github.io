@@ -43,7 +43,7 @@ $(document).ready(function(){initNavTree('uvoice.html',''); initResizable(); });
 <div class="title">uvoice </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md696"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md683"></a>
 概述</h1>
 <p>uVoice是AliOS Things的音频组件，提供了RTOS系统上端到云全链路的语音能力，包括音频硬件管理、音频增强算法、播放器、录音等基本音频功能，也结合阿里的智能语音云端服务，提供了TTS、语音控制、语音对话等能智能语音功能。同时，uVoice也是一个资源占用极少，性能较高的音频组件，适合为低资源、低算力的嵌入式MCU提供音频能力。 组件支持以下功能：</p><ul>
 <li>录音</li>
@@ -53,12 +53,12 @@ $(document).ready(function(){initNavTree('uvoice.html',''); initResizable(); });
 <li>音频格式编码</li>
 <li>阿里云TTS</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md697"></a>
+<h2><a class="anchor" id="autotoc_md684"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md698"></a>
+<h2><a class="anchor" id="autotoc_md685"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">.</div>
 <div class="line">├── aos.mk</div>
@@ -198,14 +198,14 @@ $(document).ready(function(){initNavTree('uvoice.html',''); initResizable(); });
 <div class="line">├── tools</div>
 <div class="line">│   └── gen_voice.py</div>
 <div class="line">└── uvoice.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md699"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md686"></a>
 依赖组件</h2>
 <ul>
 <li>a2sa</li>
 <li>ulog</li>
 <li>mbedtls</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md700"></a>
+<h1><a class="anchor" id="autotoc_md687"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
 <p>支持播放功能开关 </p>
@@ -255,36 +255,36 @@ $(document).ready(function(){initNavTree('uvoice.html',''); initResizable(); });
 <p>支持阿里云TTS功能开关 </p>
 </blockquote>
 <div class="fragment"><div class="line">ALICLOUD_TTS_SUPPORT: 1</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md701"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md688"></a>
 API说明</h1>
-<p>uvoice_init_api uvoice_types_api uvoice_player_api uvoice_recorder_api uvoice_mlist_api uvoice_event_api uvoice_test_api</p>
-<h1><a class="anchor" id="autotoc_md702"></a>
+<p><a class="el" href="group__uvoice__init__api.html">Uvoice_init_api</a> <a class="el" href="group__uvoice__types__api.html">Uvoice_types_api</a> <a class="el" href="group__uvoice__player__api.html">Uvoice_player_api</a> uvoice_recorder_api <a class="el" href="group__uvoice__mlist__api.html">Uvoice_mlist_api</a> <a class="el" href="group__uvoice__event__api.html">Uvoice_event_api</a> <a class="el" href="group__uvoice__test__api.html">Uvoice_test_api</a></p>
+<h1><a class="anchor" id="autotoc_md689"></a>
 使用示例</h1>
 <p>示例代码参考example/uvoice_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md703"></a>
+<h2><a class="anchor" id="autotoc_md690"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>uvoice组件的package.yaml中添加example </p>
 </blockquote>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;example/uvoice_example.c&quot; # add uvoice_example.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md704"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md691"></a>
 添加uvoice组件</h2>
 <blockquote class="doxtable">
 <p>solution中helloworld_demo的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - uvoice: master # helloworld_demo中引入uvoice组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md705"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md692"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境：</p>
-<h2><a class="anchor" id="autotoc_md706"></a>
+<h2><a class="anchor" id="autotoc_md693"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md707"></a>
+<h2><a class="anchor" id="autotoc_md694"></a>
 uvoice示例代码测试方法</h2>
 <blockquote class="doxtable">
 <p>uvoice示例代码初始化 </p>
@@ -307,13 +307,13 @@ uvoice示例代码测试方法</h2>
 <p>uvoice录音功能测试 </p>
 </blockquote>
 <div class="fragment"><div class="line">record 16000 1 16 1024 0 fs:/data/recording.wav</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md708"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md695"></a>
 关键日志</h1>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">uvoice example initialization succeeded !</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md709"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md696"></a>
 注意事项</h1>
 <blockquote class="doxtable">
 <p>解码器下载 </p>

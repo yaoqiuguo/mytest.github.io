@@ -43,21 +43,21 @@ $(document).ready(function(){initNavTree('aostools.html',''); initResizable(); }
 <div class="title">aostools </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md77"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md90"></a>
 aos-tools</h1>
 <p>aos-tools 是 AliOS-Things 软件开发平台的命令行编译系统，通过 aos-tools 工具建立 AliOS-Things 开发环境，支持 AliOS-Things 组件管理、程序编译、烧录等功能。aos-tools 支持 Git 来获取 AliOS-Things 组件的代码，只是为了让您在 AliOS-Things 环境中更轻松地使用 Git，每个组件都是一个独立的 Git仓库，仍然支持使用 Git 命令来维护代码的版本管理。</p>
-<h2><a class="anchor" id="autotoc_md78"></a>
+<h2><a class="anchor" id="autotoc_md91"></a>
 安装 aostools</h2>
 <p>通过 pip 命令来安装 aos-tools 到你的系统中，aos-tools 支持 python2.7+、python3.6+。</p>
 <div class="fragment"><div class="line">sudo python -m pip install aos-tools</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md79"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md92"></a>
 aos-tools 命令</h2>
 <p>使用 aos-tools 需遵循的格式如下：</p>
 <div class="fragment"><div class="line">aos command options</div>
 </div><!-- fragment --><p>可选元素显示在方括号 [ ] 中。例如，许多命令会用到<code>组件名</code>参数：</p>
 <div class="fragment"><div class="line">aos install [component0 component1 ... componentn]</div>
 <div class="line">aos list &lt;-r&gt;</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md80"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md93"></a>
 help</h3>
 <p>通过 aos 的 help 命令，可以查看 aos-tools 支持哪些命令，并可以获取该命令完整的使用说明。</p>
 <div class="fragment"><div class="line">aos help</div>
@@ -71,7 +71,7 @@ help</h3>
 <div class="fragment"><div class="line">aos command -h</div>
 </div><!-- fragment --><p>例如：</p>
 <div class="fragment"><div class="line">aos init --help</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md81"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md94"></a>
 init</h3>
 <p>通过 aos init 命令来初始AliOS Things 的开发环境：</p>
 <div class="fragment"><div class="line">mkdir aos_workspace</div>
@@ -80,11 +80,11 @@ init</h3>
 </div><!-- fragment --><p>执行完毕之后，会在<code>aos_workspace</code>目录生成一个隐藏的&lt;tt&gt;.aos文件，存储的内容为 <code>key: value</code> 形式键值对。内容类似于下文所述：</p>
 <div class="fragment"><div class="line">repo: https://gitee.com/alios-things/manifest.git</div>
 <div class="line">branch: master</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md82"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md95"></a>
 search</h3>
 <p>在aos工作目录下使用。 根据关键字从云端查找相应的组件，并列出组件的简单描述。</p>
 <div class="fragment"><div class="line">aos search dummy</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md83"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md96"></a>
 install</h3>
 <div class="fragment"><div class="line">aos install helloworld_demo</div>
 </div><!-- fragment --><p>下载 <code>helloworld_demo</code>&#160;示例工程，以及该所依赖的组件，每一个组件都对应一个 git 仓库，通过 <code>git clone</code>&#160;命令将远程代码库中代码复制到本地目录。下载完组件后，当前的工作目录结构如下：</p>
@@ -92,7 +92,7 @@ install</h3>
 <div class="line">components/</div>
 <div class="line">kernel</div>
 <div class="line">solutions/helloworld_demo/</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md84"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md97"></a>
 list</h3>
 <p>在 aos 工作目录下使用。显示单个或者多个组件的描述信息。 下面介绍几种典型场景的使用：</p>
 <ul>
@@ -123,7 +123,7 @@ list</h3>
 <div class="line">aos list -c</div>
 <div class="line">aos list -b</div>
 <div class="line">aos list -m</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md85"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md98"></a>
 rename</h3>
 <p>在 aos 工作目录下使用。此命令不会对云端进行操作。一般是在用户基于某个已经存在的组件进行开发，当开发完毕时需要修改组件名字时用到。 运行此命令会修改以下几部分的内容：</p>
 <ul>
@@ -131,14 +131,14 @@ rename</h3>
 <li><code>package.yaml</code>里面<code>name</code>字段</li>
 <li>当被其他组件依赖时，在其他组件的<code>package.yaml</code>文件里的<code>depend</code>字段内容也会进行修改</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md86"></a>
+<h3><a class="anchor" id="autotoc_md99"></a>
 show</h3>
 <p>在 aos 工作目录下的solution类型组件下使用。用于显示方案依赖的组件列表、库(路径)、头文件、宏定义、变量、编译选项、链接选项、链接脚本、工具链、组件源码等信息。</p>
 <p>当一个solution依赖单个或者多个board组件时，可以通过命令 <code>aos show -b board_name</code> 来查看方案依赖的组件列表和指定的board信息。</p>
-<h3><a class="anchor" id="autotoc_md87"></a>
+<h3><a class="anchor" id="autotoc_md100"></a>
 toolchain</h3>
 <p>可以在任意目录下使用。可以安装csky的工具链，安装路径在<code>/usr/local/thead</code>下，并且会在<code>/usr/bin/</code>目录下实现软连接。</p>
-<h3><a class="anchor" id="autotoc_md88"></a>
+<h3><a class="anchor" id="autotoc_md101"></a>
 export</h3>
 <p>在aos工作目录下使用。 此命令可以将aos工作目录下的单个组件或者多个组件以及这些组件所依赖的组件全部导出到指定的目录。</p>
 <ul>
@@ -146,11 +146,11 @@ export</h3>
 <li>在其他目录下使用此命令可以导出除solution组件外的其他组件到指定目录</li>
 </ul>
 <div class="fragment"><div class="line">aos export csi_pangu button /tmp/1</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md89"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md102"></a>
 format</h3>
 <p>在aos工作目录下使用此命令可以格式化组件的<code>package.yaml</code>文件，并保存到组件相应的目录中。</p>
 <div class="fragment"><div class="line">aos format component1</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md90"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md103"></a>
 variable</h3>
 <p>在solution类型组件目录下使用该命令可以将该solution的配置变量显示出来。比如：</p>
 <div class="fragment"><div class="line">BOARD_PATH = /home/xxx/work/git_project/yoc7.3/boards/csky/pangu_cpu0</div>
@@ -165,14 +165,14 @@ variable</h3>
 <div class="line">CONFIG_DECODER_AMRWB = 1</div>
 <div class="line">CONFIG_DECODER_PCM = 1</div>
 <div class="line">CHIP_PATH  = /home/xxx/work/git_project/yoc7.3/components/csi_pangu</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md91"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md104"></a>
 convert</h3>
 <p>在aos工作目录下使用。 当用户想把一个源码目录快速变为一个 aos 组件时，可以使用这个命令。 执行以下命令会在<code>&lt;dir&gt;</code>目录下生成<code>package.yaml</code>文件模板，用户可根据需求再适当的调整修改<code>package.yaml</code>文件。</p>
 <div class="fragment"><div class="line">aos convert &lt;dir&gt;</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md92"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md105"></a>
 sdk</h3>
 <p>在solution类型目录下使用。 当编译完成一个solution之后，可以在当前目录使用<code>aos sdk</code>来生成sdk包；这个sdk包只有app部分是源码，其他组件都是以.a库的形式存在&lt;tt&gt;aos_sdk目录下。 这个过程中会自动把当前目录的<code>package.yaml</code>、<code>Makefile</code>、&lt;tt&gt;.gitignore这三个文件修改成适合sdk形式的文件。 可以将整个solution目录打包给需要的开发者使用。</p>
-<h3><a class="anchor" id="autotoc_md93"></a>
+<h3><a class="anchor" id="autotoc_md106"></a>
 工程编译</h3>
 <p>当您通过&#160; <code>aos install helloworld</code>&#160; 命令下载了一个示例工程后，对应的工程代码及相关的组件代码已经安装到aos 工作环境中，可以通过以下命令，实现工程的编译：</p>
 <div class="fragment"><div class="line">cd solutions/helloworld</div>
@@ -182,10 +182,10 @@ sdk</h3>
 <div class="line">100.00% [##################################################] Speed: 6.787MB/S           </div>
 <div class="line">scons: done reading SConscript files.</div>
 <div class="line">scons: Building targets ...</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md94"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md107"></a>
 注意事项</h3>
 <p>1、aos-tools依赖于python和pip，可基于python2或python3版本来使用。使用者需要保证两者处于同一大版本(注意：python有两个发展分支，分别为python2和python3)。可执行命令python &ndash;version和pip &ndash;version来判断 2、aos-tools仅支持 python2.7+、python3.6+。对于ubuntu16.04及以下版本，预装的python3版本均在3.6以下，若需要使用python3，请自行安装高版本python3环境，并建个软链接指向python。</p>
-<h3><a class="anchor" id="autotoc_md95"></a>
+<h3><a class="anchor" id="autotoc_md108"></a>
 Q&amp;A</h3>
 <p>1、linux环境下找不到pip或者安装时速度很慢如何办？</p>
 <ul>

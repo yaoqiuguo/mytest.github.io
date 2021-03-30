@@ -43,19 +43,19 @@ $(document).ready(function(){initNavTree('py_engine.html',''); initResizable(); 
 <div class="title">py_engine </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md469"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md482"></a>
 概述</h1>
 <p>py_engine (Python轻应用引擎) 以MicroPython为基础打造而成.可以快速实现IoT场景连云、控端、AI等最常见功能。快速上手文档和编程接口请参考<a href="https://g.alicdn.com/HaaSAI/PythonDoc/quickstart/index.html">Python轻应用编程参考</a> 组件支持以下功能：</p><ul>
 <li>连云：支持基于linkit连接阿里云物联网平台</li>
 <li>控端：支持PWD、UART、SPI、I2C、ADC、DAC、GPIO等基本硬件接口控制</li>
 <li>AI：支持端上AI和云端AI能力，覆盖人脸、人体、视频、文字等150+场景</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md470"></a>
+<h2><a class="anchor" id="autotoc_md483"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md471"></a>
+<h2><a class="anchor" id="autotoc_md484"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">py_engine</div>
 <div class="line">├── call_cmake.sh                    # 系统引导编译cmake的脚本文件</div>
@@ -67,7 +67,7 @@ $(document).ready(function(){initNavTree('py_engine.html',''); initResizable(); 
 <div class="line">├── package.yaml                     # 编译配置文件</div>
 <div class="line">├── platform                         #OS隔离层</div>
 <div class="line">└── README.md                        #帮助文档</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md472"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md485"></a>
 依赖组件</h2>
 <ul>
 <li>rhino</li>
@@ -82,7 +82,7 @@ $(document).ready(function(){initNavTree('py_engine.html',''); initResizable(); 
 <li>haas1000</li>
 <li>vfs</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md473"></a>
+<h1><a class="anchor" id="autotoc_md486"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
 <p>AOS_COMP_VFS: 默认1, 如需修改，在yaml中修改AOS_COMP_VFS配置 </p>
@@ -94,13 +94,13 @@ $(document).ready(function(){initNavTree('py_engine.html',''); initResizable(); 
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  AOS_COMP_FATFS: 2</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md474"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md487"></a>
 API说明</h1>
 <p>mpy_run mpy_init mpy_add_path</p>
-<h1><a class="anchor" id="autotoc_md475"></a>
+<h1><a class="anchor" id="autotoc_md488"></a>
 使用示例</h1>
 <p>示例代码参考example/py_engine_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md476"></a>
+<h2><a class="anchor" id="autotoc_md489"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>py_engine组件的package.yaml中添加example </p>
@@ -108,38 +108,38 @@ API说明</h1>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">    - &quot;example/py_engine_example.c&quot; # add py_engine_example.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md477"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md490"></a>
 添加kv组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - py_engine: master # helloworld_demo中引入py_engine组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md478"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md491"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md479"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md492"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md480"></a>
+<h2><a class="anchor" id="autotoc_md493"></a>
 KV示例测试</h2>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">python</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md481"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md494"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">start micropython!</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md482"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md495"></a>
 注意事项</h1>
 <p>如果需要使用py_engine，就需要对接两个接口：**mpy_init** and **mpy_run**。(declare in <code>mpy_main.h</code>) ```</p>
-<h1><a class="anchor" id="autotoc_md483"></a>
+<h1><a class="anchor" id="autotoc_md496"></a>
 FAQ</h1>
 <p>Q1： python 使用示例？ </p><blockquote class="doxtable">
 <p>from driver import ADC adc = ADC() adc.open("ADC0") value = adc.read() adc.close() </p>

@@ -43,17 +43,17 @@ $(document).ready(function(){initNavTree('trace.html',''); initResizable(); });
 <div class="title">trace </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md550"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md563"></a>
 1. 案例简介</h1>
 <p>SystemView 是一个用于分析嵌入式系统性能的工具。SystemView可以分析系统中有哪些中断、任务执行了，以及它们的先后关系。 可以完整的深入观察一个应用程序运行时的行为，它揭示了在任务运行中发生了什么，哪个中断触发了任务切换，中断和任务调用了哪个底层系统的API函数。 SystemView 可以实时分析和展示数据，帮助用户进行系统调试和问题诊断，尤其是在开发和处理具有多个任务的复杂系统时。</p>
 <p>SystemView效果展示：</p>
 <p><img src="https://img.alicdn.com/imgextra/i3/O1CN01YKD6fE1Pg2uvaaGmx_!!6000000001869-2-tps-2826-1754.png" alt="undefined" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md551"></a>
+<h2><a class="anchor" id="autotoc_md564"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md552"></a>
+<h1><a class="anchor" id="autotoc_md565"></a>
 2. 基础知识</h1>
 <p>SystemView 工作原理：</p>
 <p>SystemView 由两个部分组成：</p>
@@ -62,18 +62,18 @@ $(document).ready(function(){initNavTree('trace.html',''); initResizable(); });
 <p>如果想用SystemView分析我们OS的性能，我们需要把SystemView相关的代码加到我们的代码工程中一起编译。 在我们的OS代码需要记录的地方添加hook函数，用SystemView的 API代码实现这些hook函数。 当这些函数被运行时SystemView相关的代码会把数据通过Jlink发送到PC机上，PC机上的SystemView 软件会解析这些数据并通过图形化的方式展示出来。</p>
 <p>下图展示的是SystemView的工作原理：</p>
 <p><img src="https://img.alicdn.com/imgextra/i3/O1CN01zOdgDv1QHbOPuGVKY_!!6000000001951-2-tps-1991-1434.png" alt="undefined" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md553"></a>
+<h1><a class="anchor" id="autotoc_md566"></a>
 3. 物料清单 硬件链接</h1>
-<h2><a class="anchor" id="autotoc_md554"></a>
+<h2><a class="anchor" id="autotoc_md567"></a>
 3.1 HaaS100 硬件</h2>
 <p><a href="https://help.aliyun.com/document_detail/184426.html">HaaS100 硬件简介</a></p>
 <p><img src="https://img.alicdn.com/imgextra/i4/O1CN01XxD6Xo217CB3FZnEU_!!6000000006937-2-tps-746-497.png" alt="" style="zoom:80%;" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md555"></a>
+<h2><a class="anchor" id="autotoc_md568"></a>
 3.2 J-Link 仿真器</h2>
 <p>J-Link是德国SEGGER公司推出基于JTAG的仿真器。操作方便、连接方便、简单易学，是学习开发嵌入式开发最好最实用的开发工具。 <img src="https://img.alicdn.com/imgextra/i2/O1CN01xj35251YMCIIXuzdy_!!6000000003044-0-tps-2048-1536.jpg" alt="undefined" style="zoom:47%;" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md556"></a>
+<h1><a class="anchor" id="autotoc_md569"></a>
 4. 案例实现</h1>
-<h2><a class="anchor" id="autotoc_md557"></a>
+<h2><a class="anchor" id="autotoc_md570"></a>
 4.1 硬件连接</h2>
 <p>将HaaS100 SWDIO、SWCLK和地GND共3根线与J-Link仿真器连接。</p>
 <table class="markdownTable">
@@ -88,9 +88,9 @@ $(document).ready(function(){initNavTree('trace.html',''); initResizable(); });
 </table>
 <p>硬件连接图：</p>
 <p><img src="https://img.alicdn.com/imgextra/i4/O1CN01RD9QyS1zD1zYKLKxv_!!6000000006679-2-tps-976-671.png" alt="undefined" style="zoom:70%;" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md558"></a>
+<h2><a class="anchor" id="autotoc_md571"></a>
 4.2  编译AliOS Things</h2>
-<p>AliOS Things最新代码中默认集成了SystemView的功能，默认是关闭的，只需要打开Trace工具配置开关就可以使用。</p>
+<p><a class="el" href="namespace_ali_o_s.html">AliOS</a> Things最新代码中默认集成了SystemView的功能，默认是关闭的，只需要打开Trace工具配置开关就可以使用。</p>
 <p>打开方式：</p>
 <p>3.3分支: 在应用package.yaml 文件 depends下添加一行- trace: master。</p>
 <p><img src="https://img.alicdn.com/imgextra/i3/O1CN01UiooSJ2A67n9U3FiW_!!6000000008153-2-tps-1480-1242.png" alt="undefined" style="zoom:47%;" class="inline"/></p>
@@ -102,27 +102,27 @@ $(document).ready(function(){initNavTree('trace.html',''); initResizable(); });
 <p>编译helloworld_demo应用</p>
 <p>aos make helloworld_demo@haas100 -c config &amp;&amp; aos make</p>
 <p>下载AliOS Things镜像。 下载步骤参考<a href="https://blog.csdn.net/HaaSTech/article/details/109719850">HaaS100快速开始</a></p>
-<h1><a class="anchor" id="autotoc_md559"></a>
+<h1><a class="anchor" id="autotoc_md572"></a>
 5 使用SystemView</h1>
-<h2><a class="anchor" id="autotoc_md560"></a>
+<h2><a class="anchor" id="autotoc_md573"></a>
 5.1 下载安装SystemView</h2>
 <p><a href="www.segger.com/downloads/systemview">下载地址</a></p>
 <p>根据你所用的操作系统下载对应版本的SystemView，然后进行安装。</p>
-<h2><a class="anchor" id="autotoc_md561"></a>
+<h2><a class="anchor" id="autotoc_md574"></a>
 5.2 配置SystemView</h2>
 <p>拷贝SYSVIEW_AliOSThings.txt 文件到PC机SystemView软件安装目录 C:\Program Files\SEGGER\SystemView\Description下。</p>
 <p>SYSVIEW_AliOSThings.txt 文件路径：</p>
 <p>3.3 分支路径： components/trace/Config/SYSVIEW_AliOSThings.txt 3.1分支路径： core/trace/Config/SYSVIEW_AliOSThings.txt</p>
-<h2><a class="anchor" id="autotoc_md562"></a>
+<h2><a class="anchor" id="autotoc_md575"></a>
 5.3 打开SystemView PC软件</h2>
 <p>点击菜单栏Target打开 Recorder Configuration。 <img src="https://img.alicdn.com/imgextra/i2/O1CN01szknPD1ogNbBQBZEU_!!6000000005254-2-tps-488-266.png" alt="undefined" class="inline"/></p>
 <p>参考下图配置参数信息，其中 Address 信息可以从开机串口log 中获取： 例如开机串口log中显示：_SEGGER_RTT:0x34683a1c。</p>
 <p><img src="https://img.alicdn.com/imgextra/i3/O1CN01aiPYrd1Ij4DVZLR9h_!!6000000000928-2-tps-640-762.png" alt="undefined" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md563"></a>
+<h2><a class="anchor" id="autotoc_md576"></a>
 5.4 开始采集</h2>
 <p>点击菜单栏Target打开 Start Recording <img src="https://img.alicdn.com/imgextra/i2/O1CN01E4UIcZ24f2Hwl6Hco_!!6000000007417-2-tps-452-258.png" alt="undefined" class="inline"/></p>
 <p>界面显示效果如下： <img src="https://img.alicdn.com/imgextra/i3/O1CN01YKD6fE1Pg2uvaaGmx_!!6000000001869-2-tps-2826-1754.png" alt="undefined" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md564"></a>
+<h1><a class="anchor" id="autotoc_md577"></a>
 6 总结</h1>
 <p>通过上面的操作，相信你已经学会了使用AliOS Things上的SystemView分析工具了。我们可以通过SystemView看到OS内部的运行情况。无论是对于学习操作系统知识，还是对操作系统进行性能分析，使用SystemView分析工具都是最好的选择。借助SystemView 这款工具能够缩短调试时间，提高开发效率。 </p>
 </div></div><!-- contents -->

@@ -43,7 +43,7 @@ $(document).ready(function(){initNavTree('libc_stub.html',''); initResizable(); 
 <div class="title">libc_stub </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md321"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md334"></a>
 概述</h1>
 <p>libc_stub模块是对C库的重定向的实现，支持gcc(newlibc)、icc、armcc三种类型编译器的主要库函数的重定向。 完成的重定向对接功能包括：</p><ul>
 <li>内存申请释放：malloc/free/realloc/calloc</li>
@@ -52,12 +52,12 @@ $(document).ready(function(){initNavTree('libc_stub.html',''); initResizable(); 
 <li>输出printf</li>
 </ul>
 <p>该模块只对接内核启动相关必要的接口，其他posix标准接口请参考posix组件；文件系统相关请参考vfs组件。</p>
-<h2><a class="anchor" id="autotoc_md322"></a>
+<h2><a class="anchor" id="autotoc_md335"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md323"></a>
+<h2><a class="anchor" id="autotoc_md336"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── newlib_stub.c # gcc newlibc库的重定向实现</div>
 <div class="line">├── compilers</div>
@@ -65,24 +65,24 @@ $(document).ready(function(){initNavTree('libc_stub.html',''); initResizable(); 
 <div class="line">│   ├── gcc       # gcc对接头文件修改</div>
 <div class="line">│   └── iar       # icc库的重定向实现</div>
 <div class="line">└── package.yaml  # 编译配置文件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md324"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md337"></a>
 依赖组件</h2>
 <ul>
 <li>osal_aos</li>
 <li>vfs</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md325"></a>
+<h1><a class="anchor" id="autotoc_md338"></a>
 常用配置</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md326"></a>
+<h1><a class="anchor" id="autotoc_md339"></a>
 API说明</h1>
 <p>参考标准C库接口即可。</p>
-<h1><a class="anchor" id="autotoc_md327"></a>
+<h1><a class="anchor" id="autotoc_md340"></a>
 使用示例</h1>
 <p>目前使用的gcc编译器都是使用的newlibc库，因此一般都要加上**libc_stub**组件。如果采用其他C库如musl库，则不需要添加。</p>
 <p>使用示例参考**example/libc_stub_example.c**，</p>
 <p>以运行helloworld_demo为例，添加运行组件的具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md328"></a>
+<h2><a class="anchor" id="autotoc_md341"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>libc_stub组件的package.yaml中添加example </p>
@@ -91,30 +91,30 @@ API说明</h1>
 <div class="line">  - &quot;example/*.c&quot;</div>
 </div><!-- fragment --><p> 由于libc_stub_example.c中要测试open文件系统相关接口，因此需要依赖文件系统，本示例以通用的ramfs为例，增加ramfs组件 </p><div class="fragment"><div class="line">depends:</div>
 <div class="line">  - ramfs：dev_aos</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md329"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md342"></a>
 添加libc_stub组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - libc_stub: dev_aos # helloworld_demo中引入libc_stub组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md330"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md343"></a>
 编译</h2>
 <div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
 <div class="line">aos make</div>
 </div><!-- fragment --><p> 其他单板修改haas100即可。</p>
-<h2><a class="anchor" id="autotoc_md331"></a>
+<h2><a class="anchor" id="autotoc_md344"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md332"></a>
+<h2><a class="anchor" id="autotoc_md345"></a>
 libc_stub示例测试</h2>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">libc_example</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md333"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md346"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
@@ -122,10 +122,10 @@ libc_stub示例测试</h2>
 <div class="fragment"><div class="line">libc_stub: malloc OK!</div>
 <div class="line">libc_stub: ramfs test success!</div>
 <div class="line">libc_stub comp test success!</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md334"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md347"></a>
 注意事项</h1>
 <p>该模块只对接内核启动相关必要的接口，其他posix标准接口请参考posix组件；文件系统相关请参考vfs组件。</p>
-<h1><a class="anchor" id="autotoc_md335"></a>
+<h1><a class="anchor" id="autotoc_md348"></a>
 FAQ</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

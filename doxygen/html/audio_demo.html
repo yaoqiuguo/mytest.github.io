@@ -56,7 +56,7 @@ $(document).ready(function(){initNavTree('audio_demo.html',''); initResizable();
 演示视频链接：待补充。<br  />
 </p>
 <p><a class="anchor" id="gjSAP"></a> </p>
-<h1><a class="anchor" id="autotoc_md858"></a>
+<h1><a class="anchor" id="autotoc_md845"></a>
 1、端测：硬件平台搭建</h1>
 <p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/100557/1607582005158-29af6c25-a59d-4150-b774-aaaf521d2e3e.png#align=left&amp;display=inline&amp;height=448&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=1468&amp;originWidth=2130&amp;size=1272796&amp;status=done&amp;style=none&amp;width=650" alt="image.png" class="inline"/><br  />
 图1: HaaS100智能语音播放器系统框架<br  />
@@ -69,20 +69,20 @@ $(document).ready(function(){initNavTree('audio_demo.html',''); initResizable();
 <li>**喇叭**：分为3线（VCC + GND + DIN）和4线（VCC + GND + DIN_P + DIN_N）两种经典的喇叭连接方式。上图中我们采用的是3线制喇叭，和HaaS100的连接参考上图。</li>
 </ul>
 <p><a class="anchor" id="fwStn"></a> </p>
-<h1><a class="anchor" id="autotoc_md859"></a>
+<h1><a class="anchor" id="autotoc_md846"></a>
 2、端测：软件开发</h1>
 <p><a class="anchor" id="LpMp4"></a> </p>
-<h2><a class="anchor" id="autotoc_md860"></a>
+<h2><a class="anchor" id="autotoc_md847"></a>
 2.1 AliOS Things开发环境准备</h2>
 <ul>
-<li>AliOS Things基础工具：aostools，建议参考《<a href="https://gitee.com/alios-things/dev_tool/blob/master/README.md">AliOS Things开发环境一键安装和使用说明</a>》快速搭建开发环境。</li>
+<li><a class="el" href="namespace_ali_o_s.html">AliOS</a> Things基础工具：aostools，建议参考《<a href="https://gitee.com/alios-things/dev_tool/blob/master/README.md">AliOS Things开发环境一键安装和使用说明</a>》快速搭建开发环境。</li>
 <li>VS code IDE：《<a href="https://help.aliyun.com/document_detail/184185.html?spm=a2c4g.11186623.6.641.1c691581aewxMd">使用VS code IDE开发</a>》</li>
 <li>HaaS100代码获取、编译、烧录：《<a href="https://help.aliyun.com/document_detail/184184.html?spm=a2c4g.11186623.6.640.7d096528tL9p5P">HaaS100快速开始</a>》 <div class="fragment"><div class="line">例如：git命令行从gitee下载源码的方法如下</div>
 <div class="line">git clone https://gitee.com/alios-things/AliOS-Things.git -b dev_3.1.0_haas</div>
 </div><!-- fragment --></li>
 </ul>
 <p><a class="anchor" id="e8gzv"></a> </p>
-<h2><a class="anchor" id="autotoc_md861"></a>
+<h2><a class="anchor" id="autotoc_md848"></a>
 2.2 源码介绍</h2>
 <p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/100557/1608627094820-a70d233b-eb4d-4508-b742-933ecc98194a.png#align=left&amp;display=inline&amp;height=301&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=682&amp;originWidth=902&amp;size=233480&amp;status=done&amp;style=none&amp;width=398" alt="image.png" class="inline"/><br  />
 图2: 云端钉一体智能语音播放器软件框架<br  />
@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('audio_demo.html',''); initResizable();
 <li>麦克风/喇叭硬件：HaaS100上已经集成了模拟麦和Speaker的硬件驱动。</li>
 </ul>
 <p><a class="anchor" id="f1rSa"></a> </p>
-<h2><a class="anchor" id="autotoc_md862"></a>
+<h2><a class="anchor" id="autotoc_md849"></a>
 2.3 代码编译、固件烧录</h2>
 <p>编译audio_demo的命令如下 </p><div class="fragment"><div class="line"># 下载音频解码器</div>
 <div class="line">cd ./components/uvoice/codec/opensource/pvaac</div>
@@ -109,12 +109,12 @@ $(document).ready(function(){initNavTree('audio_demo.html',''); initResizable();
 </div><!-- fragment --><p> 编译成功之后请参考《<a href="https://help.aliyun.com/document_detail/184184.html?spm=a2c4g.11186623.6.640.7d096528tL9p5P">HaaS100快速开始</a>》文章将固件更新到HaaS100板子上。最新的版本支持Windows, Mac下刷机。<br  />
 </p>
 <p><a class="anchor" id="SMzxm"></a> </p>
-<h1><a class="anchor" id="autotoc_md863"></a>
+<h1><a class="anchor" id="autotoc_md850"></a>
 3、本地语音播放器调试</h1>
 <p>基于HaaS100开发的智能音乐播放器支持离线和在线两种调试模式。离线调试模式支持从本地文件系统中播放音频，无需给HaaS100配网，可用于快速验证HaaS100的录音、播放的基本功能是否正常。在线调试模式要求连接阿里云IoT平台，优点是支持云端调试和手机小程序调试能力，且支持TTS语音合成功能。<br  />
 </p>
 <p><a class="anchor" id="fCn7h"></a> </p>
-<h2><a class="anchor" id="autotoc_md864"></a>
+<h2><a class="anchor" id="autotoc_md851"></a>
 3.1 离线音频播放器调试</h2>
 <p>因为离线音频播放调试需要先在本地文件系统的/data分区中打包音频文件，目前支持.wav和.mp3等常见的音频格式。打包音频文件到/data分区方法如下， </p><div class="fragment"><div class="line"># 拷贝音频文件到hardware/chip/haas1000/prebuild/data</div>
 <div class="line">cp ./test.mp3 hardware/chip/haas1000/prebuild/data</div>
@@ -144,24 +144,24 @@ $(document).ready(function(){initNavTree('audio_demo.html',''); initResizable();
 <div class="line"># 设置当前播放音量为90 (0~100)</div>
 <div class="line">sound_setvol 90</div>
 </div><!-- fragment --><p><a class="anchor" id="6c7n7"></a> </p>
-<h2><a class="anchor" id="autotoc_md865"></a>
+<h2><a class="anchor" id="autotoc_md852"></a>
 3.2 在线音频播放器调试</h2>
 <p>当上述离线音频播放测试通过之后，证明HaaS100的录音、播放器的硬件和软件环境都是OK的了，接下来就可以尝试连接阿里云IoT平台进行在线音频播放器调试。<br  />
 </p>
 <p><a class="anchor" id="qm8oV"></a> </p>
-<h3><a class="anchor" id="autotoc_md866"></a>
+<h3><a class="anchor" id="autotoc_md853"></a>
 3.2.1 WI-FI 配网</h3>
 <p>HaaS100支持两种WIFI配网方法，分别描述如下，<br  />
 </p>
 <p><a class="anchor" id="3zsJY"></a> </p>
-<h4><a class="anchor" id="autotoc_md867"></a>
+<h4><a class="anchor" id="autotoc_md854"></a>
 3.2.1.1 修改源码配网</h4>
 <p>在HaaS100的源码中配置Wi-Fi配网信息，配置好后烧录新固件，HaaS100在开机后会自动连接您配置SSID和Password连接路由器（请务必确认Wi-Fi天线是正常连接的）。首次使用建议使用linkkit_demo例程，直接在application/examples/linkkit_demo/app_entry.c添加下图红框中的代码，并修改为正在使用的SSID和Password。<br  />
 <img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/100557/1613814427018-12e7b54c-4138-4b1f-8b04-55c4b596cbf6.png#align=left&amp;display=inline&amp;height=283&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=692&amp;originWidth=1456&amp;size=1004780&amp;status=done&amp;style=none&amp;width=596" alt="image.png" class="inline"/><br  />
 图8: 源码中修改配网信息<br  />
 </p>
 <p><a class="anchor" id="UbTZq"></a> </p>
-<h4><a class="anchor" id="autotoc_md868"></a>
+<h4><a class="anchor" id="autotoc_md855"></a>
 3.2.1.2 串口CLI命令行配网</h4>
 <div class="fragment"><div class="line"># 串口输入配网命令</div>
 <div class="line">netmgr -t wifi -c {ssid} {password}</div>
@@ -177,14 +177,14 @@ $(document).ready(function(){initNavTree('audio_demo.html',''); initResizable();
 <li>串口终端：&gt;&gt; aos_mac WIFI XX:XX:XX:XX:XX:XX，更新WIFI MAC地址。</li>
 </ul>
 <p><a class="anchor" id="TR1OS"></a> </p>
-<h3><a class="anchor" id="autotoc_md869"></a>
+<h3><a class="anchor" id="autotoc_md856"></a>
 3.2.2 播放在线音乐</h3>
 <p>当HaaS100配网成功且可以访问外网之后，可以尝试在串口CLI中使用“play”命令播放在线音乐了， </p><div class="fragment"><div class="line"># 播放在线音乐url, 例如</div>
 <div class="line">play https://test-music-url.com</div>
 <div class="line"> </div>
 <div class="line"># 其中上面的测试音频url是无效的，因为涉及到潜在的音乐版权问题，需要开发者自己提供可以播放的音乐url。</div>
 </div><!-- fragment --><p><a class="anchor" id="GQhpF"></a> </p>
-<h3><a class="anchor" id="autotoc_md870"></a>
+<h3><a class="anchor" id="autotoc_md857"></a>
 3.2.3 TTS语音合成</h3>
 <p>在我们的uvoice组件中集成了阿里巴巴的“<a href="https://nls-portal.console.aliyun.com/overview">智能语音交互</a>”的部分功能，例如免费试用版的“语音合成”功能，需要商用的用户可以付费开通商用版。<br  />
 用户需要登陆“<a href="https://nls-portal.console.aliyun.com/overview">智能语音交互</a>”主页，并根据引导创建一个包含“语音合成”功能的项目。项目创建完成后，项目主页中会生成该项目的“Appkey”, 总览主页中可以获取到“AccessToken”两个重要信息。<br  />
@@ -201,22 +201,22 @@ $(document).ready(function(){initNavTree('audio_demo.html',''); initResizable();
 配置好AppKey和AccessToken之后，参考2.3章节重新编译audio_demo并烧录固件，按以下步骤可以本地测试TTS语音合成功能。 </p><div class="fragment"><div class="line"># TTS合成，生成的语音保存在/data/tts.mp3文件中</div>
 <div class="line">tts &quot;今天上海天气晴转多云、气温26摄氏度&quot; /data/tts.mp3</div>
 </div><!-- fragment --><p><a class="anchor" id="tMLX1"></a> </p>
-<h1><a class="anchor" id="autotoc_md871"></a>
+<h1><a class="anchor" id="autotoc_md858"></a>
 4、云端钉一体语音播放器调试</h1>
 <p><a class="anchor" id="0Gr6W"></a> </p>
-<h2><a class="anchor" id="autotoc_md872"></a>
+<h2><a class="anchor" id="autotoc_md859"></a>
 4.1 阿里云IoT平台配置</h2>
 <p>阿里云物联网平台创建产品、设备的详细过程可以参考文章《<a href="https://blog.csdn.net/HaaSTech/article/details/111190159">阿里云物联网平台快速入门实践</a>》。<br  />
 </p>
 <p><a class="anchor" id="JwrI6"></a> </p>
-<h3><a class="anchor" id="autotoc_md873"></a>
+<h3><a class="anchor" id="autotoc_md860"></a>
 4.1.1 创建智能语音播放器产品</h3>
 <p>“云端钉一体的智能语音播放器”物模型设计可以参考：“智能语音播放器物模型”（待发布）。在开发者创建自己产品时，可以选择导入我们提供的“智能语音播放器物模型”来生成一个临时产品，从而快速的验证云端钉一体的智能语音播放器方案，请参考下图步骤。<br  />
 <img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/100557/1608628568375-ac7ce5c4-7859-4519-8c81-7948ba53a45b.png#align=left&amp;display=inline&amp;height=360&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=720&amp;originWidth=1916&amp;size=224391&amp;status=done&amp;style=none&amp;width=958" alt="image.png" class="inline"/><br  />
 图10: 创建产品时快速导入物模型（待发布）<br  />
 </p>
 <p><a class="anchor" id="6NcBY"></a> </p>
-<h3><a class="anchor" id="autotoc_md874"></a>
+<h3><a class="anchor" id="autotoc_md861"></a>
 4.1.2 修改HaaS100四元组信息</h3>
 <p>在文件application/example/audio_demo/linkkit_example_solo.c中包含了HaaS100设备和阿里云物联网平台链接的关键密钥信息（四元组）。<br  />
 <img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/100557/1608616687119-9ca9af17-471a-4730-b0fd-3bde50072382.png#align=left&amp;display=inline&amp;height=209&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=242&amp;originWidth=707&amp;size=148257&amp;status=done&amp;style=none&amp;width=611" alt="image.png" class="inline"/><br  />
@@ -235,15 +235,15 @@ $(document).ready(function(){initNavTree('audio_demo.html',''); initResizable();
 **备注**：修改完四元组信息之后，别忘记参考2.3章节重新编译、烧录HaaS100固件。<br  />
 </p>
 <p><a class="anchor" id="37aMt"></a> </p>
-<h2><a class="anchor" id="autotoc_md875"></a>
+<h2><a class="anchor" id="autotoc_md862"></a>
 4.2 钉钉小程序设计</h2>
 <p><a class="anchor" id="zgszY"></a> </p>
-<h3><a class="anchor" id="autotoc_md876"></a>
+<h3><a class="anchor" id="autotoc_md863"></a>
 4.2.1 快速开始</h3>
 <p>文章《<a href="https://blog.csdn.net/HaaSTech/article/details/110850634">30分钟上手HaaS小程序开发</a>》, 文中介绍了小程序开发工具IDE、HaaS钉钉小程序示例代码获取、钉钉小程序申请、小程序真机调试等基础内容。开发者可以根据这篇文章快速上手一个自己的小程序应用开发。<br  />
 </p>
 <p><a class="anchor" id="XeDzj"></a> </p>
-<h3><a class="anchor" id="autotoc_md877"></a>
+<h3><a class="anchor" id="autotoc_md864"></a>
 4.2.2 小程序：HaaS语音播放器</h3>
 <p>下载的“HaaS钉钉小程序示例代码”中包含了“HaaS智能语音播放器”示例源码。HaaS语音播放器中创建了2个page，分别是HaasAudioPlayer和playList。</p>
 <ul>
@@ -251,7 +251,7 @@ $(document).ready(function(){initNavTree('audio_demo.html',''); initResizable();
 <li>playList页面：自动从./mock/data.json中导入用户与设置好的播放列表信息。</li>
 </ul>
 <p><a class="anchor" id="9YvwS"></a> </p>
-<h3><a class="anchor" id="autotoc_md878"></a>
+<h3><a class="anchor" id="autotoc_md865"></a>
 4.2.3 小程序账号信息修改</h3>
 <p>要成功使用HaaS智能语音播放器小程序，开发者需要正确输入用户的账号信息，包括</p>
 <ul>
@@ -267,7 +267,7 @@ $(document).ready(function(){initNavTree('audio_demo.html',''); initResizable();
 图11: 访问阿里云物联网平台某个HaaS设备的密钥信息<br  />
 </p>
 <p><a class="anchor" id="W2kY7"></a> </p>
-<h3><a class="anchor" id="autotoc_md879"></a>
+<h3><a class="anchor" id="autotoc_md866"></a>
 4.2.4 修改播放列表</h3>
 <p>开发者可以自己修改歌曲播放列表，配置文件位于./mock/data.json。每首歌曲信息包含:</p>
 <ul>
@@ -279,7 +279,7 @@ $(document).ready(function(){initNavTree('audio_demo.html',''); initResizable();
 <li>url: 歌曲链接，可以是本地文件系统中的歌曲文件，例如fs:/data/6.mp3，也可以是浏览器可以直接播放的网络歌曲链接。</li>
 </ul>
 <p><a class="anchor" id="xGVXl"></a> </p>
-<h1><a class="anchor" id="autotoc_md880"></a>
+<h1><a class="anchor" id="autotoc_md867"></a>
 5、总结</h1>
 <p>本文提供了“本地”和“云端钉一体”两种调试语音播放器的方式，本地的方式可以快速验证硬件和端测软件的基础功能是否OK，云端钉一体的方式让用户在任何一款手机、平板设备上都可以通过支付宝或者钉钉小程序远程控制HaaS100音乐播放器，更具有可玩性。祝您体验HaaS云端钉一体智能语音播放器方案愉快。 </p>
 </div></div><!-- contents -->

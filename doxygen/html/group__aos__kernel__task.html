@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
         </tr>
       </table>
 </div><div class="memdoc">
-<p>AOS任务私有数据对象具柄类型 </p>
+<p>AOS任务私有数据对象句柄类型 </p>
 
 <p class="definition">在文件 <a class="el" href="kernel_8h_source.html">kernel.h</a> 第 <a class="el" href="kernel_8h_source.html#l00158">158</a> 行定义.</p>
 
@@ -159,7 +159,7 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
         </tr>
       </table>
 </div><div class="memdoc">
-<p>AOS任务对象具柄类型 </p>
+<p>AOS任务对象句柄类型 </p>
 
 <p class="definition">在文件 <a class="el" href="kernel_8h_source.html">kernel.h</a> 第 <a class="el" href="kernel_8h_source.html#l00098">98</a> 行定义.</p>
 
@@ -229,13 +229,13 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 </div><div class="memdoc">
 <p>创建任务，该接口为创建任务分配TCB（任务控制块）并且根据指定的执行体、任务名称、栈大小来初始化对应成员. 该接口任务栈是由内核分配的。</p>
 <dl class="section user"><dt>使用约束</dt><dd>该接口不能在中断上下文中调用</dd></dl>
-<dl class="section user"><dt>错误处理</dt><dd>如果任务执行体入口函数为NULL，或任务名为NULL，或任务具柄为NULL，则返回错误码EINVAL <br  />
- 如果栈大小为零，则返回错误 <br  />
- 如果任务优先级超过配置上限或等于IDLE任务优先级，则返回错误码EINVAL <br  />
+<dl class="section user"><dt>错误处理</dt><dd>如果任务执行体入口函数为NULL，或任务名为NULL，或任务具柄为NULL，则返回错误码-EINVAL <br  />
+如果栈大小为零，则返回错误 <br  />
+如果任务优先级超过配置上限或等于IDLE任务优先级，则返回错误码-EINVAL <br  />
  </dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">task</td><td>任务对象具柄. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">task</td><td>任务对象句柄. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>任务名称.若任务名称为空，则使用默认任务名“default_name”。 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">fn</td><td>任务执行体入口函数。 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">arg</td><td>任务执行体入口函数的参数。 </td></tr>
@@ -252,8 +252,8 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>创建任务成功 </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>输入非法参数导致失败 </td></tr>
-    <tr><td class="paramname">ENOMEM</td><td>内存不足导致失败 </td></tr>
+    <tr><td class="paramname">-EINVAL</td><td>输入非法参数导致失败 </td></tr>
+    <tr><td class="paramname">-ENOMEM</td><td>内存不足导致失败 </td></tr>
     <tr><td class="paramname">-1</td><td>其他原因导致的失败 </td></tr>
   </table>
   </dd>
@@ -278,12 +278,12 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 </div><div class="memdoc">
 <p>删除任务，该接口删除一个任务并回收任务资源，不允许删除IDLE任务。</p>
 <dl class="section user"><dt>使用约束</dt><dd>该接口不能在中断上下文中调用</dd></dl>
-<dl class="section user"><dt>错误处理</dt><dd>如果任务具柄为NULL，则返回错误码EINVAL<br  />
- 如果删除的任务为IDLE，则返回错误码EPERM <br  />
+<dl class="section user"><dt>错误处理</dt><dd>如果任务具柄为NULL，则返回错误码-EINVAL<br  />
+ 如果删除的任务为IDLE，则返回错误码-EPERM <br  />
  </dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">task</td><td>任务对象具柄.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">task</td><td>任务对象句柄.</td></tr>
   </table>
   </dd>
 </dl>
@@ -291,8 +291,8 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>恢复任务成功 </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>输入非法参数导致失败 </td></tr>
-    <tr><td class="paramname">EPERM</td><td>尝试删除IDLE任务导致失败 </td></tr>
+    <tr><td class="paramname">-EINVAL</td><td>输入非法参数导致失败 </td></tr>
+    <tr><td class="paramname">-EPERM</td><td>尝试删除IDLE任务导致失败 </td></tr>
     <tr><td class="paramname">-1</td><td>其他原因导致的失败 </td></tr>
   </table>
   </dd>
@@ -440,13 +440,13 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 </div><div class="memdoc">
 <p>获取任务名称，该接口将指定任务的任务名称拷贝到用户缓冲区。</p>
 <dl class="section user"><dt>使用约束</dt><dd>该接口不能在中断上下文中调用</dd></dl>
-<dl class="section user"><dt>错误处理</dt><dd>如果任务具柄为NULL，则返回错误码EINVAL<br  />
-如果用户缓冲区地址参数为NULL，则返回错误码EINVAL<br  />
-如果用户缓冲区大小为0，则返回错误码EINVAL<br  />
+<dl class="section user"><dt>错误处理</dt><dd>如果任务具柄为NULL，则返回错误码-EINVAL<br  />
+如果用户缓冲区地址参数为NULL，则返回错误码-EINVAL<br  />
+如果用户缓冲区大小为0，则返回错误码-EINVAL<br  />
  </dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">task</td><td>任务对象具柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">task</td><td>任务对象句柄 </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>输出任务名的用户缓冲区地址 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">buf_size</td><td>输出任务名的用户缓冲区大小 </td></tr>
   </table>
@@ -456,7 +456,7 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>恢复任务成功 </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>输入非法参数导致失败 </td></tr>
+    <tr><td class="paramname">-EINVAL</td><td>输入非法参数导致失败 </td></tr>
     <tr><td class="paramname">-1</td><td>其他原因导致的失败 </td></tr>
   </table>
   </dd>
@@ -597,11 +597,11 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 </div><div class="memdoc">
 <p>恢复任务，该接口将挂起任务恢复，取消暂时不执行状态。</p>
 <dl class="section user"><dt>使用约束</dt><dd>该接口不能在中断上下文中调用</dd></dl>
-<dl class="section user"><dt>错误处理</dt><dd>如果任务具柄为NULL，则返回错误码EINVAL<br  />
+<dl class="section user"><dt>错误处理</dt><dd>如果任务具柄为NULL，则返回错误码-EINVAL<br  />
  </dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">task</td><td>任务对象具柄.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">task</td><td>任务对象句柄.</td></tr>
   </table>
   </dd>
 </dl>
@@ -609,7 +609,7 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>恢复任务成功 </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>输入非法参数导致失败 </td></tr>
+    <tr><td class="paramname">-EINVAL</td><td>输入非法参数导致失败 </td></tr>
     <tr><td class="paramname">-1</td><td>其他原因导致的失败 </td></tr>
   </table>
   </dd>
@@ -632,7 +632,7 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
         </tr>
       </table>
 </div><div class="memdoc">
-<p>获取当前任务的任务对象具柄。</p>
+<p>获取当前任务的任务对象句柄。</p>
 <dl class="section user"><dt>使用约束</dt><dd>无。</dd></dl>
 <dl class="section user"><dt>错误处理</dt><dd>无。</dd></dl>
 <dl class="params"><dt>参数</dt><dd>
@@ -700,12 +700,12 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 <p>挂起任务，该接口将已创建的任务挂起，暂时不执行，挂起的对象既可以是任务自身也可以是其他任务，<br  />
 但不允许挂起IDLE任务。</p>
 <dl class="section user"><dt>使用约束</dt><dd>该接口不能在中断上下文中调用</dd></dl>
-<dl class="section user"><dt>错误处理</dt><dd>如果任务具柄为NULL，则返回错误码EINVAL<br  />
-如果挂起任务为IDLE，则返回错误码EPERM <br  />
+<dl class="section user"><dt>错误处理</dt><dd>如果任务具柄为NULL，则返回错误码-EINVAL<br  />
+如果挂起任务为IDLE，则返回错误码-EPERM <br  />
  </dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">task</td><td>任务对象具柄.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">task</td><td>任务对象句柄.</td></tr>
   </table>
   </dd>
 </dl>
@@ -713,8 +713,8 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>挂起任务成功 </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>输入非法参数导致失败 </td></tr>
-    <tr><td class="paramname">EPERM</td><td>尝试挂起IDLE任务导致失败 </td></tr>
+    <tr><td class="paramname">-EINVAL</td><td>输入非法参数导致失败 </td></tr>
+    <tr><td class="paramname">-EPERM</td><td>尝试挂起IDLE任务导致失败 </td></tr>
     <tr><td class="paramname">-1</td><td>其他原因导致的失败 </td></tr>
   </table>
   </dd>
@@ -739,7 +739,7 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 </div><div class="memdoc">
 <p>当前任务让出CPU资源，该接口将当前任务唤出，放入就绪队列对尾，暂时放弃CPU的使用权。</p>
 <dl class="section user"><dt>使用约束</dt><dd>该接口不能在中断上下文中调用</dd></dl>
-<dl class="section user"><dt>错误处理</dt><dd>如果任务具柄为NULL，则返回错误码EINVAL<br  />
+<dl class="section user"><dt>错误处理</dt><dd>如果任务具柄为NULL，则返回错误码-EINVAL<br  />
  </dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -751,7 +751,7 @@ $(document).ready(function(){initNavTree('group__aos__kernel__task.html',''); in
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>恢复任务成功 </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>输入非法参数导致失败 </td></tr>
+    <tr><td class="paramname">-EINVAL</td><td>输入非法参数导致失败 </td></tr>
     <tr><td class="paramname">-1</td><td>其他原因导致的失败 </td></tr>
   </table>
   </dd>

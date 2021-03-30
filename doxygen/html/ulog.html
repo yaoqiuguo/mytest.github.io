@@ -43,7 +43,7 @@ $(document).ready(function(){initNavTree('ulog.html',''); initResizable(); });
 <div class="title">ulog </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md682"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md669"></a>
 概述</h1>
 <p>ulog是AliOS Things的日志模块，同时支持经典同步机制和异步日志机制，异步机制使其他逻辑任务保持正常工作，基于简短的日志格式和syslog协议格式，日志内容可以通过不同方式输出（uart udp vfs uagent）， 此外，文件系统中的日志文件可以通过http上传至云端。 组件支持以下功能：</p><ul>
 <li>通过串口输出日志</li>
@@ -51,12 +51,12 @@ $(document).ready(function(){initNavTree('ulog.html',''); initResizable(); });
 <li>通过文件系统输出日志</li>
 <li>通过uagent输出日志到云端</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md683"></a>
+<h2><a class="anchor" id="autotoc_md670"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md684"></a>
+<h2><a class="anchor" id="autotoc_md671"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">ulog</div>
 <div class="line">├── README.md #ulog说明文档</div>
@@ -79,7 +79,7 @@ $(document).ready(function(){initNavTree('ulog.html',''); initResizable(); });
 <div class="line">│   ├── ulog_session_file.c #ulog 日志到文件系统</div>
 <div class="line">│   ├── ulog_session_udp.c  #ulog 日志通过UDP发出</div>
 <div class="line">│   └── ulog_utility.c      #ulog 通用功能</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md685"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md672"></a>
 依赖组件</h2>
 <ul>
 <li>vfs</li>
@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('ulog.html',''); initResizable(); });
 <li>linksdk</li>
 <li>fatfs</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md686"></a>
+<h1><a class="anchor" id="autotoc_md673"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
 <p>开启异步打印: 默认0, 如需修改，在yaml中修改ULOG_CONFIG_ASYNC配置 </p>
@@ -100,13 +100,13 @@ $(document).ready(function(){initNavTree('ulog.html',''); initResizable(); });
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  ULOG_CONFIG_POP_CLOUD: 0</div>
 <div class="line">  ULOG_CONFIG_STOP_FILTER_CLOUD: 5</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md687"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md674"></a>
 API说明</h1>
-<p>LOG LOGF LOGE LOGW LOGI LOGD aos_get_ulog_list ulog_man <a class="el" href="ulog.html">ulog</a></p>
-<h1><a class="anchor" id="autotoc_md688"></a>
+<p><a class="el" href="group__aos__ulog.html#ga3577749fb48d57a158b8ac1a0b3ab57e">LOG</a> <a class="el" href="group__aos__ulog.html#ga88b11e6262113fbd4cf403f9daa0ba86">LOGF</a> <a class="el" href="group__aos__ulog.html#ga003e24d8e56582a5466eb3fd2d689307">LOGE</a> <a class="el" href="group__aos__ulog.html#ga6a297278242e1a9237a9818d14d6c3c8">LOGW</a> <a class="el" href="group__aos__ulog.html#gae8f100a73967d2ea62691afabbbfba92">LOGI</a> <a class="el" href="group__aos__ulog.html#gac8083d8831aced1183f24d2778829c86">LOGD</a> <a class="el" href="group__aos__ulog.html#ga4e8922820bd4c37b0b8ae5d92427bc58">aos_get_ulog_list</a> <a class="el" href="group__aos__ulog.html#gae569ebc100786c9d7067edb29eefebd0">ulog_man</a> <a class="el" href="ulog.html">ulog</a></p>
+<h1><a class="anchor" id="autotoc_md675"></a>
 使用示例</h1>
 <p>示例代码参考example/ulog_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md689"></a>
+<h2><a class="anchor" id="autotoc_md676"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>a2sa组件的package.yaml中添加example示例代码 </p>
@@ -121,27 +121,27 @@ API说明</h1>
 <div class="line">  - src/ulog_session_udp.c? &lt;ULOG_CONFIG_POP_UDP&gt;</div>
 <div class="line">  - src/ulog_utility.c</div>
 <div class="line">  - example/ulog_example.c #add example code</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md690"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md677"></a>
 app中添加ulog组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - ulog: master # helloworld_demo中引入ulog组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md691"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md678"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md692"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md679"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md693"></a>
+<h2><a class="anchor" id="autotoc_md680"></a>
 ulog示例测试</h2>
-<h3><a class="anchor" id="autotoc_md694"></a>
+<h3><a class="anchor" id="autotoc_md681"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ulog_example_test</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md695"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md682"></a>
 FAQ</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

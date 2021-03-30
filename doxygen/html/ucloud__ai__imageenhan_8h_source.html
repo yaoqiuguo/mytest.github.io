@@ -1,0 +1,73 @@
+<!-- HTML header for doxygen 1.8.7-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>物联网操作系统AliOS Things 3.3: /Users/yaoqiuguo/server/alios_3_3/components/ucloud_ai/include/ucloud_ai_imageenhan.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygenextra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="topbanner"><a href="https://github.com/Tencent/rapidjson" title="RapidJSON GitHub"><i class="githublogo"></i></a></div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('ucloud__ai__imageenhan_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">ucloud_ai_imageenhan.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ucloud__ai__imageenhan_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2020-2023 Alibaba Group Holding Limited</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _UCLOUD_AI_IMAGEENHAN_H_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _UCLOUD_AI_IMAGEENHAN_H_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ucloud__ai__common_8h.html">ucloud_ai_common.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="group__ucloud__ai__aos__api.html#ga3e1c2f75b41c81963e8e09bac3995ca2">   21</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__ucloud__ai__aos__api.html#ga3e1c2f75b41c81963e8e09bac3995ca2">ucloud_ai_imageenhan_erase_person</a>(<span class="keywordtype">char</span> *image_path, <span class="keywordtype">char</span> *user_mask_path, <a class="code" href="ucloud__ai__common_8h.html#a623381e060b4b0bffe10bc378aa75f91">ucloud_ai_cb_t</a> cb);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="group__ucloud__ai__aos__api.html#ga593a0b7b0faf61f1968008eea859ecca">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__ucloud__ai__aos__api.html#ga593a0b7b0faf61f1968008eea859ecca">ucloud_ai_imageenhan_extend_image_style</a>(<span class="keywordtype">char</span> *major_path, <span class="keywordtype">char</span> *style_path, <a class="code" href="ucloud__ai__common_8h.html#a623381e060b4b0bffe10bc378aa75f91">ucloud_ai_cb_t</a> cb);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// _UCLOUD_AI_IMAGEENHAN_H_</span></div>
+<div class="ttc" id="agroup__ucloud__ai__aos__api_html_ga3e1c2f75b41c81963e8e09bac3995ca2"><div class="ttname"><a href="group__ucloud__ai__aos__api.html#ga3e1c2f75b41c81963e8e09bac3995ca2">ucloud_ai_imageenhan_erase_person</a></div><div class="ttdeci">void ucloud_ai_imageenhan_erase_person(char *image_path, char *user_mask_path, ucloud_ai_cb_t cb)</div></div>
+<div class="ttc" id="agroup__ucloud__ai__aos__api_html_ga593a0b7b0faf61f1968008eea859ecca"><div class="ttname"><a href="group__ucloud__ai__aos__api.html#ga593a0b7b0faf61f1968008eea859ecca">ucloud_ai_imageenhan_extend_image_style</a></div><div class="ttdeci">void ucloud_ai_imageenhan_extend_image_style(char *major_path, char *style_path, ucloud_ai_cb_t cb)</div></div>
+<div class="ttc" id="aucloud__ai__common_8h_html"><div class="ttname"><a href="ucloud__ai__common_8h.html">ucloud_ai_common.h</a></div></div>
+<div class="ttc" id="aucloud__ai__common_8h_html_a623381e060b4b0bffe10bc378aa75f91"><div class="ttname"><a href="ucloud__ai__common_8h.html#a623381e060b4b0bffe10bc378aa75f91">ucloud_ai_cb_t</a></div><div class="ttdeci">AIModelCBFunc ucloud_ai_cb_t</div><div class="ttdef"><b>Definition:</b> <a href="ucloud__ai__common_8h_source.html#l00010">ucloud_ai_common.h:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.7-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_733cfc88327a410fd9d99c7d08ee6789.html">ucloud_ai</a></li><li class="navelem"><a class="el" href="dir_ac2c7a6cd4bd7aa4b2ef2e780f2e23e9.html">include</a></li><li class="navelem"><a class="el" href="ucloud__ai__imageenhan_8h.html">ucloud_ai_imageenhan.h</a></li>
+  </ul>
+</div>
+</body>
+</html>

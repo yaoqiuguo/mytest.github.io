@@ -43,7 +43,7 @@ $(document).ready(function(){initNavTree('linksdk.html',''); initResizable(); })
 <div class="title">linksdk </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md336"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md349"></a>
 概述</h1>
 <p>Link SDK由阿里云提供给设备厂商，由设备厂商集成到设备上后通过该SDK将设备安全地接入到阿里云IoT物联网平台，继而让设备可以被阿里云IoT物联网平台进行管理。设备需要支持TCP/IP协议栈才能集成Link SDK，Zigbee、433、KNX这样的非IP设备需要通过网关设备接入到阿里云IoT物联网平台，网关设备需要集成Link SDK。</p>
 <p>说明:Link SDK以前名称为Link Kit SDK，现更名为Link SDK。</p>
@@ -63,12 +63,12 @@ $(document).ready(function(){initNavTree('linksdk.html',''); initResizable(); })
 <li>OTA(在AliOS THings场景建议使用OS自带OTA)</li>
 </ul>
 <p>更多详情，请参考阿里云Link SDK<a href="https://help.aliyun.com/document_detail/163755.html?spm=a2c4g.11186623.6.558.38557748p9kUy6">说明文档</a> 。</p>
-<h1><a class="anchor" id="autotoc_md337"></a>
+<h1><a class="anchor" id="autotoc_md350"></a>
 版权信息</h1>
 <blockquote class="doxtable">
 <p>Apache 2.0 License </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md338"></a>
+<h1><a class="anchor" id="autotoc_md351"></a>
 目录结构</h1>
 <div class="fragment"><div class="line">.</div>
 <div class="line">├── ChangeLog.md           #变更日志</div>
@@ -104,45 +104,45 @@ $(document).ready(function(){initNavTree('linksdk.html',''); initResizable(); })
 <div class="line">│   ├── aiot_port          #AliOS Things适配层</div>
 <div class="line">│   └── README.md</div>
 <div class="line">└── README.md</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md339"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md352"></a>
 依赖组件</h1>
 <ul>
 <li>osal_aos</li>
 <li>cjson</li>
 <li>mbedtls</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md340"></a>
+<h1><a class="anchor" id="autotoc_md353"></a>
 常用配置</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md341"></a>
+<h1><a class="anchor" id="autotoc_md354"></a>
 API说明</h1>
 <p><a class="el" href="linksdk.html">linksdk</a> API 请参考阿里云Link SDK<a href="https://help.aliyun.com/document_detail/163764.html?spm=a2c4g.11186623.6.568.3d00316fqDi9YJ">编程手册</a>。</p>
-<h1><a class="anchor" id="autotoc_md342"></a>
+<h1><a class="anchor" id="autotoc_md355"></a>
 使用示例</h1>
 <p>solutions中提供了以下demo供用户选择使用：</p><ul>
 <li>link_sdk_demo 物模型单品用例</li>
 <li>link_sdk_gateway_demo 物模型网关代理子设备上云用例</li>
 </ul>
 <p>本文以link_solo_demo为例讲解快速接入。</p>
-<h2><a class="anchor" id="autotoc_md343"></a>
+<h2><a class="anchor" id="autotoc_md356"></a>
 调试设备创建</h2>
 <p>在https://iot.console.aliyun.com/创建自己的产品及设备。 详细参考<a href="https://help.aliyun.com/document_detail/163756.html?spm=a2c4g.11186623.6.559.af29557f0aLXPC#title-hod-eo1-u22">本文</a>。</p>
-<h2><a class="anchor" id="autotoc_md344"></a>
+<h2><a class="anchor" id="autotoc_md357"></a>
 修改设备端三元组</h2>
 <p>将上一步骤中创建的设备三元组信息填写到solutions/link_solo_demo/data_model_basic_demo.c的313-316行处： </p><div class="fragment"><div class="line">/* TODO: 替换为自己设备的三元组 */</div>
 <div class="line">char *product_key       = &quot;a18wPzZJzNG&quot;;</div>
 <div class="line">char *device_name       = &quot;data_model_basic_demo&quot;;</div>
 <div class="line">char *device_secret     = &quot;uwMTmVAMnGGHaAkqmeDY6cHxxBMTP3TD&quot;;</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md345"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md358"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/link_solo_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make link_solo_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md346"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md359"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md347"></a>
+<h2><a class="anchor" id="autotoc_md360"></a>
 示例测试</h2>
 <blockquote class="doxtable">
 <p>CLI命令行输入联网命令： </p>
@@ -150,7 +150,7 @@ API说明</h1>
 <div class="fragment"><div class="line">netmgr -t wifi -c ssid password</div>
 </div><!-- fragment --><p> 注意：ssid和password需要替换成自己的路由的ssid及密码</p>
 <p>连上路由器后会自动连接到阿里云物联网平台。</p>
-<h2><a class="anchor" id="autotoc_md348"></a>
+<h2><a class="anchor" id="autotoc_md361"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
@@ -158,7 +158,7 @@ API说明</h1>
 <div class="fragment"><div class="line">success to establish mbedtls connection, fd = 3(cost 0 bytes in total, max used 0 bytes)</div>
 <div class="line">[104.526][LK-0313] MQTT connect success in 1908 ms</div>
 <div class="line">AIOT_MQTTEVT_CONNECT</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md349"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md362"></a>
 FAQ</h1>
 <p>常见问题可参考阿里云官网设备接入<a href="https://help.aliyun.com/document_detail/96598.html?spm=a2c4g.11186623.6.554.2042557fWpe2Ps">常见问题</a>。 </p>
 </div></div><!-- contents -->
