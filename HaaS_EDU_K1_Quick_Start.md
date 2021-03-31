@@ -53,16 +53,19 @@ aos-tools主要于编译AliOS-Things代码和镜像烧录。alios-studio安装�
 创建工程会自动拉取AliOS-Things的核心组件代码，并配置好相关编译选项。
 ## 2.1 开始创建
 点击左下角的"+"图标开始创建工程
-
 <div align=left>
-    <img src="https://img.alicdn.com/imgextra/i2/O1CN01xmJW0b25z1BVejS40_!!6000000007596-2-tps-796-275.png" style="zoom:50%;" />
+    <img src="https://img.alicdn.com/imgextra/i4/O1CN01R4EtQc22seq5Re3AK_!!6000000007176-0-tps-1584-548.jpg" style="zoom:50%;" />
 </div>
 
-
-点击左下角的"+"图标开始创建工程
+然后设置内测参数，包括ssh域账号和代码分支，域账号为申请的账号名，分支名为dev_aos
 
 <div align=left>
-    <img src="https://img.alicdn.com/imgextra/i2/O1CN01QIJaDh1Qj59taTq8f_!!6000000002011-2-tps-2774-2044.png" style="zoom:50%;" />
+    <img src="https://img.alicdn.com/imgextra/i4/O1CN01F8njiO1NFMbwXSDIA_!!6000000001540-0-tps-2396-242.jpg" style="zoom:50%;" />
+</div>
+
+<div align=left>
+    <img src="https://img.alicdn.com/imgextra/i4/O1CN01F8njiO1NFMbwXSDIA_!!6000000001540-0-tps-2396-242.jpg)
+![](https://img.alicdn.com/imgextra/i2/O1CN01b9GkmN1kc1MrJLjWK_!!6000000004703-0-tps-2390-348.jpg" />
 </div>
 
 
@@ -81,7 +84,7 @@ aos-tools主要于编译AliOS-Things代码和镜像烧录。alios-studio安装�
 选择解决方案，之后用鼠标选择开发板（本文以 Haaseduk1为例）
 
 <div align=left>
-    <img src="https://img.alicdn.com/imgextra/i4/O1CN01ILyVQd1ERQUv5PF9f_!!6000000000348-2-tps-2604-382.png" style="zoom:50%;" />
+    <img src="https://img.alicdn.com/imgextra/i1/O1CN01sdxB6p1x2NY6rgrsd_!!6000000006385-0-tps-3216-1158.jpg" style="zoom:50%;" />
 </div>
 
 
@@ -90,7 +93,7 @@ aos-tools主要于编译AliOS-Things代码和镜像烧录。alios-studio安装�
 输入项目名称
 
 <div align=left>
-    <img src="https://img.alicdn.com/imgextra/i2/O1CN017mitRH1d8WY8wiNGo_!!6000000003691-2-tps-1067-188.png"" style="zoom:50%;" />
+    <img src="https://img.alicdn.com/imgextra/i4/O1CN01x5uEE01uz3RWI7i0U_!!6000000006107-0-tps-1586-384.jpg" style="zoom:50%;" />
 </div>
 
 工作区路径即为源码路径(此目录名称必须为连续的英文字符)
@@ -109,12 +112,16 @@ aos-tools主要于编译AliOS-Things代码和镜像烧录。alios-studio安装�
 
 # 3. 开发及调试
 ## 3.1 编译工程
-点击状态栏的编译图标，稍等片刻（由于需要安装编译器，第一次编译耗时稍久）就能看到编译成功的提示。
+点击状态栏的编译图标。
 
 <div align=left>
-    <img src="https://img.alicdn.com/imgextra/i3/O1CN01g2HtG71ag0euXCTEd_!!6000000003358-2-tps-2814-882.png" style="zoom:50%;" />
+    <img src="https://img.alicdn.com/imgextra/i2/O1CN01E8SQ7j1tNfUwboVIO_!!6000000005890-0-tps-3278-1694.jpg" style="zoom:50%;" />
 </div>
 
+稍等片刻（由于需要安装编译器，第一次编译耗时稍久）就能看到编译成功的提示。
+<div align=left>
+    <img src="https://img.alicdn.com/imgextra/i4/O1CN01MMVCEz1q1HHv8ULME_!!6000000005435-0-tps-2280-1158.jpg" style="zoom:50%;" />
+</div>
 
 ## 3.2 烧录镜像
 - 如下图，用数据线把HaaS开发板和电脑连起来。
