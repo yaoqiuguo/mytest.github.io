@@ -14,6 +14,9 @@
 
 Visual Studio Code(下称VS Code) 是一款广泛使用的IDE工具。请根据环境下载对应版本并安装。
 
+注意点: Windows 系统下请以管理员身份 运行VS Code，避免因为python权限问题导致创建失败
+
+![image.png](https://img.alicdn.com/imgextra/i1/O1CN012VNoAn1UV7Y3T6t4o_!!6000000002522-2-tps-412-649.png)
 
 
 ## 1.2 配置VS Code
