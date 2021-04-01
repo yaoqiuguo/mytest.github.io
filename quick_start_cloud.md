@@ -9,18 +9,38 @@
 请先点击登陆[物联网平台](https://www.aliyun.com/product/iot/iot_instc_public_cn)（未注册阿里云账户的用户，请先完成账户注册），按下面步骤一步步去打造。
 ## 2.2 创建产品
 注册登入后，前往管理控制台，如下图所示。
-![image.png](https://img.alicdn.com/imgextra/i4/O1CN01BN7DMd1IibotD78f6_!!6000000000927-2-tps-1308-490.png#align=left&display=inline&height=170&margin=%5Bobject%20Object%5D&name=image.png&originHeight=490&originWidth=1308&size=276942&status=done&style=none&width=453#align=left&display=inline&height=490&margin=%5Bobject%20Object%5D&originHeight=490&originWidth=1308&status=done&style=none&width=1308)
+
+<div align=left>
+    <img src="hhttps://img.alicdn.com/imgextra/i4/O1CN01BN7DMd1IibotD78f6_!!6000000000927-2-tps-1308-490.png#align=left&display=inline&height=170&margin=%5Bobject%20Object%5D&name=image.png&originHeight=490&originWidth=1308&size=276942&status=done&style=none&width=453#align=left&display=inline&height=490&margin=%5Bobject%20Object%5D&originHeight=490&originWidth=1308&status=done&style=none&width=1308" width="60%" />
+</div>
+
 1、点击公共实例，进行产品创建
-![image.png](https://img.alicdn.com/imgextra/i2/O1CN01AjRz9z294Sk2dsMXe_!!6000000008014-2-tps-1328-792.png#align=left&display=inline&height=302&margin=%5Bobject%20Object%5D&name=image.png&originHeight=792&originWidth=1328&size=142752&status=done&style=none&width=506#align=left&display=inline&height=792&margin=%5Bobject%20Object%5D&originHeight=792&originWidth=1328&status=done&style=none&width=1328)
+
+<div align=left>
+    <img src="https://img.alicdn.com/imgextra/i2/O1CN01AjRz9z294Sk2dsMXe_!!6000000008014-2-tps-1328-792.png#align=left&display=inline&height=302&margin=%5Bobject%20Object%5D&name=image.png&originHeight=792&originWidth=1328&size=142752&status=done&style=none&width=506#align=left&display=inline&height=792&margin=%5Bobject%20Object%5D&originHeight=792&originWidth=1328&status=done&style=none&width=1328" width="60%" />
+</div>
+
 2、创建灯演示产品
 点击创建产品，见下图所示，这里创建了一个名称“HaaS_Light”产品。选择标准品类/智能生活/电工照明/灯。
 当然你也可以选择其他品类活自定义品类，但是需要注意保持设备端处理的数据类型与云端定义一致。
-![](https://img.alicdn.com/imgextra/i4/O1CN01JHVICa1e8M1CVLuQ4_!!6000000003826-2-tps-1522-1768.png#align=left&display=inline&height=1768&margin=%5Bobject%20Object%5D&originHeight=1768&originWidth=1522&size=0&status=done&style=none&width=1522)
+
+<div align=left>
+    <img src="https://img.alicdn.com/imgextra/i4/O1CN01JHVICa1e8M1CVLuQ4_!!6000000003826-2-tps-1522-1768.png#align=left&display=inline&height=1768&margin=%5Bobject%20Object%5D&originHeight=1768&originWidth=1522&size=0&status=done&style=none&width=1522" width="60%" />
+</div>
+
 ## 2.3 创建设备
 在设备列表中增加对应产品的设备。本例程中创建了一个light01的设备：
-![](https://img.alicdn.com/imgextra/i2/O1CN01QipCrM1YxklnN7iIu_!!6000000003126-2-tps-2280-1276.png#align=left&display=inline&height=1276&margin=%5Bobject%20Object%5D&originHeight=1276&originWidth=2280&size=0&status=done&style=none&width=2280)
+
+<div align=left>
+    <img src="https://img.alicdn.com/imgextra/i2/O1CN01QipCrM1YxklnN7iIu_!!6000000003126-2-tps-2280-1276.png#align=left&display=inline&height=1276&margin=%5Bobject%20Object%5D&originHeight=1276&originWidth=2280&size=0&status=done&style=none&width=2280" width="60%" />
+</div>
+
 查看设备信息,并复制三元组用于设备端编程
-![](https://img.alicdn.com/imgextra/i3/O1CN01uCSOTD29nLYXjgsRm_!!6000000008112-2-tps-2512-1204.png#align=left&display=inline&height=1204&margin=%5Bobject%20Object%5D&originHeight=1204&originWidth=2512&size=0&status=done&style=none&width=2512)
+
+<div align=left>
+    <img src="https://img.alicdn.com/imgextra/i3/O1CN01uCSOTD29nLYXjgsRm_!!6000000008112-2-tps-2512-1204.png#align=left&display=inline&height=1204&margin=%5Bobject%20Object%5D&originHeight=1204&originWidth=2512&size=0&status=done&style=none&width=2512" width="60%" />
+</div>
+
 创建后的设备三元组信息需要同步到设备端的开发代码段中，在3章节会介绍。待设备端开发结束，就可以在物联网平台中参看设备在线状态。
 
 # 3. 设备端开发
@@ -72,8 +92,10 @@ AIOT_MQTTEVT_CONNECT
 ## 4.3 云端状态
 在云端设备管理中，可以看到刚创建的设备状态由未激活变成了在线，说明此设备已成功上云。
 
+<div align=left>
+    <img src="https://img.alicdn.com/imgextra/i4/O1CN01DLB3xo1sPfbw46myX_!!6000000005759-2-tps-1234-482.png#align=left&display=inline&height=482&margin=%5Bobject%20Object%5D&originHeight=482&originWidth=1234&size=0&status=done&style=none&width=1234" width="60%" />
+</div>
 
-![](https://img.alicdn.com/imgextra/i4/O1CN01DLB3xo1sPfbw46myX_!!6000000005759-2-tps-1234-482.png#align=left&display=inline&height=482&margin=%5Bobject%20Object%5D&originHeight=482&originWidth=1234&size=0&status=done&style=none&width=1234)
 # 5. 扩展开发
 上面案例我们仅通过修改三元组就让设备连接到了物联网平台。如何对设备进行功能开发，将数据从云端推送到设备或从设备推送到云端呢？
 ## 5.1 云端下发属性
@@ -126,9 +148,16 @@ static void demo_dm_recv_handler(void *dm_handle, const aiot_dm_recv_t *recv, vo
 
 ### 5.1.3 云端下发
 在设备界面点击在线调试功能
-![](https://img.alicdn.com/imgextra/i4/O1CN01cy33YO1Hnoi7A8vWV_!!6000000000803-2-tps-2176-536.png#align=left&display=inline&height=536&margin=%5Bobject%20Object%5D&originHeight=536&originWidth=2176&size=0&status=done&style=none&width=2176)
+
+<div align=left>
+    <img src="https://img.alicdn.com/imgextra/i4/O1CN01cy33YO1Hnoi7A8vWV_!!6000000000803-2-tps-2176-536.png#align=left&display=inline&height=536&margin=%5Bobject%20Object%5D&originHeight=536&originWidth=2176&size=0&status=done&style=none&width=2176" width="60%" />
+</div>
+
 跳转到在线调试页面，进行属性调试
-![](https://img.alicdn.com/imgextra/i2/O1CN01CWWBIG1dzC5unT1R7_!!6000000003806-2-tps-1934-976.png#align=left&display=inline&height=976&margin=%5Bobject%20Object%5D&originHeight=976&originWidth=1934&size=0&status=done&style=none&width=1934)
+
+<div align=left>
+    <img src="https://img.alicdn.com/imgextra/i2/O1CN01CWWBIG1dzC5unT1R7_!!6000000003806-2-tps-1934-976.png#align=left&display=inline&height=976&margin=%5Bobject%20Object%5D&originHeight=976&originWidth=1934&size=0&status=done&style=none&width=1934" width="60%" />
+</div>
 
 
 ### 5.1.3 查看设备端日志
@@ -165,7 +194,10 @@ msg_id = 1590651031, params = {"LightSwitch":1}
 ```
 ### 5.2.2 云端查看上报数据
 在监控运维-日志服务中，可以查看设备上报的所有数据。
-![](https://img.alicdn.com/imgextra/i3/O1CN013cTaUO1q5rFSx3SZC_!!6000000005445-2-tps-2648-1526.png#align=left&display=inline&height=1526&margin=%5Bobject%20Object%5D&originHeight=1526&originWidth=2648&size=0&status=done&style=none&width=2648)
+
+<div align=left>
+    <img src="https://img.alicdn.com/imgextra/i3/O1CN013cTaUO1q5rFSx3SZC_!!6000000005445-2-tps-2648-1526.png#align=left&display=inline&height=1526&margin=%5Bobject%20Object%5D&originHeight=1526&originWidth=2648&size=0&status=done&style=none&width=2648" width="60%" />
+</div>
 
 另外。物模型中主要数据类型处了属性外，还有服务和事件。具体详情请参考[官网文档](https://help.aliyun.com/document_detail/73727.html?spm=5176.11065259.1996646101.searchclickresult.40dd49deCWMVaW)。
 # 6. 总结

@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: uvoice_recorder_t结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structuvoice__recorder__t.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle">
+<div class="title">uvoice_recorder_t结构体 参考<div class="ingroups"><a class="el" href="group__uvoice__recoder__api.html">Uvoice_recoder_api</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>录音接口  
+ <a href="structuvoice__recorder__t.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:abd6a4b62dc78f3304baa5887599f5275"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#abd6a4b62dc78f3304baa5887599f5275">set_sink</a> )(<a class="el" href="group__uvoice__types__api.html#ga64b5cf52df381470edae8cbdd800fe43">media_format_t</a> format, int rate, int channels, int bits, int frames, int bitrate, char *sink)</td></tr>
+<tr class="memdesc:abd6a4b62dc78f3304baa5887599f5275"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置录音参数  <a href="structuvoice__recorder__t.html#abd6a4b62dc78f3304baa5887599f5275">更多...</a><br /></td></tr>
+<tr class="separator:abd6a4b62dc78f3304baa5887599f5275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047e54f142d8af114b4d71d151a9e80c"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#a047e54f142d8af114b4d71d151a9e80c">clr_sink</a> )(void)</td></tr>
+<tr class="separator:a047e54f142d8af114b4d71d151a9e80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8117c8db28bc209cf45ae3a49eeceef6"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#a8117c8db28bc209cf45ae3a49eeceef6">start</a> )(void)</td></tr>
+<tr class="separator:a8117c8db28bc209cf45ae3a49eeceef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f9e9a17f1976c5a428b3d22366fc38"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#a01f9e9a17f1976c5a428b3d22366fc38">stop</a> )(void)</td></tr>
+<tr class="separator:a01f9e9a17f1976c5a428b3d22366fc38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ef232a77c37be3f1f6e28b58c84b05"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#a24ef232a77c37be3f1f6e28b58c84b05">get_stream</a> )(uint8_t *buffer, int nbytes)</td></tr>
+<tr class="separator:a24ef232a77c37be3f1f6e28b58c84b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83fe77d86ecd645beb55edc7e22da92"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#ad83fe77d86ecd645beb55edc7e22da92">get_state</a> )(<a class="el" href="group__uvoice__recoder__api.html#ga0fa633f2dea0ec7108b5d126071e1ed8">recorder_state_t</a> *state)</td></tr>
+<tr class="separator:ad83fe77d86ecd645beb55edc7e22da92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9172e9e8711d6ac4e9c72dfffff6062"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#ae9172e9e8711d6ac4e9c72dfffff6062">get_position</a> )(int *position)</td></tr>
+<tr class="separator:ae9172e9e8711d6ac4e9c72dfffff6062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac29f6eded202ee96958940d20c4f122c"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#ac29f6eded202ee96958940d20c4f122c">ns_enable</a> )(int enable)</td></tr>
+<tr class="separator:ac29f6eded202ee96958940d20c4f122c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c3091a3fcd876e271a2bf0ac266c318"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#a8c3091a3fcd876e271a2bf0ac266c318">ec_enable</a> )(int enable)</td></tr>
+<tr class="separator:a8c3091a3fcd876e271a2bf0ac266c318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5adf798bee56bcc7c6d08ea55799836"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#aa5adf798bee56bcc7c6d08ea55799836">agc_enable</a> )(int enable)</td></tr>
+<tr class="separator:aa5adf798bee56bcc7c6d08ea55799836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b76667e418e439f07e426d99140c0e"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#a69b76667e418e439f07e426d99140c0e">vad_enable</a> )(int enable)</td></tr>
+<tr class="separator:a69b76667e418e439f07e426d99140c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea4dbadf9b948379535eea3c9f2739b5"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#aea4dbadf9b948379535eea3c9f2739b5">format_support</a> )(<a class="el" href="group__uvoice__types__api.html#ga64b5cf52df381470edae8cbdd800fe43">media_format_t</a> format)</td></tr>
+<tr class="separator:aea4dbadf9b948379535eea3c9f2739b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b6505c37d4ff95854b8b00527e4d9fa"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html#a8b6505c37d4ff95854b8b00527e4d9fa">priv</a></td></tr>
+<tr class="separator:a8b6505c37d4ff95854b8b00527e4d9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>录音接口 </p>
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00023">23</a> 行定义.</p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
+<a id="aa5adf798bee56bcc7c6d08ea55799836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5adf798bee56bcc7c6d08ea55799836">&#9670;&nbsp;</a></span>agc_enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* agc_enable) (int enable)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00034">34</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a047e54f142d8af114b4d71d151a9e80c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047e54f142d8af114b4d71d151a9e80c">&#9670;&nbsp;</a></span>clr_sink</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* clr_sink) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8c3091a3fcd876e271a2bf0ac266c318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c3091a3fcd876e271a2bf0ac266c318">&#9670;&nbsp;</a></span>ec_enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* ec_enable) (int enable)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aea4dbadf9b948379535eea3c9f2739b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea4dbadf9b948379535eea3c9f2739b5">&#9670;&nbsp;</a></span>format_support</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* format_support) (<a class="el" href="group__uvoice__types__api.html#ga64b5cf52df381470edae8cbdd800fe43">media_format_t</a> format)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae9172e9e8711d6ac4e9c72dfffff6062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9172e9e8711d6ac4e9c72dfffff6062">&#9670;&nbsp;</a></span>get_position</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* get_position) (int *position)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad83fe77d86ecd645beb55edc7e22da92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad83fe77d86ecd645beb55edc7e22da92">&#9670;&nbsp;</a></span>get_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* get_state) (<a class="el" href="group__uvoice__recoder__api.html#ga0fa633f2dea0ec7108b5d126071e1ed8">recorder_state_t</a> *state)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00030">30</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a24ef232a77c37be3f1f6e28b58c84b05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24ef232a77c37be3f1f6e28b58c84b05">&#9670;&nbsp;</a></span>get_stream</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* get_stream) (uint8_t *buffer, int nbytes)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00029">29</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac29f6eded202ee96958940d20c4f122c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac29f6eded202ee96958940d20c4f122c">&#9670;&nbsp;</a></span>ns_enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* ns_enable) (int enable)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00032">32</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8b6505c37d4ff95854b8b00527e4d9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b6505c37d4ff95854b8b00527e4d9fa">&#9670;&nbsp;</a></span>priv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* priv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00037">37</a> 行定义.</p>
+
+</div>
+</div>
+<a id="abd6a4b62dc78f3304baa5887599f5275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd6a4b62dc78f3304baa5887599f5275">&#9670;&nbsp;</a></span>set_sink</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* set_sink) (<a class="el" href="group__uvoice__types__api.html#ga64b5cf52df381470edae8cbdd800fe43">media_format_t</a> format, int rate, int channels, int bits, int frames, int bitrate, char *sink)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置录音参数 </p>
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00025">25</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8117c8db28bc209cf45ae3a49eeceef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8117c8db28bc209cf45ae3a49eeceef6">&#9670;&nbsp;</a></span>start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* start) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a01f9e9a17f1976c5a428b3d22366fc38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f9e9a17f1976c5a428b3d22366fc38">&#9670;&nbsp;</a></span>stop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* stop) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a69b76667e418e439f07e426d99140c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b76667e418e439f07e426d99140c0e">&#9670;&nbsp;</a></span>vad_enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* vad_enable) (int enable)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a> 第 <a class="el" href="uvoice__recorder_8h_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>/Users/yaoqiuguo/Documents/work/AOS3.3/aos/AliOS-Things/components/uvoice/include/<a class="el" href="uvoice__recorder_8h_source.html">uvoice_recorder.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structuvoice__recorder__t.html">uvoice_recorder_t</a></li>
+    <li class="footer">生成于 2021年 四月 2日 星期五 00:57:45 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

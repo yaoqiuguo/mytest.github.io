@@ -1,0 +1,28 @@
+var modules =
+[
+    [ "A2sa_mixer_api", "group__a2sa__mixer__api.html", "group__a2sa__mixer__api" ],
+    [ "A2sa_pcm_api", "group__a2sa__pcm__api.html", "group__a2sa__pcm__api" ],
+    [ "Aiagent_aos_api", "group__aiagent__aos__api.html", "group__aiagent__aos__api" ],
+    [ "Cli_aos_api", "group__cli__aos__api.html", "group__cli__aos__api" ],
+    [ "Debug_aos_api", "group__debug__aos__api.html", "group__debug__aos__api" ],
+    [ "http", "group__aos__httpclient__api.html", "group__aos__httpclient__api" ],
+    [ "Init_aos_api", "group__init__aos__api.html", "group__init__aos__api" ],
+    [ "Kv_aos_api", "group__kv__aos__api.html", "group__kv__aos__api" ],
+    [ "Netmgr_api", "group__netmgr__api.html", "group__netmgr__api" ],
+    [ "Sntp_api", "group__sntp__api.html", "group__sntp__api" ],
+    [ "Ramfs_aos_api", "group__ramfs__aos__api.html", "group__ramfs__aos__api" ],
+    [ "Ucloud_ai_aos_api", "group__ucloud__ai__aos__api.html", "group__ucloud__ai__aos__api" ],
+    [ "Ucamera_aos_api", "group__ucamera__aos__api.html", "group__ucamera__aos__api" ],
+    [ "Udisplay_cli_aos_api", "group__udisplay__cli__aos__api.html", "group__udisplay__cli__aos__api" ],
+    [ "Udisplay_aos_api", "group__udisplay__aos__api.html", "group__udisplay__aos__api" ],
+    [ "Uvoice_event_api", "group__uvoice__event__api.html", "group__uvoice__event__api" ],
+    [ "Uvoice_init_api", "group__uvoice__init__api.html", "group__uvoice__init__api" ],
+    [ "Uvoice_mlist_api", "group__uvoice__mlist__api.html", "group__uvoice__mlist__api" ],
+    [ "Uvoice_player_api", "group__uvoice__player__api.html", "group__uvoice__player__api" ],
+    [ "Uvoice_recoder_api", "group__uvoice__recoder__api.html", "group__uvoice__recoder__api" ],
+    [ "Uvoice_test_api", "group__uvoice__test__api.html", "group__uvoice__test__api" ],
+    [ "Uvoice_types_api", "group__uvoice__types__api.html", "group__uvoice__types__api" ],
+    [ "mbmaster", "group__aos__mbmaster.html", "group__aos__mbmaster" ],
+    [ "内核", "group__aos__kernel.html", "group__aos__kernel" ],
+    [ "ulog", "group__aos__ulog.html", "group__aos__ulog" ]
+];

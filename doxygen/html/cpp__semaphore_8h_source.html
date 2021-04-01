@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: /Users/yaoqiuguo/Documents/work/AOS3.3/aos/AliOS-Things/components/cplusplus/include/cpp_semaphore.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('cpp__semaphore_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">cpp_semaphore.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cpp__semaphore_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2015-2017 Alibaba Group Holding Limited</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;k_api.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ali_o_s.html">AliOS</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="cpp__semaphore_8h.html#a9f8e9fb87ac363a141f4293e5aad9204">   13</a></span>&#160;<span class="preprocessor">#define Semaphore_WAIT_FOREVER 0xFFFFFFFFU</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_semaphore.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ali_o_s_1_1_semaphore.html">Semaphore</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_semaphore.html#a60f7772bb3e462ceb8674c9f81a05c6d">   24</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_semaphore.html#a60f7772bb3e462ceb8674c9f81a05c6d">create</a>(<span class="keyword">const</span> name_t *name, sem_count_t count);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_semaphore.html#a874e2e9b877ce7296328be1a49ef806d">   31</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_semaphore.html#a874e2e9b877ce7296328be1a49ef806d">destroy</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_semaphore.html#a3084a845d16848481619d46ceee5a39a">   38</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_semaphore.html#a3084a845d16848481619d46ceee5a39a">wait</a>(uint32_t millisec);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_semaphore.html#a2ca4953e2b95c6e0fe12116b030161c2">   45</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_semaphore.html#a2ca4953e2b95c6e0fe12116b030161c2">release</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_semaphore.html#a8f318b295dc4527b167b0312446a3232">   52</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_semaphore.html#a8f318b295dc4527b167b0312446a3232">release_all</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_semaphore.html#a2f6e0ebd62918da225684b91c60104b3">   59</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_semaphore.html#a2f6e0ebd62918da225684b91c60104b3">count_set</a>(sem_count_t count);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_semaphore.html#a3732384c4cd2a90fd6410c6066b18597">   66</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_semaphore.html#a3732384c4cd2a90fd6410c6066b18597">count_get</a>(sem_count_t *count);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_semaphore.html#abd412a7c178e88a28767f34ab7bf03cf">   73</a></span>&#160;        ksem_t *<span class="keyword">self</span>(void);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        ksem_t _sem_def;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    };</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="ttc" id="aclass_ali_o_s_1_1_semaphore_html"><div class="ttname"><a href="class_ali_o_s_1_1_semaphore.html">AliOS::Semaphore</a></div><div class="ttdef"><b>Definition:</b> <a href="cpp__semaphore_8h_source.html#l00015">cpp_semaphore.h:16</a></div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_semaphore_html_a2ca4953e2b95c6e0fe12116b030161c2"><div class="ttname"><a href="class_ali_o_s_1_1_semaphore.html#a2ca4953e2b95c6e0fe12116b030161c2">AliOS::Semaphore::release</a></div><div class="ttdeci">kstat_t release(void)</div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_semaphore_html_a2f6e0ebd62918da225684b91c60104b3"><div class="ttname"><a href="class_ali_o_s_1_1_semaphore.html#a2f6e0ebd62918da225684b91c60104b3">AliOS::Semaphore::count_set</a></div><div class="ttdeci">kstat_t count_set(sem_count_t count)</div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_semaphore_html_a3084a845d16848481619d46ceee5a39a"><div class="ttname"><a href="class_ali_o_s_1_1_semaphore.html#a3084a845d16848481619d46ceee5a39a">AliOS::Semaphore::wait</a></div><div class="ttdeci">kstat_t wait(uint32_t millisec)</div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_semaphore_html_a3732384c4cd2a90fd6410c6066b18597"><div class="ttname"><a href="class_ali_o_s_1_1_semaphore.html#a3732384c4cd2a90fd6410c6066b18597">AliOS::Semaphore::count_get</a></div><div class="ttdeci">kstat_t count_get(sem_count_t *count)</div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_semaphore_html_a60f7772bb3e462ceb8674c9f81a05c6d"><div class="ttname"><a href="class_ali_o_s_1_1_semaphore.html#a60f7772bb3e462ceb8674c9f81a05c6d">AliOS::Semaphore::create</a></div><div class="ttdeci">kstat_t create(const name_t *name, sem_count_t count)</div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_semaphore_html_a874e2e9b877ce7296328be1a49ef806d"><div class="ttname"><a href="class_ali_o_s_1_1_semaphore.html#a874e2e9b877ce7296328be1a49ef806d">AliOS::Semaphore::destroy</a></div><div class="ttdeci">kstat_t destroy(void)</div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_semaphore_html_a8f318b295dc4527b167b0312446a3232"><div class="ttname"><a href="class_ali_o_s_1_1_semaphore.html#a8f318b295dc4527b167b0312446a3232">AliOS::Semaphore::release_all</a></div><div class="ttdeci">kstat_t release_all(void)</div></div>
+<div class="ttc" id="anamespace_ali_o_s_html"><div class="ttname"><a href="namespace_ali_o_s.html">AliOS</a></div><div class="ttdef"><b>Definition:</b> <a href="cpp__mutex_8h_source.html#l00011">cpp_mutex.h:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_48237cbbf86d7d3264612a1f31853aae.html">cplusplus</a></li><li class="navelem"><a class="el" href="dir_fab5ba3c885372aaf6d67e53287a28ca.html">include</a></li><li class="navelem"><a class="el" href="cpp__semaphore_8h.html">cpp_semaphore.h</a></li>
+    <li class="footer">生成于 2021年 四月 2日 星期五 00:03:55 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -23,46 +23,44 @@
    - package.yaml: AliOS Things 3.3版本采用的编译脚本。详细的.yaml语法信息可以参考《yaml语法说明》文章。
 
 
-@subpage a2sa
-@subpage ai_agent
-@subpage alicloud
-@subpage amp
-@subpage aostools
-@subpage ble_host
-@subpage ble_netconfig
-@subpage cjson
-@subpage cli
-@subpage cplusplus
-@subpage debug
-@subpage driver
-@subpage epoll
-@subpage fatfs
-@subpage freetype
-@subpage http
-@subpage init
-@subpage jsoncpp
-@subpage kv
-@subpage libc_stub
-@subpage linksdk
-@subpage littlefs
-@subpage lwip
-@subpage mbedtls
-@subpage modbus
-@subpage netmgr
-@subpage ota
-@subpage posix
-@subpage py_engine
-@subpage ramfs
-@subpage SDL2
-@subpage select
-@subpage sensor
-@subpage sntp
-@subpage trace
-@subpage uagent
-@subpage ucamera
-@subpage ucloud_ai
-@subpage udisplay
-@subpage ugraphics
-@subpage ulog
-@subpage uvoice
-@subpage vfs
+@subpage a2sa \n
+@subpage ai_agent \n
+@subpage alicloud \n
+@subpage ble_host \n
+@subpage ble_netconfig \n
+@subpage cjson \n
+@subpage cli \n
+@subpage cplusplus \n
+@subpage debug \n
+@subpage driver \n
+@subpage epoll \n
+@subpage fatfs \n
+@subpage freetype \n
+@subpage http \n
+@subpage init \n
+@subpage jsoncpp \n
+@subpage kv \n
+@subpage libc_stub \n
+@subpage linksdk \n
+@subpage littlefs \n
+@subpage lwip \n
+@subpage mbedtls \n
+@subpage modbus \n
+@subpage netmgr \n
+@subpage ota \n
+@subpage posix \n
+@subpage py_engine \n
+@subpage ramfs \n
+@subpage SDL2 \n
+@subpage select \n
+@subpage sensor \n
+@subpage sntp \n
+@subpage trace \n
+@subpage uagent \n
+@subpage ucamera \n
+@subpage ucloud_ai \n
+@subpage udisplay \n
+@subpage ugraphics \n
+@subpage ulog \n
+@subpage uvoice \n
+@subpage vfs \n

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: /Users/yaoqiuguo/Documents/work/AOS3.3/aos/AliOS-Things/components/cplusplus/include/cpp_workQueue.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('cpp__work_queue_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">cpp_workQueue.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cpp__work_queue_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2015-2017 Alibaba Group Holding Limited</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;k_api.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ali_o_s.html">AliOS</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_work_queue.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ali_o_s_1_1_work_queue.html">WorkQueue</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_work_queue.html#ace4ada02d540a57e8ae5ea92b5bcb3df">   25</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_work_queue.html#ace4ada02d540a57e8ae5ea92b5bcb3df">create</a>(<span class="keyword">const</span> name_t *name, uint8_t pri, cpu_stack_t *stack_buf,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                       <span class="keywordtype">size_t</span> stack_size);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_work_queue.html#a224c5ea0302407cba440b311be3e312e">   33</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_work_queue.html#a224c5ea0302407cba440b311be3e312e">destory</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_work_queue.html#a75067fdb512d090462053af5a3c09f50">   40</a></span>&#160;        kworkqueue_t *<span class="keyword">self</span>(void);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        kworkqueue_t _workqueue_def;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_work.html">   46</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ali_o_s_1_1_work.html">Work</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_work.html#a0e988d5346dad3aac5389c488bbff480">   56</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_work.html#a0e988d5346dad3aac5389c488bbff480">init</a>(work_handle_t handle, <span class="keywordtype">void</span> *arg, tick_t dly);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_work.html#a15361f710b76519206e6ef89cfe867f8">   63</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_work.html#a15361f710b76519206e6ef89cfe867f8">run</a>(kworkqueue_t *workqueue);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_work.html#a644001e0e92085c98f0e14a1c4675119">   70</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_work.html#a644001e0e92085c98f0e14a1c4675119">sched</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_work.html#a31e77f97aeee2811b7b5083702569e94">   77</a></span>&#160;        kstat_t <a class="code" href="class_ali_o_s_1_1_work.html#a31e77f97aeee2811b7b5083702569e94">cancel</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_ali_o_s_1_1_work.html#a581243f8a50d183aa93a9089171518a9">   84</a></span>&#160;        kwork_t *<span class="keyword">self</span>(void);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        kwork_t _work_def;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    };</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="ttc" id="aclass_ali_o_s_1_1_work_html"><div class="ttname"><a href="class_ali_o_s_1_1_work.html">AliOS::Work</a></div><div class="ttdef"><b>Definition:</b> <a href="cpp__work_queue_8h_source.html#l00046">cpp_workQueue.h:47</a></div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_work_html_a0e988d5346dad3aac5389c488bbff480"><div class="ttname"><a href="class_ali_o_s_1_1_work.html#a0e988d5346dad3aac5389c488bbff480">AliOS::Work::init</a></div><div class="ttdeci">kstat_t init(work_handle_t handle, void *arg, tick_t dly)</div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_work_html_a15361f710b76519206e6ef89cfe867f8"><div class="ttname"><a href="class_ali_o_s_1_1_work.html#a15361f710b76519206e6ef89cfe867f8">AliOS::Work::run</a></div><div class="ttdeci">kstat_t run(kworkqueue_t *workqueue)</div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_work_html_a31e77f97aeee2811b7b5083702569e94"><div class="ttname"><a href="class_ali_o_s_1_1_work.html#a31e77f97aeee2811b7b5083702569e94">AliOS::Work::cancel</a></div><div class="ttdeci">kstat_t cancel(void)</div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_work_html_a644001e0e92085c98f0e14a1c4675119"><div class="ttname"><a href="class_ali_o_s_1_1_work.html#a644001e0e92085c98f0e14a1c4675119">AliOS::Work::sched</a></div><div class="ttdeci">kstat_t sched(void)</div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_work_queue_html"><div class="ttname"><a href="class_ali_o_s_1_1_work_queue.html">AliOS::WorkQueue</a></div><div class="ttdef"><b>Definition:</b> <a href="cpp__work_queue_8h_source.html#l00013">cpp_workQueue.h:14</a></div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_work_queue_html_a224c5ea0302407cba440b311be3e312e"><div class="ttname"><a href="class_ali_o_s_1_1_work_queue.html#a224c5ea0302407cba440b311be3e312e">AliOS::WorkQueue::destory</a></div><div class="ttdeci">kstat_t destory(void)</div></div>
+<div class="ttc" id="aclass_ali_o_s_1_1_work_queue_html_ace4ada02d540a57e8ae5ea92b5bcb3df"><div class="ttname"><a href="class_ali_o_s_1_1_work_queue.html#ace4ada02d540a57e8ae5ea92b5bcb3df">AliOS::WorkQueue::create</a></div><div class="ttdeci">kstat_t create(const name_t *name, uint8_t pri, cpu_stack_t *stack_buf, size_t stack_size)</div></div>
+<div class="ttc" id="anamespace_ali_o_s_html"><div class="ttname"><a href="namespace_ali_o_s.html">AliOS</a></div><div class="ttdef"><b>Definition:</b> <a href="cpp__mutex_8h_source.html#l00011">cpp_mutex.h:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_48237cbbf86d7d3264612a1f31853aae.html">cplusplus</a></li><li class="navelem"><a class="el" href="dir_fab5ba3c885372aaf6d67e53287a28ca.html">include</a></li><li class="navelem"><a class="el" href="cpp__work_queue_8h.html">cpp_workQueue.h</a></li>
+    <li class="footer">生成于 2021年 四月 2日 星期五 00:03:55 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
