@@ -107,6 +107,7 @@ API说明</h1>
 <p>helloworld_demo组件的application_start中添加代码 </p>
 </blockquote>
 <div class="fragment"><div class="line">/*init network service*/</div>
+<div class="line">event_service_init(NULL);</div>
 <div class="line">netmgr_service_init(NULL);</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md202"></a>
 云端功能开通</h2>
@@ -125,11 +126,11 @@ API说明</h1>
 <div class="fragment"><div class="line">1. 创建Bucket时地域选择“上海”</div>
 <div class="line">2. 读写权限选择“公共读”</div>
 </div><!-- fragment --> <h2><a class="anchor" id="autotoc_md203"></a>
-aiconfig.h中配置OSS信息</h2>
-<div class="fragment"><div class="line">OSS_ACCESS_KEY &quot;&lt;Your-Access-Key&gt;&quot;</div>
-<div class="line">OSS_ACCESS_SECRET &quot;&lt;Your-Access-Secret&gt;&quot;</div>
-<div class="line">OSS_ENDPOINT &quot;oss-cn-shanghai.aliyuncs.com&quot;</div>
-<div class="line">OSS_BUCKET &quot;Your-OSS-Bucket&quot;</div>
+ucloud_ai/package.yaml中配置OSS信息</h2>
+<div class="fragment"><div class="line">OSS_ACCESS_KEY: &quot;Your-Access-Key&quot;</div>
+<div class="line">OSS_ACCESS_SECRET: &quot;Your-Access-Secret&quot;</div>
+<div class="line">OSS_ENDPOINT: &quot;Your-OSS-Endpoint&quot;</div>
+<div class="line">OSS_BUCKET: &quot;Your-OSS-Bucket&quot;</div>
 <div class="line"> </div>
 <div class="line">KEY以及SECRET获取链接: https://usercenter.console.aliyun.com/#/accesskey</div>
 <div class="line">ENDPOINT使用默认即可，BUCKET请使用你创建好的Bucket名称</div>
@@ -139,8 +140,9 @@ aiconfig.h中配置OSS信息</h2>
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
-<div class="line">  - ai_agent: dev_aos # helloworld_demo中引入ai_agent组件</div>
-<div class="line">  - netmgr: dev_aos # helloworld_demo中引入netmgr组件</div>
+<div class="line">  - ai_agent: dev_aos   # helloworld_demo中引入ai_agent组件</div>
+<div class="line">  - netmgr: dev_aos     # helloworld_demo中引入netmgr组件</div>
+<div class="line">  - littlefs: dev_aos   # helloworld_demo中引入littlefs组件</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md205"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/ucloud_ai_demo &amp;&amp; aos make</div>
@@ -154,122 +156,227 @@ aiconfig.h中配置OSS信息</h2>
 ucloud_ai示例测试</h2>
 <h3><a class="anchor" id="autotoc_md208"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 0  # 人脸比对</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 0  # 人脸比对</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Facebody comparing result:</div>
+<div class="line">confidence: 84.6</div>
+<div class="line">location at x: 159, y: 76, w: 143, h: 194</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md209"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 1  # 人物动漫化</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 1  # 人物动漫化</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Generate human anime style result:</div>
+<div class="line">url: http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/person-image-cartoonizer/4F10FBB8-19DC-476B-A51D-458CD180A24F_07f2_20210331-142711.jpg?Expires=1617202631&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=YCLva1stK27Cn657nMeYhgFt7h4%3D</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md210"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 2  # 表情识别</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 2  # 表情识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Recognize expression result:</div>
+<div class="line">type: anger, probability: 1.0</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md211"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 3  # 目标检测</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 3  # 目标检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Detect object result:</div>
+<div class="line">type: potted plant, Score: 0.4, x: 35, y: 274, w: 185, h: 443</div>
+<div class="line">Detect object result:</div>
+<div class="line">type: potted plant, Score: 0.5, x: 663, y: 121, w: 847, h: 457</div>
+<div class="line">Detect object result:</div>
+<div class="line">type: monitor, Score: 0.6, x: 250, y: 43, w: 670, h: 439</div>
+<div class="line">Detect object result:</div>
+<div class="line">type: keyboard, Score: 0.5, x: 239, y: 435, w: 489, h: 485</div>
+<div class="line">Detect object result:</div>
+<div class="line">type: keyboard, Score: 0.3, x: 241, y: 428, w: 639, h: 506</div>
+<div class="line">Detect object result:</div>
+<div class="line">type: mouse, Score: 0.2, x: 660, y: 479, w: 750, h: 528</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md212"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 4  # 主体检测</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 4  # 主体检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Detect main body result:</div>
+<div class="line">main body location x: 1, y: 31, w: 461, h: 528</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md213"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 5  # 通用分割</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 5  # 通用分割</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Segment common image result:</div>
+<div class="line">url: http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_humansegmenter/2021-3-31/invi_humansegmenter_016172056326493133388_avpTpm.jpg?Expires=1617207432&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=WREOAoBUIvpLSyygGxKPfi82HfI%3D</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md214"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 6  # 面部分割</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 6  # 面部分割</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Segment face result:</div>
+<div class="line">image url: http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_HeadSegmenter/2021-3-31/invi_HeadSegmenter_016172056422754285967296_yRhj6C.png?Expires=1617207442&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=wR7GUxqrrwRF9u3mCJ%2BNDhAPCzk%3D</div>
+<div class="line">location at x: 153, y: 66, w: 160, h: 209</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md215"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 7  # 身份证证明识别</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 7  # 身份证证明识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Recognize identity card face side result:</div>
+<div class="line">address: 江苏省南京市浦口区天天小区1栋11号</div>
+<div class="line">nationality: 汉</div>
+<div class="line">card location: x0: 1126563840, y0: 1126563840</div>
+<div class="line">card location: x1: 0, y1: 0</div>
+<div class="line">card location: x2: 0, y2: 0</div>
+<div class="line">card location: x3: 0, y3: 0</div>
+<div class="line">face location: x0: 1126563840, y0: 1126563840</div>
+<div class="line">face location: x1: 0, y1: 0</div>
+<div class="line">face location: x2: 0, y2: 0</div>
+<div class="line">face location: x3: 0, y3: 0</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md216"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 8  # 身份证反面识别</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 8  # 身份证反面识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Recognize identity card back side result:</div>
+<div class="line">start date: 20131010</div>
+<div class="line">issue: 杭州市公安局余杭分局</div>
+<div class="line">end date: 20231010</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md217"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 9  # 银行卡识别</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 9  # 银行卡识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">bankName: 中国工商银行</div>
+<div class="line">cardNumber: 6212262315007683105</div>
+<div class="line">validDate: 07/26</div>
+<div class="line">Recognize bank card result:</div>
+<div class="line">bank name: 中国工商银行</div>
+<div class="line">card number: 6212262315007683105</div>
+<div class="line">valid date: 07/26</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md218"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 10  # 文本识别</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 10  # 文本识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Recognize character result:</div>
+<div class="line">text: 《爆炸新闻》</div>
+<div class="line">probability: 1.0</div>
+<div class="line">text area: left: 141, top: 442, weight: 89, height: 20</div>
+<div class="line">Recognize character result:</div>
+<div class="line">text: 19</div>
+<div class="line">probability: 1.0</div>
+<div class="line">text area: left: 115, top: 173, weight: 100, height: 109</div>
+<div class="line">Recognize character result:</div>
+<div class="line">text: 豆瓣评分7.1</div>
+<div class="line">probability: 0.9</div>
+<div class="line">text area: left: 168, top: 447, weight: 98, height: 18</div>
+<div class="line">Recognize character result:</div>
+<div class="line">text: 2019||美国|加拿大|剧情|传记</div>
+<div class="line">probability: 0.5</div>
+<div class="line">text area: left: 181, top: 450, weight: 241, height: 17</div>
+<div class="line">Recognize character result:</div>
+<div class="line">text: 杰伊·罗奇 导演</div>
+<div class="line">probability: 0.9</div>
+<div class="line">text area: left: 216, top: 454, weight: 112, height: 18</div>
+<div class="line">Recognize character result:</div>
+<div class="line">text: 2021年2月星期五</div>
+<div class="line">probability: 1.0</div>
+<div class="line">text area: left: 231, top: 187, weight: 150, height: 18</div>
+<div class="line">Recognize character result:</div>
+<div class="line">text: 农历正月初八</div>
+<div class="line">probability: 1.0</div>
+<div class="line">text area: left: 261, top: 193, weight: 104, height: 18</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md219"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 11  # 垃圾分类</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 11  # 垃圾分类</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Recognize rubbish result:</div>
+<div class="line">rubbish: 塑料饮料瓶</div>
+<div class="line">rubbish score: 1.0</div>
+<div class="line">category: 可回收垃圾</div>
+<div class="line">category score: 1.0</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md220"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 12  # 水果检测</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 12  # 水果检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Recognize fruits result:</div>
+<div class="line">fruit name: 橙子</div>
+<div class="line">fruit score: 0.8</div>
+<div class="line">fruit location: x: 214, y: 44, w: 509, h: 438</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md221"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 13  # 图像人体擦除</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 13  # 图像人体擦除</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Erase person result:</div>
+<div class="line">url: http://algo-app-isr-lab-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/remove-person/2021-03-31_15%3A34%3A17.959810_person_org.jpg?Expires=1617206658&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=jFwwnSYOw2fXev1%2Fm5az4JBa%2B5Q%3D</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md222"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">aiagent -m 14  # 风格迁移</div>
+<div class="fragment"><div class="line">aiagent -e ucloud-ai -m 14  # 风格迁移</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
+<div class="fragment"><div class="line">Extend image style result:</div>
+<div class="line">out image url: http://viapi-cn-shanghai-dha-filter.oss-cn-shanghai.aliyuncs.com/upload/result_/2021-3-31/invi__016172056608421021961_1mdK2W.jpg?Expires=1617207460&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=3t8Q%2BwTAo6Lib9utaoMrWUJX6Iw%3D</div>
+<div class="line">aiagent comp test success!</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md223"></a>
 注意事项</h1>
 <p>NA</p>
 <h1><a class="anchor" id="autotoc_md224"></a>
 FAQ</h1>
-<p>NA </p>
+<p>NA</p>
+<p>如果遇到： </p><blockquote class="doxtable">
+<p>error code: InvalidAction.NotFound </p>
+</blockquote>
+<p>请确认Endpoint是否设置正确</p>
+<blockquote class="doxtable">
+<p>error code: InvalidApi.NotPurchase </p>
+</blockquote>
+<p>请确认是否在vision.aliyun.com开通相应功能</p>
+<blockquote class="doxtable">
+<p>tlefs_vfs.c:677:error: lfs_vfs_open /data/ucloud_ai_image/object.jpg failed, ret - -2 </p>
+</blockquote>
+<p>请确认是否有拷贝图片到hardware/chip/haas1000/prebuild/data/ucloud_ai_image目录。 如果有，可能是文件系统存储空间不够，此时请执行：</p><ol type="1">
+<li>在ucloud_ai/package.yaml中屏蔽prebuild_script: cp_resources.py；</li>
+<li>删除ucloud_ai_image中其他文件，仅保留测试case使用的图片文件；</li>
+<li>再重新编译烧录。 </li>
+</ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 2日 星期五 11:08:29 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 2日 星期五 23:34:46 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

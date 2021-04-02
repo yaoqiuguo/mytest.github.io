@@ -37,7 +37,7 @@ var component =
       [ "使用示例", "ai_agent.html#autotoc_md200", [
         [ "添加示例代码", "ai_agent.html#autotoc_md201", null ],
         [ "云端功能开通", "ai_agent.html#autotoc_md202", null ],
-        [ "aiconfig.h中配置OSS信息", "ai_agent.html#autotoc_md203", null ],
+        [ "ucloud_ai/package.yaml中配置OSS信息", "ai_agent.html#autotoc_md203", null ],
         [ "添加ai_agent组件", "ai_agent.html#autotoc_md204", null ],
         [ "编译", "ai_agent.html#autotoc_md205", null ],
         [ "烧录固件", "ai_agent.html#autotoc_md206", null ],
@@ -356,23 +356,23 @@ var component =
       [ "FAQ", "jsoncpp.html#autotoc_md462", null ]
     ] ],
     [ "kv", "kv.html", [
-      [ "概述", "kv.html#autotoc_md1214", [
-        [ "版权信息", "kv.html#autotoc_md1215", null ],
-        [ "目录结构", "kv.html#autotoc_md1216", null ],
-        [ "依赖组件", "kv.html#autotoc_md1217", null ]
+      [ "概述", "kv.html#autotoc_md1218", [
+        [ "版权信息", "kv.html#autotoc_md1219", null ],
+        [ "目录结构", "kv.html#autotoc_md1220", null ],
+        [ "依赖组件", "kv.html#autotoc_md1221", null ]
       ] ],
-      [ "常用配置", "kv.html#autotoc_md1218", null ],
-      [ "API说明", "kv.html#autotoc_md1219", null ],
-      [ "使用示例", "kv.html#autotoc_md1220", [
-        [ "添加示例代码", "kv.html#autotoc_md1221", null ],
-        [ "添加kv组件", "kv.html#autotoc_md1222", null ],
-        [ "编译", "kv.html#autotoc_md1223", null ],
-        [ "烧录固件", "kv.html#autotoc_md1224", null ],
-        [ "KV示例测试", "kv.html#autotoc_md1225", null ],
-        [ "关键日志", "kv.html#autotoc_md1226", null ]
+      [ "常用配置", "kv.html#autotoc_md1222", null ],
+      [ "API说明", "kv.html#autotoc_md1223", null ],
+      [ "使用示例", "kv.html#autotoc_md1224", [
+        [ "添加示例代码", "kv.html#autotoc_md1225", null ],
+        [ "添加kv组件", "kv.html#autotoc_md1226", null ],
+        [ "编译", "kv.html#autotoc_md1227", null ],
+        [ "烧录固件", "kv.html#autotoc_md1228", null ],
+        [ "KV示例测试", "kv.html#autotoc_md1229", null ],
+        [ "关键日志", "kv.html#autotoc_md1230", null ]
       ] ],
-      [ "注意事项", "kv.html#autotoc_md1227", null ],
-      [ "FAQ", "kv.html#autotoc_md1228", null ]
+      [ "注意事项", "kv.html#autotoc_md1231", null ],
+      [ "FAQ", "kv.html#autotoc_md1232", null ]
     ] ],
     [ "libc_stub", "libc_stub.html", [
       [ "概述", "libc_stub.html#autotoc_md463", [
@@ -485,21 +485,21 @@ var component =
       [ "FAQ", "mbedtls.html#autotoc_md551", null ]
     ] ],
     [ "modbus", "modbus.html", [
-      [ "概述", "modbus.html#autotoc_md1201", [
-        [ "版权信息", "modbus.html#autotoc_md1202", null ],
-        [ "目录结构", "modbus.html#autotoc_md1203", null ],
-        [ "依赖组件", "modbus.html#autotoc_md1204", null ]
+      [ "概述", "modbus.html#autotoc_md1205", [
+        [ "版权信息", "modbus.html#autotoc_md1206", null ],
+        [ "目录结构", "modbus.html#autotoc_md1207", null ],
+        [ "依赖组件", "modbus.html#autotoc_md1208", null ]
       ] ],
-      [ "常用配置", "modbus.html#autotoc_md1205", null ],
-      [ "API说明", "modbus.html#autotoc_md1206", null ],
-      [ "使用示例", "modbus.html#autotoc_md1207", [
-        [ "添加示例代码", "modbus.html#autotoc_md1208", null ],
-        [ "app中添加modbus组件", "modbus.html#autotoc_md1209", null ],
-        [ "编译", "modbus.html#autotoc_md1210", null ],
-        [ "烧录固件", "modbus.html#autotoc_md1211", null ],
-        [ "Modbus示例测试", "modbus.html#autotoc_md1212", null ]
+      [ "常用配置", "modbus.html#autotoc_md1209", null ],
+      [ "API说明", "modbus.html#autotoc_md1210", null ],
+      [ "使用示例", "modbus.html#autotoc_md1211", [
+        [ "添加示例代码", "modbus.html#autotoc_md1212", null ],
+        [ "app中添加modbus组件", "modbus.html#autotoc_md1213", null ],
+        [ "编译", "modbus.html#autotoc_md1214", null ],
+        [ "烧录固件", "modbus.html#autotoc_md1215", null ],
+        [ "Modbus示例测试", "modbus.html#autotoc_md1216", null ]
       ] ],
-      [ "FAQ", "modbus.html#autotoc_md1213", null ]
+      [ "FAQ", "modbus.html#autotoc_md1217", null ]
     ] ],
     [ "netmgr", "netmgr.html", [
       [ "概述", "netmgr.html#autotoc_md552", [
@@ -746,12 +746,12 @@ var component =
       [ "使用示例", "ucloud_ai.html#autotoc_md740", [
         [ "添加示例代码", "ucloud_ai.html#autotoc_md741", null ],
         [ "云端功能开通", "ucloud_ai.html#autotoc_md742", null ],
-        [ "ucloud_ai/package.yaml中配置OSS信息", "ucloud_ai.html#autotoc_md743", null ],
+        [ "配置OSS信息", "ucloud_ai.html#autotoc_md743", null ],
         [ "添加ucloud_ai组件", "ucloud_ai.html#autotoc_md744", null ],
         [ "编译", "ucloud_ai.html#autotoc_md745", null ],
-        [ "烧录固件", "ucloud_ai.html#autotoc_md746", null ],
-        [ "ucloud_ai示例测试", "ucloud_ai.html#autotoc_md747", [
-          [ "CLI命令行输入：", "ucloud_ai.html#autotoc_md748", null ],
+        [ "资源文件打包", "ucloud_ai.html#autotoc_md746", null ],
+        [ "烧录固件", "ucloud_ai.html#autotoc_md747", null ],
+        [ "ucloud_ai示例测试", "ucloud_ai.html#autotoc_md748", [
           [ "CLI命令行输入：", "ucloud_ai.html#autotoc_md749", null ],
           [ "CLI命令行输入：", "ucloud_ai.html#autotoc_md750", null ],
           [ "CLI命令行输入：", "ucloud_ai.html#autotoc_md751", null ],
@@ -765,124 +765,128 @@ var component =
           [ "CLI命令行输入：", "ucloud_ai.html#autotoc_md759", null ],
           [ "CLI命令行输入：", "ucloud_ai.html#autotoc_md760", null ],
           [ "CLI命令行输入：", "ucloud_ai.html#autotoc_md761", null ],
-          [ "CLI命令行输入：", "ucloud_ai.html#autotoc_md762", null ]
+          [ "CLI命令行输入：", "ucloud_ai.html#autotoc_md762", null ],
+          [ "CLI命令行输入：", "ucloud_ai.html#autotoc_md763", null ]
         ] ]
       ] ],
-      [ "注意事项", "ucloud_ai.html#autotoc_md763", null ],
-      [ "FAQ", "ucloud_ai.html#autotoc_md764", null ]
+      [ "注意事项", "ucloud_ai.html#autotoc_md764", null ],
+      [ "FAQ", "ucloud_ai.html#autotoc_md765", null ]
     ] ],
     [ "udisplay", "udisplay.html", [
-      [ "概述", "udisplay.html#autotoc_md765", null ],
-      [ "版权信息", "udisplay.html#autotoc_md766", null ],
-      [ "目录结构", "udisplay.html#autotoc_md767", null ],
-      [ "依赖组件", "udisplay.html#autotoc_md768", null ],
-      [ "常用配置", "udisplay.html#autotoc_md769", null ],
-      [ "API说明", "udisplay.html#autotoc_md770", null ],
-      [ "使用示例", "udisplay.html#autotoc_md771", [
-        [ "添加示例代码", "udisplay.html#autotoc_md772", null ],
-        [ "app中添加udisplay组件", "udisplay.html#autotoc_md773", null ],
-        [ "编译", "udisplay.html#autotoc_md774", null ],
-        [ "烧录固件", "udisplay.html#autotoc_md775", null ],
-        [ "udisplay示例测试", "udisplay.html#autotoc_md776", null ]
+      [ "概述", "udisplay.html#autotoc_md766", null ],
+      [ "版权信息", "udisplay.html#autotoc_md767", null ],
+      [ "目录结构", "udisplay.html#autotoc_md768", null ],
+      [ "依赖组件", "udisplay.html#autotoc_md769", null ],
+      [ "常用配置", "udisplay.html#autotoc_md770", null ],
+      [ "API说明", "udisplay.html#autotoc_md771", null ],
+      [ "使用示例", "udisplay.html#autotoc_md772", [
+        [ "添加示例代码", "udisplay.html#autotoc_md773", null ],
+        [ "app中添加udisplay组件", "udisplay.html#autotoc_md774", null ],
+        [ "编译", "udisplay.html#autotoc_md775", null ],
+        [ "烧录固件", "udisplay.html#autotoc_md776", null ],
+        [ "udisplay示例测试", "udisplay.html#autotoc_md777", null ]
       ] ],
-      [ "FAQ", "udisplay.html#autotoc_md777", null ]
+      [ "FAQ", "udisplay.html#autotoc_md778", null ]
     ] ],
     [ "ugraphics", "ugraphics.html", [
-      [ "概述", "ugraphics.html#autotoc_md778", null ],
-      [ "版权信息", "ugraphics.html#autotoc_md779", null ],
-      [ "目录结构", "ugraphics.html#autotoc_md780", null ],
-      [ "依赖组件", "ugraphics.html#autotoc_md781", null ],
-      [ "常用配置", "ugraphics.html#autotoc_md782", null ],
-      [ "API说明", "ugraphics.html#autotoc_md783", null ],
-      [ "使用示例", "ugraphics.html#autotoc_md784", [
-        [ "添加示例代码", "ugraphics.html#autotoc_md785", null ],
-        [ "添加ugraphics组件", "ugraphics.html#autotoc_md786", null ],
-        [ "编译", "ugraphics.html#autotoc_md787", null ],
-        [ "烧录固件", "ugraphics.html#autotoc_md788", null ],
-        [ "ugraphics示例测试", "ugraphics.html#autotoc_md789", [
-          [ "CLI命令行输入：", "ugraphics.html#autotoc_md790", null ],
-          [ "CLI命令行输入：", "ugraphics.html#autotoc_md791", null ],
+      [ "概述", "ugraphics.html#autotoc_md779", null ],
+      [ "版权信息", "ugraphics.html#autotoc_md780", null ],
+      [ "目录结构", "ugraphics.html#autotoc_md781", null ],
+      [ "依赖组件", "ugraphics.html#autotoc_md782", null ],
+      [ "常用配置", "ugraphics.html#autotoc_md783", null ],
+      [ "API说明", "ugraphics.html#autotoc_md784", null ],
+      [ "使用示例", "ugraphics.html#autotoc_md785", [
+        [ "添加示例代码", "ugraphics.html#autotoc_md786", null ],
+        [ "添加ugraphics组件", "ugraphics.html#autotoc_md787", null ],
+        [ "编译", "ugraphics.html#autotoc_md788", null ],
+        [ "资源文件打包", "ugraphics.html#autotoc_md789", null ],
+        [ "烧录固件", "ugraphics.html#autotoc_md790", null ],
+        [ "ugraphics示例测试", "ugraphics.html#autotoc_md791", [
           [ "CLI命令行输入：", "ugraphics.html#autotoc_md792", null ],
           [ "CLI命令行输入：", "ugraphics.html#autotoc_md793", null ],
           [ "CLI命令行输入：", "ugraphics.html#autotoc_md794", null ],
           [ "CLI命令行输入：", "ugraphics.html#autotoc_md795", null ],
-          [ "CLI命令行输入：", "ugraphics.html#autotoc_md796", null ]
+          [ "CLI命令行输入：", "ugraphics.html#autotoc_md796", null ],
+          [ "CLI命令行输入：", "ugraphics.html#autotoc_md797", null ],
+          [ "CLI命令行输入：", "ugraphics.html#autotoc_md798", null ],
+          [ "CLI命令行输入：", "ugraphics.html#autotoc_md799", null ],
+          [ "CLI命令行输入：", "ugraphics.html#autotoc_md800", null ]
         ] ]
       ] ],
-      [ "注意事项", "ugraphics.html#autotoc_md797", null ],
-      [ "FAQ", "ugraphics.html#autotoc_md798", null ]
+      [ "注意事项", "ugraphics.html#autotoc_md801", null ],
+      [ "FAQ", "ugraphics.html#autotoc_md802", null ]
     ] ],
     [ "ulog", "ulog.html", [
-      [ "概述", "ulog.html#autotoc_md799", [
-        [ "版权信息", "ulog.html#autotoc_md800", null ],
-        [ "目录结构", "ulog.html#autotoc_md801", null ],
-        [ "依赖组件", "ulog.html#autotoc_md802", null ]
+      [ "概述", "ulog.html#autotoc_md803", [
+        [ "版权信息", "ulog.html#autotoc_md804", null ],
+        [ "目录结构", "ulog.html#autotoc_md805", null ],
+        [ "依赖组件", "ulog.html#autotoc_md806", null ]
       ] ],
-      [ "常用配置", "ulog.html#autotoc_md803", null ],
-      [ "API说明", "ulog.html#autotoc_md804", null ],
-      [ "使用示例", "ulog.html#autotoc_md805", [
-        [ "添加示例代码", "ulog.html#autotoc_md806", null ],
-        [ "app中添加ulog组件", "ulog.html#autotoc_md807", null ],
-        [ "编译", "ulog.html#autotoc_md808", null ],
-        [ "烧录固件", "ulog.html#autotoc_md809", null ],
-        [ "ulog示例测试", "ulog.html#autotoc_md810", [
-          [ "CLI命令行输入：", "ulog.html#autotoc_md811", null ]
+      [ "常用配置", "ulog.html#autotoc_md807", null ],
+      [ "API说明", "ulog.html#autotoc_md808", null ],
+      [ "使用示例", "ulog.html#autotoc_md809", [
+        [ "添加示例代码", "ulog.html#autotoc_md810", null ],
+        [ "app中添加ulog组件", "ulog.html#autotoc_md811", null ],
+        [ "编译", "ulog.html#autotoc_md812", null ],
+        [ "烧录固件", "ulog.html#autotoc_md813", null ],
+        [ "ulog示例测试", "ulog.html#autotoc_md814", [
+          [ "CLI命令行输入：", "ulog.html#autotoc_md815", null ]
         ] ]
       ] ],
-      [ "FAQ", "ulog.html#autotoc_md812", null ]
+      [ "FAQ", "ulog.html#autotoc_md816", null ]
     ] ],
     [ "uvoice", "uvoice.html", [
-      [ "概述", "uvoice.html#autotoc_md813", [
-        [ "版权信息", "uvoice.html#autotoc_md814", null ],
-        [ "目录结构", "uvoice.html#autotoc_md815", null ],
-        [ "依赖组件", "uvoice.html#autotoc_md816", null ]
+      [ "概述", "uvoice.html#autotoc_md817", [
+        [ "版权信息", "uvoice.html#autotoc_md818", null ],
+        [ "目录结构", "uvoice.html#autotoc_md819", null ],
+        [ "依赖组件", "uvoice.html#autotoc_md820", null ]
       ] ],
-      [ "常用配置", "uvoice.html#autotoc_md817", null ],
-      [ "API说明", "uvoice.html#autotoc_md818", null ],
-      [ "使用示例", "uvoice.html#autotoc_md819", [
-        [ "添加示例代码", "uvoice.html#autotoc_md820", null ],
-        [ "添加uvoice组件", "uvoice.html#autotoc_md821", null ],
-        [ "编译", "uvoice.html#autotoc_md822", null ],
-        [ "烧录固件", "uvoice.html#autotoc_md823", null ],
-        [ "uvoice示例代码测试方法", "uvoice.html#autotoc_md824", null ]
+      [ "常用配置", "uvoice.html#autotoc_md821", null ],
+      [ "API说明", "uvoice.html#autotoc_md822", null ],
+      [ "使用示例", "uvoice.html#autotoc_md823", [
+        [ "添加示例代码", "uvoice.html#autotoc_md824", null ],
+        [ "添加uvoice组件", "uvoice.html#autotoc_md825", null ],
+        [ "编译", "uvoice.html#autotoc_md826", null ],
+        [ "烧录固件", "uvoice.html#autotoc_md827", null ],
+        [ "uvoice示例代码测试方法", "uvoice.html#autotoc_md828", null ]
       ] ],
-      [ "关键日志", "uvoice.html#autotoc_md825", null ],
-      [ "注意事项", "uvoice.html#autotoc_md826", null ]
+      [ "关键日志", "uvoice.html#autotoc_md829", null ],
+      [ "注意事项", "uvoice.html#autotoc_md830", null ]
     ] ],
     [ "vfs", "vfs.html", [
-      [ "概述", "vfs.html#autotoc_md827", [
-        [ "版权信息", "vfs.html#autotoc_md828", null ],
-        [ "目录结构", "vfs.html#autotoc_md829", null ],
-        [ "依赖组件", "vfs.html#autotoc_md830", null ]
+      [ "概述", "vfs.html#autotoc_md831", [
+        [ "版权信息", "vfs.html#autotoc_md832", null ],
+        [ "目录结构", "vfs.html#autotoc_md833", null ],
+        [ "依赖组件", "vfs.html#autotoc_md834", null ]
       ] ],
-      [ "常用配置", "vfs.html#autotoc_md831", null ],
-      [ "API说明", "vfs.html#autotoc_md832", null ],
-      [ "接口定义", "vfs.html#autotoc_md833", [
-        [ "初始化虚拟文件系统", "vfs.html#autotoc_md834", null ],
-        [ "通过路径打开文件", "vfs.html#autotoc_md835", null ],
-        [ "关闭文件", "vfs.html#autotoc_md836", null ],
-        [ "读取文件内容", "vfs.html#autotoc_md837", null ],
-        [ "向文件写入内容", "vfs.html#autotoc_md838", null ],
-        [ "发送特定命令控制接口", "vfs.html#autotoc_md839", null ],
-        [ "在打开的文件描述符上执行下面描述的操作，操作由 cmd 确定", "vfs.html#autotoc_md840", null ],
-        [ "设置下次读取文件的位置", "vfs.html#autotoc_md841", null ],
-        [ "同步文件", "vfs.html#autotoc_md842", null ],
-        [ "获取文件状态", "vfs.html#autotoc_md843", null ],
-        [ "删除指定目录下的文件", "vfs.html#autotoc_md844", null ],
-        [ "重命名文件", "vfs.html#autotoc_md845", null ],
-        [ "打开目录", "vfs.html#autotoc_md846", null ],
-        [ "关闭目录", "vfs.html#autotoc_md847", null ],
-        [ "读取下个目录", "vfs.html#autotoc_md848", null ],
-        [ "创建目录", "vfs.html#autotoc_md849", null ],
-        [ "删除目录", "vfs.html#autotoc_md850", null ]
+      [ "常用配置", "vfs.html#autotoc_md835", null ],
+      [ "API说明", "vfs.html#autotoc_md836", null ],
+      [ "接口定义", "vfs.html#autotoc_md837", [
+        [ "初始化虚拟文件系统", "vfs.html#autotoc_md838", null ],
+        [ "通过路径打开文件", "vfs.html#autotoc_md839", null ],
+        [ "关闭文件", "vfs.html#autotoc_md840", null ],
+        [ "读取文件内容", "vfs.html#autotoc_md841", null ],
+        [ "向文件写入内容", "vfs.html#autotoc_md842", null ],
+        [ "发送特定命令控制接口", "vfs.html#autotoc_md843", null ],
+        [ "在打开的文件描述符上执行下面描述的操作，操作由 cmd 确定", "vfs.html#autotoc_md844", null ],
+        [ "设置下次读取文件的位置", "vfs.html#autotoc_md845", null ],
+        [ "同步文件", "vfs.html#autotoc_md846", null ],
+        [ "获取文件状态", "vfs.html#autotoc_md847", null ],
+        [ "删除指定目录下的文件", "vfs.html#autotoc_md848", null ],
+        [ "重命名文件", "vfs.html#autotoc_md849", null ],
+        [ "打开目录", "vfs.html#autotoc_md850", null ],
+        [ "关闭目录", "vfs.html#autotoc_md851", null ],
+        [ "读取下个目录", "vfs.html#autotoc_md852", null ],
+        [ "创建目录", "vfs.html#autotoc_md853", null ],
+        [ "删除目录", "vfs.html#autotoc_md854", null ]
       ] ],
-      [ "使用示例", "vfs.html#autotoc_md851", [
-        [ "添加示例代码", "vfs.html#autotoc_md852", null ],
-        [ "app中添加VFS组件", "vfs.html#autotoc_md853", null ],
-        [ "编译", "vfs.html#autotoc_md854", null ],
-        [ "烧录固件", "vfs.html#autotoc_md855", null ],
-        [ "VFS示例测试", "vfs.html#autotoc_md856", null ],
-        [ "关键日志", "vfs.html#autotoc_md857", null ]
+      [ "使用示例", "vfs.html#autotoc_md855", [
+        [ "添加示例代码", "vfs.html#autotoc_md856", null ],
+        [ "app中添加VFS组件", "vfs.html#autotoc_md857", null ],
+        [ "编译", "vfs.html#autotoc_md858", null ],
+        [ "烧录固件", "vfs.html#autotoc_md859", null ],
+        [ "VFS示例测试", "vfs.html#autotoc_md860", null ],
+        [ "关键日志", "vfs.html#autotoc_md861", null ]
       ] ]
     ] ]
 ];

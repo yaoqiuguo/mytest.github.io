@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('spi.html',''); initResizable(); });
 <div class="title">spi </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1392"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1396"></a>
 概述</h1>
 <p>本组件为SPI VFS驱动子系统。给应用或组件提供通过VFS形式（open/close/ioctl）访问硬件SPI驱动对上层提供服务的接口。该组件初始化过程中，会根据hardware/chip/&lt;chip_name&gt;/package.yaml中定义的CONFIG_SPI_NUM来依此创建如下名称的设备节点：</p><ul>
 <li>/dev/spi0</li>
@@ -71,12 +71,12 @@ $(document).ready(function(){initNavTree('spi.html',''); initResizable(); });
 <li>数据接收</li>
 <li>同时发送和接收</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md1393"></a>
+<h2><a class="anchor" id="autotoc_md1397"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md1394"></a>
+<h2><a class="anchor" id="autotoc_md1398"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">.</div>
 <div class="line">.</div>
@@ -92,26 +92,26 @@ $(document).ready(function(){initNavTree('spi.html',''); initResizable(); });
 <div class="line">├── README.md            #使用文档</div>
 <div class="line">└── src</div>
 <div class="line">    └── spi_dev.c        #SPI设备实现代码</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1395"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1399"></a>
 依赖组件</h2>
 <ul>
 <li>base # 最底层核心驱动模型、驱动自动加载机制以及Device VFS core</li>
 <li>vfs # VFS API抽象库</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1396"></a>
+<h1><a class="anchor" id="autotoc_md1400"></a>
 常用配置</h1>
 <p>本组件可以通过CONFIG_SPI_NUM配置对上层提供设备节点的数量，CONFIG_SPI_NUM代表芯片内部的SPI控制器的数量。 CONFIG_SPI_NUM默认是在hardware/chip/&lt;chip_name&gt;/package.yaml中的**def_config**节点进行配置。 如果没有定义CONFIG_SPI_NUM，则代码中会定义默认对外输出的设备节点数量。 </p><blockquote class="doxtable">
 <p>设备节点数量: 默认4个, 如需修改，在hardware/chip/&lt;chip_name&gt;/package.yaml中修改CONFIG_SPI_NUM配置 </p>
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  CONFIG_SPI_NUM: 1</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1397"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1401"></a>
 API说明</h1>
 <p>spi_device_api</p>
-<h1><a class="anchor" id="autotoc_md1398"></a>
+<h1><a class="anchor" id="autotoc_md1402"></a>
 使用示例</h1>
 <p>示例代码参考example/spi_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md1399"></a>
+<h2><a class="anchor" id="autotoc_md1403"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>spi组件的package.yaml中添加example </p>
@@ -119,23 +119,23 @@ API说明</h1>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  原有其他文件</div>
 <div class="line">  - example/spi_example.c # add spi_example.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1400"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1404"></a>
 添加spi组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - spi: master # helloworld_demo中引入spi组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1401"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1405"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1402"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1406"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md1403"></a>
+<h2><a class="anchor" id="autotoc_md1407"></a>
 SPI示例测试</h2>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
@@ -143,16 +143,16 @@ SPI示例测试</h2>
 <div class="fragment"><div class="line">spi_example id</div>
 </div><!-- fragment --><p> 其中id为0-CONFIG_TIMER_NUM之间的数值。</p>
 <p>可使用示波器确认通过SPI总线发送的数据是否是spi_example中发送的数据一致来最终确认SPI是否工作正常。</p>
-<h2><a class="anchor" id="autotoc_md1404"></a>
+<h2><a class="anchor" id="autotoc_md1408"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">vfs spi test success, ret:0</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1405"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1409"></a>
 注意事项</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md1406"></a>
+<h1><a class="anchor" id="autotoc_md1410"></a>
 FAQ</h1>
 <p>无 </p>
 </div></div><!-- contents -->
@@ -161,7 +161,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 2日 星期五 11:08:29 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 2日 星期五 23:34:46 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

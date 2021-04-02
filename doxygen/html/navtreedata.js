@@ -253,11 +253,11 @@ var NAVTREEINDEX =
 "epoll.html#autotoc_md382",
 "group__aos__httpclient__api.html#gaf896b233cfdfc42c826c06b1e32a3b75",
 "group__kv__aos__api.html",
-"helloworld_demo.html#autotoc_md1120",
-"linksdk_demo.html#autotoc_md1148",
-"py_engine_demo.html#autotoc_md1180",
-"structcli__command.html#ad7ec84b4d1c84a2d1af0c0de9ea5b86f",
-"ucloud_ai.html#autotoc_md740"
+"helloworld_demo.html#autotoc_md1119",
+"linksdk_demo.html#autotoc_md1147",
+"py_engine_demo.html#autotoc_md1179",
+"structcache__config__t.html#a70b1803f35e8b36a07f8ba97b8e51819",
+"ucloud_ai.html#autotoc_md735"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

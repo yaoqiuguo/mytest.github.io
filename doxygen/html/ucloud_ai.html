@@ -130,9 +130,15 @@ API说明</h1>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;example/ucloud_ai_example.c&quot; # add ucloud_ai_example.c</div>
 </div><!-- fragment --><blockquote class="doxtable">
+<p>ugraphics组件的package.yaml中添加编译配置: </p>
+</blockquote>
+<div class="fragment"><div class="line">build_config:</div>
+<div class="line"> prebuild_script: cp_resources.py</div>
+</div><!-- fragment --><blockquote class="doxtable">
 <p>helloworld_demo组件的application_start中添加代码 </p>
 </blockquote>
 <div class="fragment"><div class="line">/*init network service*/</div>
+<div class="line">event_service_init(NULL);</div>
 <div class="line">netmgr_service_init(NULL);</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md742"></a>
 云端功能开通</h2>
@@ -151,7 +157,10 @@ API说明</h1>
 <div class="fragment"><div class="line">1. 创建Bucket时地域选择“上海”</div>
 <div class="line">2. 读写权限选择“公共读”</div>
 </div><!-- fragment --> <h2><a class="anchor" id="autotoc_md743"></a>
-ucloud_ai/package.yaml中配置OSS信息</h2>
+配置OSS信息</h2>
+<blockquote class="doxtable">
+<p>components/ucloud_ai/package.yaml中替换你的OSS信息 </p>
+</blockquote>
 <div class="fragment"><div class="line">OSS_ACCESS_KEY: &quot;Your-Access-Key&quot;</div>
 <div class="line">OSS_ACCESS_SECRET: &quot;Your-Access-Secret&quot;</div>
 <div class="line">OSS_ENDPOINT: &quot;Your-OSS-Endpoint&quot;</div>
@@ -162,140 +171,333 @@ ucloud_ai/package.yaml中配置OSS信息</h2>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md744"></a>
 添加ucloud_ai组件</h2>
 <blockquote class="doxtable">
-<p>helloworld_demo组件的package.yaml中添加 </p>
+<p>helloworld_demo组件的package.yaml中添加如下组件： </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
-<div class="line">  - ucloud_ai: dev_aos # helloworld_demo中引入ucloud_ai组件</div>
+<div class="line">  - ucloud_ai: dev_aos  # helloworld_demo中引入ucloud_ai组件</div>
 <div class="line">  - netmgr: dev_aos     # helloworld_demo中引入netmgr组件</div>
+<div class="line">  - littlefs: dev_aos   # helloworld_demo中引入littlefs组件</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md745"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md746"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md746"></a>
+资源文件打包</h2>
+<blockquote class="doxtable">
+<p>编译时ucloud_ai组件中cp_resources.py会对资源文件进行拷贝，系统自动打包到littlefs文件系统中。编译完成后请确认目录hardware/chip/haas1000/prebuild/data/下有ucloud_ai_image目录。 </p>
+</blockquote>
+<p>&gt;hardware/chip/haas1000/prebuild/data/目录下如有其他不使用的文件，建议删除后再进行编译，避免littlefs不够用导致无法访问的问题。</p>
+<blockquote class="doxtable">
+<p>在cli/package.yaml中设置打开CLI_IOBOX_ENABLE，便可在板子上通过ls命令查看资源文件是否成功烧录： </p>
+</blockquote>
+<div class="fragment"><div class="line">def_config:</div>
+<div class="line">  CLI_IOBOX_ENABLE: 1</div>
+</div><!-- fragment --> <div class="fragment"><div class="line">ls /data/ucloud_ai_image</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md747"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<p>本组件例子中使用到到图片存放在代码中hardware/chip/haas1000/prebuild/data/image目录，除烧录helloworld demo image外，需额外使用如下命令烧录littlefs文件系统: </p><div class="fragment"><div class="line">aos burn -f hardware/chip/haas1000/release/write_flash_tool/ota_bin/littlefs.bin#0xB32000</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md747"></a>
+<blockquote class="doxtable">
+<p>helloworld_demo bin烧录： </p>
+</blockquote>
+<div class="fragment"><div class="line">aos burn</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>littlefs文件系统烧录： </p>
+</blockquote>
+<div class="fragment"><div class="line">aos burn -f hardware/chip/haas1000/release/write_flash_tool/ota_bin/littlefs.bin#0xB32000</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md748"></a>
 ucloud_ai示例测试</h2>
-<h3><a class="anchor" id="autotoc_md748"></a>
+<h3><a class="anchor" id="autotoc_md749"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 0  # 人脸比对</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md749"></a>
+<div class="fragment"><div class="line">confidence:84.5607</div>
+<div class="line">x:159</div>
+<div class="line">y:76</div>
+<div class="line">w:143</div>
+<div class="line">h194</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md750"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 1  # 人物动漫化</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md750"></a>
+<div class="fragment"><div class="line">image url:http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/person-image-cartoonizer/5BE7565D-59CE-43EE-8169-09ED2821CE21_b301_20210331-093707.jpg?Expires=1617185228&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=8zhYdqxKgz9eDz970l1BXmpPAiQ%3D</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md751"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 2  # 表情识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md751"></a>
+<div class="fragment"><div class="line">face probablility:0.997393</div>
+<div class="line">x:872835160</div>
+<div class="line">y:873405208</div>
+<div class="line">w:4</div>
+<div class="line">h:872835304</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md752"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 3  # 目标检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md752"></a>
+<div class="fragment"><div class="line">object num:6</div>
+<div class="line">object height:533</div>
+<div class="line">object width:948</div>
+<div class="line">object score:0.437</div>
+<div class="line">object type:potted plant</div>
+<div class="line">object boxes.x:35</div>
+<div class="line">object boxes.y:274</div>
+<div class="line">object boxes.w:185</div>
+<div class="line">object boxes.h:443</div>
+<div class="line">object score:0.487</div>
+<div class="line">object type:potted plant</div>
+<div class="line">object boxes.x:663</div>
+<div class="line">object boxes.y:121</div>
+<div class="line">object boxes.w:847</div>
+<div class="line">object boxes.h:457</div>
+<div class="line">object score:0.583</div>
+<div class="line">object type:monitor</div>
+<div class="line">object boxes.x:250</div>
+<div class="line">object boxes.y:43</div>
+<div class="line">object boxes.w:670</div>
+<div class="line">object boxes.h:439</div>
+<div class="line">object score:0.482</div>
+<div class="line">object type:keyboard</div>
+<div class="line">object boxes.x:239</div>
+<div class="line">object boxes.y:435</div>
+<div class="line">object boxes.w:489</div>
+<div class="line">object boxes.h:485</div>
+<div class="line">object score:0.261</div>
+<div class="line">object type:keyboard</div>
+<div class="line">object boxes.x:241</div>
+<div class="line">object boxes.y:428</div>
+<div class="line">object boxes.w:639</div>
+<div class="line">object boxes.h:506</div>
+<div class="line">object score:0.217</div>
+<div class="line">object type:mouse</div>
+<div class="line">object boxes.x:660</div>
+<div class="line">object boxes.y:479</div>
+<div class="line">object boxes.w:750</div>
+<div class="line">object boxes.h:528</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md753"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 4  # 主体检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md753"></a>
+<div class="fragment"><div class="line">object x:56</div>
+<div class="line">object y:177</div>
+<div class="line">object width:661</div>
+<div class="line">object height:209</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md754"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 5  # 通用分割</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md754"></a>
+<div class="fragment"><div class="line">0image url: http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_HeadSegmenter/2021-3-31/invi_HeadSegmenter_016171837626454285967296_L925gE.png?Expires=1617185562&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=bvMITW5gJQPlHBiP3Aa%2BO6fCdvQ%3D</div>
+<div class="line">0width: 160</div>
+<div class="line">0height: 209</div>
+<div class="line">0x: 153</div>
+<div class="line">0y: 66</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md755"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 6  # 面部分割</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md755"></a>
+<div class="fragment"><div class="line">image url: http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_humansegmenter/2021-3-31/invi_humansegmenter_016171860047301086642_0V057V.jpg?Expires=1617187804&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=TiqmpoQqCon9KHPXEF8W6sf2vuY%3D</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md756"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 7  # 身份证证明识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md756"></a>
+<div class="fragment"><div class="line">Address: 江苏省南京市浦口区天天小区1栋11号</div>
+<div class="line">BirthDate:</div>
+<div class="line">gender:</div>
+<div class="line">nationality: 汉</div>
+<div class="line">iDNumber:</div>
+<div class="line">faceRectangle.x: 663.147</div>
+<div class="line">faceRectangle.y: 249.947</div>
+<div class="line">faceRectangle.width: 115.432</div>
+<div class="line">faceRectangle.height: 96.2586</div>
+<div class="line">faceRectangle.angle: -87.3476</div>
+<div class="line">0cardAreas.x: 166</div>
+<div class="line">0cardAreas.y: 97</div>
+<div class="line">0faceRectVertices.x: 708.554</div>
+<div class="line">0faceRectVertices.y: 309.828</div>
+<div class="line">1cardAreas.x: 775</div>
+<div class="line">1cardAreas.y: 97</div>
+<div class="line">1faceRectVertices.x: 612.398</div>
+<div class="line">1faceRectVertices.y: 305.374</div>
+<div class="line">2cardAreas.x: 775</div>
+<div class="line">2cardAreas.y: 460</div>
+<div class="line">2faceRectVertices.x: 617.74</div>
+<div class="line">2faceRectVertices.y: 190.065</div>
+<div class="line">3cardAreas.x: 166</div>
+<div class="line">3cardAreas.y: 460</div>
+<div class="line">3faceRectVertices.x: 713.895</div>
+<div class="line">3faceRectVertices.y: 194.52</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md757"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 8  # 身份证反面识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md757"></a>
+<div class="fragment"><div class="line">startDate: 20131010</div>
+<div class="line">issue: 杭州市公安局余杭分局</div>
+<div class="line">endDate: 20231010</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md758"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 9  # 银行卡识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md758"></a>
+<div class="fragment"><div class="line">bankName: 中国工商银行</div>
+<div class="line">cardNumber: 6212262315007683105</div>
+<div class="line">validDate: 07/26</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md759"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 10  # 文本识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md759"></a>
+<div class="fragment"><div class="line">results size: 7</div>
+<div class="line">0text: 《爆炸新闻》</div>
+<div class="line">0probability: 0.987366</div>
+<div class="line">0text left: 442</div>
+<div class="line">0text angle: -9</div>
+<div class="line">0text top: 141</div>
+<div class="line">0text height: 20</div>
+<div class="line">0text: width:89</div>
+<div class="line">1text: 19</div>
+<div class="line">1probability: 0.993373</div>
+<div class="line">1text left: 173</div>
+<div class="line">1text angle: -10</div>
+<div class="line">1text top: 115</div>
+<div class="line">1text height: 109</div>
+<div class="line">1text: width:100</div>
+<div class="line">2text: 豆瓣评分7.1</div>
+<div class="line">2probability: 0.896118</div>
+<div class="line">2text left: 447</div>
+<div class="line">2text angle: -9</div>
+<div class="line">2text top: 168</div>
+<div class="line">2text height: 18</div>
+<div class="line">2text: width:98</div>
+<div class="line">3text: 2019||美国|加拿大|剧情|传记</div>
+<div class="line">3probability: 0.494584</div>
+<div class="line">3text left: 450</div>
+<div class="line">3text angle: -9</div>
+<div class="line">3text top: 181</div>
+<div class="line">3text height: 17</div>
+<div class="line">3text: width:241</div>
+<div class="line">4text: 杰伊·罗奇 导演</div>
+<div class="line">4probability: 0.894469</div>
+<div class="line">4text left: 454</div>
+<div class="line">4text angle: -9</div>
+<div class="line">4text top: 216</div>
+<div class="line">4text height: 18</div>
+<div class="line">4text: width:112</div>
+<div class="line">5text: 2021年2月星期五</div>
+<div class="line">5probability: 0.991614</div>
+<div class="line">5text left: 187</div>
+<div class="line">5text angle: -9</div>
+<div class="line">5text top: 231</div>
+<div class="line">5text height: 18</div>
+<div class="line">5text: width:150</div>
+<div class="line">6text: 农历正月初八</div>
+<div class="line">6probability: 0.984329</div>
+<div class="line">6text left: 193</div>
+<div class="line">6text angle: -9</div>
+<div class="line">6text top: 261</div>
+<div class="line">6text height: 18</div>
+<div class="line">6text: width:104</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md760"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 11  # 垃圾分类</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md760"></a>
+<div class="fragment"><div class="line">sensitive: 0</div>
+<div class="line">0rubbish: 塑料饮料瓶</div>
+<div class="line">0category: 可回收垃圾</div>
+<div class="line">0categoryScore: 1</div>
+<div class="line">0rubbishScore: 1</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md761"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 12  # 水果检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md761"></a>
+<div class="fragment"><div class="line">0score: 0.822785</div>
+<div class="line">0name: 橙子</div>
+<div class="line">box.xmin: 214.05966186523438</div>
+<div class="line">box.ymin: 44.830513000488281</div>
+<div class="line">box.xmax: 723.5120849609375</div>
+<div class="line">box.ymax: 482.88070678710938</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md762"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 13  # 图像人体擦除</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md762"></a>
+<div class="fragment"><div class="line">imageUrl: http://algo-app-isr-lab-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/remove-person/2021-03-31_10%3A20%3A46.011134_person_org.jpg?Expires=1617187846&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=OwLEg5pWNVDwXrvAbGsUU7q5Dbs%3D</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md763"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 14  # 风格迁移</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">TODO</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md763"></a>
+<div class="fragment"><div class="line">outMajorURL:</div>
+<div class="line">outImageURL: http://viapi-cn-shanghai-dha-filter.oss-cn-shanghai.aliyuncs.com/upload/result_/2021-3-31/invi__016171860565631021659_XIqH26.jpg?Expires=1617187856&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=tqJqHHoPSvga6LyET31TZsvOXFs%3D</div>
+<div class="line">ucloud_ai comp test success!</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md764"></a>
 注意事项</h1>
-<p>NA</p>
-<h1><a class="anchor" id="autotoc_md764"></a>
+<p>使用过程中如果想要验证自己的图片是否可以正常识别可通过http://vision.aliyun.com进入能力中心中对应的体验页面进行验证。</p>
+<h1><a class="anchor" id="autotoc_md765"></a>
 FAQ</h1>
-<p>如果遇到： error code: InvalidAction.NotFound 请确认是否在vision.aliyun.com开通相应功能 </p>
+<p>如果遇到： </p><blockquote class="doxtable">
+<p>error code: InvalidAction.NotFound </p>
+</blockquote>
+<p>请确认Endpoint是否设置正确</p>
+<blockquote class="doxtable">
+<p>error code: InvalidApi.NotPurchase </p>
+</blockquote>
+<p>请确认是否在vision.aliyun.com开通相应功能</p>
+<blockquote class="doxtable">
+<p>tlefs_vfs.c:677:error: lfs_vfs_open /data/ucloud_ai_image/object.jpg failed, ret - -2 </p>
+</blockquote>
+<p>请确认是否有拷贝图片到hardware/chip/haas1000/prebuild/data/ucloud_ai_image目录。 </p><div class="fragment"><div class="line">1. 在cli/package.yaml中设置CLI_IOBOX_ENABLE: 1</div>
+<div class="line">2. ls /data/ucloud_ai_image查看</div>
+</div><!-- fragment --><p>如果有，可能是文件系统存储空间不够，此时请执行：</p><ol type="1">
+<li>在ucloud_ai/package.yaml中屏蔽prebuild_script: cp_resources.py；</li>
+<li>删除ucloud_ai_image中其他文件，仅保留测试case使用的图片文件；</li>
+<li>再重新编译烧录。 </li>
+</ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 2日 星期五 11:08:29 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 2日 星期五 23:34:46 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

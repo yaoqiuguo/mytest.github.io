@@ -252,7 +252,7 @@
       <topic label="使用示例" href="ai_agent.html#autotoc_md200">
         <topic label="添加示例代码" href="ai_agent.html#autotoc_md201"/>
         <topic label="云端功能开通" href="ai_agent.html#autotoc_md202"/>
-        <topic label="aiconfig.h中配置OSS信息" href="ai_agent.html#autotoc_md203"/>
+        <topic label="ucloud_ai/package.yaml中配置OSS信息" href="ai_agent.html#autotoc_md203"/>
         <topic label="添加ai_agent组件" href="ai_agent.html#autotoc_md204"/>
         <topic label="编译" href="ai_agent.html#autotoc_md205"/>
         <topic label="烧录固件" href="ai_agent.html#autotoc_md206"/>
@@ -456,300 +456,300 @@
     <topic label="driver" href="driver.html">
       <topic label="external_device" href="external_device.html">
         <topic label="ili9341" href="ili9341.html">
-          <topic label="概述" href="ili9341.html#autotoc_md1229">
-            <topic label="版权信息" href="ili9341.html#autotoc_md1230"/>
-            <topic label="目录结构" href="ili9341.html#autotoc_md1231"/>
-            <topic label="依赖组件" href="ili9341.html#autotoc_md1232"/>
+          <topic label="概述" href="ili9341.html#autotoc_md1233">
+            <topic label="版权信息" href="ili9341.html#autotoc_md1234"/>
+            <topic label="目录结构" href="ili9341.html#autotoc_md1235"/>
+            <topic label="依赖组件" href="ili9341.html#autotoc_md1236"/>
           </topic>
-          <topic label="常用配置" href="ili9341.html#autotoc_md1233"/>
-          <topic label="API说明" href="ili9341.html#autotoc_md1234">
-            <topic label="ili9341硬件初始化" href="ili9341.html#autotoc_md1235"/>
-            <topic label="ili9341硬件去初始化" href="ili9341.html#autotoc_md1236"/>
-            <topic label="ili9341绘画像素点" href="ili9341.html#autotoc_md1237"/>
-            <topic label="ili9341区域绘画" href="ili9341.html#autotoc_md1238"/>
-            <topic label="ili9341绘画矩形" href="ili9341.html#autotoc_md1239"/>
-            <topic label="ili9341全屏填充" href="ili9341.html#autotoc_md1240"/>
+          <topic label="常用配置" href="ili9341.html#autotoc_md1237"/>
+          <topic label="API说明" href="ili9341.html#autotoc_md1238">
+            <topic label="ili9341硬件初始化" href="ili9341.html#autotoc_md1239"/>
+            <topic label="ili9341硬件去初始化" href="ili9341.html#autotoc_md1240"/>
+            <topic label="ili9341绘画像素点" href="ili9341.html#autotoc_md1241"/>
+            <topic label="ili9341区域绘画" href="ili9341.html#autotoc_md1242"/>
+            <topic label="ili9341绘画矩形" href="ili9341.html#autotoc_md1243"/>
+            <topic label="ili9341全屏填充" href="ili9341.html#autotoc_md1244"/>
           </topic>
-          <topic label="使用示例" href="ili9341.html#autotoc_md1241">
-            <topic label="添加示例代码" href="ili9341.html#autotoc_md1242"/>
-            <topic label="添加ili9341组件" href="ili9341.html#autotoc_md1243"/>
-            <topic label="编译" href="ili9341.html#autotoc_md1244"/>
-            <topic label="烧录固件" href="ili9341.html#autotoc_md1245"/>
-            <topic label="ili9341示例测试" href="ili9341.html#autotoc_md1246"/>
-            <topic label="关键日志" href="ili9341.html#autotoc_md1247"/>
+          <topic label="使用示例" href="ili9341.html#autotoc_md1245">
+            <topic label="添加示例代码" href="ili9341.html#autotoc_md1246"/>
+            <topic label="添加ili9341组件" href="ili9341.html#autotoc_md1247"/>
+            <topic label="编译" href="ili9341.html#autotoc_md1248"/>
+            <topic label="烧录固件" href="ili9341.html#autotoc_md1249"/>
+            <topic label="ili9341示例测试" href="ili9341.html#autotoc_md1250"/>
+            <topic label="关键日志" href="ili9341.html#autotoc_md1251"/>
           </topic>
         </topic>
         <topic label="pca9544" href="pca9544.html">
-          <topic label="概述" href="pca9544.html#autotoc_md1248">
-            <topic label="版权信息" href="pca9544.html#autotoc_md1249"/>
-            <topic label="目录结构" href="pca9544.html#autotoc_md1250"/>
-            <topic label="依赖组件" href="pca9544.html#autotoc_md1251"/>
+          <topic label="概述" href="pca9544.html#autotoc_md1252">
+            <topic label="版权信息" href="pca9544.html#autotoc_md1253"/>
+            <topic label="目录结构" href="pca9544.html#autotoc_md1254"/>
+            <topic label="依赖组件" href="pca9544.html#autotoc_md1255"/>
           </topic>
-          <topic label="常用配置" href="pca9544.html#autotoc_md1252"/>
-          <topic label="API说明" href="pca9544.html#autotoc_md1253"/>
-          <topic label="使用示例" href="pca9544.html#autotoc_md1254">
-            <topic label="添加示例代码" href="pca9544.html#autotoc_md1255"/>
-            <topic label="添加pca9544组件" href="pca9544.html#autotoc_md1256"/>
-            <topic label="编译" href="pca9544.html#autotoc_md1257"/>
-            <topic label="烧录固件" href="pca9544.html#autotoc_md1258"/>
-            <topic label="PCA9544示例测试" href="pca9544.html#autotoc_md1259"/>
-            <topic label="关键日志" href="pca9544.html#autotoc_md1260"/>
+          <topic label="常用配置" href="pca9544.html#autotoc_md1256"/>
+          <topic label="API说明" href="pca9544.html#autotoc_md1257"/>
+          <topic label="使用示例" href="pca9544.html#autotoc_md1258">
+            <topic label="添加示例代码" href="pca9544.html#autotoc_md1259"/>
+            <topic label="添加pca9544组件" href="pca9544.html#autotoc_md1260"/>
+            <topic label="编译" href="pca9544.html#autotoc_md1261"/>
+            <topic label="烧录固件" href="pca9544.html#autotoc_md1262"/>
+            <topic label="PCA9544示例测试" href="pca9544.html#autotoc_md1263"/>
+            <topic label="关键日志" href="pca9544.html#autotoc_md1264"/>
           </topic>
         </topic>
         <topic label="rx8130ce" href="rx8130ce.html">
-          <topic label="概述" href="rx8130ce.html#autotoc_md1261">
-            <topic label="版权信息" href="rx8130ce.html#autotoc_md1262"/>
-            <topic label="目录结构" href="rx8130ce.html#autotoc_md1263"/>
-            <topic label="依赖组件" href="rx8130ce.html#autotoc_md1264"/>
+          <topic label="概述" href="rx8130ce.html#autotoc_md1265">
+            <topic label="版权信息" href="rx8130ce.html#autotoc_md1266"/>
+            <topic label="目录结构" href="rx8130ce.html#autotoc_md1267"/>
+            <topic label="依赖组件" href="rx8130ce.html#autotoc_md1268"/>
           </topic>
-          <topic label="常用配置" href="rx8130ce.html#autotoc_md1265"/>
-          <topic label="API说明" href="rx8130ce.html#autotoc_md1266"/>
-          <topic label="使用示例" href="rx8130ce.html#autotoc_md1267">
-            <topic label="添加示例代码" href="rx8130ce.html#autotoc_md1268"/>
-            <topic label="添加rx8130ce组件" href="rx8130ce.html#autotoc_md1269"/>
-            <topic label="编译" href="rx8130ce.html#autotoc_md1270"/>
-            <topic label="烧录固件" href="rx8130ce.html#autotoc_md1271"/>
-            <topic label="RX8130CE示例测试" href="rx8130ce.html#autotoc_md1272"/>
-            <topic label="关键日志" href="rx8130ce.html#autotoc_md1273"/>
+          <topic label="常用配置" href="rx8130ce.html#autotoc_md1269"/>
+          <topic label="API说明" href="rx8130ce.html#autotoc_md1270"/>
+          <topic label="使用示例" href="rx8130ce.html#autotoc_md1271">
+            <topic label="添加示例代码" href="rx8130ce.html#autotoc_md1272"/>
+            <topic label="添加rx8130ce组件" href="rx8130ce.html#autotoc_md1273"/>
+            <topic label="编译" href="rx8130ce.html#autotoc_md1274"/>
+            <topic label="烧录固件" href="rx8130ce.html#autotoc_md1275"/>
+            <topic label="RX8130CE示例测试" href="rx8130ce.html#autotoc_md1276"/>
+            <topic label="关键日志" href="rx8130ce.html#autotoc_md1277"/>
           </topic>
         </topic>
         <topic label="oled" href="oled.html">
-          <topic label="概述" href="oled.html#autotoc_md1274">
-            <topic label="版权信息" href="oled.html#autotoc_md1275"/>
-            <topic label="目录结构" href="oled.html#autotoc_md1276"/>
-            <topic label="依赖组件" href="oled.html#autotoc_md1277"/>
+          <topic label="概述" href="oled.html#autotoc_md1278">
+            <topic label="版权信息" href="oled.html#autotoc_md1279"/>
+            <topic label="目录结构" href="oled.html#autotoc_md1280"/>
+            <topic label="依赖组件" href="oled.html#autotoc_md1281"/>
           </topic>
-          <topic label="常用配置" href="oled.html#autotoc_md1278"/>
-          <topic label="API说明" href="oled.html#autotoc_md1279"/>
-          <topic label="使用示例" href="oled.html#autotoc_md1280">
-            <topic label="添加示例代码" href="oled.html#autotoc_md1281"/>
-            <topic label="app中添加sh1106组件" href="oled.html#autotoc_md1282"/>
-            <topic label="编译" href="oled.html#autotoc_md1283"/>
-            <topic label="烧录固件" href="oled.html#autotoc_md1284"/>
-            <topic label="SH1106示例测试" href="oled.html#autotoc_md1285">
-              <topic label="CLI命令行输入：" href="oled.html#autotoc_md1286"/>
-              <topic label="CLI命令行输入：" href="oled.html#autotoc_md1287"/>
+          <topic label="常用配置" href="oled.html#autotoc_md1282"/>
+          <topic label="API说明" href="oled.html#autotoc_md1283"/>
+          <topic label="使用示例" href="oled.html#autotoc_md1284">
+            <topic label="添加示例代码" href="oled.html#autotoc_md1285"/>
+            <topic label="app中添加sh1106组件" href="oled.html#autotoc_md1286"/>
+            <topic label="编译" href="oled.html#autotoc_md1287"/>
+            <topic label="烧录固件" href="oled.html#autotoc_md1288"/>
+            <topic label="SH1106示例测试" href="oled.html#autotoc_md1289">
+              <topic label="CLI命令行输入：" href="oled.html#autotoc_md1290"/>
+              <topic label="CLI命令行输入：" href="oled.html#autotoc_md1291"/>
             </topic>
           </topic>
-          <topic label="FAQ" href="oled.html#autotoc_md1288"/>
+          <topic label="FAQ" href="oled.html#autotoc_md1292"/>
         </topic>
         <topic label="st7789" href="st7789.html">
-          <topic label="概述" href="st7789.html#autotoc_md1289">
-            <topic label="版权信息" href="st7789.html#autotoc_md1290"/>
-            <topic label="目录结构" href="st7789.html#autotoc_md1291"/>
-            <topic label="依赖组件" href="st7789.html#autotoc_md1292"/>
+          <topic label="概述" href="st7789.html#autotoc_md1293">
+            <topic label="版权信息" href="st7789.html#autotoc_md1294"/>
+            <topic label="目录结构" href="st7789.html#autotoc_md1295"/>
+            <topic label="依赖组件" href="st7789.html#autotoc_md1296"/>
           </topic>
-          <topic label="常用配置" href="st7789.html#autotoc_md1293"/>
-          <topic label="API说明" href="st7789.html#autotoc_md1294">
-            <topic label="st7789硬件初始化" href="st7789.html#autotoc_md1295"/>
-            <topic label="st7789硬件去初始化" href="st7789.html#autotoc_md1296"/>
-            <topic label="st7789绘画像素点" href="st7789.html#autotoc_md1297"/>
-            <topic label="st7789区域绘画" href="st7789.html#autotoc_md1298"/>
-            <topic label="st7789绘画矩形" href="st7789.html#autotoc_md1299"/>
-            <topic label="st7789全屏填充" href="st7789.html#autotoc_md1300"/>
+          <topic label="常用配置" href="st7789.html#autotoc_md1297"/>
+          <topic label="API说明" href="st7789.html#autotoc_md1298">
+            <topic label="st7789硬件初始化" href="st7789.html#autotoc_md1299"/>
+            <topic label="st7789硬件去初始化" href="st7789.html#autotoc_md1300"/>
+            <topic label="st7789绘画像素点" href="st7789.html#autotoc_md1301"/>
+            <topic label="st7789区域绘画" href="st7789.html#autotoc_md1302"/>
+            <topic label="st7789绘画矩形" href="st7789.html#autotoc_md1303"/>
+            <topic label="st7789全屏填充" href="st7789.html#autotoc_md1304"/>
           </topic>
-          <topic label="使用示例" href="st7789.html#autotoc_md1301">
-            <topic label="添加示例代码" href="st7789.html#autotoc_md1302"/>
-            <topic label="添加st7789组件" href="st7789.html#autotoc_md1303"/>
-            <topic label="编译" href="st7789.html#autotoc_md1304"/>
-            <topic label="烧录固件" href="st7789.html#autotoc_md1305"/>
-            <topic label="st7789示例测试" href="st7789.html#autotoc_md1306"/>
-            <topic label="关键日志" href="st7789.html#autotoc_md1307"/>
+          <topic label="使用示例" href="st7789.html#autotoc_md1305">
+            <topic label="添加示例代码" href="st7789.html#autotoc_md1306"/>
+            <topic label="添加st7789组件" href="st7789.html#autotoc_md1307"/>
+            <topic label="编译" href="st7789.html#autotoc_md1308"/>
+            <topic label="烧录固件" href="st7789.html#autotoc_md1309"/>
+            <topic label="st7789示例测试" href="st7789.html#autotoc_md1310"/>
+            <topic label="关键日志" href="st7789.html#autotoc_md1311"/>
           </topic>
-          <topic label="注意事项" href="st7789.html#autotoc_md1308"/>
-          <topic label="FAQ" href="st7789.html#autotoc_md1309"/>
+          <topic label="注意事项" href="st7789.html#autotoc_md1312"/>
+          <topic label="FAQ" href="st7789.html#autotoc_md1313"/>
         </topic>
       </topic>
       <topic label="peripheral" href="peripheral.html">
         <topic label="adc" href="adc.html">
-          <topic label="概述" href="adc.html#autotoc_md1310">
-            <topic label="版权信息" href="adc.html#autotoc_md1311"/>
-            <topic label="目录结构" href="adc.html#autotoc_md1312"/>
-            <topic label="依赖组件" href="adc.html#autotoc_md1313"/>
+          <topic label="概述" href="adc.html#autotoc_md1314">
+            <topic label="版权信息" href="adc.html#autotoc_md1315"/>
+            <topic label="目录结构" href="adc.html#autotoc_md1316"/>
+            <topic label="依赖组件" href="adc.html#autotoc_md1317"/>
           </topic>
-          <topic label="常用配置" href="adc.html#autotoc_md1314"/>
-          <topic label="API说明" href="adc.html#autotoc_md1315"/>
-          <topic label="使用示例" href="adc.html#autotoc_md1316">
-            <topic label="添加示例代码" href="adc.html#autotoc_md1317"/>
-            <topic label="添加adc组件" href="adc.html#autotoc_md1318"/>
-            <topic label="编译" href="adc.html#autotoc_md1319"/>
-            <topic label="烧录固件" href="adc.html#autotoc_md1320"/>
-            <topic label="KV示例测试" href="adc.html#autotoc_md1321"/>
-            <topic label="关键日志" href="adc.html#autotoc_md1322"/>
+          <topic label="常用配置" href="adc.html#autotoc_md1318"/>
+          <topic label="API说明" href="adc.html#autotoc_md1319"/>
+          <topic label="使用示例" href="adc.html#autotoc_md1320">
+            <topic label="添加示例代码" href="adc.html#autotoc_md1321"/>
+            <topic label="添加adc组件" href="adc.html#autotoc_md1322"/>
+            <topic label="编译" href="adc.html#autotoc_md1323"/>
+            <topic label="烧录固件" href="adc.html#autotoc_md1324"/>
+            <topic label="KV示例测试" href="adc.html#autotoc_md1325"/>
+            <topic label="关键日志" href="adc.html#autotoc_md1326"/>
           </topic>
-          <topic label="注意事项" href="adc.html#autotoc_md1323"/>
-          <topic label="FAQ" href="adc.html#autotoc_md1324"/>
+          <topic label="注意事项" href="adc.html#autotoc_md1327"/>
+          <topic label="FAQ" href="adc.html#autotoc_md1328"/>
         </topic>
         <topic label="flash" href="flash.html">
-          <topic label="概述" href="flash.html#autotoc_md1325">
-            <topic label="分区定义" href="flash.html#autotoc_md1326"/>
-            <topic label="版权信息" href="flash.html#autotoc_md1327"/>
-            <topic label="目录结构" href="flash.html#autotoc_md1328"/>
-            <topic label="依赖组件" href="flash.html#autotoc_md1329"/>
+          <topic label="概述" href="flash.html#autotoc_md1329">
+            <topic label="分区定义" href="flash.html#autotoc_md1330"/>
+            <topic label="版权信息" href="flash.html#autotoc_md1331"/>
+            <topic label="目录结构" href="flash.html#autotoc_md1332"/>
+            <topic label="依赖组件" href="flash.html#autotoc_md1333"/>
           </topic>
-          <topic label="常用配置" href="flash.html#autotoc_md1330"/>
-          <topic label="API说明" href="flash.html#autotoc_md1331"/>
-          <topic label="使用示例" href="flash.html#autotoc_md1332">
-            <topic label="添加示例代码" href="flash.html#autotoc_md1333"/>
-            <topic label="添加flash组件" href="flash.html#autotoc_md1334"/>
-            <topic label="编译" href="flash.html#autotoc_md1335"/>
-            <topic label="烧录固件" href="flash.html#autotoc_md1336"/>
-            <topic label="KV示例测试" href="flash.html#autotoc_md1337"/>
-            <topic label="关键日志" href="flash.html#autotoc_md1338"/>
+          <topic label="常用配置" href="flash.html#autotoc_md1334"/>
+          <topic label="API说明" href="flash.html#autotoc_md1335"/>
+          <topic label="使用示例" href="flash.html#autotoc_md1336">
+            <topic label="添加示例代码" href="flash.html#autotoc_md1337"/>
+            <topic label="添加flash组件" href="flash.html#autotoc_md1338"/>
+            <topic label="编译" href="flash.html#autotoc_md1339"/>
+            <topic label="烧录固件" href="flash.html#autotoc_md1340"/>
+            <topic label="KV示例测试" href="flash.html#autotoc_md1341"/>
+            <topic label="关键日志" href="flash.html#autotoc_md1342"/>
           </topic>
-          <topic label="注意事项" href="flash.html#autotoc_md1339"/>
-          <topic label="FAQ" href="flash.html#autotoc_md1340"/>
+          <topic label="注意事项" href="flash.html#autotoc_md1343"/>
+          <topic label="FAQ" href="flash.html#autotoc_md1344"/>
         </topic>
         <topic label="GPIO" href="gpio.html">
-          <topic label="概述" href="gpio.html#autotoc_md1341">
-            <topic label="版权说明" href="gpio.html#autotoc_md1342"/>
-            <topic label="目录结构" href="gpio.html#autotoc_md1343"/>
-            <topic label="依赖组件" href="gpio.html#autotoc_md1344"/>
+          <topic label="概述" href="gpio.html#autotoc_md1345">
+            <topic label="版权说明" href="gpio.html#autotoc_md1346"/>
+            <topic label="目录结构" href="gpio.html#autotoc_md1347"/>
+            <topic label="依赖组件" href="gpio.html#autotoc_md1348"/>
           </topic>
-          <topic label="常用配置" href="gpio.html#autotoc_md1345"/>
-          <topic label="API说明" href="gpio.html#autotoc_md1346">
-            <topic label="打开" href="gpio.html#autotoc_md1347"/>
-            <topic label="关闭" href="gpio.html#autotoc_md1348"/>
-            <topic label="配置输入属性并获取输入电平" href="gpio.html#autotoc_md1349"/>
-            <topic label="配置输出属性并获取输出电平" href="gpio.html#autotoc_md1350"/>
-            <topic label="配置中断" href="gpio.html#autotoc_md1351"/>
+          <topic label="常用配置" href="gpio.html#autotoc_md1349"/>
+          <topic label="API说明" href="gpio.html#autotoc_md1350">
+            <topic label="打开" href="gpio.html#autotoc_md1351"/>
+            <topic label="关闭" href="gpio.html#autotoc_md1352"/>
+            <topic label="配置输入属性并获取输入电平" href="gpio.html#autotoc_md1353"/>
+            <topic label="配置输出属性并获取输出电平" href="gpio.html#autotoc_md1354"/>
+            <topic label="配置中断" href="gpio.html#autotoc_md1355"/>
           </topic>
-          <topic label="使用示例" href="gpio.html#autotoc_md1352">
-            <topic label="添加示例代码" href="gpio.html#autotoc_md1353"/>
-            <topic label="添加组件" href="gpio.html#autotoc_md1354"/>
-            <topic label="编译" href="gpio.html#autotoc_md1355"/>
-            <topic label="烧录固件" href="gpio.html#autotoc_md1356"/>
-            <topic label="示例测试" href="gpio.html#autotoc_md1357"/>
-            <topic label="关键日志" href="gpio.html#autotoc_md1358"/>
+          <topic label="使用示例" href="gpio.html#autotoc_md1356">
+            <topic label="添加示例代码" href="gpio.html#autotoc_md1357"/>
+            <topic label="添加组件" href="gpio.html#autotoc_md1358"/>
+            <topic label="编译" href="gpio.html#autotoc_md1359"/>
+            <topic label="烧录固件" href="gpio.html#autotoc_md1360"/>
+            <topic label="示例测试" href="gpio.html#autotoc_md1361"/>
+            <topic label="关键日志" href="gpio.html#autotoc_md1362"/>
           </topic>
-          <topic label="注意事项" href="gpio.html#autotoc_md1359"/>
-          <topic label="FAQ" href="gpio.html#autotoc_md1360"/>
+          <topic label="注意事项" href="gpio.html#autotoc_md1363"/>
+          <topic label="FAQ" href="gpio.html#autotoc_md1364"/>
         </topic>
         <topic label="i2c" href="i2c.html">
-          <topic label="概述" href="i2c.html#autotoc_md1361">
-            <topic label="版权信息" href="i2c.html#autotoc_md1362"/>
-            <topic label="目录结构" href="i2c.html#autotoc_md1363"/>
-            <topic label="依赖组件" href="i2c.html#autotoc_md1364"/>
+          <topic label="概述" href="i2c.html#autotoc_md1365">
+            <topic label="版权信息" href="i2c.html#autotoc_md1366"/>
+            <topic label="目录结构" href="i2c.html#autotoc_md1367"/>
+            <topic label="依赖组件" href="i2c.html#autotoc_md1368"/>
           </topic>
-          <topic label="常用配置" href="i2c.html#autotoc_md1365"/>
-          <topic label="API说明" href="i2c.html#autotoc_md1366"/>
-          <topic label="使用示例" href="i2c.html#autotoc_md1367">
-            <topic label="添加示例代码" href="i2c.html#autotoc_md1368"/>
-            <topic label="添加I2C组件" href="i2c.html#autotoc_md1369"/>
-            <topic label="编译" href="i2c.html#autotoc_md1370"/>
-            <topic label="烧录固件" href="i2c.html#autotoc_md1371"/>
-            <topic label="I2C示例测试" href="i2c.html#autotoc_md1372"/>
-            <topic label="关键日志" href="i2c.html#autotoc_md1373"/>
-            <topic label="关键日志" href="i2c.html#autotoc_md1374"/>
+          <topic label="常用配置" href="i2c.html#autotoc_md1369"/>
+          <topic label="API说明" href="i2c.html#autotoc_md1370"/>
+          <topic label="使用示例" href="i2c.html#autotoc_md1371">
+            <topic label="添加示例代码" href="i2c.html#autotoc_md1372"/>
+            <topic label="添加I2C组件" href="i2c.html#autotoc_md1373"/>
+            <topic label="编译" href="i2c.html#autotoc_md1374"/>
+            <topic label="烧录固件" href="i2c.html#autotoc_md1375"/>
+            <topic label="I2C示例测试" href="i2c.html#autotoc_md1376"/>
+            <topic label="关键日志" href="i2c.html#autotoc_md1377"/>
+            <topic label="关键日志" href="i2c.html#autotoc_md1378"/>
           </topic>
-          <topic label="注意事项" href="i2c.html#autotoc_md1375"/>
-          <topic label="FAQ" href="i2c.html#autotoc_md1376"/>
+          <topic label="注意事项" href="i2c.html#autotoc_md1379"/>
+          <topic label="FAQ" href="i2c.html#autotoc_md1380"/>
         </topic>
         <topic label="pwm" href="pwm.html">
-          <topic label="概述" href="pwm.html#autotoc_md1377">
-            <topic label="版权信息" href="pwm.html#autotoc_md1378"/>
-            <topic label="目录结构" href="pwm.html#autotoc_md1379"/>
-            <topic label="依赖组件" href="pwm.html#autotoc_md1380"/>
+          <topic label="概述" href="pwm.html#autotoc_md1381">
+            <topic label="版权信息" href="pwm.html#autotoc_md1382"/>
+            <topic label="目录结构" href="pwm.html#autotoc_md1383"/>
+            <topic label="依赖组件" href="pwm.html#autotoc_md1384"/>
           </topic>
-          <topic label="常用配置" href="pwm.html#autotoc_md1381"/>
-          <topic label="API说明" href="pwm.html#autotoc_md1382"/>
-          <topic label="使用示例" href="pwm.html#autotoc_md1383">
-            <topic label="添加示例代码" href="pwm.html#autotoc_md1384"/>
-            <topic label="添加PWM组件" href="pwm.html#autotoc_md1385"/>
-            <topic label="编译" href="pwm.html#autotoc_md1386"/>
-            <topic label="烧录固件" href="pwm.html#autotoc_md1387"/>
-            <topic label="PWM示例测试" href="pwm.html#autotoc_md1388"/>
-            <topic label="关键日志" href="pwm.html#autotoc_md1389"/>
+          <topic label="常用配置" href="pwm.html#autotoc_md1385"/>
+          <topic label="API说明" href="pwm.html#autotoc_md1386"/>
+          <topic label="使用示例" href="pwm.html#autotoc_md1387">
+            <topic label="添加示例代码" href="pwm.html#autotoc_md1388"/>
+            <topic label="添加PWM组件" href="pwm.html#autotoc_md1389"/>
+            <topic label="编译" href="pwm.html#autotoc_md1390"/>
+            <topic label="烧录固件" href="pwm.html#autotoc_md1391"/>
+            <topic label="PWM示例测试" href="pwm.html#autotoc_md1392"/>
+            <topic label="关键日志" href="pwm.html#autotoc_md1393"/>
           </topic>
-          <topic label="注意事项" href="pwm.html#autotoc_md1390"/>
-          <topic label="FAQ" href="pwm.html#autotoc_md1391"/>
+          <topic label="注意事项" href="pwm.html#autotoc_md1394"/>
+          <topic label="FAQ" href="pwm.html#autotoc_md1395"/>
         </topic>
         <topic label="spi" href="spi.html">
-          <topic label="概述" href="spi.html#autotoc_md1392">
-            <topic label="版权信息" href="spi.html#autotoc_md1393"/>
-            <topic label="目录结构" href="spi.html#autotoc_md1394"/>
-            <topic label="依赖组件" href="spi.html#autotoc_md1395"/>
+          <topic label="概述" href="spi.html#autotoc_md1396">
+            <topic label="版权信息" href="spi.html#autotoc_md1397"/>
+            <topic label="目录结构" href="spi.html#autotoc_md1398"/>
+            <topic label="依赖组件" href="spi.html#autotoc_md1399"/>
           </topic>
-          <topic label="常用配置" href="spi.html#autotoc_md1396"/>
-          <topic label="API说明" href="spi.html#autotoc_md1397"/>
-          <topic label="使用示例" href="spi.html#autotoc_md1398">
-            <topic label="添加示例代码" href="spi.html#autotoc_md1399"/>
-            <topic label="添加spi组件" href="spi.html#autotoc_md1400"/>
-            <topic label="编译" href="spi.html#autotoc_md1401"/>
-            <topic label="烧录固件" href="spi.html#autotoc_md1402"/>
-            <topic label="SPI示例测试" href="spi.html#autotoc_md1403"/>
-            <topic label="关键日志" href="spi.html#autotoc_md1404"/>
+          <topic label="常用配置" href="spi.html#autotoc_md1400"/>
+          <topic label="API说明" href="spi.html#autotoc_md1401"/>
+          <topic label="使用示例" href="spi.html#autotoc_md1402">
+            <topic label="添加示例代码" href="spi.html#autotoc_md1403"/>
+            <topic label="添加spi组件" href="spi.html#autotoc_md1404"/>
+            <topic label="编译" href="spi.html#autotoc_md1405"/>
+            <topic label="烧录固件" href="spi.html#autotoc_md1406"/>
+            <topic label="SPI示例测试" href="spi.html#autotoc_md1407"/>
+            <topic label="关键日志" href="spi.html#autotoc_md1408"/>
           </topic>
-          <topic label="注意事项" href="spi.html#autotoc_md1405"/>
-          <topic label="FAQ" href="spi.html#autotoc_md1406"/>
+          <topic label="注意事项" href="spi.html#autotoc_md1409"/>
+          <topic label="FAQ" href="spi.html#autotoc_md1410"/>
         </topic>
         <topic label="timer" href="timer.html">
-          <topic label="概述" href="timer.html#autotoc_md1407">
-            <topic label="版权信息" href="timer.html#autotoc_md1408"/>
-            <topic label="目录结构" href="timer.html#autotoc_md1409"/>
-            <topic label="依赖组件" href="timer.html#autotoc_md1410"/>
+          <topic label="概述" href="timer.html#autotoc_md1411">
+            <topic label="版权信息" href="timer.html#autotoc_md1412"/>
+            <topic label="目录结构" href="timer.html#autotoc_md1413"/>
+            <topic label="依赖组件" href="timer.html#autotoc_md1414"/>
           </topic>
-          <topic label="常用配置" href="timer.html#autotoc_md1411"/>
-          <topic label="API说明" href="timer.html#autotoc_md1412"/>
-          <topic label="使用示例" href="timer.html#autotoc_md1413">
-            <topic label="添加示例代码" href="timer.html#autotoc_md1414"/>
-            <topic label="添加timer组件" href="timer.html#autotoc_md1415"/>
-            <topic label="编译" href="timer.html#autotoc_md1416"/>
-            <topic label="烧录固件" href="timer.html#autotoc_md1417"/>
-            <topic label="Timer示例测试" href="timer.html#autotoc_md1418"/>
-            <topic label="关键日志" href="timer.html#autotoc_md1419"/>
+          <topic label="常用配置" href="timer.html#autotoc_md1415"/>
+          <topic label="API说明" href="timer.html#autotoc_md1416"/>
+          <topic label="使用示例" href="timer.html#autotoc_md1417">
+            <topic label="添加示例代码" href="timer.html#autotoc_md1418"/>
+            <topic label="添加timer组件" href="timer.html#autotoc_md1419"/>
+            <topic label="编译" href="timer.html#autotoc_md1420"/>
+            <topic label="烧录固件" href="timer.html#autotoc_md1421"/>
+            <topic label="Timer示例测试" href="timer.html#autotoc_md1422"/>
+            <topic label="关键日志" href="timer.html#autotoc_md1423"/>
           </topic>
-          <topic label="注意事项" href="timer.html#autotoc_md1420"/>
-          <topic label="FAQ" href="timer.html#autotoc_md1421"/>
+          <topic label="注意事项" href="timer.html#autotoc_md1424"/>
+          <topic label="FAQ" href="timer.html#autotoc_md1425"/>
         </topic>
         <topic label="UART" href="uart.html">
-          <topic label="概述" href="uart.html#autotoc_md1422">
-            <topic label="版权说明" href="uart.html#autotoc_md1423"/>
-            <topic label="目录结构" href="uart.html#autotoc_md1424"/>
-            <topic label="依赖组件" href="uart.html#autotoc_md1425"/>
+          <topic label="概述" href="uart.html#autotoc_md1426">
+            <topic label="版权说明" href="uart.html#autotoc_md1427"/>
+            <topic label="目录结构" href="uart.html#autotoc_md1428"/>
+            <topic label="依赖组件" href="uart.html#autotoc_md1429"/>
           </topic>
-          <topic label="常用配置" href="uart.html#autotoc_md1426"/>
-          <topic label="API说明" href="uart.html#autotoc_md1427">
-            <topic label="打开" href="uart.html#autotoc_md1428"/>
-            <topic label="关闭" href="uart.html#autotoc_md1429"/>
-            <topic label="接收数据" href="uart.html#autotoc_md1430"/>
-            <topic label="发送数据" href="uart.html#autotoc_md1431"/>
-            <topic label="查询IO事件" href="uart.html#autotoc_md1432"/>
-            <topic label="设置属性" href="uart.html#autotoc_md1433">
-              <topic label="波特率" href="uart.html#autotoc_md1434"/>
-              <topic label="数据位数" href="uart.html#autotoc_md1435"/>
-              <topic label="校验方式" href="uart.html#autotoc_md1436"/>
+          <topic label="常用配置" href="uart.html#autotoc_md1430"/>
+          <topic label="API说明" href="uart.html#autotoc_md1431">
+            <topic label="打开" href="uart.html#autotoc_md1432"/>
+            <topic label="关闭" href="uart.html#autotoc_md1433"/>
+            <topic label="接收数据" href="uart.html#autotoc_md1434"/>
+            <topic label="发送数据" href="uart.html#autotoc_md1435"/>
+            <topic label="查询IO事件" href="uart.html#autotoc_md1436"/>
+            <topic label="设置属性" href="uart.html#autotoc_md1437">
+              <topic label="波特率" href="uart.html#autotoc_md1438"/>
+              <topic label="数据位数" href="uart.html#autotoc_md1439"/>
+              <topic label="校验方式" href="uart.html#autotoc_md1440"/>
             </topic>
           </topic>
-          <topic label="使用示例" href="uart.html#autotoc_md1437">
-            <topic label="添加示例代码" href="uart.html#autotoc_md1438"/>
-            <topic label="添加组件" href="uart.html#autotoc_md1439"/>
-            <topic label="编译" href="uart.html#autotoc_md1440"/>
-            <topic label="烧录固件" href="uart.html#autotoc_md1441"/>
-            <topic label="示例测试" href="uart.html#autotoc_md1442"/>
-            <topic label="关键日志" href="uart.html#autotoc_md1443"/>
+          <topic label="使用示例" href="uart.html#autotoc_md1441">
+            <topic label="添加示例代码" href="uart.html#autotoc_md1442"/>
+            <topic label="添加组件" href="uart.html#autotoc_md1443"/>
+            <topic label="编译" href="uart.html#autotoc_md1444"/>
+            <topic label="烧录固件" href="uart.html#autotoc_md1445"/>
+            <topic label="示例测试" href="uart.html#autotoc_md1446"/>
+            <topic label="关键日志" href="uart.html#autotoc_md1447"/>
           </topic>
-          <topic label="注意事项" href="uart.html#autotoc_md1444"/>
-          <topic label="FAQ" href="uart.html#autotoc_md1445"/>
+          <topic label="注意事项" href="uart.html#autotoc_md1448"/>
+          <topic label="FAQ" href="uart.html#autotoc_md1449"/>
         </topic>
         <topic label="watchdog" href="watchdog.html">
-          <topic label="概述" href="watchdog.html#autotoc_md1446">
-            <topic label="版权信息" href="watchdog.html#autotoc_md1447"/>
-            <topic label="目录结构" href="watchdog.html#autotoc_md1448"/>
-            <topic label="依赖组件" href="watchdog.html#autotoc_md1449"/>
+          <topic label="概述" href="watchdog.html#autotoc_md1450">
+            <topic label="版权信息" href="watchdog.html#autotoc_md1451"/>
+            <topic label="目录结构" href="watchdog.html#autotoc_md1452"/>
+            <topic label="依赖组件" href="watchdog.html#autotoc_md1453"/>
           </topic>
-          <topic label="常用配置" href="watchdog.html#autotoc_md1450"/>
-          <topic label="API说明" href="watchdog.html#autotoc_md1451"/>
-          <topic label="使用示例" href="watchdog.html#autotoc_md1452">
-            <topic label="添加示例代码" href="watchdog.html#autotoc_md1453"/>
-            <topic label="添加WATCHDOG组件" href="watchdog.html#autotoc_md1454"/>
-            <topic label="编译" href="watchdog.html#autotoc_md1455"/>
-            <topic label="烧录固件" href="watchdog.html#autotoc_md1456"/>
-            <topic label="WATCHDOG示例测试" href="watchdog.html#autotoc_md1457"/>
-            <topic label="关键日志" href="watchdog.html#autotoc_md1458"/>
+          <topic label="常用配置" href="watchdog.html#autotoc_md1454"/>
+          <topic label="API说明" href="watchdog.html#autotoc_md1455"/>
+          <topic label="使用示例" href="watchdog.html#autotoc_md1456">
+            <topic label="添加示例代码" href="watchdog.html#autotoc_md1457"/>
+            <topic label="添加WATCHDOG组件" href="watchdog.html#autotoc_md1458"/>
+            <topic label="编译" href="watchdog.html#autotoc_md1459"/>
+            <topic label="烧录固件" href="watchdog.html#autotoc_md1460"/>
+            <topic label="WATCHDOG示例测试" href="watchdog.html#autotoc_md1461"/>
+            <topic label="关键日志" href="watchdog.html#autotoc_md1462"/>
           </topic>
-          <topic label="注意事项" href="watchdog.html#autotoc_md1459"/>
-          <topic label="FAQ" href="watchdog.html#autotoc_md1460"/>
+          <topic label="注意事项" href="watchdog.html#autotoc_md1463"/>
+          <topic label="FAQ" href="watchdog.html#autotoc_md1464"/>
         </topic>
       </topic>
     </topic>
@@ -871,23 +871,23 @@
       <topic label="FAQ" href="jsoncpp.html#autotoc_md462"/>
     </topic>
     <topic label="kv" href="kv.html">
-      <topic label="概述" href="kv.html#autotoc_md1214">
-        <topic label="版权信息" href="kv.html#autotoc_md1215"/>
-        <topic label="目录结构" href="kv.html#autotoc_md1216"/>
-        <topic label="依赖组件" href="kv.html#autotoc_md1217"/>
+      <topic label="概述" href="kv.html#autotoc_md1218">
+        <topic label="版权信息" href="kv.html#autotoc_md1219"/>
+        <topic label="目录结构" href="kv.html#autotoc_md1220"/>
+        <topic label="依赖组件" href="kv.html#autotoc_md1221"/>
       </topic>
-      <topic label="常用配置" href="kv.html#autotoc_md1218"/>
-      <topic label="API说明" href="kv.html#autotoc_md1219"/>
-      <topic label="使用示例" href="kv.html#autotoc_md1220">
-        <topic label="添加示例代码" href="kv.html#autotoc_md1221"/>
-        <topic label="添加kv组件" href="kv.html#autotoc_md1222"/>
-        <topic label="编译" href="kv.html#autotoc_md1223"/>
-        <topic label="烧录固件" href="kv.html#autotoc_md1224"/>
-        <topic label="KV示例测试" href="kv.html#autotoc_md1225"/>
-        <topic label="关键日志" href="kv.html#autotoc_md1226"/>
+      <topic label="常用配置" href="kv.html#autotoc_md1222"/>
+      <topic label="API说明" href="kv.html#autotoc_md1223"/>
+      <topic label="使用示例" href="kv.html#autotoc_md1224">
+        <topic label="添加示例代码" href="kv.html#autotoc_md1225"/>
+        <topic label="添加kv组件" href="kv.html#autotoc_md1226"/>
+        <topic label="编译" href="kv.html#autotoc_md1227"/>
+        <topic label="烧录固件" href="kv.html#autotoc_md1228"/>
+        <topic label="KV示例测试" href="kv.html#autotoc_md1229"/>
+        <topic label="关键日志" href="kv.html#autotoc_md1230"/>
       </topic>
-      <topic label="注意事项" href="kv.html#autotoc_md1227"/>
-      <topic label="FAQ" href="kv.html#autotoc_md1228"/>
+      <topic label="注意事项" href="kv.html#autotoc_md1231"/>
+      <topic label="FAQ" href="kv.html#autotoc_md1232"/>
     </topic>
     <topic label="libc_stub" href="libc_stub.html">
       <topic label="概述" href="libc_stub.html#autotoc_md463">
@@ -1000,21 +1000,21 @@
       <topic label="FAQ" href="mbedtls.html#autotoc_md551"/>
     </topic>
     <topic label="modbus" href="modbus.html">
-      <topic label="概述" href="modbus.html#autotoc_md1201">
-        <topic label="版权信息" href="modbus.html#autotoc_md1202"/>
-        <topic label="目录结构" href="modbus.html#autotoc_md1203"/>
-        <topic label="依赖组件" href="modbus.html#autotoc_md1204"/>
+      <topic label="概述" href="modbus.html#autotoc_md1205">
+        <topic label="版权信息" href="modbus.html#autotoc_md1206"/>
+        <topic label="目录结构" href="modbus.html#autotoc_md1207"/>
+        <topic label="依赖组件" href="modbus.html#autotoc_md1208"/>
       </topic>
-      <topic label="常用配置" href="modbus.html#autotoc_md1205"/>
-      <topic label="API说明" href="modbus.html#autotoc_md1206"/>
-      <topic label="使用示例" href="modbus.html#autotoc_md1207">
-        <topic label="添加示例代码" href="modbus.html#autotoc_md1208"/>
-        <topic label="app中添加modbus组件" href="modbus.html#autotoc_md1209"/>
-        <topic label="编译" href="modbus.html#autotoc_md1210"/>
-        <topic label="烧录固件" href="modbus.html#autotoc_md1211"/>
-        <topic label="Modbus示例测试" href="modbus.html#autotoc_md1212"/>
+      <topic label="常用配置" href="modbus.html#autotoc_md1209"/>
+      <topic label="API说明" href="modbus.html#autotoc_md1210"/>
+      <topic label="使用示例" href="modbus.html#autotoc_md1211">
+        <topic label="添加示例代码" href="modbus.html#autotoc_md1212"/>
+        <topic label="app中添加modbus组件" href="modbus.html#autotoc_md1213"/>
+        <topic label="编译" href="modbus.html#autotoc_md1214"/>
+        <topic label="烧录固件" href="modbus.html#autotoc_md1215"/>
+        <topic label="Modbus示例测试" href="modbus.html#autotoc_md1216"/>
       </topic>
-      <topic label="FAQ" href="modbus.html#autotoc_md1213"/>
+      <topic label="FAQ" href="modbus.html#autotoc_md1217"/>
     </topic>
     <topic label="netmgr" href="netmgr.html">
       <topic label="概述" href="netmgr.html#autotoc_md552">
@@ -1261,12 +1261,12 @@
       <topic label="使用示例" href="ucloud_ai.html#autotoc_md740">
         <topic label="添加示例代码" href="ucloud_ai.html#autotoc_md741"/>
         <topic label="云端功能开通" href="ucloud_ai.html#autotoc_md742"/>
-        <topic label="ucloud_ai/package.yaml中配置OSS信息" href="ucloud_ai.html#autotoc_md743"/>
+        <topic label="配置OSS信息" href="ucloud_ai.html#autotoc_md743"/>
         <topic label="添加ucloud_ai组件" href="ucloud_ai.html#autotoc_md744"/>
         <topic label="编译" href="ucloud_ai.html#autotoc_md745"/>
-        <topic label="烧录固件" href="ucloud_ai.html#autotoc_md746"/>
-        <topic label="ucloud_ai示例测试" href="ucloud_ai.html#autotoc_md747">
-          <topic label="CLI命令行输入：" href="ucloud_ai.html#autotoc_md748"/>
+        <topic label="资源文件打包" href="ucloud_ai.html#autotoc_md746"/>
+        <topic label="烧录固件" href="ucloud_ai.html#autotoc_md747"/>
+        <topic label="ucloud_ai示例测试" href="ucloud_ai.html#autotoc_md748">
           <topic label="CLI命令行输入：" href="ucloud_ai.html#autotoc_md749"/>
           <topic label="CLI命令行输入：" href="ucloud_ai.html#autotoc_md750"/>
           <topic label="CLI命令行输入：" href="ucloud_ai.html#autotoc_md751"/>
@@ -1281,123 +1281,127 @@
           <topic label="CLI命令行输入：" href="ucloud_ai.html#autotoc_md760"/>
           <topic label="CLI命令行输入：" href="ucloud_ai.html#autotoc_md761"/>
           <topic label="CLI命令行输入：" href="ucloud_ai.html#autotoc_md762"/>
+          <topic label="CLI命令行输入：" href="ucloud_ai.html#autotoc_md763"/>
         </topic>
       </topic>
-      <topic label="注意事项" href="ucloud_ai.html#autotoc_md763"/>
-      <topic label="FAQ" href="ucloud_ai.html#autotoc_md764"/>
+      <topic label="注意事项" href="ucloud_ai.html#autotoc_md764"/>
+      <topic label="FAQ" href="ucloud_ai.html#autotoc_md765"/>
     </topic>
     <topic label="udisplay" href="udisplay.html">
-      <topic label="概述" href="udisplay.html#autotoc_md765"/>
-      <topic label="版权信息" href="udisplay.html#autotoc_md766"/>
-      <topic label="目录结构" href="udisplay.html#autotoc_md767"/>
-      <topic label="依赖组件" href="udisplay.html#autotoc_md768"/>
-      <topic label="常用配置" href="udisplay.html#autotoc_md769"/>
-      <topic label="API说明" href="udisplay.html#autotoc_md770"/>
-      <topic label="使用示例" href="udisplay.html#autotoc_md771">
-        <topic label="添加示例代码" href="udisplay.html#autotoc_md772"/>
-        <topic label="app中添加udisplay组件" href="udisplay.html#autotoc_md773"/>
-        <topic label="编译" href="udisplay.html#autotoc_md774"/>
-        <topic label="烧录固件" href="udisplay.html#autotoc_md775"/>
-        <topic label="udisplay示例测试" href="udisplay.html#autotoc_md776"/>
+      <topic label="概述" href="udisplay.html#autotoc_md766"/>
+      <topic label="版权信息" href="udisplay.html#autotoc_md767"/>
+      <topic label="目录结构" href="udisplay.html#autotoc_md768"/>
+      <topic label="依赖组件" href="udisplay.html#autotoc_md769"/>
+      <topic label="常用配置" href="udisplay.html#autotoc_md770"/>
+      <topic label="API说明" href="udisplay.html#autotoc_md771"/>
+      <topic label="使用示例" href="udisplay.html#autotoc_md772">
+        <topic label="添加示例代码" href="udisplay.html#autotoc_md773"/>
+        <topic label="app中添加udisplay组件" href="udisplay.html#autotoc_md774"/>
+        <topic label="编译" href="udisplay.html#autotoc_md775"/>
+        <topic label="烧录固件" href="udisplay.html#autotoc_md776"/>
+        <topic label="udisplay示例测试" href="udisplay.html#autotoc_md777"/>
       </topic>
-      <topic label="FAQ" href="udisplay.html#autotoc_md777"/>
+      <topic label="FAQ" href="udisplay.html#autotoc_md778"/>
     </topic>
     <topic label="ugraphics" href="ugraphics.html">
-      <topic label="概述" href="ugraphics.html#autotoc_md778"/>
-      <topic label="版权信息" href="ugraphics.html#autotoc_md779"/>
-      <topic label="目录结构" href="ugraphics.html#autotoc_md780"/>
-      <topic label="依赖组件" href="ugraphics.html#autotoc_md781"/>
-      <topic label="常用配置" href="ugraphics.html#autotoc_md782"/>
-      <topic label="API说明" href="ugraphics.html#autotoc_md783"/>
-      <topic label="使用示例" href="ugraphics.html#autotoc_md784">
-        <topic label="添加示例代码" href="ugraphics.html#autotoc_md785"/>
-        <topic label="添加ugraphics组件" href="ugraphics.html#autotoc_md786"/>
-        <topic label="编译" href="ugraphics.html#autotoc_md787"/>
-        <topic label="烧录固件" href="ugraphics.html#autotoc_md788"/>
-        <topic label="ugraphics示例测试" href="ugraphics.html#autotoc_md789">
-          <topic label="CLI命令行输入：" href="ugraphics.html#autotoc_md790"/>
-          <topic label="CLI命令行输入：" href="ugraphics.html#autotoc_md791"/>
+      <topic label="概述" href="ugraphics.html#autotoc_md779"/>
+      <topic label="版权信息" href="ugraphics.html#autotoc_md780"/>
+      <topic label="目录结构" href="ugraphics.html#autotoc_md781"/>
+      <topic label="依赖组件" href="ugraphics.html#autotoc_md782"/>
+      <topic label="常用配置" href="ugraphics.html#autotoc_md783"/>
+      <topic label="API说明" href="ugraphics.html#autotoc_md784"/>
+      <topic label="使用示例" href="ugraphics.html#autotoc_md785">
+        <topic label="添加示例代码" href="ugraphics.html#autotoc_md786"/>
+        <topic label="添加ugraphics组件" href="ugraphics.html#autotoc_md787"/>
+        <topic label="编译" href="ugraphics.html#autotoc_md788"/>
+        <topic label="资源文件打包" href="ugraphics.html#autotoc_md789"/>
+        <topic label="烧录固件" href="ugraphics.html#autotoc_md790"/>
+        <topic label="ugraphics示例测试" href="ugraphics.html#autotoc_md791">
           <topic label="CLI命令行输入：" href="ugraphics.html#autotoc_md792"/>
           <topic label="CLI命令行输入：" href="ugraphics.html#autotoc_md793"/>
           <topic label="CLI命令行输入：" href="ugraphics.html#autotoc_md794"/>
           <topic label="CLI命令行输入：" href="ugraphics.html#autotoc_md795"/>
           <topic label="CLI命令行输入：" href="ugraphics.html#autotoc_md796"/>
+          <topic label="CLI命令行输入：" href="ugraphics.html#autotoc_md797"/>
+          <topic label="CLI命令行输入：" href="ugraphics.html#autotoc_md798"/>
+          <topic label="CLI命令行输入：" href="ugraphics.html#autotoc_md799"/>
+          <topic label="CLI命令行输入：" href="ugraphics.html#autotoc_md800"/>
         </topic>
       </topic>
-      <topic label="注意事项" href="ugraphics.html#autotoc_md797"/>
-      <topic label="FAQ" href="ugraphics.html#autotoc_md798"/>
+      <topic label="注意事项" href="ugraphics.html#autotoc_md801"/>
+      <topic label="FAQ" href="ugraphics.html#autotoc_md802"/>
     </topic>
     <topic label="ulog" href="ulog.html">
-      <topic label="概述" href="ulog.html#autotoc_md799">
-        <topic label="版权信息" href="ulog.html#autotoc_md800"/>
-        <topic label="目录结构" href="ulog.html#autotoc_md801"/>
-        <topic label="依赖组件" href="ulog.html#autotoc_md802"/>
+      <topic label="概述" href="ulog.html#autotoc_md803">
+        <topic label="版权信息" href="ulog.html#autotoc_md804"/>
+        <topic label="目录结构" href="ulog.html#autotoc_md805"/>
+        <topic label="依赖组件" href="ulog.html#autotoc_md806"/>
       </topic>
-      <topic label="常用配置" href="ulog.html#autotoc_md803"/>
-      <topic label="API说明" href="ulog.html#autotoc_md804"/>
-      <topic label="使用示例" href="ulog.html#autotoc_md805">
-        <topic label="添加示例代码" href="ulog.html#autotoc_md806"/>
-        <topic label="app中添加ulog组件" href="ulog.html#autotoc_md807"/>
-        <topic label="编译" href="ulog.html#autotoc_md808"/>
-        <topic label="烧录固件" href="ulog.html#autotoc_md809"/>
-        <topic label="ulog示例测试" href="ulog.html#autotoc_md810">
-          <topic label="CLI命令行输入：" href="ulog.html#autotoc_md811"/>
+      <topic label="常用配置" href="ulog.html#autotoc_md807"/>
+      <topic label="API说明" href="ulog.html#autotoc_md808"/>
+      <topic label="使用示例" href="ulog.html#autotoc_md809">
+        <topic label="添加示例代码" href="ulog.html#autotoc_md810"/>
+        <topic label="app中添加ulog组件" href="ulog.html#autotoc_md811"/>
+        <topic label="编译" href="ulog.html#autotoc_md812"/>
+        <topic label="烧录固件" href="ulog.html#autotoc_md813"/>
+        <topic label="ulog示例测试" href="ulog.html#autotoc_md814">
+          <topic label="CLI命令行输入：" href="ulog.html#autotoc_md815"/>
         </topic>
       </topic>
-      <topic label="FAQ" href="ulog.html#autotoc_md812"/>
+      <topic label="FAQ" href="ulog.html#autotoc_md816"/>
     </topic>
     <topic label="uvoice" href="uvoice.html">
-      <topic label="概述" href="uvoice.html#autotoc_md813">
-        <topic label="版权信息" href="uvoice.html#autotoc_md814"/>
-        <topic label="目录结构" href="uvoice.html#autotoc_md815"/>
-        <topic label="依赖组件" href="uvoice.html#autotoc_md816"/>
+      <topic label="概述" href="uvoice.html#autotoc_md817">
+        <topic label="版权信息" href="uvoice.html#autotoc_md818"/>
+        <topic label="目录结构" href="uvoice.html#autotoc_md819"/>
+        <topic label="依赖组件" href="uvoice.html#autotoc_md820"/>
       </topic>
-      <topic label="常用配置" href="uvoice.html#autotoc_md817"/>
-      <topic label="API说明" href="uvoice.html#autotoc_md818"/>
-      <topic label="使用示例" href="uvoice.html#autotoc_md819">
-        <topic label="添加示例代码" href="uvoice.html#autotoc_md820"/>
-        <topic label="添加uvoice组件" href="uvoice.html#autotoc_md821"/>
-        <topic label="编译" href="uvoice.html#autotoc_md822"/>
-        <topic label="烧录固件" href="uvoice.html#autotoc_md823"/>
-        <topic label="uvoice示例代码测试方法" href="uvoice.html#autotoc_md824"/>
+      <topic label="常用配置" href="uvoice.html#autotoc_md821"/>
+      <topic label="API说明" href="uvoice.html#autotoc_md822"/>
+      <topic label="使用示例" href="uvoice.html#autotoc_md823">
+        <topic label="添加示例代码" href="uvoice.html#autotoc_md824"/>
+        <topic label="添加uvoice组件" href="uvoice.html#autotoc_md825"/>
+        <topic label="编译" href="uvoice.html#autotoc_md826"/>
+        <topic label="烧录固件" href="uvoice.html#autotoc_md827"/>
+        <topic label="uvoice示例代码测试方法" href="uvoice.html#autotoc_md828"/>
       </topic>
-      <topic label="关键日志" href="uvoice.html#autotoc_md825"/>
-      <topic label="注意事项" href="uvoice.html#autotoc_md826"/>
+      <topic label="关键日志" href="uvoice.html#autotoc_md829"/>
+      <topic label="注意事项" href="uvoice.html#autotoc_md830"/>
     </topic>
     <topic label="vfs" href="vfs.html">
-      <topic label="概述" href="vfs.html#autotoc_md827">
-        <topic label="版权信息" href="vfs.html#autotoc_md828"/>
-        <topic label="目录结构" href="vfs.html#autotoc_md829"/>
-        <topic label="依赖组件" href="vfs.html#autotoc_md830"/>
+      <topic label="概述" href="vfs.html#autotoc_md831">
+        <topic label="版权信息" href="vfs.html#autotoc_md832"/>
+        <topic label="目录结构" href="vfs.html#autotoc_md833"/>
+        <topic label="依赖组件" href="vfs.html#autotoc_md834"/>
       </topic>
-      <topic label="常用配置" href="vfs.html#autotoc_md831"/>
-      <topic label="API说明" href="vfs.html#autotoc_md832"/>
-      <topic label="接口定义" href="vfs.html#autotoc_md833">
-        <topic label="初始化虚拟文件系统" href="vfs.html#autotoc_md834"/>
-        <topic label="通过路径打开文件" href="vfs.html#autotoc_md835"/>
-        <topic label="关闭文件" href="vfs.html#autotoc_md836"/>
-        <topic label="读取文件内容" href="vfs.html#autotoc_md837"/>
-        <topic label="向文件写入内容" href="vfs.html#autotoc_md838"/>
-        <topic label="发送特定命令控制接口" href="vfs.html#autotoc_md839"/>
-        <topic label="在打开的文件描述符上执行下面描述的操作，操作由 cmd 确定" href="vfs.html#autotoc_md840"/>
-        <topic label="设置下次读取文件的位置" href="vfs.html#autotoc_md841"/>
-        <topic label="同步文件" href="vfs.html#autotoc_md842"/>
-        <topic label="获取文件状态" href="vfs.html#autotoc_md843"/>
-        <topic label="删除指定目录下的文件" href="vfs.html#autotoc_md844"/>
-        <topic label="重命名文件" href="vfs.html#autotoc_md845"/>
-        <topic label="打开目录" href="vfs.html#autotoc_md846"/>
-        <topic label="关闭目录" href="vfs.html#autotoc_md847"/>
-        <topic label="读取下个目录" href="vfs.html#autotoc_md848"/>
-        <topic label="创建目录" href="vfs.html#autotoc_md849"/>
-        <topic label="删除目录" href="vfs.html#autotoc_md850"/>
+      <topic label="常用配置" href="vfs.html#autotoc_md835"/>
+      <topic label="API说明" href="vfs.html#autotoc_md836"/>
+      <topic label="接口定义" href="vfs.html#autotoc_md837">
+        <topic label="初始化虚拟文件系统" href="vfs.html#autotoc_md838"/>
+        <topic label="通过路径打开文件" href="vfs.html#autotoc_md839"/>
+        <topic label="关闭文件" href="vfs.html#autotoc_md840"/>
+        <topic label="读取文件内容" href="vfs.html#autotoc_md841"/>
+        <topic label="向文件写入内容" href="vfs.html#autotoc_md842"/>
+        <topic label="发送特定命令控制接口" href="vfs.html#autotoc_md843"/>
+        <topic label="在打开的文件描述符上执行下面描述的操作，操作由 cmd 确定" href="vfs.html#autotoc_md844"/>
+        <topic label="设置下次读取文件的位置" href="vfs.html#autotoc_md845"/>
+        <topic label="同步文件" href="vfs.html#autotoc_md846"/>
+        <topic label="获取文件状态" href="vfs.html#autotoc_md847"/>
+        <topic label="删除指定目录下的文件" href="vfs.html#autotoc_md848"/>
+        <topic label="重命名文件" href="vfs.html#autotoc_md849"/>
+        <topic label="打开目录" href="vfs.html#autotoc_md850"/>
+        <topic label="关闭目录" href="vfs.html#autotoc_md851"/>
+        <topic label="读取下个目录" href="vfs.html#autotoc_md852"/>
+        <topic label="创建目录" href="vfs.html#autotoc_md853"/>
+        <topic label="删除目录" href="vfs.html#autotoc_md854"/>
       </topic>
-      <topic label="使用示例" href="vfs.html#autotoc_md851">
-        <topic label="添加示例代码" href="vfs.html#autotoc_md852"/>
-        <topic label="app中添加VFS组件" href="vfs.html#autotoc_md853"/>
-        <topic label="编译" href="vfs.html#autotoc_md854"/>
-        <topic label="烧录固件" href="vfs.html#autotoc_md855"/>
-        <topic label="VFS示例测试" href="vfs.html#autotoc_md856"/>
-        <topic label="关键日志" href="vfs.html#autotoc_md857"/>
+      <topic label="使用示例" href="vfs.html#autotoc_md855">
+        <topic label="添加示例代码" href="vfs.html#autotoc_md856"/>
+        <topic label="app中添加VFS组件" href="vfs.html#autotoc_md857"/>
+        <topic label="编译" href="vfs.html#autotoc_md858"/>
+        <topic label="烧录固件" href="vfs.html#autotoc_md859"/>
+        <topic label="VFS示例测试" href="vfs.html#autotoc_md860"/>
+        <topic label="关键日志" href="vfs.html#autotoc_md861"/>
       </topic>
     </topic>
   </topic>
@@ -1406,483 +1410,483 @@
       <topic label="版权信息" href="solution.html#autotoc_md173"/>
       <topic label="详情" href="solution.html#autotoc_md174"/>
     <topic label="audio_demo" href="audio_demo.html">
-      <topic label="1、端测：硬件平台搭建" href="audio_demo.html#autotoc_md858"/>
-      <topic label="2、端测：软件开发" href="audio_demo.html#autotoc_md859">
-        <topic label="2.1 AliOS Things开发环境准备" href="audio_demo.html#autotoc_md860"/>
-        <topic label="2.2 源码介绍" href="audio_demo.html#autotoc_md861"/>
-        <topic label="2.3 代码编译、固件烧录" href="audio_demo.html#autotoc_md862"/>
+      <topic label="1、端测：硬件平台搭建" href="audio_demo.html#autotoc_md862"/>
+      <topic label="2、端测：软件开发" href="audio_demo.html#autotoc_md863">
+        <topic label="2.1 AliOS Things开发环境准备" href="audio_demo.html#autotoc_md864"/>
+        <topic label="2.2 源码介绍" href="audio_demo.html#autotoc_md865"/>
+        <topic label="2.3 代码编译、固件烧录" href="audio_demo.html#autotoc_md866"/>
       </topic>
-      <topic label="3、本地语音播放器调试" href="audio_demo.html#autotoc_md863">
-        <topic label="3.1 离线音频播放器调试" href="audio_demo.html#autotoc_md864"/>
-        <topic label="3.2 在线音频播放器调试" href="audio_demo.html#autotoc_md865">
-          <topic label="3.2.1 WI-FI 配网" href="audio_demo.html#autotoc_md866">
-            <topic label="3.2.1.1 修改源码配网" href="audio_demo.html#autotoc_md867"/>
-            <topic label="3.2.1.2 串口CLI命令行配网" href="audio_demo.html#autotoc_md868"/>
+      <topic label="3、本地语音播放器调试" href="audio_demo.html#autotoc_md867">
+        <topic label="3.1 离线音频播放器调试" href="audio_demo.html#autotoc_md868"/>
+        <topic label="3.2 在线音频播放器调试" href="audio_demo.html#autotoc_md869">
+          <topic label="3.2.1 WI-FI 配网" href="audio_demo.html#autotoc_md870">
+            <topic label="3.2.1.1 修改源码配网" href="audio_demo.html#autotoc_md871"/>
+            <topic label="3.2.1.2 串口CLI命令行配网" href="audio_demo.html#autotoc_md872"/>
           </topic>
-          <topic label="3.2.2 播放在线音乐" href="audio_demo.html#autotoc_md869"/>
-          <topic label="3.2.3 TTS语音合成" href="audio_demo.html#autotoc_md870"/>
+          <topic label="3.2.2 播放在线音乐" href="audio_demo.html#autotoc_md873"/>
+          <topic label="3.2.3 TTS语音合成" href="audio_demo.html#autotoc_md874"/>
         </topic>
       </topic>
-      <topic label="4、云端钉一体语音播放器调试" href="audio_demo.html#autotoc_md871">
-        <topic label="4.1 阿里云IoT平台配置" href="audio_demo.html#autotoc_md872">
-          <topic label="4.1.1 创建智能语音播放器产品" href="audio_demo.html#autotoc_md873"/>
-          <topic label="4.1.2 修改HaaS100四元组信息" href="audio_demo.html#autotoc_md874"/>
+      <topic label="4、云端钉一体语音播放器调试" href="audio_demo.html#autotoc_md875">
+        <topic label="4.1 阿里云IoT平台配置" href="audio_demo.html#autotoc_md876">
+          <topic label="4.1.1 创建智能语音播放器产品" href="audio_demo.html#autotoc_md877"/>
+          <topic label="4.1.2 修改HaaS100四元组信息" href="audio_demo.html#autotoc_md878"/>
         </topic>
-        <topic label="4.2 钉钉小程序设计" href="audio_demo.html#autotoc_md875">
-          <topic label="4.2.1 快速开始" href="audio_demo.html#autotoc_md876"/>
-          <topic label="4.2.2 小程序：HaaS语音播放器" href="audio_demo.html#autotoc_md877"/>
-          <topic label="4.2.3 小程序账号信息修改" href="audio_demo.html#autotoc_md878"/>
-          <topic label="4.2.4 修改播放列表" href="audio_demo.html#autotoc_md879"/>
+        <topic label="4.2 钉钉小程序设计" href="audio_demo.html#autotoc_md879">
+          <topic label="4.2.1 快速开始" href="audio_demo.html#autotoc_md880"/>
+          <topic label="4.2.2 小程序：HaaS语音播放器" href="audio_demo.html#autotoc_md881"/>
+          <topic label="4.2.3 小程序账号信息修改" href="audio_demo.html#autotoc_md882"/>
+          <topic label="4.2.4 修改播放列表" href="audio_demo.html#autotoc_md883"/>
         </topic>
       </topic>
-      <topic label="5、总结" href="audio_demo.html#autotoc_md880"/>
+      <topic label="5、总结" href="audio_demo.html#autotoc_md884"/>
     </topic>
     <topic label="auto_demo" href="auto_demo.html">
-      <topic label="1. 案例简介" href="auto_demo.html#autotoc_md881"/>
-      <topic label="2. 基础知识" href="auto_demo.html#autotoc_md882">
-        <topic label="2.1 &amp;nbsp;HaaS100开发板" href="auto_demo.html#autotoc_md883"/>
-        <topic label="2.2 驱动电机" href="auto_demo.html#autotoc_md884"/>
-        <topic label="2.3 超声波测距模块" href="auto_demo.html#autotoc_md885"/>
-        <topic label="2.4 红外避障模块" href="auto_demo.html#autotoc_md886"/>
-        <topic label="2.5 测速模块" href="auto_demo.html#autotoc_md887"/>
+      <topic label="1. 案例简介" href="auto_demo.html#autotoc_md885"/>
+      <topic label="2. 基础知识" href="auto_demo.html#autotoc_md886">
+        <topic label="2.1 &amp;nbsp;HaaS100开发板" href="auto_demo.html#autotoc_md887"/>
+        <topic label="2.2 驱动电机" href="auto_demo.html#autotoc_md888"/>
+        <topic label="2.3 超声波测距模块" href="auto_demo.html#autotoc_md889"/>
+        <topic label="2.4 红外避障模块" href="auto_demo.html#autotoc_md890"/>
+        <topic label="2.5 测速模块" href="auto_demo.html#autotoc_md891"/>
       </topic>
-      <topic label="3. 物料清单" href="auto_demo.html#autotoc_md888"/>
-      <topic label="4. 案例实现" href="auto_demo.html#autotoc_md889">
-        <topic label="4.1 硬件连接" href="auto_demo.html#autotoc_md890"/>
-        <topic label="4.2 软件设计" href="auto_demo.html#autotoc_md891">
-          <topic label="4.2.1 云端创建产品" href="auto_demo.html#autotoc_md892"/>
-          <topic label="4.2.2 设备端代码" href="auto_demo.html#autotoc_md893"/>
-          <topic label="4.2.3 小程序开发" href="auto_demo.html#autotoc_md894"/>
+      <topic label="3. 物料清单" href="auto_demo.html#autotoc_md892"/>
+      <topic label="4. 案例实现" href="auto_demo.html#autotoc_md893">
+        <topic label="4.1 硬件连接" href="auto_demo.html#autotoc_md894"/>
+        <topic label="4.2 软件设计" href="auto_demo.html#autotoc_md895">
+          <topic label="4.2.1 云端创建产品" href="auto_demo.html#autotoc_md896"/>
+          <topic label="4.2.2 设备端代码" href="auto_demo.html#autotoc_md897"/>
+          <topic label="4.2.3 小程序开发" href="auto_demo.html#autotoc_md898"/>
         </topic>
-        <topic label="4.3 编译，烧入，运行" href="auto_demo.html#autotoc_md895"/>
+        <topic label="4.3 编译，烧入，运行" href="auto_demo.html#autotoc_md899"/>
       </topic>
-      <topic label="5. 总结" href="auto_demo.html#autotoc_md896"/>
+      <topic label="5. 总结" href="auto_demo.html#autotoc_md900"/>
     </topic>
     <topic label="eduk1_demo" href="eduk1_demo.html">
-        <topic label="HaaS EDU场景式应用整体介绍" href="eduk1_demo.html#autotoc_md897">
-            <topic label="2.1 首页系统信息屏" href="eduk1_demo.html#autotoc_md898"/>
-            <topic label="2.2 温湿度计" href="eduk1_demo.html#autotoc_md899"/>
-            <topic label="2.3 陀螺仪小球" href="eduk1_demo.html#autotoc_md900"/>
-            <topic label="2.4 分歧争端机" href="eduk1_demo.html#autotoc_md901"/>
-            <topic label="2.5 电子罗盘" href="eduk1_demo.html#autotoc_md902"/>
-            <topic label="2.6 光照信息屏" href="eduk1_demo.html#autotoc_md903"/>
-            <topic label="2.7 大气压海拔仪" href="eduk1_demo.html#autotoc_md904"/>
-            <topic label="2.8 复古八音盒" href="eduk1_demo.html#autotoc_md905"/>
-            <topic label="2.9 贪吃蛇" href="eduk1_demo.html#autotoc_md906"/>
-            <topic label="2.10 飞机大战" href="eduk1_demo.html#autotoc_md907"/>
+          <topic label="HaaS EDU场景式应用整体介绍" href="eduk1_demo.html#autotoc_md901">
+            <topic label="2.1 首页系统信息屏" href="eduk1_demo.html#autotoc_md902"/>
+            <topic label="2.2 温湿度计" href="eduk1_demo.html#autotoc_md903"/>
+            <topic label="2.3 陀螺仪小球" href="eduk1_demo.html#autotoc_md904"/>
+            <topic label="2.4 分歧争端机" href="eduk1_demo.html#autotoc_md905"/>
+            <topic label="2.5 电子罗盘" href="eduk1_demo.html#autotoc_md906"/>
+            <topic label="2.6 光照信息屏" href="eduk1_demo.html#autotoc_md907"/>
+            <topic label="2.7 大气压海拔仪" href="eduk1_demo.html#autotoc_md908"/>
+            <topic label="2.8 复古八音盒" href="eduk1_demo.html#autotoc_md909"/>
+            <topic label="2.9 贪吃蛇" href="eduk1_demo.html#autotoc_md910"/>
+            <topic label="2.10 飞机大战" href="eduk1_demo.html#autotoc_md911"/>
       </topic>
       <topic label="首页信息屏" href="homepage.html">
-        <topic label="实验介绍" href="homepage.html#autotoc_md1003">
-              <topic label="显示效果" href="homepage.html#autotoc_md1004"/>
+        <topic label="实验介绍" href="homepage.html#autotoc_md1007">
+              <topic label="显示效果" href="homepage.html#autotoc_md1008"/>
         </topic>
-        <topic label="涉及知识点" href="homepage.html#autotoc_md1005"/>
-        <topic label="软硬件环境准备" href="homepage.html#autotoc_md1006">
-          <topic label="硬件" href="homepage.html#autotoc_md1007"/>
+        <topic label="涉及知识点" href="homepage.html#autotoc_md1009"/>
+        <topic label="软硬件环境准备" href="homepage.html#autotoc_md1010">
+          <topic label="硬件" href="homepage.html#autotoc_md1011"/>
         </topic>
-        <topic label="各实验介绍" href="homepage.html#autotoc_md1008">
-          <topic label="OLED开发与显示" href="homepage.html#autotoc_md1009">
-            <topic label="OLED背景介绍" href="homepage.html#autotoc_md1010"/>
-            <topic label="硬件设计" href="homepage.html#autotoc_md1011"/>
-            <topic label="软件设计" href="homepage.html#autotoc_md1012">
-              <topic label="初始化" href="homepage.html#autotoc_md1013"/>
-              <topic label="显示部分" href="homepage.html#autotoc_md1014"/>
+        <topic label="各实验介绍" href="homepage.html#autotoc_md1012">
+          <topic label="OLED开发与显示" href="homepage.html#autotoc_md1013">
+            <topic label="OLED背景介绍" href="homepage.html#autotoc_md1014"/>
+            <topic label="硬件设计" href="homepage.html#autotoc_md1015"/>
+            <topic label="软件设计" href="homepage.html#autotoc_md1016">
+              <topic label="初始化" href="homepage.html#autotoc_md1017"/>
+              <topic label="显示部分" href="homepage.html#autotoc_md1018"/>
             </topic>
           </topic>
-          <topic label="ADC操作与电量获取" href="homepage.html#autotoc_md1015">
-            <topic label="背景介绍" href="homepage.html#autotoc_md1016"/>
-            <topic label="硬件设计" href="homepage.html#autotoc_md1017"/>
-            <topic label="软件设计" href="homepage.html#autotoc_md1018">
-              <topic label="驱动初始化" href="homepage.html#autotoc_md1019"/>
-              <topic label="获取电压值" href="homepage.html#autotoc_md1020"/>
-              <topic label="返回电量等级" href="homepage.html#autotoc_md1021"/>
-              <topic label="显示图标" href="homepage.html#autotoc_md1022"/>
+          <topic label="ADC操作与电量获取" href="homepage.html#autotoc_md1019">
+            <topic label="背景介绍" href="homepage.html#autotoc_md1020"/>
+            <topic label="硬件设计" href="homepage.html#autotoc_md1021"/>
+            <topic label="软件设计" href="homepage.html#autotoc_md1022">
+              <topic label="驱动初始化" href="homepage.html#autotoc_md1023"/>
+              <topic label="获取电压值" href="homepage.html#autotoc_md1024"/>
+              <topic label="返回电量等级" href="homepage.html#autotoc_md1025"/>
+              <topic label="显示图标" href="homepage.html#autotoc_md1026"/>
             </topic>
           </topic>
-          <topic label="系统Wi-Fi以及网络对时" href="homepage.html#autotoc_md1023">
-            <topic label="背景介绍" href="homepage.html#autotoc_md1024">
-              <topic label="Wi-Fi" href="homepage.html#autotoc_md1025"/>
-              <topic label="2.4GHz频段" href="homepage.html#autotoc_md1026"/>
-              <topic label="5GHz频段" href="homepage.html#autotoc_md1027"/>
-              <topic label="系统时钟获取（SNTP网络对时）" href="homepage.html#autotoc_md1028"/>
-              <topic label="SNTP协议" href="homepage.html#autotoc_md1029"/>
+          <topic label="系统Wi-Fi以及网络对时" href="homepage.html#autotoc_md1027">
+            <topic label="背景介绍" href="homepage.html#autotoc_md1028">
+              <topic label="Wi-Fi" href="homepage.html#autotoc_md1029"/>
+              <topic label="2.4GHz频段" href="homepage.html#autotoc_md1030"/>
+              <topic label="5GHz频段" href="homepage.html#autotoc_md1031"/>
+              <topic label="系统时钟获取（SNTP网络对时）" href="homepage.html#autotoc_md1032"/>
+              <topic label="SNTP协议" href="homepage.html#autotoc_md1033"/>
             </topic>
-            <topic label="硬件设计" href="homepage.html#autotoc_md1030"/>
-            <topic label="软件设计" href="homepage.html#autotoc_md1031">
-              <topic label="Wi-Fi模块" href="homepage.html#autotoc_md1032"/>
-              <topic label="使用Wi-Fi" href="homepage.html#autotoc_md1033"/>
-              <topic label="网络对时（SNTP）" href="homepage.html#autotoc_md1034"/>
+            <topic label="硬件设计" href="homepage.html#autotoc_md1034"/>
+            <topic label="软件设计" href="homepage.html#autotoc_md1035">
+              <topic label="Wi-Fi模块" href="homepage.html#autotoc_md1036"/>
+              <topic label="使用Wi-Fi" href="homepage.html#autotoc_md1037"/>
+              <topic label="网络对时（SNTP）" href="homepage.html#autotoc_md1038"/>
             </topic>
           </topic>
         </topic>
       </topic>
       <topic label="温湿度计" href="humiture.html">
-        <topic label="实验介绍" href="humiture.html#autotoc_md1035"/>
-        <topic label="涉及知识点" href="humiture.html#autotoc_md1036">
-            <topic label="I2C通信原理" href="humiture.html#autotoc_md1037"/>
-            <topic label="SI7006传感器简介" href="humiture.html#autotoc_md1038"/>
-            <topic label="OLED绘图" href="humiture.html#autotoc_md1039"/>
+        <topic label="实验介绍" href="humiture.html#autotoc_md1039"/>
+        <topic label="涉及知识点" href="humiture.html#autotoc_md1040">
+            <topic label="I2C通信原理" href="humiture.html#autotoc_md1041"/>
+            <topic label="SI7006传感器简介" href="humiture.html#autotoc_md1042"/>
+            <topic label="OLED绘图" href="humiture.html#autotoc_md1043"/>
         </topic>
-        <topic label="软硬件环境准备" href="humiture.html#autotoc_md1040">
-          <topic label="硬件" href="humiture.html#autotoc_md1041"/>
+        <topic label="软硬件环境准备" href="humiture.html#autotoc_md1044">
+          <topic label="硬件" href="humiture.html#autotoc_md1045"/>
         </topic>
-        <topic label="硬件设计" href="humiture.html#autotoc_md1042">
-            <topic label="软件设计" href="humiture.html#autotoc_md1043">
-              <topic label="应用代码部分" href="humiture.html#autotoc_md1044"/>
-              <topic label="驱动部分" href="humiture.html#autotoc_md1045"/>
+        <topic label="硬件设计" href="humiture.html#autotoc_md1046">
+            <topic label="软件设计" href="humiture.html#autotoc_md1047">
+              <topic label="应用代码部分" href="humiture.html#autotoc_md1048"/>
+              <topic label="驱动部分" href="humiture.html#autotoc_md1049"/>
           </topic>
         </topic>
       </topic>
       <topic label="陀螺仪小球" href="gyroscope.html">
-        <topic label="实验介绍" href="gyroscope.html#autotoc_md984"/>
-        <topic label="涉及知识点" href="gyroscope.html#autotoc_md985"/>
-        <topic label="软硬件环境准备" href="gyroscope.html#autotoc_md986">
-          <topic label="硬件" href="gyroscope.html#autotoc_md987"/>
+        <topic label="实验介绍" href="gyroscope.html#autotoc_md988"/>
+        <topic label="涉及知识点" href="gyroscope.html#autotoc_md989"/>
+        <topic label="软硬件环境准备" href="gyroscope.html#autotoc_md990">
+          <topic label="硬件" href="gyroscope.html#autotoc_md991"/>
         </topic>
-        <topic label="硬件介绍 - MPU-6050" href="gyroscope.html#autotoc_md988">
-          <topic label="DataSheet" href="gyroscope.html#autotoc_md989"/>
-          <topic label="硬件规格" href="gyroscope.html#autotoc_md990"/>
-          <topic label="传感原理" href="gyroscope.html#autotoc_md991"/>
-          <topic label="原理图" href="gyroscope.html#autotoc_md992"/>
-          <topic label="驱动方式" href="gyroscope.html#autotoc_md993">
-            <topic label="通讯接口" href="gyroscope.html#autotoc_md994"/>
-            <topic label="寄存器" href="gyroscope.html#autotoc_md995"/>
-            <topic label="驱动实现" href="gyroscope.html#autotoc_md996">
-              <topic label="uint8_t MPU_Init(void)" href="gyroscope.html#autotoc_md997"/>
-              <topic label="void MPU_Get_Gyroscope(short *gx, short *gy, short *gz)" href="gyroscope.html#autotoc_md998"/>
-              <topic label="void MPU_Get_Accelerometer(short *ax, short *ay, short *az)" href="gyroscope.html#autotoc_md999"/>
+        <topic label="硬件介绍 - MPU-6050" href="gyroscope.html#autotoc_md992">
+          <topic label="DataSheet" href="gyroscope.html#autotoc_md993"/>
+          <topic label="硬件规格" href="gyroscope.html#autotoc_md994"/>
+          <topic label="传感原理" href="gyroscope.html#autotoc_md995"/>
+          <topic label="原理图" href="gyroscope.html#autotoc_md996"/>
+          <topic label="驱动方式" href="gyroscope.html#autotoc_md997">
+            <topic label="通讯接口" href="gyroscope.html#autotoc_md998"/>
+            <topic label="寄存器" href="gyroscope.html#autotoc_md999"/>
+            <topic label="驱动实现" href="gyroscope.html#autotoc_md1000">
+              <topic label="uint8_t MPU_Init(void)" href="gyroscope.html#autotoc_md1001"/>
+              <topic label="void MPU_Get_Gyroscope(short *gx, short *gy, short *gz)" href="gyroscope.html#autotoc_md1002"/>
+              <topic label="void MPU_Get_Accelerometer(short *ax, short *ay, short *az)" href="gyroscope.html#autotoc_md1003"/>
             </topic>
           </topic>
         </topic>
-        <topic label="应用开发" href="gyroscope.html#autotoc_md1000"/>
-        <topic label="更多应用" href="gyroscope.html#autotoc_md1001"/>
-        <topic label="引用" href="gyroscope.html#autotoc_md1002"/>
+        <topic label="应用开发" href="gyroscope.html#autotoc_md1004"/>
+        <topic label="更多应用" href="gyroscope.html#autotoc_md1005"/>
+        <topic label="引用" href="gyroscope.html#autotoc_md1006"/>
       </topic>
       <topic label="分歧争端机" href="shakeshake.html">
-        <topic label="实验介绍" href="shakeshake.html#autotoc_md1089"/>
-        <topic label="涉及知识点" href="shakeshake.html#autotoc_md1090"/>
-        <topic label="硬件介绍 - MPU-6050" href="shakeshake.html#autotoc_md1091"/>
-        <topic label="应用开发" href="shakeshake.html#autotoc_md1092">
-            <topic label="autotoc_md1093" href="shakeshake.html#autotoc_md1093"/>
+        <topic label="实验介绍" href="shakeshake.html#autotoc_md1093"/>
+        <topic label="涉及知识点" href="shakeshake.html#autotoc_md1094"/>
+        <topic label="硬件介绍 - MPU-6050" href="shakeshake.html#autotoc_md1095"/>
+        <topic label="应用开发" href="shakeshake.html#autotoc_md1096">
+            <topic label="autotoc_md1097" href="shakeshake.html#autotoc_md1097"/>
         </topic>
       </topic>
       <topic label="电子罗盘" href="compass.html">
-        <topic label="实验介绍" href="compass.html#autotoc_md944"/>
-        <topic label="涉及知识点" href="compass.html#autotoc_md945"/>
-        <topic label="软硬件环境准备" href="compass.html#autotoc_md946">
-          <topic label="硬件" href="compass.html#autotoc_md947"/>
+        <topic label="实验介绍" href="compass.html#autotoc_md948"/>
+        <topic label="涉及知识点" href="compass.html#autotoc_md949"/>
+        <topic label="软硬件环境准备" href="compass.html#autotoc_md950">
+          <topic label="硬件" href="compass.html#autotoc_md951"/>
         </topic>
-        <topic label="硬件介绍 - QMC5883L" href="compass.html#autotoc_md948">
-          <topic label="DataSheet" href="compass.html#autotoc_md949"/>
-          <topic label="硬件规格" href="compass.html#autotoc_md950"/>
-          <topic label="传感原理" href="compass.html#autotoc_md951">
-            <topic label="名词释义" href="compass.html#autotoc_md952"/>
+        <topic label="硬件介绍 - QMC5883L" href="compass.html#autotoc_md952">
+          <topic label="DataSheet" href="compass.html#autotoc_md953"/>
+          <topic label="硬件规格" href="compass.html#autotoc_md954"/>
+          <topic label="传感原理" href="compass.html#autotoc_md955">
+            <topic label="名词释义" href="compass.html#autotoc_md956"/>
           </topic>
-          <topic label="驱动方式" href="compass.html#autotoc_md953">
-            <topic label="通讯接口" href="compass.html#autotoc_md954"/>
-            <topic label="寄存器地址" href="compass.html#autotoc_md955">
-              <topic label="只读寄存器（输出寄存器）" href="compass.html#autotoc_md956"/>
-              <topic label="读写寄存器（配置寄存器）" href="compass.html#autotoc_md957"/>
+          <topic label="驱动方式" href="compass.html#autotoc_md957">
+            <topic label="通讯接口" href="compass.html#autotoc_md958"/>
+            <topic label="寄存器地址" href="compass.html#autotoc_md959">
+              <topic label="只读寄存器（输出寄存器）" href="compass.html#autotoc_md960"/>
+              <topic label="读写寄存器（配置寄存器）" href="compass.html#autotoc_md961"/>
             </topic>
-            <topic label="驱动实现" href="compass.html#autotoc_md958"/>
+            <topic label="驱动实现" href="compass.html#autotoc_md962"/>
           </topic>
-          <topic label="数据校准" href="compass.html#autotoc_md959">
-            <topic label="原始数据采样" href="compass.html#autotoc_md960"/>
+          <topic label="数据校准" href="compass.html#autotoc_md963">
+            <topic label="原始数据采样" href="compass.html#autotoc_md964"/>
           </topic>
         </topic>
-        <topic label="界面开发" href="compass.html#autotoc_md961"/>
+        <topic label="界面开发" href="compass.html#autotoc_md965"/>
       </topic>
       <topic label="大气压海拔仪" href="barometer.html">
-        <topic label="实验介绍" href="barometer.html#autotoc_md926"/>
-        <topic label="涉及知识点" href="barometer.html#autotoc_md927">
-            <topic label="I2C通信原理" href="barometer.html#autotoc_md928"/>
-            <topic label="SPL06传感器简介" href="barometer.html#autotoc_md929"/>
+        <topic label="实验介绍" href="barometer.html#autotoc_md930"/>
+        <topic label="涉及知识点" href="barometer.html#autotoc_md931">
+            <topic label="I2C通信原理" href="barometer.html#autotoc_md932"/>
+            <topic label="SPL06传感器简介" href="barometer.html#autotoc_md933"/>
         </topic>
-        <topic label="开发准备" href="barometer.html#autotoc_md930">
-          <topic label="硬件" href="barometer.html#autotoc_md931"/>
+        <topic label="开发准备" href="barometer.html#autotoc_md934">
+          <topic label="硬件" href="barometer.html#autotoc_md935"/>
         </topic>
-        <topic label="硬件设计" href="barometer.html#autotoc_md932">
-            <topic label="SPL06特性" href="barometer.html#autotoc_md933"/>
-            <topic label="读取大气压" href="barometer.html#autotoc_md934">
-              <topic label="压力数据寄存器" href="barometer.html#autotoc_md935"/>
-              <topic label="校准寄存器" href="barometer.html#autotoc_md936"/>
-              <topic label="如何计算气压" href="barometer.html#autotoc_md937"/>
-            <topic label="读取温度" href="barometer.html#autotoc_md938">
-              <topic label="温度数据寄存器" href="barometer.html#autotoc_md939"/>
-              <topic label="如何计算温度" href="barometer.html#autotoc_md940"/>
+        <topic label="硬件设计" href="barometer.html#autotoc_md936">
+            <topic label="SPL06特性" href="barometer.html#autotoc_md937"/>
+            <topic label="读取大气压" href="barometer.html#autotoc_md938">
+              <topic label="压力数据寄存器" href="barometer.html#autotoc_md939"/>
+              <topic label="校准寄存器" href="barometer.html#autotoc_md940"/>
+              <topic label="如何计算气压" href="barometer.html#autotoc_md941"/>
+            <topic label="读取温度" href="barometer.html#autotoc_md942">
+              <topic label="温度数据寄存器" href="barometer.html#autotoc_md943"/>
+              <topic label="如何计算温度" href="barometer.html#autotoc_md944"/>
             </topic>
-            <topic label="软件设计" href="barometer.html#autotoc_md941">
-              <topic label="应用代码部分" href="barometer.html#autotoc_md942"/>
-              <topic label="驱动部分" href="barometer.html#autotoc_md943"/>
+            <topic label="软件设计" href="barometer.html#autotoc_md945">
+              <topic label="应用代码部分" href="barometer.html#autotoc_md946"/>
+              <topic label="驱动部分" href="barometer.html#autotoc_md947"/>
             </topic>
           </topic>
         </topic>
       </topic>
       <topic label="光照信息屏" href="lightmeter.html">
-        <topic label="实验整体介绍" href="lightmeter.html#autotoc_md1046">
-          <topic label="背景" href="lightmeter.html#autotoc_md1047"/>
-          <topic label="涉及的知识点" href="lightmeter.html#autotoc_md1048"/>
+        <topic label="实验整体介绍" href="lightmeter.html#autotoc_md1050">
+          <topic label="背景" href="lightmeter.html#autotoc_md1051"/>
+          <topic label="涉及的知识点" href="lightmeter.html#autotoc_md1052"/>
         </topic>
-        <topic label="实验准备工作" href="lightmeter.html#autotoc_md1049">
-          <topic label="硬件" href="lightmeter.html#autotoc_md1050"/>
-          <topic label="上手把玩" href="lightmeter.html#autotoc_md1051"/>
-          <topic label="实际应用场景（产品）介绍" href="lightmeter.html#autotoc_md1052"/>
+        <topic label="实验准备工作" href="lightmeter.html#autotoc_md1053">
+          <topic label="硬件" href="lightmeter.html#autotoc_md1054"/>
+          <topic label="上手把玩" href="lightmeter.html#autotoc_md1055"/>
+          <topic label="实际应用场景（产品）介绍" href="lightmeter.html#autotoc_md1056"/>
         </topic>
-        <topic label="硬件介绍" href="lightmeter.html#autotoc_md1053">
-          <topic label="电路原理图" href="lightmeter.html#autotoc_md1054"/>
-          <topic label="AP3216C传感器" href="lightmeter.html#autotoc_md1055">
-            <topic label="AP3216C外观" href="lightmeter.html#autotoc_md1056"/>
-            <topic label="AP3216C芯片特性" href="lightmeter.html#autotoc_md1057"/>
-            <topic label="AP3216C内部框图" href="lightmeter.html#autotoc_md1058"/>
-            <topic label="AP3216C工作模式" href="lightmeter.html#autotoc_md1059"/>
-            <topic label="AP3216C中断模式" href="lightmeter.html#autotoc_md1060"/>
-            <topic label="AP3216C工作流程" href="lightmeter.html#autotoc_md1061"/>
-            <topic label="ALS光强度解析" href="lightmeter.html#autotoc_md1062"/>
-            <topic label="PS/IR数据解析" href="lightmeter.html#autotoc_md1063"/>
-            <topic label="PS中断模式说明" href="lightmeter.html#autotoc_md1064"/>
+        <topic label="硬件介绍" href="lightmeter.html#autotoc_md1057">
+          <topic label="电路原理图" href="lightmeter.html#autotoc_md1058"/>
+          <topic label="AP3216C传感器" href="lightmeter.html#autotoc_md1059">
+            <topic label="AP3216C外观" href="lightmeter.html#autotoc_md1060"/>
+            <topic label="AP3216C芯片特性" href="lightmeter.html#autotoc_md1061"/>
+            <topic label="AP3216C内部框图" href="lightmeter.html#autotoc_md1062"/>
+            <topic label="AP3216C工作模式" href="lightmeter.html#autotoc_md1063"/>
+            <topic label="AP3216C中断模式" href="lightmeter.html#autotoc_md1064"/>
+            <topic label="AP3216C工作流程" href="lightmeter.html#autotoc_md1065"/>
+            <topic label="ALS光强度解析" href="lightmeter.html#autotoc_md1066"/>
+            <topic label="PS/IR数据解析" href="lightmeter.html#autotoc_md1067"/>
+            <topic label="PS中断模式说明" href="lightmeter.html#autotoc_md1068"/>
           </topic>
-          <topic label="I2C总线技术" href="lightmeter.html#autotoc_md1065"/>
+          <topic label="I2C总线技术" href="lightmeter.html#autotoc_md1069"/>
         </topic>
-        <topic label="软件介绍" href="lightmeter.html#autotoc_md1066">
-          <topic label="软件流程" href="lightmeter.html#autotoc_md1067"/>
-          <topic label="代码实现" href="lightmeter.html#autotoc_md1068">
-            <topic label="光照信息屏页面" href="lightmeter.html#autotoc_md1069"/>
-            <topic label="AP3216C驱动" href="lightmeter.html#autotoc_md1070"/>
+        <topic label="软件介绍" href="lightmeter.html#autotoc_md1070">
+          <topic label="软件流程" href="lightmeter.html#autotoc_md1071"/>
+          <topic label="代码实现" href="lightmeter.html#autotoc_md1072">
+            <topic label="光照信息屏页面" href="lightmeter.html#autotoc_md1073"/>
+            <topic label="AP3216C驱动" href="lightmeter.html#autotoc_md1074"/>
           </topic>
         </topic>
       </topic>
       <topic label="复古八音盒" href="musicbox.html">
-        <topic label="实验介绍" href="musicbox.html#autotoc_md1071"/>
-        <topic label="涉及知识点" href="musicbox.html#autotoc_md1072"/>
-        <topic label="实验准备工作" href="musicbox.html#autotoc_md1073">
-          <topic label="硬件" href="musicbox.html#autotoc_md1074"/>
+        <topic label="实验介绍" href="musicbox.html#autotoc_md1075"/>
+        <topic label="涉及知识点" href="musicbox.html#autotoc_md1076"/>
+        <topic label="实验准备工作" href="musicbox.html#autotoc_md1077">
+          <topic label="硬件" href="musicbox.html#autotoc_md1078"/>
         </topic>
-        <topic label="蜂鸣器" href="musicbox.html#autotoc_md1075">
-          <topic label="驱动电路" href="musicbox.html#autotoc_md1076"/>
-          <topic label="驱动代码" href="musicbox.html#autotoc_md1077"/>
+        <topic label="蜂鸣器" href="musicbox.html#autotoc_md1079">
+          <topic label="驱动电路" href="musicbox.html#autotoc_md1080"/>
+          <topic label="驱动代码" href="musicbox.html#autotoc_md1081"/>
         </topic>
-        <topic label="从音调到音乐" href="musicbox.html#autotoc_md1078">
-          <topic label="定义音调" href="musicbox.html#autotoc_md1079"/>
-          <topic label="生成乐谱" href="musicbox.html#autotoc_md1080">
-            <topic label="音符" href="musicbox.html#autotoc_md1081"/>
-            <topic label="八度" href="musicbox.html#autotoc_md1082">
-              <topic label="自然大调" href="musicbox.html#autotoc_md1083"/>
-              <topic label="自然小调" href="musicbox.html#autotoc_md1084"/>
+        <topic label="从音调到音乐" href="musicbox.html#autotoc_md1082">
+          <topic label="定义音调" href="musicbox.html#autotoc_md1083"/>
+          <topic label="生成乐谱" href="musicbox.html#autotoc_md1084">
+            <topic label="音符" href="musicbox.html#autotoc_md1085"/>
+            <topic label="八度" href="musicbox.html#autotoc_md1086">
+              <topic label="自然大调" href="musicbox.html#autotoc_md1087"/>
+              <topic label="自然小调" href="musicbox.html#autotoc_md1088"/>
             </topic>
-            <topic label="拍号和音长" href="musicbox.html#autotoc_md1085"/>
-            <topic label="结构体定义" href="musicbox.html#autotoc_md1086"/>
+            <topic label="拍号和音长" href="musicbox.html#autotoc_md1089"/>
+            <topic label="结构体定义" href="musicbox.html#autotoc_md1090"/>
           </topic>
         </topic>
-        <topic label="实现播放音乐" href="musicbox.html#autotoc_md1087"/>
-        <topic label="绘制播放器" href="musicbox.html#autotoc_md1088"/>
+        <topic label="实现播放音乐" href="musicbox.html#autotoc_md1091"/>
+        <topic label="绘制播放器" href="musicbox.html#autotoc_md1092"/>
       </topic>
       <topic label="贪吃蛇" href="greedy_snake.html">
-        <topic label="实验介绍" href="greedy_snake.html#autotoc_md962"/>
-        <topic label="涉及知识点" href="greedy_snake.html#autotoc_md963"/>
-        <topic label="软硬件环境准备" href="greedy_snake.html#autotoc_md964">
-          <topic label="硬件" href="greedy_snake.html#autotoc_md965"/>
+        <topic label="实验介绍" href="greedy_snake.html#autotoc_md966"/>
+        <topic label="涉及知识点" href="greedy_snake.html#autotoc_md967"/>
+        <topic label="软硬件环境准备" href="greedy_snake.html#autotoc_md968">
+          <topic label="硬件" href="greedy_snake.html#autotoc_md969"/>
         </topic>
-        <topic label="设计思路" href="greedy_snake.html#autotoc_md966">
-          <topic label="游戏空间映射到逻辑空间" href="greedy_snake.html#autotoc_md967"/>
-          <topic label="对象定义" href="greedy_snake.html#autotoc_md968">
-            <topic label="蛇" href="greedy_snake.html#autotoc_md969"/>
-            <topic label="食物" href="greedy_snake.html#autotoc_md970"/>
-            <topic label="地图" href="greedy_snake.html#autotoc_md971"/>
-            <topic label="游戏" href="greedy_snake.html#autotoc_md972"/>
+        <topic label="设计思路" href="greedy_snake.html#autotoc_md970">
+          <topic label="游戏空间映射到逻辑空间" href="greedy_snake.html#autotoc_md971"/>
+          <topic label="对象定义" href="greedy_snake.html#autotoc_md972">
+            <topic label="蛇" href="greedy_snake.html#autotoc_md973"/>
+            <topic label="食物" href="greedy_snake.html#autotoc_md974"/>
+            <topic label="地图" href="greedy_snake.html#autotoc_md975"/>
+            <topic label="游戏" href="greedy_snake.html#autotoc_md976"/>
           </topic>
-          <topic label="对象初始化" href="greedy_snake.html#autotoc_md973"/>
-          <topic label="对象绘画" href="greedy_snake.html#autotoc_md974">
-            <topic label="蛇" href="greedy_snake.html#autotoc_md975"/>
-            <topic label="食物" href="greedy_snake.html#autotoc_md976"/>
+          <topic label="对象初始化" href="greedy_snake.html#autotoc_md977"/>
+          <topic label="对象绘画" href="greedy_snake.html#autotoc_md978">
+            <topic label="蛇" href="greedy_snake.html#autotoc_md979"/>
+            <topic label="食物" href="greedy_snake.html#autotoc_md980"/>
           </topic>
-          <topic label="对象行为" href="greedy_snake.html#autotoc_md977">
-            <topic label="蛇的运动" href="greedy_snake.html#autotoc_md978"/>
-            <topic label="死亡判定" href="greedy_snake.html#autotoc_md979"/>
-            <topic label="吃食判定" href="greedy_snake.html#autotoc_md980"/>
+          <topic label="对象行为" href="greedy_snake.html#autotoc_md981">
+            <topic label="蛇的运动" href="greedy_snake.html#autotoc_md982"/>
+            <topic label="死亡判定" href="greedy_snake.html#autotoc_md983"/>
+            <topic label="吃食判定" href="greedy_snake.html#autotoc_md984"/>
           </topic>
-          <topic label="绑定用户操作" href="greedy_snake.html#autotoc_md981"/>
-          <topic label="游戏全局控制" href="greedy_snake.html#autotoc_md982"/>
-          <topic label="实现效果" href="greedy_snake.html#autotoc_md983"/>
+          <topic label="绑定用户操作" href="greedy_snake.html#autotoc_md985"/>
+          <topic label="游戏全局控制" href="greedy_snake.html#autotoc_md986"/>
+          <topic label="实现效果" href="greedy_snake.html#autotoc_md987"/>
         </topic>
       </topic>
       <topic label="飞机大战" href="aircraft_battle.html">
-        <topic label="实验介绍" href="aircraft_battle.html#autotoc_md908"/>
-        <topic label="涉及知识点" href="aircraft_battle.html#autotoc_md909"/>
-        <topic label="软硬件环境准备" href="aircraft_battle.html#autotoc_md910">
-          <topic label="硬件" href="aircraft_battle.html#autotoc_md911"/>
+        <topic label="实验介绍" href="aircraft_battle.html#autotoc_md912"/>
+        <topic label="涉及知识点" href="aircraft_battle.html#autotoc_md913"/>
+        <topic label="软硬件环境准备" href="aircraft_battle.html#autotoc_md914">
+          <topic label="硬件" href="aircraft_battle.html#autotoc_md915"/>
         </topic>
-        <topic label="游戏设定" href="aircraft_battle.html#autotoc_md912">
-          <topic label="角色设定" href="aircraft_battle.html#autotoc_md913"/>
-          <topic label="行为设定" href="aircraft_battle.html#autotoc_md914"/>
+        <topic label="游戏设定" href="aircraft_battle.html#autotoc_md916">
+          <topic label="角色设定" href="aircraft_battle.html#autotoc_md917"/>
+          <topic label="行为设定" href="aircraft_battle.html#autotoc_md918"/>
         </topic>
-        <topic label="游戏实现" href="aircraft_battle.html#autotoc_md915">
-          <topic label="游戏流程" href="aircraft_battle.html#autotoc_md916"/>
-          <topic label="贴图实现" href="aircraft_battle.html#autotoc_md917"/>
-          <topic label="移动战舰" href="aircraft_battle.html#autotoc_md918"/>
-          <topic label="加一点特效" href="aircraft_battle.html#autotoc_md919"/>
-          <topic label="移动敌机" href="aircraft_battle.html#autotoc_md920"/>
-          <topic label="重载敌机" href="aircraft_battle.html#autotoc_md921"/>
-          <topic label="发射子弹" href="aircraft_battle.html#autotoc_md922"/>
-          <topic label="撞击判定" href="aircraft_battle.html#autotoc_md923"/>
-          <topic label="全局刷新" href="aircraft_battle.html#autotoc_md924"/>
+        <topic label="游戏实现" href="aircraft_battle.html#autotoc_md919">
+          <topic label="游戏流程" href="aircraft_battle.html#autotoc_md920"/>
+          <topic label="贴图实现" href="aircraft_battle.html#autotoc_md921"/>
+          <topic label="移动战舰" href="aircraft_battle.html#autotoc_md922"/>
+          <topic label="加一点特效" href="aircraft_battle.html#autotoc_md923"/>
+          <topic label="移动敌机" href="aircraft_battle.html#autotoc_md924"/>
+          <topic label="重载敌机" href="aircraft_battle.html#autotoc_md925"/>
+          <topic label="发射子弹" href="aircraft_battle.html#autotoc_md926"/>
+          <topic label="撞击判定" href="aircraft_battle.html#autotoc_md927"/>
+          <topic label="全局刷新" href="aircraft_battle.html#autotoc_md928"/>
         </topic>
-        <topic label="实现效果" href="aircraft_battle.html#autotoc_md925"/>
+        <topic label="实现效果" href="aircraft_battle.html#autotoc_md929"/>
       </topic>
     </topic>
     <topic label="flower_demo" href="flower_demo.html">
-      <topic label="1. 案例简介" href="flower_demo.html#autotoc_md1094"/>
-      <topic label="2. 基础知识" href="flower_demo.html#autotoc_md1095">
-        <topic label="2.1 &amp;nbsp;&lt;strong&gt;HaaS100开发板&lt;/strong&gt;" href="flower_demo.html#autotoc_md1096"/>
-        <topic label="2.2  温湿度传感器" href="flower_demo.html#autotoc_md1097">
-          <topic label="2.2.1 工作时序" href="flower_demo.html#autotoc_md1098"/>
-          <topic label="2.2.2 起始信号和响应信号的规则" href="flower_demo.html#autotoc_md1099"/>
-          <topic label="2.2.3数字信号的规则" href="flower_demo.html#autotoc_md1100"/>
+      <topic label="1. 案例简介" href="flower_demo.html#autotoc_md1098"/>
+      <topic label="2. 基础知识" href="flower_demo.html#autotoc_md1099">
+        <topic label="2.1 &amp;nbsp;&lt;strong&gt;HaaS100开发板&lt;/strong&gt;" href="flower_demo.html#autotoc_md1100"/>
+        <topic label="2.2  温湿度传感器" href="flower_demo.html#autotoc_md1101">
+          <topic label="2.2.1 工作时序" href="flower_demo.html#autotoc_md1102"/>
+          <topic label="2.2.2 起始信号和响应信号的规则" href="flower_demo.html#autotoc_md1103"/>
+          <topic label="2.2.3数字信号的规则" href="flower_demo.html#autotoc_md1104"/>
         </topic>
       </topic>
-      <topic label="3 物料清单" href="flower_demo.html#autotoc_md1101"/>
-      <topic label="4. 案例实现" href="flower_demo.html#autotoc_md1102">
-        <topic label="4.1 硬件连接" href="flower_demo.html#autotoc_md1103"/>
-        <topic label="4.2 软件设计" href="flower_demo.html#autotoc_md1104">
-          <topic label="4.2.1 云端创建产品" href="flower_demo.html#autotoc_md1105"/>
-          <topic label="4.2.2 设备端代码" href="flower_demo.html#autotoc_md1106"/>
-          <topic label="4.2.3 小程序开发1、 云端钉一体小程序SDK获取" href="flower_demo.html#autotoc_md1107"/>
+      <topic label="3 物料清单" href="flower_demo.html#autotoc_md1105"/>
+      <topic label="4. 案例实现" href="flower_demo.html#autotoc_md1106">
+        <topic label="4.1 硬件连接" href="flower_demo.html#autotoc_md1107"/>
+        <topic label="4.2 软件设计" href="flower_demo.html#autotoc_md1108">
+          <topic label="4.2.1 云端创建产品" href="flower_demo.html#autotoc_md1109"/>
+          <topic label="4.2.2 设备端代码" href="flower_demo.html#autotoc_md1110"/>
+          <topic label="4.2.3 小程序开发1、 云端钉一体小程序SDK获取" href="flower_demo.html#autotoc_md1111"/>
         </topic>
-        <topic label="4.3 编译，烧入，运行" href="flower_demo.html#autotoc_md1108"/>
+        <topic label="4.3 编译，烧入，运行" href="flower_demo.html#autotoc_md1112"/>
       </topic>
-      <topic label="5. 总结" href="flower_demo.html#autotoc_md1109"/>
+      <topic label="5. 总结" href="flower_demo.html#autotoc_md1113"/>
     </topic>
     <topic label="helloworld_demo" href="helloworld_demo.html">
-      <topic label="1. 案例简介" href="helloworld_demo.html#autotoc_md1110"/>
-      <topic label="2. 基础知识" href="helloworld_demo.html#autotoc_md1111">
-        <topic label="2.1 基础目录结构" href="helloworld_demo.html#autotoc_md1112"/>
-        <topic label="2.2 基本规范" href="helloworld_demo.html#autotoc_md1113"/>
-        <topic label="2.3 基本运行流程" href="helloworld_demo.html#autotoc_md1114"/>
+      <topic label="1. 案例简介" href="helloworld_demo.html#autotoc_md1114"/>
+      <topic label="2. 基础知识" href="helloworld_demo.html#autotoc_md1115">
+        <topic label="2.1 基础目录结构" href="helloworld_demo.html#autotoc_md1116"/>
+        <topic label="2.2 基本规范" href="helloworld_demo.html#autotoc_md1117"/>
+        <topic label="2.3 基本运行流程" href="helloworld_demo.html#autotoc_md1118"/>
       </topic>
-      <topic label="3. 物料清单" href="helloworld_demo.html#autotoc_md1115">
-        <topic label="3.1 HaaS100 硬件" href="helloworld_demo.html#autotoc_md1116"/>
+      <topic label="3. 物料清单" href="helloworld_demo.html#autotoc_md1119">
+        <topic label="3.1 HaaS100 硬件" href="helloworld_demo.html#autotoc_md1120"/>
       </topic>
-      <topic label="4. 案例实现" href="helloworld_demo.html#autotoc_md1117">
-        <topic label="4.1 硬件连接" href="helloworld_demo.html#autotoc_md1118"/>
-        <topic label="4.2 软件实现" href="helloworld_demo.html#autotoc_md1119"/>
-        <topic label="4.3 编译下载" href="helloworld_demo.html#autotoc_md1120">
-          <topic label="编译" href="helloworld_demo.html#autotoc_md1121"/>
-          <topic label="烧录镜像命令：" href="helloworld_demo.html#autotoc_md1122"/>
+      <topic label="4. 案例实现" href="helloworld_demo.html#autotoc_md1121">
+        <topic label="4.1 硬件连接" href="helloworld_demo.html#autotoc_md1122"/>
+        <topic label="4.2 软件实现" href="helloworld_demo.html#autotoc_md1123"/>
+        <topic label="4.3 编译下载" href="helloworld_demo.html#autotoc_md1124">
+          <topic label="编译" href="helloworld_demo.html#autotoc_md1125"/>
+          <topic label="烧录镜像命令：" href="helloworld_demo.html#autotoc_md1126"/>
         </topic>
-        <topic label="4.4 串口输出效果" href="helloworld_demo.html#autotoc_md1123"/>
+        <topic label="4.4 串口输出效果" href="helloworld_demo.html#autotoc_md1127"/>
       </topic>
-      <topic label="5 添加新组件" href="helloworld_demo.html#autotoc_md1124">
-        <topic label="5.1 yaml增加组件" href="helloworld_demo.html#autotoc_md1125"/>
+      <topic label="5 添加新组件" href="helloworld_demo.html#autotoc_md1128">
+        <topic label="5.1 yaml增加组件" href="helloworld_demo.html#autotoc_md1129"/>
       </topic>
-      <topic label="6. 总结" href="helloworld_demo.html#autotoc_md1126"/>
+      <topic label="6. 总结" href="helloworld_demo.html#autotoc_md1130"/>
     </topic>
     <topic label="linksdk_demo" href="linksdk_demo.html">
-      <topic label="1. 案例简介" href="linksdk_demo.html#autotoc_md1127"/>
-      <topic label="2. 基础知识" href="linksdk_demo.html#autotoc_md1128"/>
-      <topic label="2.1 基础目录结构" href="linksdk_demo.html#autotoc_md1129"/>
-      <topic label="3. 物料清单" href="linksdk_demo.html#autotoc_md1130"/>
-      <topic label="3.1 HaaS100 硬件" href="linksdk_demo.html#autotoc_md1131"/>
-      <topic label="4. 案例实现" href="linksdk_demo.html#autotoc_md1132">
-        <topic label="4.1 硬件连接" href="linksdk_demo.html#autotoc_md1133"/>
-        <topic label="4.2 软件实现" href="linksdk_demo.html#autotoc_md1134">
-          <topic label="4.2.1 云端创建产品" href="linksdk_demo.html#autotoc_md1135"/>
-          <topic label="4.2.2 设备端代码" href="linksdk_demo.html#autotoc_md1136"/>
+      <topic label="1. 案例简介" href="linksdk_demo.html#autotoc_md1131"/>
+      <topic label="2. 基础知识" href="linksdk_demo.html#autotoc_md1132"/>
+      <topic label="2.1 基础目录结构" href="linksdk_demo.html#autotoc_md1133"/>
+      <topic label="3. 物料清单" href="linksdk_demo.html#autotoc_md1134"/>
+      <topic label="3.1 HaaS100 硬件" href="linksdk_demo.html#autotoc_md1135"/>
+      <topic label="4. 案例实现" href="linksdk_demo.html#autotoc_md1136">
+        <topic label="4.1 硬件连接" href="linksdk_demo.html#autotoc_md1137"/>
+        <topic label="4.2 软件实现" href="linksdk_demo.html#autotoc_md1138">
+          <topic label="4.2.1 云端创建产品" href="linksdk_demo.html#autotoc_md1139"/>
+          <topic label="4.2.2 设备端代码" href="linksdk_demo.html#autotoc_md1140"/>
         </topic>
-        <topic label="4.3 编译下载" href="linksdk_demo.html#autotoc_md1137">
-          <topic label="编译" href="linksdk_demo.html#autotoc_md1138"/>
-          <topic label="烧录镜像命令" href="linksdk_demo.html#autotoc_md1139"/>
+        <topic label="4.3 编译下载" href="linksdk_demo.html#autotoc_md1141">
+          <topic label="编译" href="linksdk_demo.html#autotoc_md1142"/>
+          <topic label="烧录镜像命令" href="linksdk_demo.html#autotoc_md1143"/>
         </topic>
-        <topic label="4.4 调试" href="linksdk_demo.html#autotoc_md1140">
-          <topic label="4.4.1 关键日志" href="linksdk_demo.html#autotoc_md1141"/>
-          <topic label="4.4.2 云端状态" href="linksdk_demo.html#autotoc_md1142"/>
-        </topic>
-      </topic>
-      <topic label="5. 扩展开发" href="linksdk_demo.html#autotoc_md1143">
-        <topic label="5.1 云端下发属性" href="linksdk_demo.html#autotoc_md1144">
-          <topic label="5.1.2 设备端处理" href="linksdk_demo.html#autotoc_md1145"/>
-          <topic label="5.1.3 云端下发" href="linksdk_demo.html#autotoc_md1146"/>
-          <topic label="5.1.3 查看设备端日志" href="linksdk_demo.html#autotoc_md1147"/>
-        </topic>
-        <topic label="5.2 设备上报属性" href="linksdk_demo.html#autotoc_md1148">
-          <topic label="5.2.1 设备端处理" href="linksdk_demo.html#autotoc_md1149"/>
-          <topic label="5.2.2 云端查看上报数据" href="linksdk_demo.html#autotoc_md1150"/>
+        <topic label="4.4 调试" href="linksdk_demo.html#autotoc_md1144">
+          <topic label="4.4.1 关键日志" href="linksdk_demo.html#autotoc_md1145"/>
+          <topic label="4.4.2 云端状态" href="linksdk_demo.html#autotoc_md1146"/>
         </topic>
       </topic>
-      <topic label="6. 总结" href="linksdk_demo.html#autotoc_md1151"/>
+      <topic label="5. 扩展开发" href="linksdk_demo.html#autotoc_md1147">
+        <topic label="5.1 云端下发属性" href="linksdk_demo.html#autotoc_md1148">
+          <topic label="5.1.2 设备端处理" href="linksdk_demo.html#autotoc_md1149"/>
+          <topic label="5.1.3 云端下发" href="linksdk_demo.html#autotoc_md1150"/>
+          <topic label="5.1.3 查看设备端日志" href="linksdk_demo.html#autotoc_md1151"/>
+        </topic>
+        <topic label="5.2 设备上报属性" href="linksdk_demo.html#autotoc_md1152">
+          <topic label="5.2.1 设备端处理" href="linksdk_demo.html#autotoc_md1153"/>
+          <topic label="5.2.2 云端查看上报数据" href="linksdk_demo.html#autotoc_md1154"/>
+        </topic>
+      </topic>
+      <topic label="6. 总结" href="linksdk_demo.html#autotoc_md1155"/>
     </topic>
     <topic label="linksdk_gateway_demo" href="linksdk_gateway_demo.html">
-      <topic label="1. 案例简介" href="linksdk_gateway_demo.html#autotoc_md1152"/>
-      <topic label="2. 基础知识" href="linksdk_gateway_demo.html#autotoc_md1153"/>
-      <topic label="2.1 基础目录结构" href="linksdk_gateway_demo.html#autotoc_md1154"/>
-      <topic label="3. 物料清单" href="linksdk_gateway_demo.html#autotoc_md1155"/>
-      <topic label="3.1 HaaS100 硬件" href="linksdk_gateway_demo.html#autotoc_md1156"/>
-      <topic label="4. 案例实现" href="linksdk_gateway_demo.html#autotoc_md1157">
-        <topic label="4.1 硬件连接" href="linksdk_gateway_demo.html#autotoc_md1158"/>
-        <topic label="4.2 软件实现" href="linksdk_gateway_demo.html#autotoc_md1159">
-          <topic label="4.2.1 云端创建产品" href="linksdk_gateway_demo.html#autotoc_md1160"/>
-          <topic label="4.2.2 设备端代码" href="linksdk_gateway_demo.html#autotoc_md1161"/>
+      <topic label="1. 案例简介" href="linksdk_gateway_demo.html#autotoc_md1156"/>
+      <topic label="2. 基础知识" href="linksdk_gateway_demo.html#autotoc_md1157"/>
+      <topic label="2.1 基础目录结构" href="linksdk_gateway_demo.html#autotoc_md1158"/>
+      <topic label="3. 物料清单" href="linksdk_gateway_demo.html#autotoc_md1159"/>
+      <topic label="3.1 HaaS100 硬件" href="linksdk_gateway_demo.html#autotoc_md1160"/>
+      <topic label="4. 案例实现" href="linksdk_gateway_demo.html#autotoc_md1161">
+        <topic label="4.1 硬件连接" href="linksdk_gateway_demo.html#autotoc_md1162"/>
+        <topic label="4.2 软件实现" href="linksdk_gateway_demo.html#autotoc_md1163">
+          <topic label="4.2.1 云端创建产品" href="linksdk_gateway_demo.html#autotoc_md1164"/>
+          <topic label="4.2.2 设备端代码" href="linksdk_gateway_demo.html#autotoc_md1165"/>
         </topic>
-        <topic label="4.3 编译下载" href="linksdk_gateway_demo.html#autotoc_md1162">
-          <topic label="编译" href="linksdk_gateway_demo.html#autotoc_md1163"/>
-          <topic label="烧录镜像命令" href="linksdk_gateway_demo.html#autotoc_md1164"/>
+        <topic label="4.3 编译下载" href="linksdk_gateway_demo.html#autotoc_md1166">
+          <topic label="编译" href="linksdk_gateway_demo.html#autotoc_md1167"/>
+          <topic label="烧录镜像命令" href="linksdk_gateway_demo.html#autotoc_md1168"/>
         </topic>
-        <topic label="4.4 调试" href="linksdk_gateway_demo.html#autotoc_md1165">
-          <topic label="4.4.1 关键日志" href="linksdk_gateway_demo.html#autotoc_md1166"/>
+        <topic label="4.4 调试" href="linksdk_gateway_demo.html#autotoc_md1169">
+          <topic label="4.4.1 关键日志" href="linksdk_gateway_demo.html#autotoc_md1170"/>
         </topic>
       </topic>
-      <topic label="5. 总结" href="linksdk_gateway_demo.html#autotoc_md1167"/>
+      <topic label="5. 总结" href="linksdk_gateway_demo.html#autotoc_md1171"/>
     </topic>
     <topic label="ota_demo" href="ota_demo.html">
-      <topic label="1. 案例简介" href="ota_demo.html#autotoc_md1168"/>
-      <topic label="2. 基础知识" href="ota_demo.html#autotoc_md1169"/>
-      <topic label="3. 物料清单" href="ota_demo.html#autotoc_md1170"/>
-      <topic label="4. 案例实现" href="ota_demo.html#autotoc_md1171"/>
-      <topic label="5. 总结" href="ota_demo.html#autotoc_md1172"/>
+      <topic label="1. 案例简介" href="ota_demo.html#autotoc_md1172"/>
+      <topic label="2. 基础知识" href="ota_demo.html#autotoc_md1173"/>
+      <topic label="3. 物料清单" href="ota_demo.html#autotoc_md1174"/>
+      <topic label="4. 案例实现" href="ota_demo.html#autotoc_md1175"/>
+      <topic label="5. 总结" href="ota_demo.html#autotoc_md1176"/>
     </topic>
     <topic label="py_engine_demo" href="py_engine_demo.html">
-      <topic label="1. 案例简介" href="py_engine_demo.html#autotoc_md1173"/>
-      <topic label="2. 基础知识" href="py_engine_demo.html#autotoc_md1174">
-        <topic label="2.1 组件依赖方法" href="py_engine_demo.html#autotoc_md1175"/>
+      <topic label="1. 案例简介" href="py_engine_demo.html#autotoc_md1177"/>
+      <topic label="2. 基础知识" href="py_engine_demo.html#autotoc_md1178">
+        <topic label="2.1 组件依赖方法" href="py_engine_demo.html#autotoc_md1179"/>
       </topic>
-      <topic label="3. 物料清单" href="py_engine_demo.html#autotoc_md1176">
-        <topic label="3.1 HaaS100 硬件" href="py_engine_demo.html#autotoc_md1177"/>
+      <topic label="3. 物料清单" href="py_engine_demo.html#autotoc_md1180">
+        <topic label="3.1 HaaS100 硬件" href="py_engine_demo.html#autotoc_md1181"/>
       </topic>
-      <topic label="4. 案例实现" href="py_engine_demo.html#autotoc_md1178">
-        <topic label="4.1 硬件连接" href="py_engine_demo.html#autotoc_md1179"/>
-        <topic label="4.2 软件实现" href="py_engine_demo.html#autotoc_md1180">
-          <topic label="4.2.1 编译固件" href="py_engine_demo.html#autotoc_md1181"/>
-          <topic label="4.2.2 验证Python功能" href="py_engine_demo.html#autotoc_md1182"/>
+      <topic label="4. 案例实现" href="py_engine_demo.html#autotoc_md1182">
+        <topic label="4.1 硬件连接" href="py_engine_demo.html#autotoc_md1183"/>
+        <topic label="4.2 软件实现" href="py_engine_demo.html#autotoc_md1184">
+          <topic label="4.2.1 编译固件" href="py_engine_demo.html#autotoc_md1185"/>
+          <topic label="4.2.2 验证Python功能" href="py_engine_demo.html#autotoc_md1186"/>
         </topic>
       </topic>
-      <topic label="5. 总结" href="py_engine_demo.html#autotoc_md1183"/>
+      <topic label="5. 总结" href="py_engine_demo.html#autotoc_md1187"/>
     </topic>
     <topic label="rfid_demo" href="rfid_demo.html">
-      <topic label="1. 案例简介" href="rfid_demo.html#autotoc_md1184"/>
-      <topic label="2. 基础知识" href="rfid_demo.html#autotoc_md1185"/>
-      <topic label="3. 物料清单" href="rfid_demo.html#autotoc_md1186">
-        <topic label="3.1 HaaS100 硬件" href="rfid_demo.html#autotoc_md1187"/>
-        <topic label="3.2 RFID读写器" href="rfid_demo.html#autotoc_md1188"/>
+      <topic label="1. 案例简介" href="rfid_demo.html#autotoc_md1188"/>
+      <topic label="2. 基础知识" href="rfid_demo.html#autotoc_md1189"/>
+      <topic label="3. 物料清单" href="rfid_demo.html#autotoc_md1190">
+        <topic label="3.1 HaaS100 硬件" href="rfid_demo.html#autotoc_md1191"/>
+        <topic label="3.2 RFID读写器" href="rfid_demo.html#autotoc_md1192"/>
       </topic>
-      <topic label="4. 案例实现" href="rfid_demo.html#autotoc_md1189">
-        <topic label="4.1 硬件连接" href="rfid_demo.html#autotoc_md1190"/>
-        <topic label="4.2 接入阿里云IOT平台" href="rfid_demo.html#autotoc_md1191"/>
-        <topic label="4.3 软件实现" href="rfid_demo.html#autotoc_md1192">
-          <topic label="4.3.1 软件流程图" href="rfid_demo.html#autotoc_md1193"/>
-          <topic label="4.3.2 HaaS100 串口通信部分" href="rfid_demo.html#autotoc_md1194"/>
-          <topic label="4.3.3 往阿里云IOT平台发送数据" href="rfid_demo.html#autotoc_md1195"/>
+      <topic label="4. 案例实现" href="rfid_demo.html#autotoc_md1193">
+        <topic label="4.1 硬件连接" href="rfid_demo.html#autotoc_md1194"/>
+        <topic label="4.2 接入阿里云IOT平台" href="rfid_demo.html#autotoc_md1195"/>
+        <topic label="4.3 软件实现" href="rfid_demo.html#autotoc_md1196">
+          <topic label="4.3.1 软件流程图" href="rfid_demo.html#autotoc_md1197"/>
+          <topic label="4.3.2 HaaS100 串口通信部分" href="rfid_demo.html#autotoc_md1198"/>
+          <topic label="4.3.3 往阿里云IOT平台发送数据" href="rfid_demo.html#autotoc_md1199"/>
         </topic>
-        <topic label="4.4 端云联调" href="rfid_demo.html#autotoc_md1196">
-          <topic label="4.4.1 下载软件版本" href="rfid_demo.html#autotoc_md1197"/>
-          <topic label="4.4.2 设备配网" href="rfid_demo.html#autotoc_md1198"/>
-          <topic label="4.4.3 演示效果图片" href="rfid_demo.html#autotoc_md1199"/>
+        <topic label="4.4 端云联调" href="rfid_demo.html#autotoc_md1200">
+          <topic label="4.4.1 下载软件版本" href="rfid_demo.html#autotoc_md1201"/>
+          <topic label="4.4.2 设备配网" href="rfid_demo.html#autotoc_md1202"/>
+          <topic label="4.4.3 演示效果图片" href="rfid_demo.html#autotoc_md1203"/>
         </topic>
       </topic>
-      <topic label="5. 总结" href="rfid_demo.html#autotoc_md1200"/>
+      <topic label="5. 总结" href="rfid_demo.html#autotoc_md1204"/>
     </topic>
     <topic label="lora_p2p_demo" href="lora_p2p_demo.html">
-      <topic label="案例简介" href="lora_p2p_demo.html#autotoc_md1461"/>
-      <topic label="基础知识" href="lora_p2p_demo.html#autotoc_md1462"/>
-      <topic label="物品清单和Checklist" href="lora_p2p_demo.html#autotoc_md1463"/>
-      <topic label="案例实现" href="lora_p2p_demo.html#autotoc_md1464"/>
-      <topic label="效果图" href="lora_p2p_demo.html#autotoc_md1465"/>
+      <topic label="案例简介" href="lora_p2p_demo.html#autotoc_md1465"/>
+      <topic label="基础知识" href="lora_p2p_demo.html#autotoc_md1466"/>
+      <topic label="物品清单和Checklist" href="lora_p2p_demo.html#autotoc_md1467"/>
+      <topic label="案例实现" href="lora_p2p_demo.html#autotoc_md1468"/>
+      <topic label="效果图" href="lora_p2p_demo.html#autotoc_md1469"/>
     </topic>
   </topic>
   <topic label="API" href="modules.html">
@@ -2393,15 +2397,19 @@
       <topic label="ramfs_unregister" href="group__ramfs__aos__api.html#ga812deae3a0f05f1c98b9c99bde9d7059"/>
     </topic>
     <topic label="ucloud_ai" href="group__ucloud__ai__aos__api.html">
+      <topic label="ucloud_ai_connect" href="group__ucloud__ai__aos__api.html#ga944c9012dfbd2bcaaf787006fee299f3"/>
+      <topic label="ucloud_ai_disconnect" href="group__ucloud__ai__aos__api.html#ga75c4a41bf28e51bf212cd6a88b36ec43"/>
       <topic label="ucloud_ai_facebody_comparing_face" href="group__ucloud__ai__aos__api.html#ga8195eeb1cc82273d85edce88573a90a8"/>
       <topic label="ucloud_ai_facebody_generate_human_anime_style" href="group__ucloud__ai__aos__api.html#ga4846af2a86f35fd2f72ff9381dd801f3"/>
       <topic label="ucloud_ai_facebody_recognize_expression" href="group__ucloud__ai__aos__api.html#ga3ab1df59afb0f4dccb25d462bccc1c5e"/>
+      <topic label="ucloud_ai_get_stream" href="group__ucloud__ai__aos__api.html#ga2ca86a85b062b3fa8fc2acb2bb479baf"/>
       <topic label="ucloud_ai_imageenhan_erase_person" href="group__ucloud__ai__aos__api.html#ga3e1c2f75b41c81963e8e09bac3995ca2"/>
       <topic label="ucloud_ai_imageenhan_extend_image_style" href="group__ucloud__ai__aos__api.html#ga593a0b7b0faf61f1968008eea859ecca"/>
       <topic label="ucloud_ai_imagerecog_classifying_rubbish" href="group__ucloud__ai__aos__api.html#gac320bc3130fe2f56442a092e403ce337"/>
       <topic label="ucloud_ai_imagerecog_detect_fruits" href="group__ucloud__ai__aos__api.html#ga79d7d962868ce29e9b78ea17383aa894"/>
       <topic label="ucloud_ai_imageseg_segment_common_image" href="group__ucloud__ai__aos__api.html#ga0cdc6203814dae106b259b2a61d2f008"/>
       <topic label="ucloud_ai_imageseg_segment_face" href="group__ucloud__ai__aos__api.html#gacb40aba3d701b0686344a09fb48d7889"/>
+      <topic label="ucloud_ai_init" href="group__ucloud__ai__aos__api.html#gaa484c25103abc014a8861222732acfe2"/>
       <topic label="ucloud_ai_objectdet_detect_main_body" href="group__ucloud__ai__aos__api.html#gae44dfac1af03e7187b9672aa186d0968"/>
       <topic label="ucloud_ai_objectdet_detect_object" href="group__ucloud__ai__aos__api.html#ga0f24390bf528afe777a360d0a9257cba"/>
       <topic label="ucloud_ai_ocr_recognize_bank_card" href="group__ucloud__ai__aos__api.html#ga9116de0579ce76b476046cd30bb20da5"/>
@@ -2411,6 +2419,7 @@
       <topic label="ucloud_ai_set_key_secret" href="group__ucloud__ai__aos__api.html#ga6578033d5993b4fb6634af79d4c205ce"/>
       <topic label="ucloud_ai_set_oss_bucket" href="group__ucloud__ai__aos__api.html#gae0a6ef9adbcabef1b3e1c8acf273911b"/>
       <topic label="ucloud_ai_set_oss_endpoint" href="group__ucloud__ai__aos__api.html#gac10299c4adaac2638b4525b32de5ca44"/>
+      <topic label="ucloud_ai_uninit" href="group__ucloud__ai__aos__api.html#ga16d891ce26b0287be3976b922f0bb095"/>
       <topic label="ucloud_ai_upload_file" href="group__ucloud__ai__aos__api.html#ga336f740983e891409e543e9d6483b066"/>
     </topic>
     <topic label="ucamera" href="group__ucamera__aos__api.html">

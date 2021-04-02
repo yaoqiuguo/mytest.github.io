@@ -66,6 +66,16 @@ $(document).ready(function(){initNavTree('group__ucloud__ai__aos__api.html','');
 <tr class="separator:gac10299c4adaac2638b4525b32de5ca44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga336f740983e891409e543e9d6483b066"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ucloud__ai__aos__api.html#ga336f740983e891409e543e9d6483b066">ucloud_ai_upload_file</a> (char *path)</td></tr>
 <tr class="separator:ga336f740983e891409e543e9d6483b066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa484c25103abc014a8861222732acfe2"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ucloud__ai__aos__api.html#gaa484c25103abc014a8861222732acfe2">ucloud_ai_init</a> (void)</td></tr>
+<tr class="separator:gaa484c25103abc014a8861222732acfe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga16d891ce26b0287be3976b922f0bb095"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ucloud__ai__aos__api.html#ga16d891ce26b0287be3976b922f0bb095">ucloud_ai_uninit</a> (void)</td></tr>
+<tr class="separator:ga16d891ce26b0287be3976b922f0bb095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga944c9012dfbd2bcaaf787006fee299f3"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ucloud__ai__aos__api.html#ga944c9012dfbd2bcaaf787006fee299f3">ucloud_ai_connect</a> (char *url)</td></tr>
+<tr class="separator:ga944c9012dfbd2bcaaf787006fee299f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75c4a41bf28e51bf212cd6a88b36ec43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ucloud__ai__aos__api.html#ga75c4a41bf28e51bf212cd6a88b36ec43">ucloud_ai_disconnect</a> (void)</td></tr>
+<tr class="separator:ga75c4a41bf28e51bf212cd6a88b36ec43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ca86a85b062b3fa8fc2acb2bb479baf"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ucloud__ai__aos__api.html#ga2ca86a85b062b3fa8fc2acb2bb479baf">ucloud_ai_get_stream</a> (char *url, char **stream)</td></tr>
+<tr class="separator:ga2ca86a85b062b3fa8fc2acb2bb479baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8195eeb1cc82273d85edce88573a90a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ucloud__ai__aos__api.html#ga8195eeb1cc82273d85edce88573a90a8">ucloud_ai_facebody_comparing_face</a> (char *path, char *myface, <a class="el" href="ucloud__ai__common_8h.html#a623381e060b4b0bffe10bc378aa75f91">ucloud_ai_cb_t</a> cb)</td></tr>
 <tr class="separator:ga8195eeb1cc82273d85edce88573a90a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3ab1df59afb0f4dccb25d462bccc1c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ucloud__ai__aos__api.html#ga3ab1df59afb0f4dccb25d462bccc1c5e">ucloud_ai_facebody_recognize_expression</a> (char *path, <a class="el" href="ucloud__ai__common_8h.html#a623381e060b4b0bffe10bc378aa75f91">ucloud_ai_cb_t</a> cb)</td></tr>
@@ -99,6 +109,51 @@ $(document).ready(function(){initNavTree('group__ucloud__ai__aos__api.html','');
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <h2 class="groupheader">函数说明</h2>
+<a id="ga944c9012dfbd2bcaaf787006fee299f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga944c9012dfbd2bcaaf787006fee299f3">&#9670;&nbsp;</a></span>ucloud_ai_connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ucloud_ai_connect </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Connect to url server.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>url address.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
+
+</div>
+</div>
+<a id="ga75c4a41bf28e51bf212cd6a88b36ec43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga75c4a41bf28e51bf212cd6a88b36ec43">&#9670;&nbsp;</a></span>ucloud_ai_disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ucloud_ai_disconnect </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Disconnect to url server. </p>
+
+</div>
+</div>
 <a id="ga8195eeb1cc82273d85edce88573a90a8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga8195eeb1cc82273d85edce88573a90a8">&#9670;&nbsp;</a></span>ucloud_ai_facebody_comparing_face()</h2>
 
@@ -211,6 +266,35 @@ $(document).ready(function(){initNavTree('group__ucloud__ai__aos__api.html','');
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga2ca86a85b062b3fa8fc2acb2bb479baf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ca86a85b062b3fa8fc2acb2bb479baf">&#9670;&nbsp;</a></span>ucloud_ai_get_stream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ucloud_ai_get_stream </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get stream by url address. </p>
 
 </div>
 </div>
@@ -441,6 +525,26 @@ $(document).ready(function(){initNavTree('group__ucloud__ai__aos__api.html','');
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="gaa484c25103abc014a8861222732acfe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa484c25103abc014a8861222732acfe2">&#9670;&nbsp;</a></span>ucloud_ai_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ucloud_ai_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize ucloud ai.</p>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
 
 </div>
 </div>
@@ -745,6 +849,26 @@ $(document).ready(function(){initNavTree('group__ucloud__ai__aos__api.html','');
 
 </div>
 </div>
+<a id="ga16d891ce26b0287be3976b922f0bb095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga16d891ce26b0287be3976b922f0bb095">&#9670;&nbsp;</a></span>ucloud_ai_uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ucloud_ai_uninit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Uninitialize ucloud ai.</p>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
+
+</div>
+</div>
 <a id="ga336f740983e891409e543e9d6483b066"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga336f740983e891409e543e9d6483b066">&#9670;&nbsp;</a></span>ucloud_ai_upload_file()</h2>
 
@@ -763,7 +887,7 @@ $(document).ready(function(){initNavTree('group__ucloud__ai__aos__api.html','');
 <p>Upload file to oss bucket.</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">endpoint</td><td>oss endpoint.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>local file path.</td></tr>
   </table>
   </dd>
 </dl>
@@ -776,7 +900,7 @@ $(document).ready(function(){initNavTree('group__ucloud__ai__aos__api.html','');
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 2日 星期五 11:08:29 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 2日 星期五 23:34:46 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
