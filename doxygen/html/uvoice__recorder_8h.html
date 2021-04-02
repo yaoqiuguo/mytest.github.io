@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: /Users/yaoqiuguo/Documents/work/AOS3.3/aos/AliOS-Things/components/uvoice/include/uvoice_recorder.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('uvoice__recorder_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">uvoice_recorder.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="uvoice__recorder_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuvoice__recorder__t.html">uvoice_recorder_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音接口  <a href="structuvoice__recorder__t.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga0fa633f2dea0ec7108b5d126071e1ed8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uvoice__recoder__api.html#ga0fa633f2dea0ec7108b5d126071e1ed8">recorder_state_t</a> { <br />
+&#160;&#160;<a class="el" href="group__uvoice__recoder__api.html#gga0fa633f2dea0ec7108b5d126071e1ed8a3029b0b6b8b0ce4c2e8ad769778a01e4">RECORDER_STAT_IDLE</a> = 0
+, <a class="el" href="group__uvoice__recoder__api.html#gga0fa633f2dea0ec7108b5d126071e1ed8a74c22cc03c8b02a5d8022648c0a8d154">RECORDER_STAT_READY</a>
+, <a class="el" href="group__uvoice__recoder__api.html#gga0fa633f2dea0ec7108b5d126071e1ed8a4a8ad65d9655e415b770e44345113f22">RECORDER_STAT_RUNNING</a>
+, <a class="el" href="group__uvoice__recoder__api.html#gga0fa633f2dea0ec7108b5d126071e1ed8a449d653c620019765def5c6c84a328f8">RECORDER_STAT_STOP</a>
+, <br />
+&#160;&#160;<a class="el" href="group__uvoice__recoder__api.html#gga0fa633f2dea0ec7108b5d126071e1ed8ae2ffd1f141261bb6901020f0bd28ec6b">RECORDER_STAT_ERROR</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga0fa633f2dea0ec7108b5d126071e1ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">录音状态  <a href="group__uvoice__recoder__api.html#ga0fa633f2dea0ec7108b5d126071e1ed8">更多...</a><br /></td></tr>
+<tr class="separator:ga0fa633f2dea0ec7108b5d126071e1ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga9bca95bdcf70ea850d46d9047238e869"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structuvoice__recorder__t.html">uvoice_recorder_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uvoice__recoder__api.html#ga9bca95bdcf70ea850d46d9047238e869">uvoice_recorder_create</a> (void)</td></tr>
+<tr class="separator:ga9bca95bdcf70ea850d46d9047238e869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa0b1273b0c32bfdae7495de1c7126134"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uvoice__recoder__api.html#gaa0b1273b0c32bfdae7495de1c7126134">uvoice_recorder_release</a> (<a class="el" href="structuvoice__recorder__t.html">uvoice_recorder_t</a> *mrecorder)</td></tr>
+<tr class="separator:gaa0b1273b0c32bfdae7495de1c7126134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_9979507fa415acdc30e194265eb9dab9.html">uvoice</a></li><li class="navelem"><a class="el" href="dir_c9a3a185c48ac5502c77e9c3665c51b7.html">include</a></li><li class="navelem"><a class="el" href="uvoice__recorder_8h.html">uvoice_recorder.h</a></li>
+    <li class="footer">生成于 2021年 四月 2日 星期五 11:08:29 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

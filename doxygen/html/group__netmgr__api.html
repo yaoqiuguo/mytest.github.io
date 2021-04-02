@@ -982,4 +982,182 @@ $(document).ready(function(){initNavTree('group__netmgr__api.html',''); initResi
         <tr>
           <td class="memname">int netmgr_service_init </td>
           <td>(</td>
-          <td c
+          <td class="paramtype">utask_t *&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>net manager init. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">task</td><td>NULL for current realize.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
+
+</div>
+</div>
+<a id="ga53a12e5a94db17b582a92b8eed47ffc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga53a12e5a94db17b582a92b8eed47ffc1">&#9670;&nbsp;</a></span>netmgr_set_auto_reconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void netmgr_set_auto_reconnect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__netmgr__api.html#ga408266b8bf23968b46b652cc358decce">netmgr_hdl_t</a>&#160;</td>
+          <td class="paramname"><em>hdl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set auto reconnect flag </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdl</td><td>netmgr handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>enable auto reconnect </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7d3b65e9753d7e9e12cde851f2567f2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d3b65e9753d7e9e12cde851f2567f2a">&#9670;&nbsp;</a></span>netmgr_set_connect_params()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int netmgr_set_connect_params </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__netmgr__api.html#ga408266b8bf23968b46b652cc358decce">netmgr_hdl_t</a>&#160;</td>
+          <td class="paramname"><em>hdl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__netmgr__api.html#gaaa3ce1b4834d5bf8ff050e4835136686">netmgr_connect_params_t</a> *&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>netmgr set connect params </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdl</td><td>netmgr handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">params</td><td>netmgr connect params</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, others on error </dd></dl>
+
+</div>
+</div>
+<a id="ga9036e86e3f260ac090625fcf33cdc1af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9036e86e3f260ac090625fcf33cdc1af">&#9670;&nbsp;</a></span>netmgr_set_ifconfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int netmgr_set_ifconfig </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__netmgr__api.html#ga408266b8bf23968b46b652cc358decce">netmgr_hdl_t</a>&#160;</td>
+          <td class="paramname"><em>hdl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__netmgr__api.html#ga2f39390882e8ac918d5e211927558c98">netmgr_ifconfig_info_t</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set if config information </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdl</td><td>netmgr handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>config information</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, others on error </dd></dl>
+
+</div>
+</div>
+<a id="gadfa4262bd0cb53b7e17c5678e4224056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadfa4262bd0cb53b7e17c5678e4224056">&#9670;&nbsp;</a></span>netmgr_set_msg_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int netmgr_set_msg_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__netmgr__api.html#ga408266b8bf23968b46b652cc358decce">netmgr_hdl_t</a>&#160;</td>
+          <td class="paramname"><em>hdl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__netmgr__api.html#ga738a62f1ccca533992614b1b0df928b8">netmgr_msg_cb_t</a>&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>netmgr set message callback </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hdl</td><td>netmgr handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>netmgr msg callback</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, others on error </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2021年 四月 2日 星期五 11:08:29 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
