@@ -1,5 +1,6 @@
 var group__udisplay__aos__api =
 [
+    [ "udisplay_cli", "group__udisplay__cli__aos__api.html", "group__udisplay__cli__aos__api" ],
     [ "udisplay_disable_backlight", "group__udisplay__aos__api.html#gaf150db2d68c138446086231d74c7851a", null ],
     [ "udisplay_enable_backlight", "group__udisplay__aos__api.html#gafc1dd2df91513c3d3f76becbffeb481f", null ],
     [ "udisplay_get_brightness", "group__udisplay__aos__api.html#ga99a241eac19f7a4c3b64b0c3a8093d6b", null ],
