@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('aos_kernel.html',''); initResizable();
 <div class="title">内核 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><b>AliOS Things</b> 是一款支持单处理器上运行多个任务的实时操作系统。操作系统内核只包含用来控制系统资源和处理器对资源的使用的基础功能，来支持系统服务和上层应用的构建和开发。 AliOS Things操作系统内核特性如下：</p>
+<div class="textblock"><p>AliOS Things是一款支持单处理器上运行多个任务的实时操作系统。操作系统内核只包含用来控制系统资源和处理器对资源的使用的基础功能，来支持系统服务和上层应用的构建和开发。 AliOS Things操作系统内核特性如下：</p>
 <ul>
 <li>可抢占式/协作式任务调度</li>
 <li>多任务管理</li>
@@ -104,8 +104,7 @@ $(document).ready(function(){initNavTree('aos_kernel.html',''); initResizable();
 <h3><a class="anchor" id="autotoc_md58"></a>
 任务状态</h3>
 <p>任务状态是反映当前系统中任务所处的状况，操作系统内核需要维护所有任务的当前状态。AliOS Things为了充分描述任务在系统中所处的状态以及引发状态迁移的条件差异，将任务状态分为就绪状态、挂起状态、休眠状态、阻塞状态、运行状态和删除状态。当任务通过aos_task_create()创建时，任务处于挂起状态，当任务通过aos_task_del()删除时，任务处于删除状态，具体的转化过程如下图：</p>
-<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/240152/1616554722217-d2c5eac4-c5f6-4224-9fc9-e5eadcd01369.png#height=395&amp;id=4O0qt&amp;margin=%5Bobject%20Object%5D&amp;name=%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E8%BF%81%E7%A7%BB-AliOSThings.png&amp;originHeight=451&amp;originWidth=684&amp;originalType=binary&amp;size=299647&amp;status=done&amp;style=none&amp;width=599" alt="任务状态迁移-AliOSThings.png" class="inline"/></p>
-<p>（1）阻塞状态是指因等待资源而处于等待状态，如调用aos_mutex_lock()获取互斥量时互斥量已经被锁定、调用aos_queue_recv()获取队列数据时队列为空、调用aos_sem_wait()等待信号量时信号量计数为0、调用aos_evnet_get()获取事件时，事件还未发生； （2）挂起状态是因任务被其他或自身调用挂起函数aos_task_suspend()后，将无条件地停止运行，被挂起的任务只能通过其他任务调用恢复函数aos_task_resume()使其恢复到就绪状态； （3）休眠状态是因任务在调用任务休眠函数aos_msleep()后，进入一种延迟执行的状态，直到休眠时间到达任务被重新调度恢复运行。 （4）删除状态是因任务运行完成调用任务退出函数aos_task_exit()或被调用任务删除函数aos_task_del()时被设置的一种状态。 （5）就绪状态是在任务被创建或任务解除阻塞或延迟到期时，任务被置为就绪状态。只有当任务处于就绪状态时，才能被系统调度进入运行状态。 （6）运行状态是获取处理器执行权的就绪任务所处的状态，单处理器系统，任意时刻只有一个任务可以运行。 AliOS Things允许任务处于组合状态，如阻塞挂起状态：任务在阻塞状态下，被其他任务挂起，则进入阻塞挂起状态。该状态下，若任务被恢复则保持阻塞状态；若任务解除阻塞则保持挂起状态。 用户可通过tasklist命令查看任务状态，任务状态描述符号和含义如下表：</p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01LHAt211Dqmoi53SlY_!!6000000000268-2-tps-684-451.png" alt="" style="max-width:90%;" class="inline"/> </div><p>（1）阻塞状态是指因等待资源而处于等待状态，如调用aos_mutex_lock()获取互斥量时互斥量已经被锁定、调用aos_queue_recv()获取队列数据时队列为空、调用aos_sem_wait()等待信号量时信号量计数为0、调用aos_evnet_get()获取事件时，事件还未发生； （2）挂起状态是因任务被其他或自身调用挂起函数aos_task_suspend()后，将无条件地停止运行，被挂起的任务只能通过其他任务调用恢复函数aos_task_resume()使其恢复到就绪状态； （3）休眠状态是因任务在调用任务休眠函数aos_msleep()后，进入一种延迟执行的状态，直到休眠时间到达任务被重新调度恢复运行。 （4）删除状态是因任务运行完成调用任务退出函数aos_task_exit()或被调用任务删除函数aos_task_del()时被设置的一种状态。 （5）就绪状态是在任务被创建或任务解除阻塞或延迟到期时，任务被置为就绪状态。只有当任务处于就绪状态时，才能被系统调度进入运行状态。 （6）运行状态是获取处理器执行权的就绪任务所处的状态，单处理器系统，任意时刻只有一个任务可以运行。 AliOS Things允许任务处于组合状态，如阻塞挂起状态：任务在阻塞状态下，被其他任务挂起，则进入阻塞挂起状态。该状态下，若任务被恢复则保持阻塞状态；若任务解除阻塞则保持挂起状态。 用户可通过tasklist命令查看任务状态，任务状态描述符号和含义如下表：</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone"><b>状态符号</b>   </th><th class="markdownTableHeadNone"><b>描述</b>    </th></tr>
@@ -200,7 +199,7 @@ $(document).ready(function(){initNavTree('aos_kernel.html',''); initResizable();
 <div class="line">  RHINO_CONFIG_SCHED_CFS: 1</div>
 </div><!-- fragment --> <h2><a class="anchor" id="autotoc_md65"></a>
 API说明</h2>
-<p><a href="/ref">@ref</a> aos_api_task </p>
+<p>参见：<a class="el" href="group__aos__kernel__task.html">任务管理</a> </p>
 <h2><a class="anchor" id="autotoc_md66"></a>
 使用示例</h2>
 <p>示例代码参考example/task_example.c，该示例使用任务管理函数来控制任务的执行状态，具体场景为任务2因等待某个信号量进入阻塞状态，而此时被任务1将其挂起，则任务2仍然是处于阻塞状态，如果在此过程中等到信号量，则任务2会解除阻塞进入挂起状态；如果未等到信号量，则任务2恢复状态后仍然处于阻塞状态。 示例说明如下：</p>
@@ -219,8 +218,7 @@ API说明</h2>
 <ol type="1">
 <li>Task1在t4时刻因延迟到期得到运行，并调用aos_sem_signal()释放信号量，这时task2因等到信号量而进入就绪状态。待到task1再次进入休眠转改后task2得到运行，进入运行状态。</li>
 </ol>
-<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/240152/1616744632080-c92e6681-5b82-467b-9474-230107e171ea.png#from=ui&amp;height=230&amp;id=cB4BF&amp;margin=%5Bobject%20Object%5D&amp;originHeight=291&amp;originWidth=859&amp;originalType=binary&amp;size=279786&amp;status=done&amp;style=none&amp;taskId=u78eadfcf-f0ba-48d3-8bce-f4ee949724d&amp;width=678" alt="" class="inline"/></p>
-<p>该示例可配置到helloworld_demo中运行，具体步骤如下： </p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01WaKfUM1fXNGrOho4q_!!6000000004016-2-tps-859-291.png" alt="" style="max-width:90%;" class="inline"/> </div><p>该示例可配置到helloworld_demo中运行，具体步骤如下： </p>
 <h3><a class="anchor" id="autotoc_md67"></a>
 添加示例</h3>
 <blockquote class="doxtable">
@@ -342,7 +340,7 @@ FAQ</h2>
 <div class="line">  RHINO_CONFIG_TIME_SLICE_DEFAULT: 100</div>
 </div><!-- fragment --> <h2><a class="anchor" id="autotoc_md82"></a>
 API说明</h2>
-<p><a href="https://yuque.antfin-inc.com/ref">@ref</a> aos_api_timer </p>
+<p>参见：<a class="el" href="group__aos__kernel__timer.html">定时器</a> </p>
 <h2><a class="anchor" id="autotoc_md83"></a>
 使用示例</h2>
 <ul>
@@ -361,8 +359,7 @@ API说明</h2>
 <ol type="1">
 <li>tn+1时刻，相对tn过去2秒，定时器到期，回调函数timer1_func被执行。该过程重复5次。</li>
 </ol>
-<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/240152/1616588910140-4bbbef73-9403-4594-a4ab-0d030787178c.png#height=192&amp;id=MsMCs&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%86%85%E6%A0%B8readme-%E5%AE%9A%E6%97%B6%E5%99%A8.png&amp;originHeight=192&amp;originWidth=689&amp;originalType=binary&amp;size=34537&amp;status=done&amp;style=none&amp;width=689" alt="内核readme-定时器.png" class="inline"/></p>
-<ul>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01eCw5Hz1JIKiZdxYMI_!!6000000001005-2-tps-689-192.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
 <li>该示例可配置到helloworld_demo中运行，具体步骤如下： </li>
 </ul>
 <h3><a class="anchor" id="autotoc_md84"></a>
@@ -443,13 +440,11 @@ FAQ</h2>
 <ul>
 <li>buddy算法：</li>
 </ul>
-<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/72291/1616644539239-28cc3c84-0b5f-4306-a459-414b623bd7e3.png#from=paste&amp;height=197&amp;id=u92e93236&amp;margin=%5Bobject%20Object%5D&amp;originHeight=393&amp;originWidth=841&amp;originalType=binary&amp;size=22481&amp;status=done&amp;style=none&amp;taskId=u4e9b2b20-7bce-4d41-a7be-bfa3a197dae&amp;width=420.5" alt="" class="inline"/></p>
-<p>Buddy算法申请的内存最小为8字节对齐 可申请的最大长度除了受堆空间总大小限制外还可通过编译宏配置 通过32 bit的位图结构来挂载对应的空闲链表bit n代表内存块对应的type，其下面挂载了长度范围 (2^(n- 1 + off) ~ 2^(n + off) - 1)的空闲块，其中off值主要是考虑利用了原本较小长度块的低bit。 内存申请时，优先从对应type的空闲链表中申请；如果没有空闲，则从 type+1 的位置申请内存，并将多余的空闲内存块做拆分并重新放入对应的空闲链表位置；每个内存块维测信息，包括如魔术字、多级申请调用栈、是否空闲等信息，便于内存踩踏、泄漏、重复释放等问题的定位。 内存释放时，考虑前后的内存块是否也空闲，如果是，则进行内存块合并，并插入相应type的空闲链表位置。 <b>优点：</b> 能够满足绝大多数场景的内存申请需求； 可以申请最大范围内任意长度的内存； 内存碎片整理已经相当出色； 有充分的维测信息，便于问题定位。 <b>缺点：</b> 内存维测信息较多，有一定的空间浪费； 内存不停地拆分组合，一定程度上影响效率； 长期运行过多的小内存会出现碎片，会隔断大内存空间。</p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01N1qqmG1md3UkY5gRB_!!6000000004976-2-tps-841-393.png" alt="" style="max-width:90%;" class="inline"/> </div><p>Buddy算法申请的内存最小为8字节对齐 可申请的最大长度除了受堆空间总大小限制外还可通过编译宏配置 通过32 bit的位图结构来挂载对应的空闲链表bit n代表内存块对应的type，其下面挂载了长度范围 (2^(n- 1 + off) ~ 2^(n + off) - 1)的空闲块，其中off值主要是考虑利用了原本较小长度块的低bit。 内存申请时，优先从对应type的空闲链表中申请；如果没有空闲，则从 type+1 的位置申请内存，并将多余的空闲内存块做拆分并重新放入对应的空闲链表位置；每个内存块维测信息，包括如魔术字、多级申请调用栈、是否空闲等信息，便于内存踩踏、泄漏、重复释放等问题的定位。 内存释放时，考虑前后的内存块是否也空闲，如果是，则进行内存块合并，并插入相应type的空闲链表位置。 <b>优点：</b> 能够满足绝大多数场景的内存申请需求； 可以申请最大范围内任意长度的内存； 内存碎片整理已经相当出色； 有充分的维测信息，便于问题定位。 <b>缺点：</b> 内存维测信息较多，有一定的空间浪费； 内存不停地拆分组合，一定程度上影响效率； 长期运行过多的小内存会出现碎片，会隔断大内存空间。</p>
 <ul>
 <li>blk小内存快速申请：</li>
 </ul>
-<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/72291/1616652512057-be2111fc-8018-4882-b994-c025dfb030c9.png#from=paste&amp;height=239&amp;id=uf6218865&amp;margin=%5Bobject%20Object%5D&amp;originHeight=477&amp;originWidth=835&amp;originalType=binary&amp;size=32715&amp;status=done&amp;style=none&amp;taskId=u226814a9-04eb-47e8-977c-3017591b1b9&amp;width=417.5" alt="" class="inline"/></p>
-<p>blk小内存算法申请的内存最小为4字节对齐 小于RHINO_CONFIG_MM_BLK_SIZE大小的内存块会优先从blk算法中申请不够的再从通过buddy申请 内存申请时，优先从对应type的空闲链表中申请；如果没有空闲，则先考虑从空闲资源池拉取一段空闲资源补充；如果空闲资源不足，则从 type+1 的位置申请内存（以此类推）申请过程不涉及拆分； 内存释放时，直接挂在到对应type的空闲链表内，释放不涉及合并。 <b>优点：</b> 申请效率高； 避免过多小内存碎片。 <b>缺点：</b> 内存维测信息少，出现问题较难定位； 申请的内存大小有限制，一般为1K以下。 </p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01mHjJZ11viOeeBd76S_!!6000000006206-2-tps-835-477.png" alt="" style="max-width:90%;" class="inline"/> </div><p>blk小内存算法申请的内存最小为4字节对齐 小于RHINO_CONFIG_MM_BLK_SIZE大小的内存块会优先从blk算法中申请不够的再从通过buddy申请 内存申请时，优先从对应type的空闲链表中申请；如果没有空闲，则先考虑从空闲资源池拉取一段空闲资源补充；如果空闲资源不足，则从 type+1 的位置申请内存（以此类推）申请过程不涉及拆分； 内存释放时，直接挂在到对应type的空闲链表内，释放不涉及合并。 <b>优点：</b> 申请效率高； 避免过多小内存碎片。 <b>缺点：</b> 内存维测信息少，出现问题较难定位； 申请的内存大小有限制，一般为1K以下。 </p>
 <h2><a class="anchor" id="autotoc_md96"></a>
 常用配置</h2>
 <p>内存的常用配置都在各个单板的k_config.h中，如果不需修改，则会使用k_default_config.h里面的默认配置。当然由于其本身是宏定义，也可在board对应的yaml中定义。 </p><blockquote class="doxtable">
@@ -472,7 +467,7 @@ FAQ</h2>
 </div><!-- fragment --><p>注: blk目前最大支持1K以下的小内存块如果需要调整可修改内部配置 MM_BLK_SLICE_BIT一般无需修改 </p>
 <h2><a class="anchor" id="autotoc_md97"></a>
 API说明</h2>
-<p><a href="https://yuque.antfin-inc.com/ref">@ref</a> aos_api_memory </p>
+<p>参见：<a class="el" href="group__aos__kernel__memory.html">内存管理</a> </p>
 <h2><a class="anchor" id="autotoc_md98"></a>
 使用示例</h2>
 <p>该示例可配置到helloworld_demo中运行，具体步骤如下： </p>
@@ -578,7 +573,7 @@ FAQ</h2>
 <div class="line">  RHINO_CONFIG_SEM: 0</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md113"></a>
 API说明</h2>
-<p><a href="https://yuque.antfin-inc.com/ref">@ref</a> aos_api_sem </p>
+<p>参见：<a class="el" href="group__aos__kernel__sem.html">信号量</a> </p>
 <h2><a class="anchor" id="autotoc_md114"></a>
 使用示例</h2>
 <ul>
@@ -594,8 +589,7 @@ API说明</h2>
 <ol type="1">
 <li>t2时刻，任务A调用aos_sem_signal()释放信号量，任务B获得信号量。</li>
 </ol>
-<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/240152/1616566491274-051d66db-f7e1-4656-a5f9-89e34762e680.png#height=261&amp;id=RHFAE&amp;margin=%5Bobject%20Object%5D&amp;name=%E4%BF%A1%E5%8F%B7%E9%87%8F.png&amp;originHeight=261&amp;originWidth=516&amp;originalType=binary&amp;size=31897&amp;status=done&amp;style=none&amp;width=516" alt="信号量.png" class="inline"/></p>
-<ul>
+<div align="left" display="flex"> <img src="hhttps://img.alicdn.com/imgextra/i3/O1CN01NW351a1hXUbVEKizH_!!6000000004287-2-tps-516-261.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
 <li>该示例可配置到helloworld_demo中运行，具体步骤如下： </li>
 </ul>
 <h3><a class="anchor" id="autotoc_md115"></a>
@@ -667,13 +661,11 @@ FAQ</h2>
 <h3><a class="anchor" id="autotoc_md125"></a>
 优先级反转</h3>
 <p>优先级反转是一种不希望发生的任务调度状态，该状态下，一个高优先级任务间接的被一个低优先级任务所抢占，使得两个任务的相对优先级反转了。当高、中、低三个优先级任务同时访问使用信号量互斥资源时，可能会引起优先级反转。当高优先级的任务需要的信号量被低优先级任务占用时，处理器资源会调度给低优先级任务。此时如果低优先级需要获取的另一个信号量被中优先级的pend任务所占用，那么低优先级的任务则需要等待中优先级的任务事件到来，并释放信号量，则就出现了 高、中优先级的任务并不是等待一个信号量，但是中优先级任务先运行的现象。如下图：</p>
-<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/240152/1616569160251-4853ecf9-466b-4efb-a839-4462d78b8390.png#height=240&amp;id=IKGiL&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%86%85%E6%A0%B8readme-%E7%AC%AC%203%20%E9%A1%B5.png&amp;originHeight=240&amp;originWidth=410&amp;originalType=binary&amp;size=34479&amp;status=done&amp;style=none&amp;width=410" alt="内核readme-第 3 页.png" class="inline"/></p>
-<p>任务H具有高优先级，任务M具有中等优先级，任务L具有低优先级，在t0时刻任务H还未运行，任务M因等待信号量2而阻塞，低优先级任务L得到调度占用信号量1；t1时刻，任务H运行并抢占任务L，任务L占用信号量还未释放；t2时刻，任务H阻塞于信号量1，任务L得以继续运行；t3时刻，任务L等待信号量2而阻塞，t4时刻，信号量2被释放，任务M得到运行，此时任务H虽然具有高优先级，但需先等待任务M释放信号量2让任务L运行，并且任务L释放信号量1后才能运行，这种情况即出现了优先级反转。 </p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01zD7nbO1kzNZGRDjRR_!!6000000004754-2-tps-410-240.png" alt="" style="max-width:90%;" class="inline"/> </div><p>任务H具有高优先级，任务M具有中等优先级，任务L具有低优先级，在t0时刻任务H还未运行，任务M因等待信号量2而阻塞，低优先级任务L得到调度占用信号量1；t1时刻，任务H运行并抢占任务L，任务L占用信号量还未释放；t2时刻，任务H阻塞于信号量1，任务L得以继续运行；t3时刻，任务L等待信号量2而阻塞，t4时刻，信号量2被释放，任务M得到运行，此时任务H虽然具有高优先级，但需先等待任务M释放信号量2让任务L运行，并且任务L释放信号量1后才能运行，这种情况即出现了优先级反转。 </p>
 <h3><a class="anchor" id="autotoc_md126"></a>
 优先级继承</h3>
 <p>互斥量可以解决优先级反转问题，高优先级的任务获取互斥量时，如果该互斥量被某低优先级的任务占用， 会动态提升该低优先级任务的优先级等于高优先级，并且将该优先级值依次传递给该低优先级任务依赖的互斥量关联的任务，以此递归下去。当某任务释放互斥量时，会查找该任务的基础优先级，以及获取到的互斥量所阻塞的最高优先级的任务的优先级，取两者中高的优先级来重新设定此任务的优先级。总的原则就是，高优先级任务被互斥量阻塞时，会将占用该互斥量的低优先级任务临时提高；互斥量释放时，相应任务的优先级需要恢复。如下图：</p>
-<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/240152/1616570670169-fb285380-21ac-4647-8581-1e0ff8421d6a.png#height=250&amp;id=XImTj&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%86%85%E6%A0%B8readme-%E7%AC%AC%204%20%E9%A1%B5.png&amp;originHeight=250&amp;originWidth=481&amp;originalType=binary&amp;size=38285&amp;status=done&amp;style=none&amp;width=481" alt="内核readme-第 4 页.png" class="inline"/></p>
-<p>任务H具有高优先级，任务M具有中等优先级，任务L具有低优先级，在t0时刻任务H还未运行，任务M获取互斥量2而阻塞，低优先级任务L得到调度获得互斥量1；t1时刻taskH抢占taskL，但因无法获得互斥量1而阻塞，此时taskL的优先级被提升至与taskH一样高，并继续运行；t2时刻taskL因无法获得互斥量2而阻塞，t3时刻互斥量2被释放，taskL因比taskM优先级高获得互斥量2得到运行；在t4时刻，taskL释放互斥量1，并将优先级恢复到之前状态，taskH因获得互斥量1得到运行，该机制消除了优先级反转的发生。 </p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN0131uJpc1veH5gWvL3g_!!6000000006197-2-tps-481-250.png" alt="" style="max-width:90%;" class="inline"/> </div><p>任务H具有高优先级，任务M具有中等优先级，任务L具有低优先级，在t0时刻任务H还未运行，任务M获取互斥量2而阻塞，低优先级任务L得到调度获得互斥量1；t1时刻taskH抢占taskL，但因无法获得互斥量1而阻塞，此时taskL的优先级被提升至与taskH一样高，并继续运行；t2时刻taskL因无法获得互斥量2而阻塞，t3时刻互斥量2被释放，taskL因比taskM优先级高获得互斥量2得到运行；在t4时刻，taskL释放互斥量1，并将优先级恢复到之前状态，taskH因获得互斥量1得到运行，该机制消除了优先级反转的发生。 </p>
 <h3><a class="anchor" id="autotoc_md127"></a>
 超时时间</h3>
 <p>互斥量获取可设置超时时间，如果任务在超时时间到期后仍未获得互斥量，则任务解除阻塞进入就绪状态。 </p>
@@ -704,7 +696,7 @@ FAQ</h2>
 <div class="line">  RHINO_CONFIG_MUTEX_INHERIT: 1</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md130"></a>
 API说明</h2>
-<p><a href="https://yuque.antfin-inc.com/ref">@ref</a> aos_api_mutex </p>
+<p>参见：<a class="el" href="group__aos__kernel__mutex.html">互斥量</a> </p>
 <h2><a class="anchor" id="autotoc_md131"></a>
 使用示例</h2>
 <ul>
@@ -723,8 +715,7 @@ API说明</h2>
 <ol type="1">
 <li>t3时刻，任务A对数据区record_status的操作完成，释放互斥量，任务B获得互斥量开始对数据区record_status进行读写操作。</li>
 </ol>
-<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/240152/1616572799825-55d525d0-064f-4a64-b277-2155869762bb.png#height=251&amp;id=BGqZ1&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%86%85%E6%A0%B8readme-%E4%BA%92%E6%96%A5%E9%87%8F%E7%A4%BA%E4%BE%8B.png&amp;originHeight=251&amp;originWidth=409&amp;originalType=binary&amp;size=39453&amp;status=done&amp;style=none&amp;width=409" alt="内核readme-互斥量示例.png" class="inline"/></p>
-<ul>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01UKTCDa1kGx9OVO9Yi_!!6000000004657-2-tps-409-251.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
 <li>该示例可配置到helloworld_demo中运行，具体步骤如下： </li>
 </ul>
 <h3><a class="anchor" id="autotoc_md132"></a>
@@ -827,7 +818,7 @@ FAQ</h2>
 <div class="line">  RHINO_CONFIG_EVENT_FLAG: 0</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md145"></a>
 API说明</h2>
-<p><a href="https://yuque.antfin-inc.com/ref">@ref</a> aos_api_event </p>
+<p>参见：<a class="el" href="group__aos__kernel__event.html">事件</a> </p>
 <h2><a class="anchor" id="autotoc_md146"></a>
 使用示例</h2>
 <ul>
@@ -843,8 +834,7 @@ API说明</h2>
 <ol type="1">
 <li>t2时刻，任务T调用aos_event_get()设置事件2，任务A因等到了所有事件1和2而得到运行。</li>
 </ol>
-<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/240152/1616577591544-706c0ac3-9691-439a-96f4-21f6bbb81ecb.png#height=250&amp;id=CkkFS&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%86%85%E6%A0%B8readme-%E7%AC%AC%207%20%E9%A1%B5.png&amp;originHeight=250&amp;originWidth=430&amp;originalType=binary&amp;size=36706&amp;status=done&amp;style=none&amp;width=430" alt="内核readme-第 7 页.png" class="inline"/></p>
-<ul>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01F9Ij8h1vWwkllyh25_!!6000000006181-2-tps-430-250.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
 <li>该示例可配置到helloworld_demo中运行，具体步骤如下： </li>
 </ul>
 <h3><a class="anchor" id="autotoc_md147"></a>
@@ -935,7 +925,7 @@ FAQ</h2>
 <div class="line">  RHINO_CONFIG_BUF_QUEUE: 0</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md160"></a>
 API说明</h2>
-<p><a href="https://yuque.antfin-inc.com/ref">@ref</a> aos_api_queue </p>
+<p>参见：<a class="el" href="group__aos__kernel__queue.html">消息队列</a> </p>
 <h2><a class="anchor" id="autotoc_md161"></a>
 使用示例</h2>
 <ul>
@@ -954,8 +944,7 @@ API说明</h2>
 <ol type="1">
 <li>t3时刻，重复t1时刻的操作。</li>
 </ol>
-<p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2021/png/240152/1616575304233-e6c3ede4-c396-4bc3-8e2d-83b03a7dc556.png#height=190&amp;id=uAOqk&amp;margin=%5Bobject%20Object%5D&amp;name=%E5%86%85%E6%A0%B8readme-%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E7%A4%BA%E4%BE%8B.png&amp;originHeight=190&amp;originWidth=438&amp;originalType=binary&amp;size=37419&amp;status=done&amp;style=none&amp;width=438" alt="内核readme-消息队列示例.png" class="inline"/></p>
-<ul>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01VjMeUN1XLuQimsUEW_!!6000000002908-2-tps-438-190.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
 <li>该示例可配置到helloworld_demo中运行，具体步骤如下： </li>
 </ul>
 <h3><a class="anchor" id="autotoc_md162"></a>
@@ -1016,7 +1005,7 @@ FAQ</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 2日 星期五 23:34:46 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 5日 星期一 12:01:15 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

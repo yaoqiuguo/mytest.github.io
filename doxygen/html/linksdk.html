@@ -128,45 +128,17 @@ API说明</h1>
 <h1><a class="anchor" id="autotoc_md484"></a>
 使用示例</h1>
 <p>solutions中提供了以下demo供用户选择使用：</p><ul>
-<li>link_sdk_demo 物模型单品用例</li>
-<li>link_sdk_gateway_demo 物模型网关代理子设备上云用例</li>
+<li><a class="el" href="solutions_2linksdk__demo_2_r_e_a_d_m_e_8md.html">link_sdk_demo 物模型单品用例</a></li>
+<li><a class="el" href="solutions_2linksdk__demo_2_r_e_a_d_m_e_8md.html">link_sdk_gateway_demo 物模型网关代理子设备上云用例</a></li>
 </ul>
-<p>本文以link_solo_demo为例讲解快速接入。</p>
 <h2><a class="anchor" id="autotoc_md485"></a>
-调试设备创建</h2>
-<p>在https://iot.console.aliyun.com/创建自己的产品及设备。 详细参考<a href="https://help.aliyun.com/document_detail/163756.html?spm=a2c4g.11186623.6.559.af29557f0aLXPC#title-hod-eo1-u22">本文</a>。</p>
-<h2><a class="anchor" id="autotoc_md486"></a>
-修改设备端三元组</h2>
-<p>将上一步骤中创建的设备三元组信息填写到solutions/link_solo_demo/data_model_basic_demo.c的313-316行处： </p><div class="fragment"><div class="line">/* TODO: 替换为自己设备的三元组 */</div>
-<div class="line">char *product_key       = &quot;a18wPzZJzNG&quot;;</div>
-<div class="line">char *device_name       = &quot;data_model_basic_demo&quot;;</div>
-<div class="line">char *device_secret     = &quot;uwMTmVAMnGGHaAkqmeDY6cHxxBMTP3TD&quot;;</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md487"></a>
-编译</h2>
-<div class="fragment"><div class="line">cd solutions/link_solo_demo &amp;&amp; aos make</div>
-</div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make link_solo_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md488"></a>
-烧录固件</h2>
-<blockquote class="doxtable">
-<p>参考具体板子的快速开始文档。 </p>
-</blockquote>
-<h2><a class="anchor" id="autotoc_md489"></a>
-示例测试</h2>
-<blockquote class="doxtable">
-<p>CLI命令行输入联网命令： </p>
-</blockquote>
-<div class="fragment"><div class="line">netmgr -t wifi -c ssid password</div>
-</div><!-- fragment --><p> 注意：ssid和password需要替换成自己的路由的ssid及密码</p>
-<p>连上路由器后会自动连接到阿里云物联网平台。</p>
-<h2><a class="anchor" id="autotoc_md490"></a>
-关键日志</h2>
-<blockquote class="doxtable">
-<p>CLI日志： </p>
-</blockquote>
-<div class="fragment"><div class="line">success to establish mbedtls connection, fd = 3(cost 0 bytes in total, max used 0 bytes)</div>
-<div class="line">[104.526][LK-0313] MQTT connect success in 1908 ms</div>
-<div class="line">AIOT_MQTTEVT_CONNECT</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md491"></a>
+添加Link SDK功能模块</h2>
+<p>默认仅使能能物模型及网关子设备功能。如需编译其他功能，请在package.yaml中包含对应的头文件路径及源码编译路径。如需使能动态注册： </p><div class="fragment"><div class="line">source_file:</div>
+<div class="line">  - &quot;components/dynreg/*.c&quot;</div>
+<div class="line"> </div>
+<div class="line">include:</div>
+<div class="line">  - components/dynreg</div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md486"></a>
 FAQ</h1>
 <p>常见问题可参考阿里云官网设备接入<a href="https://help.aliyun.com/document_detail/96598.html?spm=a2c4g.11186623.6.554.2042557fWpe2Ps">常见问题</a>。 </p>
 </div></div><!-- contents -->
@@ -175,7 +147,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 2日 星期五 23:34:46 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 5日 星期一 12:01:19 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

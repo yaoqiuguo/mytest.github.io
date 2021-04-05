@@ -76,11 +76,10 @@ var NAVTREE =
         [ "2.3 创建设备", "quick_start_cloud.html#autotoc_md34", null ]
       ] ],
       [ "3. 设备端开发", "quick_start_cloud.html#autotoc_md35", [
-        [ "3.1 修改三元组", "quick_start_cloud.html#autotoc_md36", null ],
-        [ "3.2 编译下载", "quick_start_cloud.html#autotoc_md37", [
-          [ "3.2.1 编译", "quick_start_cloud.html#autotoc_md38", null ],
-          [ "3.2.2 烧录镜像命令", "quick_start_cloud.html#autotoc_md39", null ]
-        ] ]
+        [ "3.1 AliOS Things开发环境搭建", "quick_start_cloud.html#autotoc_md36", null ],
+        [ "3.2 linksdk_demo代码下载", "quick_start_cloud.html#autotoc_md37", null ],
+        [ "3.3 设备端代码修改", "quick_start_cloud.html#autotoc_md38", null ],
+        [ "3.4 代码编译、烧录", "quick_start_cloud.html#autotoc_md39", null ]
       ] ],
       [ "4. 调试", "quick_start_cloud.html#autotoc_md40", [
         [ "4.1 联网", "quick_start_cloud.html#autotoc_md41", null ],
@@ -249,15 +248,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_haa_s100__quick__start.html",
-"aos_kernel.html#autotoc_md96",
-"epoll.html#autotoc_md382",
-"group__aos__httpclient__api.html#gaf896b233cfdfc42c826c06b1e32a3b75",
-"group__kv__aos__api.html",
-"helloworld_demo.html#autotoc_md1119",
-"linksdk_demo.html#autotoc_md1147",
-"py_engine_demo.html#autotoc_md1179",
-"structcache__config__t.html#a70b1803f35e8b36a07f8ba97b8e51819",
-"ucloud_ai.html#autotoc_md735"
+"aos_kernel.html#autotoc_md94",
+"fatfs.html#autotoc_md388",
+"group__aos__httpclient__api.html#gga8ef0339085aef96706a30799cc01b35ea4069647e70ffdeee9fb2bf569114c857",
+"group__kv__aos__api.html#gafa4c842f059c069a6ca43de194f78d05",
+"helloworld_demo.html#autotoc_md1134",
+"linksdk_gateway_demo.html#autotoc_md1166",
+"quick_start_cloud.html#autotoc_md33",
+"structhint__list__t.html#a44ac4c6a3693f3d2fa34a50428e42237",
+"ucloud_ai.html#autotoc_md743"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

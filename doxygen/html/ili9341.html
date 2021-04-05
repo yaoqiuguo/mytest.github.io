@@ -53,19 +53,19 @@ $(document).ready(function(){initNavTree('ili9341.html',''); initResizable(); })
 <div class="title">ili9341 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1233"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1240"></a>
 概述</h1>
 <p>LCD (Liquid Crystal Display) 即液晶显示器。AliOS Things 提供了多款LCD组件供开发者使用，适配了目前应用最多的LCD模块。 组件支持以下功能：</p><ul>
 <li>LCD 绘制简单几何图形</li>
 <li>LCD 基于 fbdev组件 (frame buffer) 和 udisplay组件 对接更高层的图形库如 LVGL 或 SDL</li>
 <li>支持接入多块 LCD</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md1234"></a>
+<h2><a class="anchor" id="autotoc_md1241"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md1235"></a>
+<h2><a class="anchor" id="autotoc_md1242"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── src</div>
 <div class="line">│   ├── ili9341.c                # ili9341驱动组件实现</div>
@@ -77,7 +77,7 @@ $(document).ready(function(){initNavTree('ili9341.html',''); initResizable(); })
 <div class="line">│   └── ili9341_example.c        # 测试代码</div>
 <div class="line">├── package.yaml                # 编译配置文件</div>
 <div class="line">└── README.md                   # 组件使用文档</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1236"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1243"></a>
 依赖组件</h2>
 <ul>
 <li>base</li>
@@ -85,7 +85,7 @@ $(document).ready(function(){initNavTree('ili9341.html',''); initResizable(); })
 <li>spi</li>
 <li>gpio</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1237"></a>
+<h1><a class="anchor" id="autotoc_md1244"></a>
 常用配置</h1>
 <div class="fragment"><div class="line">typedef struct _ili9341_dev_t</div>
 <div class="line">{</div>
@@ -98,9 +98,9 @@ $(document).ready(function(){initNavTree('ili9341.html',''); initResizable(); })
 <div class="line">    int spi_fd;</div>
 <div class="line">    int gpio_fd;</div>
 <div class="line">} ili9341_dev_t;</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1238"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1245"></a>
 API说明</h1>
-<h2><a class="anchor" id="autotoc_md1239"></a>
+<h2><a class="anchor" id="autotoc_md1246"></a>
 ili9341硬件初始化</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> ili9341_hw_init(ili9341_dev_t *ili9341_dev)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -109,7 +109,7 @@ ili9341硬件初始化</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">ili9341_dev   </td><td class="markdownTableBodyLeft">ili9341设备结构体 注意以指针形式访问   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md1240"></a>
+<h2><a class="anchor" id="autotoc_md1247"></a>
 ili9341硬件去初始化</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> ili9341_hw_uninit(ili9341_dev_t *ili9341_dev)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -118,7 +118,7 @@ ili9341硬件去初始化</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">ili9341_dev   </td><td class="markdownTableBodyLeft">ili9341设备结构体 注意以指针形式访问   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md1241"></a>
+<h2><a class="anchor" id="autotoc_md1248"></a>
 ili9341绘画像素点</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> ili9341_draw_pixel(ili9341_dev_t ili9341_dev, uint16_t x, uint16_t y, uint16_t color)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -131,7 +131,7 @@ ili9341绘画像素点</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">color   </td><td class="markdownTableBodyLeft">画笔颜色 (如白色 0xffff)   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md1242"></a>
+<h2><a class="anchor" id="autotoc_md1249"></a>
 ili9341区域绘画</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> ili9341_draw_area(ili9341_dev_t ili9341_dev, uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint8_t *frame)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -146,7 +146,7 @@ ili9341区域绘画</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">frame   </td><td class="markdownTableBodyLeft">绘画内容   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md1243"></a>
+<h2><a class="anchor" id="autotoc_md1250"></a>
 ili9341绘画矩形</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> ili9341_draw_rect(ili9341_dev_t ili9341_dev, uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint16_t color)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -161,7 +161,7 @@ ili9341绘画矩形</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">color   </td><td class="markdownTableBodyLeft">画笔颜色 (如白色 0xffff)   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md1244"></a>
+<h2><a class="anchor" id="autotoc_md1251"></a>
 ili9341全屏填充</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span>        ili9341_draw_frame(ili9341_dev_t ili9341_dev, uint8_t *frame)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -172,10 +172,10 @@ ili9341全屏填充</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">frame   </td><td class="markdownTableBodyLeft">待填充数据，构建frame时需根据屏幕分辨率来确定大小   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md1245"></a>
+<h1><a class="anchor" id="autotoc_md1252"></a>
 使用示例</h1>
 <p>示例代码参考example/ili9341_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md1246"></a>
+<h2><a class="anchor" id="autotoc_md1253"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>向ili9341组件的package.yaml中添加example </p>
@@ -183,22 +183,22 @@ ili9341全屏填充</h2>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - &quot;example/ili9341_example.c&quot; # add ili9341_example.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1247"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1254"></a>
 添加ili9341组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - ili9341: master # helloworld_demo中引入ili9341组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1248"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1255"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make helloworld_demo@haaseduk1 -c config &amp;&amp; aos make</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1249"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1256"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md1250"></a>
+<h2><a class="anchor" id="autotoc_md1257"></a>
 ili9341示例测试</h2>
 <blockquote class="doxtable">
 <p>CLI命令行输入(初始化屏幕)： </p>
@@ -209,7 +209,7 @@ ili9341示例测试</h2>
 </blockquote>
 <div class="fragment"><div class="line">ili9341_draw_ract_example 0x0000</div>
 </div><!-- fragment --><p> 注： 0x0000 是 RGB565 的颜色设置</p>
-<h2><a class="anchor" id="autotoc_md1251"></a>
+<h2><a class="anchor" id="autotoc_md1258"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
@@ -221,7 +221,7 @@ ili9341示例测试</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 2日 星期五 23:34:46 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 5日 星期一 12:01:25 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

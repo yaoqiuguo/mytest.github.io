@@ -53,22 +53,22 @@ $(document).ready(function(){initNavTree('shakeshake.html',''); initResizable();
 <div class="title">分歧争端机 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1093"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1100"></a>
 实验介绍</h1>
 <p>分歧争端机使用的场景是当出现分歧时，分别摇一摇HaaS EDU K1来摇出一个0到100之间的数字，通过比较谁摇出的数字大来解决分歧的一种方法。本质是通过摇一摇这个动作来随机产生一个数字。这个实验的核心如何通过加速度传感器来检测到摇一摇这个动作，并随机生成一个数字。</p>
 <p><b>显示效果</b></p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i2/O1CN019OP4kF22I19ZudgVF_!!6000000007096-1-tps-1200-800.gif" alt="" style="zoom:50%;" class="inline"/> </div><p> ** </p>
-<h1><a class="anchor" id="autotoc_md1094"></a>
+<h1><a class="anchor" id="autotoc_md1101"></a>
 涉及知识点</h1>
 <ul>
 <li>三轴加速度传感器的原理和使用</li>
 <li>随机数生成的方法</li>
 <li>OLED绘图</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1095"></a>
+<h1><a class="anchor" id="autotoc_md1102"></a>
 硬件介绍 - MPU-6050</h1>
 <p>请参考《陀螺仪小球》中的相同章节。</p>
-<h1><a class="anchor" id="autotoc_md1096"></a>
+<h1><a class="anchor" id="autotoc_md1103"></a>
 应用开发</h1>
 <p>本实验通过MPU_Get_Accelerometer去获得三轴加速度传感器的原始值。然后计算出在y方向上和z方向上的差值，作为震动大小的强弱标志。当两个方向上的震动大小都超过了阈值，就认为是一次有效的摇晃，就生成随机数。生成随机的方法直接采用OS自动的rand()方法，他的返回值对100进行取模，保证是一个小于100的数字。然后将这个数据显示在OLED屏幕上。</p>
 <div class="fragment"><div class="line">void shakeshake_task()</div>
@@ -106,15 +106,15 @@ $(document).ready(function(){initNavTree('shakeshake.html',''); initResizable();
 <div class="line">        aos_msleep(50);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md1097"></a>
-autotoc_md1097</h3>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md1104"></a>
+autotoc_md1104</h3>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 2日 星期五 23:34:46 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 5日 星期一 12:01:23 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

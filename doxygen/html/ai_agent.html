@@ -112,7 +112,7 @@ API说明</h1>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md202"></a>
 云端功能开通</h2>
 <blockquote class="doxtable">
-<p>登陆https://vision.aliyun.com开通如下功能： </p>
+<p>登陆https://vision.aliyun.com免费开通如下功能： </p>
 </blockquote>
 <div class="fragment"><div class="line">人脸人体: https://vision.aliyun.com/facebody</div>
 <div class="line">文字识别: https://vision.aliyun.com/ocr</div>
@@ -149,10 +149,15 @@ ucloud_ai/package.yaml中配置OSS信息</h2>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md206"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
-<p>参考具体板子的快速开始文档。 </p>
+<p>helloworld_demo bin烧录： </p>
 </blockquote>
-<p>此外，本组件例子中使用到到图片存放在代码中hardware/chip/haas1000/prebuild/data目录，除烧录helloworld demo image外，需额外使用如下命令烧录littlefs文件系统: </p><div class="fragment"><div class="line">aos burn -f hardware/chip/haas1000/release/write_flash_tool/ota_bin/littlefs.bin#0xB32000</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md207"></a>
+<div class="fragment"><div class="line">aos burn</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>littlefs文件系统烧录： </p>
+</blockquote>
+<div class="fragment"><div class="line">aos burn -f hardware/chip/haas1000/release/write_flash_tool/ota_bin/littlefs.bin#0xB32000</div>
+</div><!-- fragment --><p> 本组件例子中使用到到图片存放在代码中hardware/chip/haas1000/prebuild/data目录，除烧录helloworld demo image外，需烧录littlefs文件系统。</p>
+<h2><a class="anchor" id="autotoc_md207"></a>
 ucloud_ai示例测试</h2>
 <h3><a class="anchor" id="autotoc_md208"></a>
 CLI命令行输入：</h3>
@@ -376,7 +381,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 2日 星期五 23:34:46 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 5日 星期一 12:01:17 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

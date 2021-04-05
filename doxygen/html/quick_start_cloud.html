@@ -55,7 +55,7 @@ $(document).ready(function(){initNavTree('quick_start_cloud.html',''); initResiz
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md30"></a>
 1. 概括</h1>
-<p>本文档介绍如何通过 <b>AliOS Things3.3</b> 快速连接到阿里云物联网云平台，并进行数据交互。</p>
+<p>本文档介绍如何通过AliOS Things3.3快速连接到阿里云物联网云平台，并进行数据交互。</p>
 <h1><a class="anchor" id="autotoc_md31"></a>
 2. 云端准备工作</h1>
 <h2><a class="anchor" id="autotoc_md32"></a>
@@ -63,20 +63,28 @@ $(document).ready(function(){initNavTree('quick_start_cloud.html',''); initResiz
 <p>请先点击登陆<a href="https://www.aliyun.com/product/iot/iot_instc_public_cn">物联网平台</a>（未注册阿里云账户的用户，请先完成账户注册），按下面步骤一步步去打造。 </p>
 <h2><a class="anchor" id="autotoc_md33"></a>
 2.2 创建产品</h2>
-<p>注册登入后，前往管理控制台，如下图所示。</p>
-<div align="left"> <img src="hhttps://img.alicdn.com/imgextra/i4/O1CN01BN7DMd1IibotD78f6_!!6000000000927-2-tps-1308-490.png#align=left&amp;display=inline&amp;height=170&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=490&amp;originWidth=1308&amp;size=276942&amp;status=done&amp;style=none&amp;width=453#align=left&amp;display=inline&amp;height=490&amp;margin=%5Bobject%20Object%5D&amp;originHeight=490&amp;originWidth=1308&amp;status=done&amp;style=none&amp;width=1308" alt="" width="60%" class="inline"/> </div><p>1、点击公共实例，进行产品创建</p>
-<div align="left"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01AjRz9z294Sk2dsMXe_!!6000000008014-2-tps-1328-792.png#align=left&amp;display=inline&amp;height=302&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=792&amp;originWidth=1328&amp;size=142752&amp;status=done&amp;style=none&amp;width=506#align=left&amp;display=inline&amp;height=792&amp;margin=%5Bobject%20Object%5D&amp;originHeight=792&amp;originWidth=1328&amp;status=done&amp;style=none&amp;width=1328" alt="" width="60%" class="inline"/> </div><p>2、创建灯演示产品 点击创建产品，见下图所示，这里创建了一个名称“HaaS_Light”产品。选择标准品类/智能生活/电工照明/灯。 当然你也可以选择其他品类活自定义品类，但是需要注意保持设备端处理的数据类型与云端定义一致。</p>
-<div align="left"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01JHVICa1e8M1CVLuQ4_!!6000000003826-2-tps-1522-1768.png#align=left&amp;display=inline&amp;height=1768&amp;margin=%5Bobject%20Object%5D&amp;originHeight=1768&amp;originWidth=1522&amp;size=0&amp;status=done&amp;style=none&amp;width=1522" alt="" width="60%" class="inline"/> </div><h2><a class="anchor" id="autotoc_md34"></a>
+<p>注册登入后，如下图所示，前往管理控制台。</p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01BN7DMd1IibotD78f6_!!6000000000927-2-tps-1308-490.png" alt="" style="max-width:90%;" class="inline"/> </div><p>点击公共实例，进行产品创建</p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01AjRz9z294Sk2dsMXe_!!6000000008014-2-tps-1328-792.png" alt="" style="max-width:90%;" class="inline"/> </div><p>2、创建灯演示产品 点击创建产品，见下图所示，这里创建了一个名称“HaaS_Light”产品。选择标准品类/智能生活/电工照明/灯。 当然你也可以选择其他品类活自定义品类，但是需要注意保持设备端处理的数据类型与云端定义一致。</p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01JHVICa1e8M1CVLuQ4_!!6000000003826-2-tps-1522-1768.png" alt="" style="max-width:90%;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md34"></a>
 2.3 创建设备</h2>
 <p>在设备列表中增加对应产品的设备。本例程中创建了一个light01的设备：</p>
-<div align="left"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01QipCrM1YxklnN7iIu_!!6000000003126-2-tps-2280-1276.png#align=left&amp;display=inline&amp;height=1276&amp;margin=%5Bobject%20Object%5D&amp;originHeight=1276&amp;originWidth=2280&amp;size=0&amp;status=done&amp;style=none&amp;width=2280" alt="" width="60%" class="inline"/> </div><p>查看设备信息,并复制三元组用于设备端编程</p>
-<div align="left"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01uCSOTD29nLYXjgsRm_!!6000000008112-2-tps-2512-1204.png#align=left&amp;display=inline&amp;height=1204&amp;margin=%5Bobject%20Object%5D&amp;originHeight=1204&amp;originWidth=2512&amp;size=0&amp;status=done&amp;style=none&amp;width=2512" alt="" width="60%" class="inline"/> </div><p>创建后的设备三元组信息需要同步到设备端的开发代码段中，在3章节会介绍。待设备端开发结束，就可以在物联网平台中参看设备在线状态。</p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01QipCrM1YxklnN7iIu_!!6000000003126-2-tps-2280-1276.png" alt="" style="max-width:90%;" class="inline"/> </div><p>查看设备信息,并复制三元组用于设备端编程</p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01uCSOTD29nLYXjgsRm_!!6000000008112-2-tps-2512-1204.png" alt="" style="max-width:90%;" class="inline"/> </div><p>创建后的设备三元组信息需要同步到设备端的开发代码段中，在3章节会介绍。待设备端开发结束，就可以在物联网平台中参看设备在线状态。</p>
 <h1><a class="anchor" id="autotoc_md35"></a>
 3. 设备端开发</h1>
-<p>演示用例路径为solutions/linksdk_demo/data_model_basic_demo.c 。此用例演示Link SDK物模型单品上云的功能。 </p>
 <h2><a class="anchor" id="autotoc_md36"></a>
-3.1 修改三元组</h2>
-<p>将2.3章节中获取到的三元组(Product Key/Device Name/Device Secret)填入代码如下区域： </p><div class="fragment"><div class="line">int demo_main(int argc, char *argv[])</div>
+3.1 AliOS Things开发环境搭建</h2>
+<p>开发环境的搭建请参考 <a class="el" href="_haa_s100__quick__start.html">HaaS100快速开始</a> (搭建开发环境章节)，其中详细的介绍了AliOS Things 3.3的IDE集成开发环境的搭建流程。</p>
+<h2><a class="anchor" id="autotoc_md37"></a>
+3.2 linksdk_demo代码下载</h2>
+<p>物模型上云的代码下载请参考 <a class="el" href="_haa_s100__quick__start.html">HaaS100快速开始</a> (创建工程章节)，其中， </p><blockquote class="doxtable">
+<p>选择解决方案: “linksdk_demo” 选择开发板: HaaS100 </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md38"></a>
+3.3 设备端代码修改</h2>
+<p>演示用例路径为solutions/{your_project}/data_model_basic_demo.c 此演示用例演示Link SDK物模型单品上云的功能。 注意：{your_project} 为studio中创建的工程名（基于linksdk_demo模板）</p>
+<p>1.修改三元组，使用4.2.1章节得到的三元组填入代码如下区域： </p><div class="fragment"><div class="line">int demo_main(int argc, char *argv[])</div>
 <div class="line">{</div>
 <div class="line">...</div>
 <div class="line">    /* TODO: 替换为自己设备的三元组 */</div>
@@ -84,17 +92,12 @@ $(document).ready(function(){initNavTree('quick_start_cloud.html',''); initResiz
 <div class="line">    char *device_name       = &quot;此处请填入device_name&quot;;</div>
 <div class="line">    char *device_secret     = &quot;此处请填入device_secret&quot;;</div>
 <div class="line">...</div>
-</div><!-- fragment --><p> 本案例使用Link SDK组件实现了设备上云基本逻辑，开发者仅需替换三元组即可连接到阿里云物联网平台。如需了解Link SDK API详情，请参考Link SDK<a href="https://help.aliyun.com/document_detail/163772.html?spm=a2c4g.11186623.6.576.50e76ba7rkfLbp">编程手册</a>。 </p>
-<h2><a class="anchor" id="autotoc_md37"></a>
-3.2 编译下载</h2>
-<h3><a class="anchor" id="autotoc_md38"></a>
-3.2.1 编译</h3>
-<div class="fragment"><div class="line">cd solutions/link_sdk_demo &amp;&amp; aos make</div>
-</div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make link_sdk_demo@haas100 -c config</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md39"></a>
-3.2.2 烧录镜像命令</h3>
-<div class="fragment"><div class="line">aos burn</div>
-</div><!-- fragment --><p> 烧写步骤可以参考 HaaS100_Quick_Start。 </p>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md39"></a>
+3.4 代码编译、烧录</h2>
+<p>编译linksdk_demo的过程如下：</p>
+<p>&ndash; 参考 <a class="el" href="_haa_s100__quick__start.html">HaaS100快速开始</a> (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。</p>
+<p>&ndash; 参考 <a class="el" href="_haa_s100__quick__start.html">HaaS100快速开始</a> (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
+<p>烧写步骤可以参考 HaaS100_Quick_Start。 </p>
 <h1><a class="anchor" id="autotoc_md40"></a>
 4. 调试</h1>
 <h2><a class="anchor" id="autotoc_md41"></a>
@@ -109,8 +112,7 @@ $(document).ready(function(){initNavTree('quick_start_cloud.html',''); initResiz
 <div class="line">AIOT_MQTTEVT_CONNECT</div>
 </div><!-- fragment --> <h2><a class="anchor" id="autotoc_md43"></a>
 4.3 云端状态</h2>
-<p>在云端设备管理中，可以看到刚创建的设备状态由未激活变成了在线，说明此设备已成功上云。</p>
-<div align="left"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01DLB3xo1sPfbw46myX_!!6000000005759-2-tps-1234-482.png#align=left&amp;display=inline&amp;height=482&amp;margin=%5Bobject%20Object%5D&amp;originHeight=482&amp;originWidth=1234&amp;size=0&amp;status=done&amp;style=none&amp;width=1234" alt="" width="60%" class="inline"/> </div><h1><a class="anchor" id="autotoc_md44"></a>
+<p>在云端设备管理中，可以看到刚创建的设备状态由未激活变成了在线，说明此设备已成功上云。 </p><div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01DLB3xo1sPfbw46myX_!!6000000005759-2-tps-1234-482.png" alt="" style="max-width:90%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md44"></a>
 5. 扩展开发</h1>
 <p>上面案例我们仅通过修改三元组就让设备连接到了物联网平台。如何对设备进行功能开发，将数据从云端推送到设备或从设备推送到云端呢？ </p>
 <h2><a class="anchor" id="autotoc_md45"></a>
@@ -158,8 +160,8 @@ $(document).ready(function(){initNavTree('quick_start_cloud.html',''); initResiz
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md47"></a>
 5.1.3 云端下发</h3>
 <p>在设备界面点击在线调试功能</p>
-<div align="left"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01cy33YO1Hnoi7A8vWV_!!6000000000803-2-tps-2176-536.png#align=left&amp;display=inline&amp;height=536&amp;margin=%5Bobject%20Object%5D&amp;originHeight=536&amp;originWidth=2176&amp;size=0&amp;status=done&amp;style=none&amp;width=2176" alt="" width="60%" class="inline"/> </div><p>跳转到在线调试页面，进行属性调试</p>
-<div align="left"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01CWWBIG1dzC5unT1R7_!!6000000003806-2-tps-1934-976.png#align=left&amp;display=inline&amp;height=976&amp;margin=%5Bobject%20Object%5D&amp;originHeight=976&amp;originWidth=1934&amp;size=0&amp;status=done&amp;style=none&amp;width=1934" alt="" width="60%" class="inline"/> </div><h3><a class="anchor" id="autotoc_md48"></a>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01cy33YO1Hnoi7A8vWV_!!6000000000803-2-tps-2176-536.png" alt="" style="max-width:90%;" class="inline"/> </div><p>跳转到在线调试页面，进行属性调试</p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01CWWBIG1dzC5unT1R7_!!6000000003806-2-tps-1934-976.png" alt="" style="max-width:90%;" class="inline"/> </div><h3><a class="anchor" id="autotoc_md48"></a>
 5.1.3 查看设备端日志</h3>
 <p>如下所示，&#160;{"LightSwitch":1}的命令已经下发到设备端，开发者可以对此json字符串进行解析并用于设备控制。 </p><div class="fragment"><div class="line">[1606.833][LK-0309] pub: /sys/a1duSiRzIXc/light01/thing/service/<span class="keyword">property</span>/set</div>
 <div class="line"> </div>
@@ -188,7 +190,7 @@ $(document).ready(function(){initNavTree('quick_start_cloud.html',''); initResiz
 </div><!-- fragment --> <h3><a class="anchor" id="autotoc_md51"></a>
 5.2.2 云端查看上报数据</h3>
 <p>在监控运维-日志服务中，可以查看设备上报的所有数据。</p>
-<div align="left"> <img src="https://img.alicdn.com/imgextra/i3/O1CN013cTaUO1q5rFSx3SZC_!!6000000005445-2-tps-2648-1526.png#align=left&amp;display=inline&amp;height=1526&amp;margin=%5Bobject%20Object%5D&amp;originHeight=1526&amp;originWidth=2648&amp;size=0&amp;status=done&amp;style=none&amp;width=2648" alt="" width="60%" class="inline"/> </div><p>另外。物模型中主要数据类型处了属性外，还有服务和事件。具体详情请参考<a href="https://help.aliyun.com/document_detail/73727.html?spm=5176.11065259.1996646101.searchclickresult.40dd49deCWMVaW">官网文档</a>。 </p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN013cTaUO1q5rFSx3SZC_!!6000000005445-2-tps-2648-1526.png" alt="" style="max-width:90%;" class="inline"/> </div><p>另外。物模型中主要数据类型处了属性外，还有服务和事件。具体详情请参考<a href="https://help.aliyun.com/document_detail/73727.html?spm=5176.11065259.1996646101.searchclickresult.40dd49deCWMVaW">官网文档</a>。 </p>
 <h1><a class="anchor" id="autotoc_md52"></a>
 6. 总结</h1>
 <p>回顾一下整个流程，可概括为：</p><ul>
@@ -204,7 +206,7 @@ $(document).ready(function(){initNavTree('quick_start_cloud.html',''); initResiz
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 2日 星期五 23:34:46 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 5日 星期一 12:01:15 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

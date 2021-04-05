@@ -53,39 +53,39 @@ $(document).ready(function(){initNavTree('gyroscope.html',''); initResizable(); 
 <div class="title">陀螺仪小球 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md988"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md995"></a>
 实验介绍</h1>
 <p>手机上的“重力感应”想必大家都不陌生，基于重力感应可以实现飞车、辅助瞄准等各种体感非常强的交互功能。所谓的“重力感应”，其实就可以使用“加速度计及陀螺仪传感器”来实现。 本节实验中，我们将会基于 MPU-6050 实现一个根据开发板姿态滚动的小球。当我们倾斜 HaaS EDU K1 时，会看见小球根据我们的倾斜方向发生相对应的偏移。</p>
-<div align="center"> <img src="https://img.alicdn.com/imgextra/i3/O1CN019hMi8z1duc8ShPnTo_!!6000000003796-1-tps-1200-800.gif" alt="" style="zoom:50%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md989"></a>
+<div align="center"> <img src="https://img.alicdn.com/imgextra/i3/O1CN019hMi8z1duc8ShPnTo_!!6000000003796-1-tps-1200-800.gif" alt="" style="zoom:50%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md996"></a>
 涉及知识点</h1>
 <ul>
 <li>MPU-6050 的驱动和使用</li>
 <li>OLED绘图 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md990"></a>
+<h1><a class="anchor" id="autotoc_md997"></a>
 软硬件环境准备</h1>
-<h2><a class="anchor" id="autotoc_md991"></a>
+<h2><a class="anchor" id="autotoc_md998"></a>
 硬件</h2>
 <p>开发用电脑一台 HAAS EDU K1 开发板一块 （开发板内置 MPU-6050 传感器） USB2TypeC 数据线一根</p>
-<h1><a class="anchor" id="autotoc_md992"></a>
+<h1><a class="anchor" id="autotoc_md999"></a>
 硬件介绍 - MPU-6050</h1>
-<h2><a class="anchor" id="autotoc_md993"></a>
+<h2><a class="anchor" id="autotoc_md1000"></a>
 DataSheet</h2>
 <p>了解一款IC最快捷和精准的方法是查阅它的DataSheet。这款IC的DataSheet可以在以下链接获取。 <a href="https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf">MPU-6000-Datasheet1.pdf</a> <a href="https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Register-Map1.pdf">MPU-6000-Register-Map1.pdf</a> </p>
-<h2><a class="anchor" id="autotoc_md994"></a>
+<h2><a class="anchor" id="autotoc_md1001"></a>
 硬件规格</h2>
 <p>&#160;&#160; &#160;&#160;MPU-60X0是世界上第一款集成 6 轴MotionTracking设备。它集成了**3轴MEMS陀螺仪，3轴MEMS加速度计**，以及一个可扩展的数字运动处理器 DMP（ DigitalMotion Processor），可用I2C接口连接一个第三方的数字传感器，比如磁力计。 MPU-6050具有三个用于将陀螺仪输出数字化的16位模数转换器（ADC）和三个用于将加速度计输出数字化的16位ADC。 为了精确跟踪快速和慢速运动，这些部件具有用户可编程的陀螺仪满量程范围，范围为±250，±500，±1000和±2000°/ sec（dps），以及用户可编程的加速度计满量程范围 范围为±2g，±4g，±8g和±16g。使用400kHz的I2C与设备的所有寄存器进行通信。其他功能包括嵌入式温度传感器和片上振荡器，在整个工作温度范围内误差±1％。 更多硬件规格请参考 DataSheet。 </p>
-<h2><a class="anchor" id="autotoc_md995"></a>
+<h2><a class="anchor" id="autotoc_md1002"></a>
 传感原理</h2>
 <p>陀螺仪由1850年法国物理学家莱昂·傅科在研究地球自传中获得灵感而发明出来的，类似像是把一个高速旋转的陀螺放到一个万向支架上，靠陀螺的方向来计算角速度，和现在小巧的芯片造型大相径庭。</p>
 <p>| | | | &mdash; | &mdash; | | 早期的机械陀螺仪[1]&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; | 目前常见的电子陀螺仪 |</p>
 <p>那么如何将这么庞大的机械设备，塞进小小的芯片当中呢？以目前广泛使用的MPU-6050为例，它属于传感MEMS分支。传感MEMS技术是指用微电子微机械加工出来的、用敏感元件如电容、压电、压阻、热电耦、谐振、隧道电流等来感受转换电信号的器件和系统。感兴趣的同学可以来这里学习亚德诺半导体的公开课 —— <a href="https://www.analog.com/cn/education/education-library/videos/5996766351001.html">MEMS传感器2：加速，旋转——陀螺仪工作原理</a>。 我们使用的MPU-6050是一款经典的MEMS陀螺仪，即硅微机电陀螺仪。MEMS(Micro-Electro-Mechanical System)是指集机械元素、微型传感器、微型执行器以及信号处理和控制电路、接口电路、通信和电源于一体的完整微型机电系统。绝大多数的MEMS陀螺仪依赖于相互正交的振动和转动引起的交变科里奥利力。在MPU-6050内部，存在一质量块，当器件上电后，会触发质量块以固定频率横向运动。当器件遭受外力具备加速度时，就会触发质量块的纵向运动，从而改变四周梳齿之间的距离，改变输出的电容，进而通过ADC将模拟信号转换为数字信号，输出给外部[2]。</p>
-<div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01XULlZo1EGQzbOj08P_!!6000000000324-1-tps-448-279.gif" alt="" style="zoom:50%;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md996"></a>
+<div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01XULlZo1EGQzbOj08P_!!6000000000324-1-tps-448-279.gif" alt="" style="zoom:50%;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md1003"></a>
 原理图</h2>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i1/O1CN0163mBYO1RNO0tDwwSg_!!6000000002099-2-tps-1338-976.png" alt="" style="zoom:50%;" class="inline"/> </div><p>在原理图中我们可以看出，器件使用I2C通讯接口。并且，器件支持使用过INT引脚，当数据到来时可以在该引脚上触发中断。需要注意的是，AD0引脚决定了器件地址的第 0 bit。当AD0连接高电平，即AD0 = 1，此时器件地址为0x69。 </p>
-<h2><a class="anchor" id="autotoc_md997"></a>
+<h2><a class="anchor" id="autotoc_md1004"></a>
 驱动方式</h2>
-<h3><a class="anchor" id="autotoc_md998"></a>
+<h3><a class="anchor" id="autotoc_md1005"></a>
 通讯接口</h3>
 <p>由DataSheet可知，MPU-6050采用的通讯方式为I2C。默认7bit设备地址：0x69 (DataSheet P33 9.2) 在 AliOS Things 中，开发者只需要关心器件的设备地址即可，因为只要知道了设备地址，读写地址也可以计算出，AliOS Things 会自动处理这些计算。如果我们需要为了 MPU-6050 初始化I2C接口，那么对应的代码为： </p><div class="fragment"><div class="line"><span class="comment">// components\peripherals\sensor\drv\drv_mag_honeywell_qmc5883l.c</span></div>
 <div class="line"> </div>
@@ -98,15 +98,15 @@ DataSheet</h2>
 <div class="line">i2c_dev.config.dev_addr      = MPU_ADDR;                                                <span class="comment">// MPU_ADDR 0X69</span></div>
 <div class="line"> </div>
 <div class="line"> hal_i2c_init(&amp;i2c_dev);</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md999"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1006"></a>
 寄存器</h3>
 <p>一般，使用I2C通讯的器件，都是通过读写寄存器的方式来完成对设备的读取和配置，因此了解寄存器的分布就非常重要。由于 MPU-6050 的寄存器数量较多，建议读者们查阅 Regsiter Map 文档来获取这些信息。我们进列出部分较为关键的寄存器。</p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i3/O1CN019KZFs71fzJQikctwK_!!6000000004077-2-tps-1946-812.png" alt="" style="zoom:50%;" class="inline"/> </div><p>0x3B-0x40 三轴加速度寄存器 &#160; &#160;&#160;每轴数据2Byte <br  />
  0x41-0x42 温度寄存器&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;2Byte 0x43-0x48 三轴陀螺仪寄存器&#160; &#160;&#160; 每轴数据2Byte <br  />
  </p>
-<h3><a class="anchor" id="autotoc_md1000"></a>
+<h3><a class="anchor" id="autotoc_md1007"></a>
 驱动实现</h3>
-<h4><a class="anchor" id="autotoc_md1001"></a>
+<h4><a class="anchor" id="autotoc_md1008"></a>
 uint8_t MPU_Init(void)</h4>
 <p>器件初始化。 </p><div class="fragment"><div class="line"><span class="comment">// components/peripherals/sensor/drv/drv_acc_gyro_inv_mpu6050.c</span></div>
 <div class="line"> </div>
@@ -159,7 +159,7 @@ uint8_t MPU_Init(void)</h4>
 <div class="line">}</div>
 <div class="ttc" id="agroup__aos__kernel__time_html_ga198267174bf34247bca2163293c20d5c"><div class="ttname"><a href="group__aos__kernel__time.html#ga198267174bf34247bca2163293c20d5c">aos_msleep</a></div><div class="ttdeci">void aos_msleep(uint32_t ms)</div></div>
 <div class="ttc" id="agroup__aos__ulog_html_gae8f100a73967d2ea62691afabbbfba92"><div class="ttname"><a href="group__aos__ulog.html#gae8f100a73967d2ea62691afabbbfba92">LOGI</a></div><div class="ttdeci">#define LOGI(mod,...)</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00123">ulog.h:123</a></div></div>
-</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md1002"></a>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md1009"></a>
 void MPU_Get_Gyroscope(short *gx, short *gy, short *gz)</h4>
 <p>读取三轴陀螺仪数据。由Register Map得知，只需要从GYRO_XOUTH向后依次读出6个寄存器内容即可。 </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MPU_Get_Gyroscope(<span class="keywordtype">short</span> *gx, <span class="keywordtype">short</span> *gy, <span class="keywordtype">short</span> *gz)</div>
 <div class="line">{</div>
@@ -170,7 +170,7 @@ void MPU_Get_Gyroscope(short *gx, short *gy, short *gz)</h4>
 <div class="line">        *gy = ((u16)buf[2] &lt;&lt; 8) | buf[3];</div>
 <div class="line">        *gz = ((u16)buf[4] &lt;&lt; 8) | buf[5];</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md1003"></a>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md1010"></a>
 void MPU_Get_Accelerometer(short *ax, short *ay, short *az)</h4>
 <p>读取三轴加速度数据。由Register Map得知，只需要从ACCEL_XOUTH向后依次读出6个寄存器内容即可。 </p><div class="fragment"><div class="line"><span class="comment">// components/peripherals/sensor/drv/drv_acc_gyro_inv_mpu6050.c</span></div>
 <div class="line"> </div>
@@ -183,7 +183,7 @@ void MPU_Get_Accelerometer(short *ax, short *ay, short *az)</h4>
 <div class="line">        *ay = ((u16)buf[2] &lt;&lt; 8) | buf[3];</div>
 <div class="line">        *az = ((u16)buf[4] &lt;&lt; 8) | buf[5];</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md1004"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md1011"></a>
 应用开发</h1>
 <p>本实验的应用较为简单，只需要读出加速度数据，并显示在屏幕上即可。OLED的相关接口中已经给出了丰富的绘图函数。具体实现如下。 </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> gyroscope_task(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
@@ -203,10 +203,10 @@ void MPU_Get_Accelerometer(short *ax, short *ay, short *az)</h4>
 <div class="line">        <a class="code" href="group__aos__kernel__time.html#ga198267174bf34247bca2163293c20d5c">aos_msleep</a>(20);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md1005"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md1012"></a>
 更多应用</h1>
 <p>本实验展示的仅是六轴传感器的一个非常简单的应用。随着类似传感器的体积越来越小，精度越来越高，它们也被应用在各种消费类电子产品，如穿戴设备、手机上。 使用它们可以进行一些非常有趣的应用，例如，手环中经常会使用到的计步算法，运动状态检测算法，都是基于其中的六轴传感器数据。近年来，还有很多学术界的工作，使用手环中的六轴传感器来实现空中写字的识别。 除此之外，它也广泛应用于辅助定位、飞行设备的姿态检测，摄像机云台的水平保持等等。期待读者们能够发掘出更多有价值的使用场景。 </p>
-<h1><a class="anchor" id="autotoc_md1006"></a>
+<h1><a class="anchor" id="autotoc_md1013"></a>
 引用</h1>
 <p>[1] Gyroscope invented by Léon Foucault in 1852. Replica built by Dumoulin-Froment for the Exposition universelle in 1867.&#160;<a href="https://en.wikipedia.org/wiki/Conservatoire_national_des_arts_et_m%C3%A9tiers">National Conservatory of Arts and Crafts museum</a>, Paris. By Stéphane Magnenat - Own work by uploader, subject public domain, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=4302903">https://commons.wikimedia.org/w/index.php?curid=4302903</a> [2] 图片来自 <a href="https://www.analog.com/cn/education/education-library/videos/5996766351001.html">https://www.analog.com/cn/education/education-library/videos/5996766351001.html</a> </p>
 </div></div><!-- contents -->
@@ -215,7 +215,7 @@ void MPU_Get_Accelerometer(short *ax, short *ay, short *az)</h4>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 2日 星期五 23:34:46 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 5日 星期一 12:01:23 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
