@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('init.html',''); initResizable(); });
 <div class="title">init </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md438"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md433"></a>
 概述</h1>
 <p>init是AliOS Things的基础模块初始化接口。其主要实现了**aos_components_init**接口。内部包含了Kernel中间件相关的基础组件的初始化。**aos_components_init**默认在各个app中作为基础接口在进入application_start前被调用。 该组件实现了以下功能：</p><ul>
 <li>基础中间件的初始化</li>
@@ -81,12 +81,12 @@ $(document).ready(function(){initNavTree('init.html',''); initResizable(); });
 <p>其中上述组件模块只有被编译链接进相关的app时，对应的宏才会生效。如，只有vfs这个模块被编译链接，AOS_COMP_VFS宏才会生效，vfs_init才会被执行，如： </p><div class="fragment"><div class="line"><span class="preprocessor">#ifdef AOS_COMP_VFS</span></div>
 <div class="line">    vfs_init();</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md439"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md434"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md440"></a>
+<h2><a class="anchor" id="autotoc_md435"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── aos_init.c     # aos_components_init实现</div>
 <div class="line">├── include</div>
@@ -94,44 +94,44 @@ $(document).ready(function(){initNavTree('init.html',''); initResizable(); });
 <div class="line">│       └── init.h # 对外头文件</div>
 <div class="line">├── package.yaml   # 编译配置文件</div>
 <div class="line">└── README.md</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md441"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md436"></a>
 依赖组件</h2>
 <ul>
 <li>rhino</li>
 <li>drivers</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md442"></a>
+<h1><a class="anchor" id="autotoc_md437"></a>
 常用配置</h1>
 <p>init模块本身没有配置，相关的只有aos_component_init模块初始化内各个模块的开关宏； 而这些开关宏是通过yaml内引入组件自动打开的，不需要手动修改相关配置。</p>
-<h1><a class="anchor" id="autotoc_md443"></a>
+<h1><a class="anchor" id="autotoc_md438"></a>
 API说明</h1>
 <p><a class="el" href="group__init__aos__api.html">init</a></p>
-<h1><a class="anchor" id="autotoc_md444"></a>
+<h1><a class="anchor" id="autotoc_md439"></a>
 使用示例</h1>
 <p>以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md445"></a>
+<h2><a class="anchor" id="autotoc_md440"></a>
 添加init组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - init: master # helloworld_demo中引入init组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md446"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md441"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md447"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md442"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md448"></a>
+<h2><a class="anchor" id="autotoc_md443"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>aos欢迎日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">Welcome to AliOS Things           </div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md449"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md444"></a>
 FAQ</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -139,7 +139,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 6日 星期二 15:35:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 6日 星期二 16:11:42 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -53,16 +53,16 @@ $(document).ready(function(){initNavTree('ugraphics.html',''); initResizable(); 
 <div class="title">ugraphics </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md786"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md781"></a>
 概述</h1>
 <p>ugraphics组件是基于SDL2封装的接口，支持JPEG/PNG图像解码绘制、点/线/框图像等绘制、图像旋转、RGB格式转换、中英文字符绘制等功能，方便用户进行基础的图像应用开发。</p>
-<h1><a class="anchor" id="autotoc_md787"></a>
-版权信息</h1>
+<h2><a class="anchor" id="autotoc_md782"></a>
+版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache 2.0 License </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md788"></a>
-目录结构</h1>
+<h2><a class="anchor" id="autotoc_md783"></a>
+目录结构</h2>
 <div class="fragment"><div class="line">.</div>
 <div class="line">├── include</div>
 <div class="line">│   ├── ugraphics.h                 # 对外头文件</div>
@@ -81,14 +81,14 @@ $(document).ready(function(){initNavTree('ugraphics.html',''); initResizable(); 
 <div class="line">    │    └── jpegdec.c              # 基于libjpeg实现的图像解码实现</div>
 <div class="line">    └── rotate</div>
 <div class="line">         └── rotate.c               # 图像旋转函数代码</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md789"></a>
-依赖组件</h1>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md784"></a>
+依赖组件</h2>
 <ul>
 <li>SDL2</li>
 <li>fatfs</li>
 <li>littlefs</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md790"></a>
+<h1><a class="anchor" id="autotoc_md785"></a>
 常用配置</h1>
 <div class="fragment"><div class="line">def_config:                              # 组件的可配置项</div>
 <div class="line">  AOS_COMP_JPEG: 0</div>
@@ -97,13 +97,13 @@ $(document).ready(function(){initNavTree('ugraphics.html',''); initResizable(); 
 </div><!-- fragment --> <blockquote class="doxtable">
 <p>配置是否支持JPEG解码、图像格式转换、图像旋转，默认是关闭的 </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md791"></a>
+<h1><a class="anchor" id="autotoc_md786"></a>
 API说明</h1>
 <p>ugraphics_aos_api</p>
-<h1><a class="anchor" id="autotoc_md792"></a>
+<h1><a class="anchor" id="autotoc_md787"></a>
 使用示例</h1>
 <p>示例代码参考example/ugraphics_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md793"></a>
+<h2><a class="anchor" id="autotoc_md788"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>ugraphics组件的package.yaml中添加example </p>
@@ -115,23 +115,23 @@ API说明</h1>
 </blockquote>
 <div class="fragment"><div class="line">build_config:</div>
 <div class="line"> prebuild_script: cp_resources.py</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md794"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md789"></a>
 添加ugraphics组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - ugraphics: dev_aos            # helloworld_demo组件中引入ugraphics组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md795"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md790"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md796"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md791"></a>
 资源文件打包</h2>
 <blockquote class="doxtable">
 <p>编译时ugraphics组件中cp_resources.py会对资源文件进行拷贝，系统自动打包到littlefs文件系统中。编译完成后请确认目录hardware/chip/haas1000/prebuild/data/下有ugraphics_image目录。 </p>
 </blockquote>
 <p>&gt;hardware/chip/haas1000/prebuild/data/目录下如有其他不使用的文件，建议删除后再进行编译，避免littlefs不够用导致无法访问的问题。</p>
-<h2><a class="anchor" id="autotoc_md797"></a>
+<h2><a class="anchor" id="autotoc_md792"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
@@ -144,75 +144,75 @@ API说明</h1>
 <p>littlefs文件系统烧录： </p>
 </blockquote>
 <div class="fragment"><div class="line">aos burn -f hardware/chip/haas1000/release/write_flash_tool/ota_bin/littlefs.bin#0xB32000</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md798"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md793"></a>
 ugraphics示例测试</h2>
-<h3><a class="anchor" id="autotoc_md799"></a>
+<h3><a class="anchor" id="autotoc_md794"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ugraphics init # 资源初始化</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">ugraphics init ok!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md800"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md795"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ugraphics draw rect # 绘制矩形框</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">ugraphics draw rectangle ok!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md801"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md796"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ugraphics draw jpg # 绘制jpeg图片</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">ugraphics draw jpg image ok!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md802"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md797"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ugraphics draw png # 绘制png图片</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">ugraphics draw png image ok!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md803"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md798"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ugraphics draw line # 绘制线条</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">ugraphics draw line ok!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md804"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md799"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ugraphics draw string # 绘制字符串</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">ugraphics draw string ok!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md805"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md800"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ugraphics fill rect # 填充矩形框</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">ugraphics fill rectangle ok!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md806"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md801"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ugraphics clear # 清屏</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">ugraphics clear screen ok!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md807"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md802"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ugraphics quit # 释放资源</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">ugraphics quit ok!</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md808"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md803"></a>
 注意事项</h1>
 <p>在使用绘制字符串或图片时，因为需要加载字体或图片，字库Alibaba-PuHuiTi-Heavy.ttf或图片默认存放在/data/font/目录，因此需要在depends中确保littlefs组件已经加入。烧录程序时除烧录demo image外，还需要通过以下命令烧录文件系统。 </p><div class="fragment"><div class="line">aos burn -f hardware/chip/haas1000/release/write_flash_tool/ota_bin/littlefs.bin#0xB32000</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md809"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md804"></a>
 FAQ</h1>
 <p>NA </p>
 </div></div><!-- contents -->
@@ -221,7 +221,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 6日 星期二 15:35:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 6日 星期二 16:11:42 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

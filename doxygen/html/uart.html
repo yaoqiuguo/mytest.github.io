@@ -53,15 +53,15 @@ $(document).ready(function(){initNavTree('uart.html',''); initResizable(); });
 <div class="title">UART </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1433"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1427"></a>
 概述</h1>
 <p>UART设备VFS驱动子系统。</p>
-<h2><a class="anchor" id="autotoc_md1434"></a>
+<h2><a class="anchor" id="autotoc_md1428"></a>
 版权说明</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md1435"></a>
+<h2><a class="anchor" id="autotoc_md1429"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── src</div>
 <div class="line">│   └── uart_dev.c          # HAL to VFS适配</div>
@@ -74,18 +74,18 @@ $(document).ready(function(){initNavTree('uart.html',''); initResizable(); });
 <div class="line">├── package.yaml            # 编译配置文件</div>
 <div class="line">└── example</div>
 <div class="line">    └── uart_example.c      # 示例代码（默认禁用，可在package.yaml中使能）</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1436"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1430"></a>
 依赖组件</h2>
 <ul>
 <li>base</li>
 <li>vfs</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1437"></a>
+<h1><a class="anchor" id="autotoc_md1431"></a>
 常用配置</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md1438"></a>
+<h1><a class="anchor" id="autotoc_md1432"></a>
 API说明</h1>
-<h2><a class="anchor" id="autotoc_md1439"></a>
+<h2><a class="anchor" id="autotoc_md1433"></a>
 打开</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> open(<span class="keyword">const</span> <span class="keywordtype">char</span> *pathname, <span class="keywordtype">int</span> flags);</div>
 </div><!-- fragment --> <table class="markdownTable">
@@ -97,31 +97,31 @@ API说明</h1>
 <td class="markdownTableBodyLeft">flags   </td><td class="markdownTableBodyLeft">目前固定为0值   </td></tr>
 </table>
 <p>兼容POSIX标准的open接口。其中参数*pathname*为*/dev/ttyUART*加UART序号，例如*/dev/ttyUART0*。</p>
-<h2><a class="anchor" id="autotoc_md1440"></a>
+<h2><a class="anchor" id="autotoc_md1434"></a>
 关闭</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> close(<span class="keywordtype">int</span> fd);</div>
 </div><!-- fragment --><p> 兼容POSIX标准的close接口。</p>
-<h2><a class="anchor" id="autotoc_md1441"></a>
+<h2><a class="anchor" id="autotoc_md1435"></a>
 接收数据</h2>
 <div class="fragment"><div class="line">ssize_t read(<span class="keywordtype">int</span> fd, <span class="keywordtype">void</span> *buf, <span class="keywordtype">size_t</span> count);</div>
 </div><!-- fragment --><p> 兼容POSIX标准的read接口。接收缓冲区为空时返回0。</p>
-<h2><a class="anchor" id="autotoc_md1442"></a>
+<h2><a class="anchor" id="autotoc_md1436"></a>
 发送数据</h2>
 <div class="fragment"><div class="line">ssize_t write(<span class="keywordtype">int</span> fd, <span class="keyword">const</span> <span class="keywordtype">void</span> *buf, <span class="keywordtype">size_t</span> count);</div>
 </div><!-- fragment --><p> 兼容POSIX标准的write接口。发送缓冲区已满时返回0。</p>
-<h2><a class="anchor" id="autotoc_md1443"></a>
+<h2><a class="anchor" id="autotoc_md1437"></a>
 查询IO事件</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> poll(<span class="keyword">struct</span> pollfd *fds, nfds_t nfds, <span class="keywordtype">int</span> timeout);</div>
 <div class="line"><span class="keywordtype">int</span> select(<span class="keywordtype">int</span> nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, <span class="keyword">struct</span> timeval *timeout);</div>
 </div><!-- fragment --><p> 兼容POSIX标准的poll/select接口。</p>
-<h2><a class="anchor" id="autotoc_md1444"></a>
+<h2><a class="anchor" id="autotoc_md1438"></a>
 设置属性</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> ioctl(<span class="keywordtype">int</span> fd, IOC_UART_SET_CFLAG, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> flags);</div>
 </div><!-- fragment --><p> 参数flags包含波特率、数据位数、校验方式等属性，各属性之间是逻辑或关系。 </p>
-<h3><a class="anchor" id="autotoc_md1445"></a>
+<h3><a class="anchor" id="autotoc_md1439"></a>
 波特率</h3>
 <p>用*B*加波特率数值表示，例如*B115200*。 </p>
-<h3><a class="anchor" id="autotoc_md1446"></a>
+<h3><a class="anchor" id="autotoc_md1440"></a>
 数据位数</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -135,7 +135,7 @@ API说明</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">CS8   </td><td class="markdownTableBodyLeft">数据长度8位   </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md1447"></a>
+<h3><a class="anchor" id="autotoc_md1441"></a>
 校验方式</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -147,36 +147,36 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">PARENB | PARODD   </td><td class="markdownTableBodyLeft">奇校验   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md1448"></a>
+<h1><a class="anchor" id="autotoc_md1442"></a>
 使用示例</h1>
 <p>示例代码参考example/uart_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md1449"></a>
+<h2><a class="anchor" id="autotoc_md1443"></a>
 添加示例代码</h2>
 <p>uart组件的package.yaml中添加example </p><div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - &quot;example/uart_example.c&quot;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1450"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1444"></a>
 添加组件</h2>
 <p>helloworld_demo组件默认已依赖uart组件。</p>
-<h2><a class="anchor" id="autotoc_md1451"></a>
+<h2><a class="anchor" id="autotoc_md1445"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1452"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1446"></a>
 烧录固件</h2>
 <p>参考具体板子的快速开始文档。</p>
-<h2><a class="anchor" id="autotoc_md1453"></a>
+<h2><a class="anchor" id="autotoc_md1447"></a>
 示例测试</h2>
 <p>UART接收测试，CLI命令行输入： </p><div class="fragment"><div class="line">uartr</div>
 </div><!-- fragment --><p> UART发送测试，CLI命令行输入： </p><div class="fragment"><div class="line">uartw</div>
 </div><!-- fragment --><p> UART回显测试，CLI命令行输入： </p><div class="fragment"><div class="line">uarte</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1454"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1448"></a>
 关键日志</h2>
 <p>以UART实际收发数据为准。</p>
-<h1><a class="anchor" id="autotoc_md1455"></a>
+<h1><a class="anchor" id="autotoc_md1449"></a>
 注意事项</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md1456"></a>
+<h1><a class="anchor" id="autotoc_md1450"></a>
 FAQ</h1>
 <p>无 </p>
 </div></div><!-- contents -->
@@ -185,7 +185,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 6日 星期二 15:35:21 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 6日 星期二 16:11:42 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

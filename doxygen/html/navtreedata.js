@@ -249,13 +249,13 @@ var NAVTREEINDEX =
 [
 "_haa_s100__quick__start.html",
 "aos_kernel.html#autotoc_md94",
-"fatfs.html#autotoc_md388",
-"group__aos__httpclient__api.html#gga8ef0339085aef96706a30799cc01b35ea4069647e70ffdeee9fb2bf569114c857",
-"group__kv__aos__api.html#gafa4c842f059c069a6ca43de194f78d05",
-"helloworld_demo.html#autotoc_md1134",
-"linksdk_gateway_demo.html#autotoc_md1166",
-"quick_start_cloud.html#autotoc_md33",
-"structhint__list__t.html#a44ac4c6a3693f3d2fa34a50428e42237",
+"fatfs.html#autotoc_md385",
+"group__aos__httpclient__api.html#gga8ef0339085aef96706a30799cc01b35ea5eb28729475a464c46c0318250b3ff28",
+"group__netmgr__api.html#ga0054e8d5fe75edfc60e348af04dbff93",
+"helloworld_demo.html#autotoc_md1130",
+"linksdk_gateway_demo.html#autotoc_md1162",
+"quick_start_cloud.html#autotoc_md35",
+"structhint__list__t.html#aabf78433f41fa466777073dc0420aa64",
 "ucloud_ai.html#autotoc_md743"
 ];
 
