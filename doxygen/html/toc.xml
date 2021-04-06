@@ -214,8 +214,8 @@
     </topic>
   </topic>
   <topic label="组件" href="component.html">
-      <topic label="组件之间的关系" href="component.html#autotoc_md170"/>
-      <topic label="组件的构成" href="component.html#autotoc_md171"/>
+        <topic label="组件之间的关系" href="component.html#autotoc_md170"/>
+        <topic label="组件的构成" href="component.html#autotoc_md171"/>
     <topic label="a2sa" href="a2sa.html">
       <topic label="概述" href="a2sa.html#autotoc_md175">
         <topic label="版权信息" href="a2sa.html#autotoc_md176"/>
@@ -967,7 +967,7 @@
       </topic>
       <topic label="使用示例" href="lwip.html#autotoc_md523">
         <topic label="添加示例代码" href="lwip.html#autotoc_md524"/>
-        <topic label="添加kv组件" href="lwip.html#autotoc_md525"/>
+        <topic label="添加lwip组件" href="lwip.html#autotoc_md525"/>
         <topic label="编译" href="lwip.html#autotoc_md526"/>
         <topic label="烧录固件" href="lwip.html#autotoc_md527"/>
         <topic label="lwip 示例测试" href="lwip.html#autotoc_md528"/>
@@ -1025,7 +1025,7 @@
         <topic label="app中添加netmgr组件" href="netmgr.html#autotoc_md555"/>
         <topic label="编译" href="netmgr.html#autotoc_md556"/>
         <topic label="烧录固件" href="netmgr.html#autotoc_md557"/>
-        <topic label="sntp示例测试" href="netmgr.html#autotoc_md558"/>
+        <topic label="netmgr示例测试" href="netmgr.html#autotoc_md558"/>
         <topic label="关键日志" href="netmgr.html#autotoc_md559"/>
       </topic>
       <topic label="Notice" href="netmgr.html#autotoc_md560"/>
