@@ -61,10 +61,11 @@ var component =
       [ "FAQ", "ai_agent.html#autotoc_md219", null ]
     ] ],
     [ "alicloud", "alicloud.html", [
-      [ "概述", "alicloud.html#autotoc_md220", null ],
-      [ "版权信息", "alicloud.html#autotoc_md221", null ],
-      [ "目录结构", "alicloud.html#autotoc_md222", null ],
-      [ "依赖组件", "alicloud.html#autotoc_md223", null ],
+      [ "概述", "alicloud.html#autotoc_md220", [
+        [ "版权信息", "alicloud.html#autotoc_md221", null ],
+        [ "目录结构", "alicloud.html#autotoc_md222", null ],
+        [ "依赖组件", "alicloud.html#autotoc_md223", null ]
+      ] ],
       [ "常用配置", "alicloud.html#autotoc_md224", null ],
       [ "API说明", "alicloud.html#autotoc_md225", null ],
       [ "使用示例", "alicloud.html#autotoc_md226", [
@@ -77,7 +78,7 @@ var component =
       [ "FAQ", "alicloud.html#autotoc_md232", null ]
     ] ],
     [ "ble_host", "ble_host.html", [
-      [ "组件概述", "ble_host.html#autotoc_md233", [
+      [ "概述", "ble_host.html#autotoc_md233", [
         [ "功能支持", "ble_host.html#autotoc_md234", null ],
         [ "版权说明", "ble_host.html#autotoc_md235", null ],
         [ "目录结构", "ble_host.html#autotoc_md236", null ],
@@ -126,7 +127,7 @@ var component =
       [ "常见问题", "ble_host.html#autotoc_md274", null ]
     ] ],
     [ "ble_netconfig", "ble_netconfig.html", [
-      [ "组件概述", "ble_netconfig.html#autotoc_md275", [
+      [ "概述", "ble_netconfig.html#autotoc_md275", [
         [ "功能支持", "ble_netconfig.html#autotoc_md276", null ],
         [ "版权说明", "ble_netconfig.html#autotoc_md277", null ],
         [ "目录结构", "ble_netconfig.html#autotoc_md278", null ],
