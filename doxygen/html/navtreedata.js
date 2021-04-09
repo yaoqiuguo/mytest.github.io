@@ -248,15 +248,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_haa_s100__quick__start.html",
-"aos_kernel.html#autotoc_md94",
-"fatfs.html#autotoc_md385",
-"group__aos__httpclient__api.html#gga8ef0339085aef96706a30799cc01b35ea5eb28729475a464c46c0318250b3ff28",
-"group__netmgr__api.html#ga0054e8d5fe75edfc60e348af04dbff93",
-"helloworld_demo.html#autotoc_md1130",
-"linksdk_gateway_demo.html#autotoc_md1162",
-"quick_start_cloud.html#autotoc_md35",
-"structhint__list__t.html#aabf78433f41fa466777073dc0420aa64",
-"ucloud_ai.html#autotoc_md743"
+"aos_kernel.html#autotoc_md91",
+"epoll.html#autotoc_md365",
+"group__aos__httpclient__api.html#gac36b3b1bf22d4741169ed93a48a5bf5c",
+"group__debug__aos__api.html#ga4850d78661ee280da8f88d6c459f51e2",
+"gyroscope.html#autotoc_md1020",
+"linksdk.html",
+"pwm.html#autotoc_md1435",
+"structaos__pcm__sw__params__t.html#a88507323543a43c64add156b4898fac7",
+"uart.html#autotoc_md1485"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

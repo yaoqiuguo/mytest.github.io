@@ -65,6 +65,7 @@ $(document).ready(function(){initNavTree('_haa_s__e_d_u__k1__quick__start.html',
 Visual Studio Code</h2>
 <p>Visual Studio Code(下称VS Code) 是一款广泛使用的IDE工具。AliOS-Things 3.3的开发环境是主要基于VS Code搭建的。</p>
 <p>安装VS Code: 下载链接: <a href="https://code.visualstudio.com/docs/?dv=osx">https://code.visualstudio.com/docs/?dv=osx</a></p>
+<p>注意点: Windows 系统下请以管理员身份 运行VS Code，避免因为python权限问题导致创建失败</p>
 <h2><a class="anchor" id="autotoc_md8"></a>
 AliOS-Studio</h2>
 <p>AliOS-Studio是开发AliOS Things所需的核心插件, 安装插件流程如下:</p>
@@ -81,14 +82,10 @@ aos-tools</h2>
 <h2><a class="anchor" id="autotoc_md11"></a>
 2.1 开始创建</h2>
 <p>点击左下角的"+"图标开始创建工程</p>
-<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01R4EtQc22seq5Re3AK_!!6000000007176-0-tps-1584-548.jpg" alt="" style="max-width:90%;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 2.2 选择解决方案和开发板</h2>
-<p>随后VS Code会依次提示“请选择解决方案”和“请选择开发板”:</p><ul>
-<li>选择解决方案，即选择什么功能的示例程序，如eduk1_demo, hal demo等</li>
-<li>选择开发板，即选择在哪块开发板上运行这套示例程序，如HaaS EDU等</li>
-</ul>
-<p>选择意向的解决方案（本文以 eduk1_demo为例）</p>
-<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01QIJaDh1Qj59taTq8f_!!6000000002011-2-tps-2774-2044.png" alt="" style="max-width:90%;" class="inline"/> </div><p>选择解决方案，之后用鼠标选择开发板（本文以 Haaseduk1为例）</p>
+<p>选择意向的解决方案（本文以 “基于教育开发板的示例” 为例）</p>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01mocrXV26x14RyUR90_!!6000000007727-2-tps-1802-1135.png" alt="" style="max-width:90%;" class="inline"/> </div><p>选择解决方案，之后用鼠标选择开发板（本文以 Haaseduk1为例）</p>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01sdxB6p1x2NY6rgrsd_!!6000000006385-0-tps-3216-1158.jpg" alt="" style="max-width:90%;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md13"></a>
 2.3 输入项目名称和路径</h2>
 <p>输入项目名称</p>
@@ -117,9 +114,9 @@ aos-tools</h2>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01nCB0L01npFekkzmjN_!!6000000005138-2-tps-2506-1234.png" alt="" style="max-width:90%;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md17"></a>
 3.3 查看日志</h2>
 <ul>
-<li>点击VS Code的Serial Monitor按钮, 选择对应串口号。</li>
+<li>点击VS Code的Serial Monitor按钮, 选择对应串口号,下图是windows系统的示例, 如果是MacOS系统的话，串口一般为/dev/cu.SLAB_USBtoUART。</li>
 </ul>
-<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01aG5qNC1GvJZsy5419_!!6000000000684-2-tps-2376-1948.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN010WZPcO1GczjjpWVp5_!!6000000000644-2-tps-2144-1508.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
 <li>设置波特率为1500000</li>
 </ul>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN017FqUBk1OA9iyd6bn7_!!6000000001664-2-tps-2466-652.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
@@ -134,7 +131,7 @@ aos-tools</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 6日 星期二 16:15:58 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 9日 星期五 13:02:34 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

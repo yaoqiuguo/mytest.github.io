@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('posix.html',''); initResizable(); });
 <div class="title">posix </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md572"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md568"></a>
 概述</h1>
 <p>POSIX (Portable Operating System Interface) 是IEEE组织为了维护应用在不同操作系统之间的兼容性而制定的标准。 主要包括API，Shell和Utility等一整套应用环境。主要应用于Unix/Linux操作系统之间， 也有其他的操作系统为了兼容Unix/Linux的应用生态而支持POSIX标准， 如Zephyr, VxWorks, QNX, Fuchsia等。 组件支持以下功能：</p><ul>
 <li>pthread 线程及其属性管理</li>
@@ -65,12 +65,12 @@ $(document).ready(function(){initNavTree('posix.html',''); initResizable(); });
 <li>POSIX定时器</li>
 <li>POSIX消息队列</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md573"></a>
+<h2><a class="anchor" id="autotoc_md569"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md574"></a>
+<h2><a class="anchor" id="autotoc_md570"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">|-- example</div>
 <div class="line">|   |-- pthread_example.c #示例代码</div>
@@ -103,21 +103,21 @@ $(document).ready(function(){initNavTree('posix.html',''); initResizable(); });
 <div class="line">    |-- sched.c          #调度类接口实现</div>
 <div class="line">    |-- semaphore.c      #POSIX信号量的实现</div>
 <div class="line">    |-- timer.c          #POSIX定时器及时间函数的实现</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md575"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md571"></a>
 依赖组件</h2>
 <ul>
 <li>osal_aos</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md576"></a>
+<h1><a class="anchor" id="autotoc_md572"></a>
 常用配置</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md577"></a>
+<h1><a class="anchor" id="autotoc_md573"></a>
 API说明</h1>
 <p>本组件实现POSIX标准的API，API的使用方式遵循POSIX.1-2017标准的定义，与Unix/Linux上POSIX API使用方式一致，具体使用方法可使用搜索引擎搜索，或者参考官方文档<a href="https://pubs.opengroup.org/onlinepubs/9699919799/idx/functions.html">POSIX.1-2017标准</a>。</p>
-<h1><a class="anchor" id="autotoc_md578"></a>
+<h1><a class="anchor" id="autotoc_md574"></a>
 使用示例</h1>
 <p>POSIX API的使用建议查询Linux man 手册，搜索引擎搜索或者参考官方文档<a href="https://pubs.opengroup.org/onlinepubs/9699919799/idx/functions.html">POSIX.1-2017标准</a>。 pthread的使用也可以参考示例代码example/pthread_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md579"></a>
+<h2><a class="anchor" id="autotoc_md575"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>posix组件的package.yaml中添加example </p>
@@ -125,40 +125,40 @@ API说明</h1>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - &quot;example/pthread_example.c&quot;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md580"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md576"></a>
 添加posix组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - posix: master # helloworld_demo中引入posix组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md581"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md577"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md582"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md578"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md583"></a>
+<h2><a class="anchor" id="autotoc_md579"></a>
 posix示例测试</h2>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">pthread_example</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md584"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md580"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">pthread_example test success！</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md585"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md581"></a>
 注意事项</h1>
 <ol type="1">
 <li>POSIX API的使用方式虽然与POSIX标准一致，但相同API的子功能项可能是不支持的，此时注意判断API的异常处理（返回值和errno）。异常处理也遵循POSIX标准。</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md586"></a>
+<h1><a class="anchor" id="autotoc_md582"></a>
 FAQ</h1>
 <p>无 </p>
 </div></div><!-- contents -->
@@ -167,7 +167,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 6日 星期二 16:15:58 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 9日 星期五 13:02:34 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

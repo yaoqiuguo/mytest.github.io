@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('jsoncpp.html',''); initResizable(); })
 <div class="title">jsoncpp </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md445"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md441"></a>
 概述</h1>
 <p>JSON是一种轻量级的数据交换格式。它可以表示数字，字符串，值的有序序列以及名称/值对的集合。</p>
 <p>JsonCpp是一个C ++库，它允许处理JSON值，包括在字符串之间进行序列化和反序列化。它还可以在反序列化/序列化步骤中保留现有注释，从而使其成为存储用户输入文件的便捷格式。</p>
@@ -62,12 +62,12 @@ $(document).ready(function(){initNavTree('jsoncpp.html',''); initResizable(); })
 <li>json字符串编码</li>
 <li>json字符串解码</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md446"></a>
+<h2><a class="anchor" id="autotoc_md442"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>MIT license </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md447"></a>
+<h2><a class="anchor" id="autotoc_md443"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">.</div>
 <div class="line">├── cmake</div>
@@ -82,15 +82,15 @@ $(document).ready(function(){initNavTree('jsoncpp.html',''); initResizable(); })
 <div class="line">├── src</div>
 <div class="line">│   └── lib_json                  # jsoncpp 核心源文件</div>
 <div class="line">└── test                          # jsoncpp 测试相关文件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md448"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md444"></a>
 依赖组件</h2>
 <ul>
 <li>osal_aos</li>
 <li>cplusplus</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md449"></a>
+<h1><a class="anchor" id="autotoc_md445"></a>
 常用配置</h1>
-<h1><a class="anchor" id="autotoc_md450"></a>
+<h1><a class="anchor" id="autotoc_md446"></a>
 API说明</h1>
 <p>第三方库 API 对应放在头文件中，每个头文件的类都包含了类中函数的详细解释</p>
 <p>Read 相关类：</p>
@@ -106,10 +106,10 @@ API说明</h1>
 <div class="line">class JSON_API ValueIteratorBase</div>
 <div class="line">class JSON_API ValueConstIterator</div>
 <div class="line">class JSON_API ValueIterator </div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md451"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md447"></a>
 使用示例</h1>
 <p>示例代码参考example/jsoncpp_comp_example.cpp，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md452"></a>
+<h2><a class="anchor" id="autotoc_md448"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>jsoncpp组件的package.yaml中添加 </p>
@@ -119,22 +119,22 @@ API说明</h1>
 <div class="line">  - <span class="stringliteral">&quot;src/lib_json/json_value.cpp&quot;</span></div>
 <div class="line">  - <span class="stringliteral">&quot;src/lib_json/json_writer.cpp&quot;</span></div>
 <div class="line">  - <span class="stringliteral">&quot;example/jsoncpp_comp_example.cpp&quot;</span> # add jsoncpp_comp_example.cpp</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md453"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md449"></a>
 app中添加jsoncpp组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - jsoncpp: dev_aos # helloworld_demo中引入jsoncpp组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md454"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md450"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md455"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md451"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md456"></a>
+<h2><a class="anchor" id="autotoc_md452"></a>
 jsoncpp示例测试</h2>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
@@ -159,7 +159,7 @@ jsoncpp示例测试</h2>
 </blockquote>
 <div class="fragment"><div class="line">json read name = colin !</div>
 <div class="line">josn read age = 20 !</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md457"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md453"></a>
 FAQ</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -167,7 +167,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 6日 星期二 16:15:58 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 9日 星期五 13:02:34 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
