@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('cplusplus.html',''); initResizable(); 
 <div class="title">cplusplus </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md330"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md367"></a>
 概述</h1>
 <p>AliOS Things支持C++ 11相关特性，并且将内核基本模块功能抽象出了namespace AliOS，供用户使用。 组件支持标准的C++ 11特性：</p><ul>
 <li>基本类的特性，继承等；</li>
@@ -76,12 +76,12 @@ $(document).ready(function(){initNavTree('cplusplus.html',''); initResizable(); 
 <li>Queue类</li>
 <li>WorkQueue类</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md331"></a>
+<h2><a class="anchor" id="autotoc_md368"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md332"></a>
+<h2><a class="anchor" id="autotoc_md369"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── mutex.cpp           # AliOS: Mutex类</div>
 <div class="line">├── queue.cpp           # AliOS: Queue类</div>
@@ -102,18 +102,18 @@ $(document).ready(function(){initNavTree('cplusplus.html',''); initResizable(); 
 <div class="line">│   ├── cpp_timer.h</div>
 <div class="line">│   └── cpp_workQueue.h</div>
 <div class="line">└── alios_cpp.h         # 对外统一头文件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md333"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md370"></a>
 依赖组件</h2>
 <ul>
 <li>rhino</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md334"></a>
+<h1><a class="anchor" id="autotoc_md371"></a>
 常用配置</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md335"></a>
+<h1><a class="anchor" id="autotoc_md372"></a>
 API说明</h1>
 <p>其中C++ 11标准使用参考相关C++标准； AliOS Things自定义的内核相关功能类参考： cpp_aos_init cpp_aos_workqueue cpp_aos_timer cpp_aos_thread cpp_aos_sem cpp_aos_queue cpp_aos_mutex</p>
-<h1><a class="anchor" id="autotoc_md336"></a>
+<h1><a class="anchor" id="autotoc_md373"></a>
 使用示例</h1>
 <p>如果需要使用cplusplus的功能，需要注意下面内容：</p><ul>
 <li>需要首先调用cpp_init初始化cpp基础功能，一般aos_component_init中已经调用</li>
@@ -121,7 +121,7 @@ API说明</h1>
 </ul>
 <p>标准C++功能使用示例参考**example/cpp_standard**，AliOS命令空间的内核类使用参考**example/cpp_aos**。</p>
 <p>以运行helloworld_demo为例，添加运行组件的具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md337"></a>
+<h2><a class="anchor" id="autotoc_md374"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>cplusplus组件的package.yaml中添加example </p>
@@ -133,25 +133,25 @@ API说明</h1>
 <div class="line">  - example/cpp_standard/*.cpp</div>
 </div><!-- fragment --><p> 其中由于example/cpp_aos/basic_test.cpp要测试**catch**异常功能，需要编译选项加入**-fexceptions**。在实际使用中不使用该选项有利于降低空间大小。 </p><div class="fragment"><div class="line">build_config:</div>
 <div class="line">  cxxflag: &#39;-fexceptions&#39;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md338"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md375"></a>
 添加cplusplus组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - cplusplus: dev_aos # helloworld_demo中引入cplusplus组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md339"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md376"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md340"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md377"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md341"></a>
+<h2><a class="anchor" id="autotoc_md378"></a>
 cpp示例测试</h2>
-<h3><a class="anchor" id="autotoc_md342"></a>
+<h3><a class="anchor" id="autotoc_md379"></a>
 运行标准C++示例</h3>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
@@ -170,7 +170,7 @@ cpp示例测试</h2>
 <div class="line">rvalue test ok</div>
 <div class="line">atomic test ok</div>
 </div><!-- fragment --><p> 说明：上面是主要模块运行成功的日志打印，屏蔽了一些中间输出，以及hellworld_demo自身的循环输出，实际运行如果没有出现**test error**字样即代表功能运行正常。</p>
-<h3><a class="anchor" id="autotoc_md343"></a>
+<h3><a class="anchor" id="autotoc_md380"></a>
 运行aos封装类</h3>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
@@ -189,13 +189,13 @@ cpp示例测试</h2>
 <div class="line">demo_task2 lock</div>
 <div class="line">demo_task2 unlock</div>
 <div class="line">demo_task2 count  4</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md344"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md381"></a>
 注意事项</h1>
 <blockquote class="doxtable">
 <p>rtti_test.cpp测试依赖打开rtti功能(dynamic_cast或typeid)，因此不能使用**-fno-rtti**编译选项。 basic_test.cpp测试catch异常功能，因此依赖选项**-fexceptions**。 </p>
 </blockquote>
 <p>在正常使用时，按照自身需求，可以增加编译选项**-fno-rtti**，或去除编译选项**-fexceptions**来达到降低版本大小的目的。</p>
-<h1><a class="anchor" id="autotoc_md345"></a>
+<h1><a class="anchor" id="autotoc_md382"></a>
 FAQ</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -203,7 +203,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 9日 星期五 13:02:34 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 14日 星期三 20:44:50 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

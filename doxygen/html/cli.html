@@ -53,19 +53,19 @@ $(document).ready(function(){initNavTree('cli.html',''); initResizable(); });
 <div class="title">cli </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md318"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md355"></a>
 概述</h1>
 <p>在日常嵌入式开发中，用户经常会自行实现一套类似Linux Shell的交互工具来实现通过串口命令控制设备进入某种特定的状态，或执行某个特定的操作。如系统自检，模拟运行，或者进入手动模式进行设备点动。AliOS Things原生实现了一套名为CLI（Command-Line Interface）的命令行交互工具，在提供基本的系统交互命令的基础上，也支持用户自定义命令。 组件支持以下功能：</p><ul>
 <li>cli commands register</li>
 <li>cli commands unregister</li>
 <li>cli commands show </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md319"></a>
+<h2><a class="anchor" id="autotoc_md356"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md320"></a>
+<h2><a class="anchor" id="autotoc_md357"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── include</div>
 <div class="line">│   └── aos</div>
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('cli.html',''); initResizable(); });
 <div class="line">    │   ├── pwd.c</div>
 <div class="line">    │   ├── rm.c</div>
 <div class="line">    │   └── touch.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md321"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md358"></a>
 依赖组件</h2>
 <ul>
 <li>rhino</li>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('cli.html',''); initResizable(); });
 <li>vfs(使用文件系统操作命令)</li>
 <li>littlefs(使用文件系统操作命令)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md322"></a>
+<h1><a class="anchor" id="autotoc_md359"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
 <p>cli 输入缓冲区大小: 默认256 bytes，即cli单次可接收的输入最大字节数，可修改yaml配置如： </p>
@@ -158,12 +158,12 @@ $(document).ready(function(){initNavTree('cli.html',''); initResizable(); });
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  CLI_IOBOX_ENABLE: 0</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md323"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md360"></a>
 API说明</h1>
 <p><a class="el" href="group__cli__aos__api.html">cli</a></p>
-<h1><a class="anchor" id="autotoc_md324"></a>
+<h1><a class="anchor" id="autotoc_md361"></a>
 使用示例</h1>
-<h2><a class="anchor" id="autotoc_md325"></a>
+<h2><a class="anchor" id="autotoc_md362"></a>
 示例代码</h2>
 <p>Example: 包含头文件 **#include "aos/cli.h"**</p>
 <blockquote class="doxtable">
@@ -237,16 +237,16 @@ API说明</h1>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - cli: dev_aos # helloworld_demo中引入cli组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md326"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md363"></a>
 编译烧录</h2>
 <p>&gt;参考 <a class="el" href="_haa_s100__quick__start.html">HaaS100快速开始</a></p>
-<h2><a class="anchor" id="autotoc_md327"></a>
+<h2><a class="anchor" id="autotoc_md364"></a>
 CLI示例测试</h2>
 <blockquote class="doxtable">
 <p>命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">help</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md328"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md365"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
@@ -255,7 +255,7 @@ CLI示例测试</h2>
 <div class="line">help</div>
 <div class="line">...(注册的cli命令)</div>
 <div class="line">================ AliOS Things Command End ===============</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md329"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md366"></a>
 FAQ</h1>
 <p>Q1： 如何打开文件系统操作命令集？ </p><div class="fragment"><div class="line">答：</div>
 <div class="line">cli组件支持文件系统操作命令，默认关闭，打开方式为：</div>
@@ -279,7 +279,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 9日 星期五 13:02:34 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 14日 星期三 20:44:50 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

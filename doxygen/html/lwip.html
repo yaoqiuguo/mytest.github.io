@@ -53,16 +53,16 @@ $(document).ready(function(){initNavTree('lwip.html',''); initResizable(); });
 <div class="title">lwip </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md490"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md527"></a>
 概述</h1>
 <p>LwIP(Light Weight Internet Protoco1)是瑞士计算机科学院(Swedish Institute of Computer Science)AdamDunkels等人开发的一套用于嵌入式系统的开放源代码TCP／IP协议栈。LWIP的含义是Light Weight(轻型)IP协议。LWIP可以移植到操作系统上，也可以在无操作系统的情况下独立运行。LWIP TCP／IP实现的重点是在保持TCP协议主要功能的基础上减少对RAM的占用。一般它只需要几十KB的RAM和40 KB左右的ROM就可以运行，这使LWIP协议栈适合在小型嵌入式系统中使用。 官网：https://savannah.nongnu.org/projects/lwip/ 将LwIP协议栈分成四层： 1.应用层 2.传输层 3.网络层 4.网卡层 本文将2，3，4统称为协议层 应用层支持： arp, dhcpd, dns, httpd, ifconfig, iperf, lsfd, mdns, netbiosns, ping, sendfile, snmp, sntp, telnetd, tftp</p>
 <p>协议层支持： IP (Internet Protocol, IPv4 and IPv6) including packet forwarding over multiple network interfaces ICMP (Internet Control Message Protocol) for network maintenance and debugging IGMP (Internet Group Management Protocol) for multicast traffic management MLD (Multicast listener discovery for IPv6). Aims to be compliant with RFC 2710. No support for MLDv2 ND (Neighbor discovery and stateless address autoconfiguration for IPv6). Aims to be compliant with RFC 4861 (Neighbor discovery) and RFC 4862 (Address autoconfiguration) UDP (User Datagram Protocol) including experimental UDP-lite extensions TCP (Transmission Control Protocol) with congestion control, RTT estimation and fast recovery/fast retransmit raw/native API for enhanced performance Optional Berkeley-like socket API DNS (Domain names resolver)</p>
-<h2><a class="anchor" id="autotoc_md491"></a>
+<h2><a class="anchor" id="autotoc_md528"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md492"></a>
+<h2><a class="anchor" id="autotoc_md529"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── api</div>
 <div class="line">│   ├── api_lib.c  # 库</div>
@@ -93,9 +93,9 @@ $(document).ready(function(){initNavTree('lwip.html',''); initResizable(); });
 <div class="line">├── include        # 头文件</div>
 <div class="line">├── netif          # 网卡锡相关</div>
 <div class="line">└── port           # 移植对接</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md493"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md530"></a>
 依赖组件</h2>
-<h1><a class="anchor" id="autotoc_md494"></a>
+<h1><a class="anchor" id="autotoc_md531"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
 <p>使能TCPIP是1，不使能TCPIP是0，默认是1，可修改yaml配置如 </p>
@@ -112,9 +112,9 @@ $(document).ready(function(){initNavTree('lwip.html',''); initResizable(); });
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  WITH_LWIP_PKTPRINT: 1</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md495"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md532"></a>
 API说明</h1>
-<h2><a class="anchor" id="autotoc_md496"></a>
+<h2><a class="anchor" id="autotoc_md533"></a>
 创建socket</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> socket(<span class="keywordtype">int</span> domain, <span class="keywordtype">int</span> type, <span class="keywordtype">int</span> protocol);</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -127,7 +127,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">protocol   </td><td class="markdownTableBodyLeft">传输协议   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md497"></a>
+<h2><a class="anchor" id="autotoc_md534"></a>
 绑定地址端口</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> bind(<span class="keywordtype">int</span> s, <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr *addr, socklen_t namelen)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -140,7 +140,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">namelen   </td><td class="markdownTableBodyLeft">sockaddr 结构的长度   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md498"></a>
+<h2><a class="anchor" id="autotoc_md535"></a>
 将套接字设为监听模式，并在套接字指定的端口上开始监听，以便对到达的服务请求进行处理</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> listen(<span class="keywordtype">int</span> s, <span class="keywordtype">int</span> backlog)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -151,7 +151,7 @@ API说明</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">backlog   </td><td class="markdownTableBodyLeft">连接请求队列可以容纳的最大数目   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md499"></a>
+<h2><a class="anchor" id="autotoc_md536"></a>
 从完全建立的连接的队列中接受一个连接</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> accept(<span class="keywordtype">int</span> s, <span class="keyword">struct</span> sockaddr *addr, socklen_t *addrlen)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -162,7 +162,7 @@ API说明</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">backlog   </td><td class="markdownTableBodyLeft">连接请求队列可以容纳的最大数目   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md500"></a>
+<h2><a class="anchor" id="autotoc_md537"></a>
 与服务器建立一个 TCP 连接</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> connect(<span class="keywordtype">int</span> s, <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr *name, socklen_t namelen)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -175,7 +175,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">namelen   </td><td class="markdownTableBodyLeft">sockaddr 结构体的长度   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md501"></a>
+<h2><a class="anchor" id="autotoc_md538"></a>
 面向连接的数据流 socket 模式下发送数据</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> send(<span class="keywordtype">int</span> s, <span class="keyword">const</span> <span class="keywordtype">void</span> *dataptr, <span class="keywordtype">size_t</span> size, <span class="keywordtype">int</span> flags)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -190,7 +190,7 @@ API说明</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">flags   </td><td class="markdownTableBodyLeft">控制选项，通常为 0   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md502"></a>
+<h2><a class="anchor" id="autotoc_md539"></a>
 面向连接的数据流 socket 模式下接收数据</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> send(<span class="keywordtype">int</span> s, <span class="keyword">const</span> <span class="keywordtype">void</span> *dataptr, <span class="keywordtype">size_t</span> size, <span class="keywordtype">int</span> flags)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -205,7 +205,7 @@ API说明</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">flags   </td><td class="markdownTableBodyLeft">控制选项，通常为 0   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md503"></a>
+<h2><a class="anchor" id="autotoc_md540"></a>
 在无连接的数据报 socket 模式下发送数据</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> sendto(<span class="keywordtype">int</span> s, <span class="keyword">const</span> <span class="keywordtype">void</span> *dataptr, <span class="keywordtype">size_t</span> size, <span class="keywordtype">int</span> flags, <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr *to, socklen_t tolen)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -222,7 +222,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">tolen   </td><td class="markdownTableBodyLeft">sockaddr 结构体的长度   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md504"></a>
+<h2><a class="anchor" id="autotoc_md541"></a>
 在无连接的数据报 socket 模式下接收数据</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> recvfrom(<span class="keywordtype">int</span> s, <span class="keywordtype">void</span>*mem, <span class="keywordtype">size_t</span> size, <span class="keywordtype">int</span> flags, <span class="keyword">struct</span> sockaddr *from, socklen_t *fromlen)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -241,7 +241,7 @@ API说明</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">fromlen   </td><td class="markdownTableBodyLeft">指向 sockaddr 结构体的长度的指针   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md505"></a>
+<h2><a class="anchor" id="autotoc_md542"></a>
 查询一个或者多个socket的可读性、可写性及错误状态信息</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> select(<span class="keywordtype">int</span> maxfdp1, fd_set *readset, fd_set *writeset, fd_set *exceptset,</div>
 <div class="line">                <span class="keyword">struct</span> timeval *timeout)</div>
@@ -259,7 +259,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">timeout   </td><td class="markdownTableBodyLeft">超时时间   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md506"></a>
+<h2><a class="anchor" id="autotoc_md543"></a>
 传输完数据之后关闭 socket 并释放资源</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> closesocket(<span class="keywordtype">int</span> s)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -268,7 +268,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">s   </td><td class="markdownTableBodyLeft">socket 描述符   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md507"></a>
+<h2><a class="anchor" id="autotoc_md544"></a>
 允许进行单向的关闭操作，或是全部禁止掉</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> shutdown(<span class="keywordtype">int</span> s, <span class="keywordtype">int</span> how)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -279,7 +279,7 @@ API说明</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">how   </td><td class="markdownTableBodyLeft">控制选项   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md508"></a>
+<h2><a class="anchor" id="autotoc_md545"></a>
 通过域名来获取主机的 IP 地址等信息</h2>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>hostent* gethostbyname(<span class="keyword">const</span> <span class="keywordtype">char</span>*name)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -288,7 +288,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">name   </td><td class="markdownTableBodyLeft">主机域名   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md509"></a>
+<h2><a class="anchor" id="autotoc_md546"></a>
 获取本地主机的信息</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> getsockname(<span class="keywordtype">int</span> s, <span class="keyword">struct</span> sockaddr *name, socklen_t *namelen)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -301,7 +301,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">namelen   </td><td class="markdownTableBodyLeft">指向 sockaddr 结构体的长度的指针   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md510"></a>
+<h2><a class="anchor" id="autotoc_md547"></a>
 得到与本地主机连接的远程主机的信息</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> getpeername(<span class="keywordtype">int</span> s, <span class="keyword">struct</span> sockaddr *name, socklen_t *namelen)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -314,7 +314,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">namelen   </td><td class="markdownTableBodyLeft">指向 sockaddr 结构体的长度的指针   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md511"></a>
+<h2><a class="anchor" id="autotoc_md548"></a>
 设置套接字控制模式</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> ioctlsocket(<span class="keywordtype">int</span> s, <span class="keywordtype">long</span> cmd, <span class="keywordtype">void</span> *argp)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -327,7 +327,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">argp   </td><td class="markdownTableBodyLeft">操作命令所带参数   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md512"></a>
+<h2><a class="anchor" id="autotoc_md549"></a>
 获取套接字控制模式</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> getsockopt (<span class="keywordtype">int</span> s, <span class="keywordtype">int</span> level, <span class="keywordtype">int</span> optname, <span class="keywordtype">void</span> *optval, socklen_t *optlen)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -344,7 +344,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">optlen   </td><td class="markdownTableBodyLeft">指向option属性长度的指针   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md513"></a>
+<h2><a class="anchor" id="autotoc_md550"></a>
 设置套接字控制模式</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> setsockopt (<span class="keywordtype">int</span> s, <span class="keywordtype">int</span> level, <span class="keywordtype">int</span> optname, <span class="keyword">const</span> <span class="keywordtype">void</span> *optval, socklen_t optlen)</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -361,17 +361,17 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">optlen   </td><td class="markdownTableBodyLeft">option属性的长度   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md514"></a>
+<h1><a class="anchor" id="autotoc_md551"></a>
 使用示例</h1>
 <p>示例代码参考example/udp_test.c，以运行solution/helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md515"></a>
+<h2><a class="anchor" id="autotoc_md552"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>lwip组件的package.yaml中添加example </p>
 </blockquote>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - example/*.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md516"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md553"></a>
 添加lwip组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
@@ -379,16 +379,16 @@ API说明</h1>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - netmgr     # 添加netmgr依赖，使用netmgr连接wifi</div>
 <div class="line">  - lwip       # helloworld_demo中引入lwip组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md517"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md554"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md518"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md555"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md519"></a>
+<h2><a class="anchor" id="autotoc_md556"></a>
 lwip 示例测试</h2>
 <blockquote class="doxtable">
 <p>CLI命令行输入netmgr相关命令进行联网操作： </p>
@@ -399,7 +399,7 @@ lwip 示例测试</h2>
 <p>CLI命令行输入udp 测试命令： </p>
 </blockquote>
 <div class="fragment"><div class="line">test_udp</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md520"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md557"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>输入联网命令后的WIFI联网成功日志： </p>
@@ -420,12 +420,12 @@ lwip 示例测试</h2>
 <div class="line">recv: hello UDP</div>
 <div class="line">hello world! count 19</div>
 <div class="line">recv: hello UDP</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md521"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md558"></a>
 注意事项</h1>
 <ul>
 <li>使用lwip前，请先确定已经联网</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md522"></a>
+<h1><a class="anchor" id="autotoc_md559"></a>
 FAQ</h1>
 <p>NA </p>
 </div></div><!-- contents -->
@@ -434,7 +434,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 9日 星期五 13:02:34 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 14日 星期三 20:44:51 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

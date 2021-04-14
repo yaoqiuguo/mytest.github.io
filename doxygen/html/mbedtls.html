@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('mbedtls.html',''); initResizable(); })
 <div class="title">mbedtls </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md523"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md560"></a>
 概述</h1>
 <p>mbedtls提供加解密算法（AES, RSA, MD5/SHA1/SHA256/SHA512 etc.），X.509证书管理和TLS/DTLS协议支持。详细介绍可参考<a href="https://tls.mbed.org/">mbedtls官网</a>。 组件支持以下功能：</p><ul>
 <li>TLS(1.0, 1.1, 1.2), DTLS(1.0, 1.2)</li>
@@ -61,12 +61,12 @@ $(document).ready(function(){initNavTree('mbedtls.html',''); initResizable(); })
 <li>加解密算法(DES/3DES/AES/RSA/ARIA/ARC4/BLOWFISH/CAMELLIA/XTEA/CHACHA20/POLY1305)</li>
 <li>摘要算法(MD5/SHA1/SHA256/SHA512/RIPEMD160)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md524"></a>
+<h2><a class="anchor" id="autotoc_md561"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md525"></a>
+<h2><a class="anchor" id="autotoc_md562"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">|-- apache-2.0.txt</div>
 <div class="line">|-- ChangeLog</div>
@@ -79,13 +79,13 @@ $(document).ready(function(){initNavTree('mbedtls.html',''); initResizable(); })
 <div class="line">|-- programs             #开源原生的示例代码</div>
 <div class="line">|-- README.mbedtls.md    #开源原生的README文档</div>
 <div class="line">|-- README.md            #README文档</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md526"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md563"></a>
 依赖组件</h2>
 <ul>
 <li>osal_aos</li>
 <li>netmgr</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md527"></a>
+<h1><a class="anchor" id="autotoc_md564"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，如需修改配置，统一在platform/include/config_aos_base.h中修改，具体如下： </p><blockquote class="doxtable">
 <p>使能加解密: 默认使能, 如需关闭，可修改配置如： </p>
@@ -252,13 +252,13 @@ $(document).ready(function(){initNavTree('mbedtls.html',''); initResizable(); })
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  MBEDTLS_CONFIG_ERROR: 1</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md528"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md565"></a>
 API说明</h1>
 <p>mbedtls API用法与开源版本一致，API用法可以参考<a href="https://tls.mbed.org/api/">mbedtls官网API说明</a>, 也可以在网上搜索其API的用法。</p>
-<h1><a class="anchor" id="autotoc_md529"></a>
+<h1><a class="anchor" id="autotoc_md566"></a>
 使用示例</h1>
 <p>mbedtls提供了TLS/DTLS协议，加解密算法等众多功能，其在programs目录下也提供了各功能的示例代码，注意这些示例代码虽然不能直接在 AliOS Things上运行起来，但其逻辑是可以参考的。我们也在example目录下提供了可以直接在AliOS Things运行的示例。 示例代码参考example/tls_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md530"></a>
+<h2><a class="anchor" id="autotoc_md567"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>mbedtls组件的package.yaml中添加example </p>
@@ -266,23 +266,23 @@ API说明</h1>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - 原有其他文件</div>
 <div class="line">  - &quot;example/tls_example.c&quot; # add tls_example.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md531"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md568"></a>
 app中添加mbedtls组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - mbedtls: master # helloworld_demo中引入mbedtls组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md532"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md569"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md533"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md570"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md534"></a>
+<h2><a class="anchor" id="autotoc_md571"></a>
 mbedtls示例测试</h2>
 <p>tls_example的测试依赖于网络，在进行测试前，首先执行联网命令，请先阅读netmgr组件的README.md </p><blockquote class="doxtable">
 <p>CLI命令行输入： </p>
@@ -291,16 +291,16 @@ mbedtls示例测试</h2>
 <div class="line">netmgr -t wifi -c &lt;ssid(你的wifi名)&gt; &lt;passworld(你的wifi密码)&gt;</div>
 <div class="line">tls_example</div>
 </div><!-- fragment --><p> 注意这里使用2.4GHZ的wifi网络。</p>
-<h2><a class="anchor" id="autotoc_md535"></a>
+<h2><a class="anchor" id="autotoc_md572"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">tls_example test success!</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md536"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md573"></a>
 注意事项</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md537"></a>
+<h1><a class="anchor" id="autotoc_md574"></a>
 FAQ</h1>
 <p>Q1： TLS 握手失败，Debug消息显示"buffer too small ..." 或者 "bad message length"</p>
 <p>答：这可能是TLS消息出来的I/O buffer小于消息的长度， 通过配置增大I/O buffer即可。 修改yaml配置文件中MBEDTLS_CONFIG_TLS_MAX_CONTENT_LEN。 AliOS Things默认配置的I/O buffer为4KB， 一般扩大到16384 （16KB）可以解决所有的此类问题。 </p>
@@ -310,7 +310,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 9日 星期五 13:02:34 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 14日 星期三 20:44:51 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -53,19 +53,19 @@ $(document).ready(function(){initNavTree('udisplay.html',''); initResizable(); }
 <div class="title">udisplay </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md768"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md805"></a>
 概述</h1>
 <p>udisplay是一套图形接口组件，AliOS Things图形组件包含该部分，用于连接用户层和驱动层的部分。 用户通过调用udisplay函数来进行图形处理，udisplay通过posix接口调用fbdev设备驱动，避免用户和驱动直接交互。</p>
 <p>该组件支持以下功能：</p><ul>
 <li>udisplay init</li>
 <li>udisplay draw</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md769"></a>
+<h2><a class="anchor" id="autotoc_md806"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache 2.0 License </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md770"></a>
+<h2><a class="anchor" id="autotoc_md807"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">.</div>
 <div class="line">├── include</div>
@@ -76,22 +76,22 @@ $(document).ready(function(){initNavTree('udisplay.html',''); initResizable(); }
 <div class="line">│   └── udisplay.c            # udisplay核心处理层</div>
 <div class="line">└──example</div>
 <div class="line">    └── udisplay_example.c    # udisplay测试用例代码</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md771"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md808"></a>
 依赖组件</h2>
 <ul>
 <li>osal_aos</li>
 <li>drivers</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md772"></a>
+<h1><a class="anchor" id="autotoc_md809"></a>
 常用配置</h1>
-<h1><a class="anchor" id="autotoc_md773"></a>
+<h1><a class="anchor" id="autotoc_md810"></a>
 API说明</h1>
 <p><a class="el" href="group__udisplay__aos__api.html">udisplay</a></p>
 <p><a class="el" href="group__udisplay__cli__aos__api.html">udisplay_cli</a></p>
-<h1><a class="anchor" id="autotoc_md774"></a>
+<h1><a class="anchor" id="autotoc_md811"></a>
 使用示例</h1>
 <p>示例代码参考example/udisplay_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md775"></a>
+<h2><a class="anchor" id="autotoc_md812"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>udispaly组件的package.yaml中添加 </p>
@@ -99,7 +99,7 @@ API说明</h1>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - <span class="stringliteral">&quot;src/*.c&quot;</span></div>
 <div class="line">  - <span class="stringliteral">&quot;example/udisplay_example.c&quot;</span> # add udisplay_example.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md776"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md813"></a>
 app中添加udisplay组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
@@ -107,11 +107,11 @@ app中添加udisplay组件</h2>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - udispaly: dev_aos # helloworld_demo 中引入 udisplay 组件</div>
 <div class="line">  - ili9341: master   # helloworld_demo 中引入 ili9341 屏幕驱动</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md777"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md814"></a>
 代码编译、烧录</h2>
 <p>参考 <a class="el" href="_haa_s100__quick__start.html">HaaS100快速开始</a> (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。</p>
 <p>参考 <a class="el" href="_haa_s100__quick__start.html">HaaS100快速开始</a> (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
-<h2><a class="anchor" id="autotoc_md778"></a>
+<h2><a class="anchor" id="autotoc_md815"></a>
 udisplay示例测试</h2>
 <blockquote class="doxtable">
 <p>udisplay 初始化命令： </p>
@@ -126,7 +126,7 @@ udisplay示例测试</h2>
 <li>16: ili9341 屏幕为 RGB565</li>
 <li>0x0000 RGB565 颜色设置</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md779"></a>
+<h1><a class="anchor" id="autotoc_md816"></a>
 FAQ</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -134,7 +134,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 9日 星期五 13:02:34 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 14日 星期三 20:44:53 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
