@@ -90,6 +90,7 @@
       <topic label="开发与调试" href="dev_debug.html">
         <topic label="编译固件" href="build_project.html"/>
         <topic label="烧录固件" href="build_image.html"/>
+        <topic label="查看日志" href="view_log.html"/>
       </topic>
       <topic label="打开工程" href="open_project.html"/>
     </topic>
