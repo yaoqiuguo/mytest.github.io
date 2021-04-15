@@ -65,12 +65,12 @@ $(document).ready(function(){initNavTree('aos_kernel.html',''); initResizable();
 <li>系统信息</li>
 <li>系统初始化 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md87"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md88"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── include</div>
 <div class="line">│   ├── aos</div>
@@ -91,17 +91,17 @@ $(document).ready(function(){initNavTree('aos_kernel.html',''); initResizable();
 <div class="line">    └── sem_example.c   # 信号量使用示例代码</div>
 <div class="line">    └── task_example.c   # 任务功能使用示例代码</div>
 <div class="line">    └── timer_example.c   # 定时器功能使用示例代码</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md89"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
 依赖组件</h2>
 <ul>
 <li>rhino </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md90"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 任务管理</h1>
-<h2><a class="anchor" id="autotoc_md91"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 概述</h2>
 <p>任务可以认为是一段独享CPU的运行程序，而应用是完成特定功能的多个任务的集合。任务管理就是为多任务环境中的每个任务分配一个上下文（context）（上下文（context）是指当任务被调度执行的所必不可少的一组数据，包括前任务的CPU指令地址（PC指针），当前任务的栈空间，当前任务的CPU寄存器状态等），在任务相继执行过程中，将切出任务的信息保存在任务上下文中，将切入任务的上下文信息恢复，使其得以执行。为维护任务上下文、状态、栈等相关信息，操作系统内核为每个任务定义了一组数据结构，即任务控制块（Task Control Block），来存放这些信息。 任务调度负责将处理器资源分配给关键任务，让其优先运行。所以系统中的每个任务需要根据关键程度分配不同的优先级，那些执行关键操作的任务被赋予高优先级，而一些非关键性任务赋予低优先级。当系统发生调度时，高优先级任务可以抢占低优先级任务的处理器资源得到调度执行。系统在无任务可调度时，就运行空闲任务，其优先级最低。 任务被创建时，需要为任务指定执行体入口地址、栈大小、优先级等信息，创建过程中内核为任务分配任务控制块（TCB）。任务栈空间可以在任务创建时由用户程序指定，也可以由内核根据用户指定大小来动态分配。操作系统内核提供基于软件的栈溢出检测方法，用户可根据需要配置或关闭该功能。 </p>
-<h3><a class="anchor" id="autotoc_md92"></a>
+<h3><a class="anchor" id="autotoc_md11"></a>
 任务状态</h3>
 <p>任务状态是反映当前系统中任务所处的状况，操作系统内核需要维护所有任务的当前状态。AliOS Things为了充分描述任务在系统中所处的状态以及引发状态迁移的条件差异，将任务状态分为就绪状态、挂起状态、休眠状态、阻塞状态、运行状态和删除状态。当任务通过aos_task_create()创建时，任务处于挂起状态，当任务通过aos_task_del()删除时，任务处于删除状态，具体的转化过程如下图：</p>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01LHAt211Dqmoi53SlY_!!6000000000268-2-tps-684-451.png" alt="" style="max-width:90%;" class="inline"/> </div><p>（1）阻塞状态是指因等待资源而处于等待状态，如调用aos_mutex_lock()获取互斥量时互斥量已经被锁定、调用aos_queue_recv()获取队列数据时队列为空、调用aos_sem_wait()等待信号量时信号量计数为0、调用aos_evnet_get()获取事件时，事件还未发生； （2）挂起状态是因任务被其他或自身调用挂起函数aos_task_suspend()后，将无条件地停止运行，被挂起的任务只能通过其他任务调用恢复函数aos_task_resume()使其恢复到就绪状态； （3）休眠状态是因任务在调用任务休眠函数aos_msleep()后，进入一种延迟执行的状态，直到休眠时间到达任务被重新调度恢复运行。 （4）删除状态是因任务运行完成调用任务退出函数aos_task_exit()或被调用任务删除函数aos_task_del()时被设置的一种状态。 （5）就绪状态是在任务被创建或任务解除阻塞或延迟到期时，任务被置为就绪状态。只有当任务处于就绪状态时，才能被系统调度进入运行状态。 （6）运行状态是获取处理器执行权的就绪任务所处的状态，单处理器系统，任意时刻只有一个任务可以运行。 AliOS Things允许任务处于组合状态，如阻塞挂起状态：任务在阻塞状态下，被其他任务挂起，则进入阻塞挂起状态。该状态下，若任务被恢复则保持阻塞状态；若任务解除阻塞则保持挂起状态。 用户可通过tasklist命令查看任务状态，任务状态描述符号和含义如下表：</p>
@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('aos_kernel.html',''); initResizable();
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">DELETED   </td><td class="markdownTableBodyNone">任务处于删除状态   </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md93"></a>
+<h3><a class="anchor" id="autotoc_md12"></a>
 任务调度</h3>
 <p>任务调度是为多任务环境中的就绪任务分配处理器资源。AliOS Things操作系统内核支持两种调度策略：</p>
 <ul>
@@ -134,16 +134,16 @@ $(document).ready(function(){initNavTree('aos_kernel.html',''); initResizable();
 <li>基于时间片的轮转调度</li>
 </ul>
 <p>时间片轮转调度使用时间片控制每个任务的执行时间，同等优先级的任务依次获得处理器被调度执行，每个任务可以运行的时间片是固定的，当任务的时间片用完后，该任务被放在对应优先级就绪队列的队尾，然后调度就绪队列第一个位置上的任务来执行。 </p>
-<h3><a class="anchor" id="autotoc_md94"></a>
+<h3><a class="anchor" id="autotoc_md13"></a>
 优先级分配</h3>
 <p>AliOS Things操作系统内核允许的任务优先级分配范围默认为0～62，值越大表示优先级越低，其中空闲任务的优先级是61，即系统最低优先级。 </p>
-<h3><a class="anchor" id="autotoc_md95"></a>
+<h3><a class="anchor" id="autotoc_md14"></a>
 任务栈保护</h3>
 <p>任务栈保护采用栈统计的方法在任务切换时，对当前任务栈的使用情况进行统计，当检测到任务栈使用量超过了预先分配的空间，则抛出异常。 </p>
-<h3><a class="anchor" id="autotoc_md96"></a>
+<h3><a class="anchor" id="autotoc_md15"></a>
 空闲任务</h3>
 <p>空闲任务是一个无限循环函数，在进入循环前或循环体内允许用户配置钩子函数。 </p>
-<h3><a class="anchor" id="autotoc_md97"></a>
+<h3><a class="anchor" id="autotoc_md16"></a>
 任务管理函数</h3>
 <p>AliOS Things操作系统内核提供了任务创建、任务删除、任务延迟、获取任务名称等任务相关的服务函数，提供给应用程序调用，具体描述如下：</p>
 <table class="markdownTable">
@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('aos_kernel.html',''); initResizable();
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="group__aos__kernel__task.html#gad2e51387d827e5307690163f55f666ba">aos_task_name_get()</a>   </td><td class="markdownTableBodyNone">获取任务名称   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md98"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 常用配置</h2>
 <blockquote class="doxtable">
 <p>任务优先级最大值: 默认62, 最大不能超过256，如需修改，在yaml中修改RHINO_CONFIG_PRI_MAX配置 </p>
@@ -197,10 +197,10 @@ $(document).ready(function(){initNavTree('aos_kernel.html',''); initResizable();
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  RHINO_CONFIG_SCHED_CFS: 1</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md99"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md18"></a>
 API说明</h2>
 <p>参见：<a class="el" href="group__aos__kernel__task.html">任务管理</a> </p>
-<h2><a class="anchor" id="autotoc_md100"></a>
+<h2><a class="anchor" id="autotoc_md19"></a>
 使用示例</h2>
 <p>示例代码参考example/task_example.c，该示例使用任务管理函数来控制任务的执行状态，具体场景为任务2因等待某个信号量进入阻塞状态，而此时被任务1将其挂起，则任务2仍然是处于阻塞状态，如果在此过程中等到信号量，则任务2会解除阻塞进入挂起状态；如果未等到信号量，则任务2恢复状态后仍然处于阻塞状态。 示例说明如下：</p>
 <ol type="1">
@@ -219,7 +219,7 @@ API说明</h2>
 <li>Task1在t4时刻因延迟到期得到运行，并调用aos_sem_signal()释放信号量，这时task2因等到信号量而进入就绪状态。待到task1再次进入休眠转改后task2得到运行，进入运行状态。</li>
 </ol>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01WaKfUM1fXNGrOho4q_!!6000000004016-2-tps-859-291.png" alt="" style="max-width:90%;" class="inline"/> </div><p>该示例可配置到helloworld_demo中运行，具体步骤如下： </p>
-<h3><a class="anchor" id="autotoc_md101"></a>
+<h3><a class="anchor" id="autotoc_md20"></a>
 添加示例</h3>
 <blockquote class="doxtable">
 <p>osal_aos组件的package.yaml中添加example </p>
@@ -230,28 +230,28 @@ API说明</h2>
 <div class="line">source_file:</div>
 <div class="line">  - <span class="stringliteral">&quot;*.c&quot;</span></div>
 <div class="line">  - <span class="stringliteral">&quot;example/task_example.c&quot;</span> # 添加 task_example.c</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md102"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md21"></a>
 添加组件</h3>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - osal_aos: master # helloworld_demo中引入osal_aos组件</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md103"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md22"></a>
 编译链接</h3>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md104"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md23"></a>
 烧录固件</h3>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h3><a class="anchor" id="autotoc_md105"></a>
+<h3><a class="anchor" id="autotoc_md24"></a>
 执行示例</h3>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">task_example</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md106"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md25"></a>
 关键日志</h3>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
@@ -267,13 +267,13 @@ API说明</h2>
 <div class="line">[aos_task_example]task1 signal a semphone!</div>
 <div class="line">[aos_task_example]task1 start to sleep and release CPU!</div>
 <div class="line">[aos_task_example]task2 get semphone and is running!</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md107"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md26"></a>
 注意事项</h2>
 <ul>
 <li>时间片轮转调度也是基于优先级策略的，如果有一个高优先级任务就绪了，无论当前任务的时间片是否用完，处理器都会立即去执行高优先级任务，当被打断的任务恢复执行时，它将继续执行剩下的时间片。</li>
 <li>tasklist查看运行任务的状态标识符为RDY，内核并没有为运行状态定义特定的标识符。 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md108"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
 FAQ</h2>
 <ul>
 <li>Q1： 如何避免栈溢出？</li>
@@ -283,21 +283,21 @@ FAQ</h2>
 <li>Q2： <a class="el" href="group__aos__kernel__task.html#gae960413acb286b8f5589264993f53af6">aos_task_yield()</a>和aos_task_suspend()都能够使任务退出运行状态，使用上有什么差异吗？</li>
 </ul>
 <p>答：aos_task_yield()仅仅是让出CPU，它仍然处于就绪状态，因为该操作只是将任务放置到就绪队列的队&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; 尾，若无更高优先级任务在就绪队列中，它就可以被调度执行。而aos_task_suspend()是将任务挂起停&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160; 止运行，任务会从就绪队列中去除，只有当任务被其他任务调用aos_task_resume()才能恢复。 </p>
-<h1><a class="anchor" id="autotoc_md109"></a>
+<h1><a class="anchor" id="autotoc_md28"></a>
 软件定时器</h1>
-<h2><a class="anchor" id="autotoc_md110"></a>
+<h2><a class="anchor" id="autotoc_md29"></a>
 概述</h2>
 <p>AliOS Things操作系统内核使用tick作为时间片轮转调度以及延迟操作的时间度量单位，tick是实现定时触发功能的基础。tick计数发生在每次时钟中断处理的过程，时钟中断是定时产生的，系统在默认情况下为1ms触发一次，即一个tick代表1ms，用户可根据应用需要调整该时间。 软件定时器是用来在指定时间或者触发一次或多次某个功能函数的调用。这种由定时器来执行的函数叫做定时器回调函数，定时器回调函数以及触发时间由应用程序来设定。当定时器的触发时间到来，则定时器的回调函数会被执行。定时器支持两种工作模式：单次模式和周期性模式。定时器在创建时，用户可通过option参数来制定该定时器的工作模式是单次还是周期性的，若option设置了AOS_TIMER_REPEAT则为周期性的，否则为单次。 </p>
-<h3><a class="anchor" id="autotoc_md111"></a>
+<h3><a class="anchor" id="autotoc_md30"></a>
 单次模式</h3>
 <p>定时器会从应用程序设置的初始时间开始，以tick为计时单位进行倒计时，当计数值减为0时调用回调函数执行。回调函数执行完毕，则定时器停止。 </p>
-<h3><a class="anchor" id="autotoc_md112"></a>
+<h3><a class="anchor" id="autotoc_md31"></a>
 周期性模式</h3>
 <p>周期定时器在时间到期执行完回调函数后，重新开始计时，直到下次时间到期，再次执行回调函数，然后一直循环下去。 </p>
-<h3><a class="anchor" id="autotoc_md113"></a>
+<h3><a class="anchor" id="autotoc_md32"></a>
 定时器任务</h3>
 <p>为了在定时器创建、删除、启动、停止以及参数并更的过程中，避免锁操作，系统采用一个定时器任务来处理这些操作。当应用程序调用定时器管理接口时，将接口调用命令发送到一个消息队列，定时器任务从消息队列中读取消息并处理该命令。 定时器任务除了处理命令外，还对当前已运行的定时器进行实时调度。所有正在运行的定时器会被挂接到g_timer_head链表，定时器任务循环的从g_timer_head链表中取出时间最近一次的定时器，通过当前tick计数和该定时器的超时tick数来判断定时时间是否到，如果该定时器触发时间已到则立即执行其处理函数，否则代表最近一次的定时器时间尚未到来，则在此时差，继续从命令buffer中收取消息，直到时间差到来后，再立即执行定时器处理函数。 上述流程在g_timer_head中有待处理定时器时才会进入，如果没有待处理定时器，在定时器任务将只会进入定时器管理循环中。 </p>
-<h3><a class="anchor" id="autotoc_md114"></a>
+<h3><a class="anchor" id="autotoc_md33"></a>
 定时器管理函数</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -321,7 +321,7 @@ FAQ</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">aos_timer_gettime()   </td><td class="markdownTableBodyNone">获取定时器时间参数函数   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md115"></a>
+<h2><a class="anchor" id="autotoc_md34"></a>
 常用配置</h2>
 <blockquote class="doxtable">
 <p>软件定时器功能: 默认使能，如需修改，在yaml中修改RHINO_CONFIG_TIMER配置 </p>
@@ -338,10 +338,10 @@ FAQ</h2>
 <div class="line">  RHINO_CONFIG_TICKS_PER_SECOND: 1000</div>
 </div><!-- fragment --><p>时间片: 默认50个tick，如需修改，在yaml中修改RHINO_CONFIG_TIME_SLICE_DEFAULT配置 </p><div class="fragment"><div class="line">def_config:</div>
 <div class="line">  RHINO_CONFIG_TIME_SLICE_DEFAULT: 100</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md116"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md35"></a>
 API说明</h2>
 <p>参见：<a class="el" href="group__aos__kernel__timer.html">定时器</a> </p>
-<h2><a class="anchor" id="autotoc_md117"></a>
+<h2><a class="anchor" id="autotoc_md36"></a>
 使用示例</h2>
 <ul>
 <li>示例代码参考example/timer_example.c，该示例使用定时器管理函数来控制定时器的执行，具体场景为创建一个周期性定时器，定时调用回调函数执行，停止定时器该变定时器的时间参数，则定时器按照修改后的时间间隔定时调用回调函数执行。</li>
@@ -362,7 +362,7 @@ API说明</h2>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01eCw5Hz1JIKiZdxYMI_!!6000000001005-2-tps-689-192.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
 <li>该示例可配置到helloworld_demo中运行，具体步骤如下： </li>
 </ul>
-<h3><a class="anchor" id="autotoc_md118"></a>
+<h3><a class="anchor" id="autotoc_md37"></a>
 添加示例</h3>
 <blockquote class="doxtable">
 <p>osal_aos组件的package.yaml中添加example </p>
@@ -373,52 +373,52 @@ API说明</h2>
 <div class="line">source_file:</div>
 <div class="line">  - <span class="stringliteral">&quot;*.c&quot;</span></div>
 <div class="line">  - <span class="stringliteral">&quot;example/timer_example.c&quot;</span> # 添加 timer_example.c</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md119"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md38"></a>
 添加组件</h3>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - osal_aos: master # helloworld_demo中引入osal_aos组件</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md120"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md39"></a>
 编译链接</h3>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p>其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md121"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md40"></a>
 烧录固件</h3>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h3><a class="anchor" id="autotoc_md122"></a>
+<h3><a class="anchor" id="autotoc_md41"></a>
 执行示例</h3>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">timer_example</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md123"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md42"></a>
 关键日志</h3>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">[aos_timer_example]timer expires 10 times</div>
 <div class="line">[aos_timer_example]timer expires 5 times</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md124"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md43"></a>
 注意事项</h2>
 <ul>
 <li>tick是内核调度和延迟操作的基础，所以RHINO_CONFIG_TICKS_PER_SECOND参数必须配置，而定时器是基于tick实现的软件定时器功能，可以通过配置RHINO_CONFIG_TIMER参数来使能或关闭该功能。 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md125"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 FAQ</h2>
 <ul>
 <li>Q1： 定时器回调函数的执行上下文是在哪里？</li>
 </ul>
 <p>答：定时器回调函数是在定时器任务中执行的，所以定时器回调函数的执行上下文为定时器任务，当回调函&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; 数所需栈空间超过定时器任务栈大小时，用户需要通过配置&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; RHINO_CONFIG_TIMER_TASK_STACK_SIZE参数来增加栈大小。 </p>
-<h1><a class="anchor" id="autotoc_md126"></a>
+<h1><a class="anchor" id="autotoc_md45"></a>
 内存管理</h1>
-<h2><a class="anchor" id="autotoc_md127"></a>
+<h2><a class="anchor" id="autotoc_md46"></a>
 概述</h2>
 <p>AliOS Things操作系统内核通过内存管理实现应用程序可以调用标准C库的malloc和free接口来动态的分配和释放内存。 </p>
-<h3><a class="anchor" id="autotoc_md128"></a>
+<h3><a class="anchor" id="autotoc_md47"></a>
 内存管理函数</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -434,7 +434,7 @@ FAQ</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="group__aos__kernel__memory.html#ga12a6358720769a6489f381d860fe6dc4">aos_free()</a>   </td><td class="markdownTableBodyNone">内存释放函数   </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md129"></a>
+<h3><a class="anchor" id="autotoc_md48"></a>
 内存分配算法</h3>
 <p>AliOS Things内存管理采用类buddy伙伴算法，以及blk快速小内存申请算法相结合的策略。</p>
 <ul>
@@ -445,7 +445,7 @@ FAQ</h2>
 <li>blk小内存快速申请：</li>
 </ul>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01mHjJZ11viOeeBd76S_!!6000000006206-2-tps-835-477.png" alt="" style="max-width:90%;" class="inline"/> </div><p>blk小内存算法申请的内存最小为4字节对齐 小于RHINO_CONFIG_MM_BLK_SIZE大小的内存块会优先从blk算法中申请不够的再从通过buddy申请 内存申请时，优先从对应type的空闲链表中申请；如果没有空闲，则先考虑从空闲资源池拉取一段空闲资源补充；如果空闲资源不足，则从 type+1 的位置申请内存（以此类推）申请过程不涉及拆分； 内存释放时，直接挂在到对应type的空闲链表内，释放不涉及合并。 <b>优点：</b> 申请效率高； 避免过多小内存碎片。 <b>缺点：</b> 内存维测信息少，出现问题较难定位； 申请的内存大小有限制，一般为1K以下。 </p>
-<h2><a class="anchor" id="autotoc_md130"></a>
+<h2><a class="anchor" id="autotoc_md49"></a>
 常用配置</h2>
 <p>内存的常用配置都在各个单板的k_config.h中，如果不需修改，则会使用k_default_config.h里面的默认配置。当然由于其本身是宏定义，也可在board对应的yaml中定义。 </p><blockquote class="doxtable">
 <p>打开关闭内存模块功能 </p>
@@ -465,13 +465,13 @@ FAQ</h2>
 </div><!-- fragment --><p>设定从blk小内存申请的阈值（byte）即 </p><div class="fragment"><div class="line">def_config:</div>
 <div class="line">  RHINO_CONFIG_MM_BLK_SIZE: 256</div>
 </div><!-- fragment --><p>注: blk目前最大支持1K以下的小内存块如果需要调整可修改内部配置 MM_BLK_SLICE_BIT一般无需修改 </p>
-<h2><a class="anchor" id="autotoc_md131"></a>
+<h2><a class="anchor" id="autotoc_md50"></a>
 API说明</h2>
 <p>参见：<a class="el" href="group__aos__kernel__memory.html">内存管理</a> </p>
-<h2><a class="anchor" id="autotoc_md132"></a>
+<h2><a class="anchor" id="autotoc_md51"></a>
 使用示例</h2>
 <p>该示例可配置到helloworld_demo中运行，具体步骤如下： </p>
-<h3><a class="anchor" id="autotoc_md133"></a>
+<h3><a class="anchor" id="autotoc_md52"></a>
 添加示例</h3>
 <blockquote class="doxtable">
 <p>osal_aos组件的package.yaml中添加example </p>
@@ -482,28 +482,28 @@ API说明</h2>
 <div class="line">source_file:</div>
 <div class="line">  - <span class="stringliteral">&quot;*.c&quot;</span></div>
 <div class="line">  - <span class="stringliteral">&quot;example/mem_example.c&quot;</span> # 添加 mem_example.c</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md134"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md53"></a>
 添加组件</h3>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - osal_aos: master # helloworld_demo中引入osal_aos组件</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md135"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md54"></a>
 编译链接</h3>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md136"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md55"></a>
 烧录固件</h3>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h3><a class="anchor" id="autotoc_md137"></a>
+<h3><a class="anchor" id="autotoc_md56"></a>
 执行示例</h3>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">mem_example</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md138"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md57"></a>
 关键日志</h3>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
@@ -516,14 +516,14 @@ API说明</h2>
 <div class="ttc" id="agroup__aos__kernel__memory_html_ga7b24f9425ee7459f47d6271cd6ea926d"><div class="ttname"><a href="group__aos__kernel__memory.html#ga7b24f9425ee7459f47d6271cd6ea926d">aos_zalloc</a></div><div class="ttdeci">void * aos_zalloc(size_t size)</div></div>
 <div class="ttc" id="agroup__aos__kernel__memory_html_gafe0bae9d3df9e3a97a92d5d6b0227221"><div class="ttname"><a href="group__aos__kernel__memory.html#gafe0bae9d3df9e3a97a92d5d6b0227221">aos_calloc</a></div><div class="ttdeci">void * aos_calloc(size_t nitems, size_t size)</div></div>
 <div class="ttc" id="agroup__aos__kernel__memory_html_gafe116e43dfba3b6353939edf9fc49f83"><div class="ttname"><a href="group__aos__kernel__memory.html#gafe116e43dfba3b6353939edf9fc49f83">aos_malloc</a></div><div class="ttdeci">void * aos_malloc(size_t size)</div></div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md139"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md58"></a>
 注意事项</h2>
 <ul>
 <li>实际内存申请释放应统一通过malloc/free接口，其内部已经对接了aos_malloc/aos_free接口</li>
 <li>内存申请使用的堆统一由g_mm_region数据结构初始化（传入堆起点和长度），并在aos_init内核初始化接口中默认完成了内存模块的初始化</li>
 <li>AliOS Things针对内存模块提供了完善的内存解析工具，用来分析内存踩踏、内存泄漏、重复释放等问题。具体可参考：<a href="https://blog.csdn.net/HaaSTech/article/details/112246611">https://blog.csdn.net/HaaSTech/article/details/112246611</a> </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md140"></a>
+<h2><a class="anchor" id="autotoc_md59"></a>
 FAQ</h2>
 <ul>
 <li>Q1： 内存模块的维测功能如何打开？</li>
@@ -533,18 +533,18 @@ FAQ</h2>
 <li>Q2：如何查看当前内存的使用情况？</li>
 </ul>
 <p>答：通过在cli中输入 dumpsys_mm_info ,将所有内存块的使用情况，以及整体的占用空闲情况输出。 </p>
-<h1><a class="anchor" id="autotoc_md141"></a>
+<h1><a class="anchor" id="autotoc_md60"></a>
 信号量</h1>
-<h2><a class="anchor" id="autotoc_md142"></a>
+<h2><a class="anchor" id="autotoc_md61"></a>
 概述</h2>
 <p>信号量是多任务系统中实现任务间同步，并且协调多任务对共享资源访问的一种互斥机制。信号量允许有多个使用者，所以采用计数值来表示可用的资源数，当请求一个信号量时，该计数值减1，若此时计数值大于等于0，表示当前有可用的信号量，则任务获得信号量，可以访问资源，若此时计数值为负数，则任务进入阻塞状态，释放处理器资源。当获取信号量的任务执行完操作，释放信号量时，则将当前计数值加1，如果当前存在等待该资源的任务，则任务被唤醒而获得该信号量。 </p>
-<h3><a class="anchor" id="autotoc_md143"></a>
+<h3><a class="anchor" id="autotoc_md62"></a>
 超时时间</h3>
 <p>信号量获取可设置超时时间，如果任务在超时时间到期后仍未等待信号量，则任务解除阻塞进入就绪状态。 </p>
-<h3><a class="anchor" id="autotoc_md144"></a>
+<h3><a class="anchor" id="autotoc_md63"></a>
 多任务同步</h3>
 <p>多个任务可以等待同一个信号量，若信号量可用或信号量被释放，通常情况下，系统会将阻塞在该信号量上优先级最高的任务置于就绪状态，提供了面向所有阻塞任务的信号量释放机制，可以将阻塞在该信号量上的所有任务都置为就绪状态。 </p>
-<h3><a class="anchor" id="autotoc_md145"></a>
+<h3><a class="anchor" id="autotoc_md64"></a>
 信号量功能函数</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -564,17 +564,17 @@ FAQ</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="group__aos__kernel__sem.html#gae9fda03a3ccd89b951f6d3a3d69d16e1">aos_sem_is_valid()</a>   </td><td class="markdownTableBodyNone">判断信号量具柄是否合法函数   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md146"></a>
+<h2><a class="anchor" id="autotoc_md65"></a>
 常用配置</h2>
 <blockquote class="doxtable">
 <p>软件定时器功能: 默认使能，如需修改，在yaml中修改RHINO_CONFIG_SEM配置 </p>
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  RHINO_CONFIG_SEM: 0</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md147"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md66"></a>
 API说明</h2>
 <p>参见：<a class="el" href="group__aos__kernel__sem.html">信号量</a> </p>
-<h2><a class="anchor" id="autotoc_md148"></a>
+<h2><a class="anchor" id="autotoc_md67"></a>
 使用示例</h2>
 <ul>
 <li>示例代码参考example/sem_example.c，该示例使用信号量实现多任务同步，具体场景为创建一个高优先级任务A，一个低优先级任务B，任务A和任务B同时等待同一信号量，此时测试任务T调用aos_sem_signal()释放信号量，任务A首先获得信号量，任务A操作完成后释放一次信号量，此时任务B获取信号量得到运行。</li>
@@ -592,7 +592,7 @@ API说明</h2>
 <div align="left" display="flex"> <img src="hhttps://img.alicdn.com/imgextra/i3/O1CN01NW351a1hXUbVEKizH_!!6000000004287-2-tps-516-261.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
 <li>该示例可配置到helloworld_demo中运行，具体步骤如下： </li>
 </ul>
-<h3><a class="anchor" id="autotoc_md149"></a>
+<h3><a class="anchor" id="autotoc_md68"></a>
 添加示例</h3>
 <blockquote class="doxtable">
 <p>osal_aos组件的package.yaml中添加example </p>
@@ -603,29 +603,29 @@ API说明</h2>
 <div class="line">source_file:</div>
 <div class="line">  - <span class="stringliteral">&quot;*.c&quot;</span></div>
 <div class="line">  - <span class="stringliteral">&quot;example/sem_example.c&quot;</span> # 添加 sem_example.c</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md150"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md69"></a>
 添加组件</h3>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - osal_aos: master # helloworld_demo中引入osal_aos组件</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md151"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md70"></a>
 编译链接</h3>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p>其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md152"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md71"></a>
 烧录固件</h3>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h3><a class="anchor" id="autotoc_md153"></a>
+<h3><a class="anchor" id="autotoc_md72"></a>
 执行示例</h3>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">sem_example</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md154"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md73"></a>
 关键日志</h3>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
@@ -636,7 +636,7 @@ API说明</h2>
 <div class="line">[aos_sem_example][0x34035d10]field1=1949034929, field2=1949034929, field3=1949034929, field4=1949034929</div>
 <div class="line">[aos_sem_example][0x34035840]field1=672861528, field2=672861528, field3=672861528, field4=672861528</div>
 <div class="line">[aos_sem_example][0x34035d10]field1=820049120, field2=820049120, field3=820049120, field4=820049120</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md155"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md74"></a>
 注意事项</h2>
 <ul>
 <li>中断禁止信号量获取检测</li>
@@ -646,30 +646,30 @@ API说明</h2>
 <li>占用信号量非等待、永远等待、延时使用区别</li>
 </ul>
 <p>应用程序在获取信号量时，需要按照实际的需求，来安排信号量获取策略。aos_sem_take传入延时timeout为0，获取不到信号量会立即报失败；timeout为AOS_WAIT_FOREVER时，会永远在此等待，直到获取到信号量，可能会造成该任务无法继续运行；其他值标识最大延迟的时间上限，达到上限时，即使未获取到信号量，任务也会被唤醒，并返回错误。 </p>
-<h2><a class="anchor" id="autotoc_md156"></a>
+<h2><a class="anchor" id="autotoc_md75"></a>
 FAQ</h2>
 <ul>
 <li><p class="startli">Q1： 调用aos_sem_task()接口无限期的等待信号量，timeout参数怎么设置？</p>
 <p class="startli">答：将timeout赋值为AOS_WAIT_FOREVER。 </p>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md157"></a>
+<h1><a class="anchor" id="autotoc_md76"></a>
 互斥量</h1>
-<h2><a class="anchor" id="autotoc_md158"></a>
+<h2><a class="anchor" id="autotoc_md77"></a>
 概述</h2>
 <p>互斥量的获取是完全互斥的，即同一时刻，互斥量只能被一个任务获取。而信号量按照起始的计数值的配置，可以存在多个任务获取同一信号量的情况，直到计数值减为0，则后续任务无法再获取信号量，当信号量的计数初值设置为1，同样有互斥的效果。但信号量无法避免优先级反转问题。 </p>
-<h3><a class="anchor" id="autotoc_md159"></a>
+<h3><a class="anchor" id="autotoc_md78"></a>
 优先级反转</h3>
 <p>优先级反转是一种不希望发生的任务调度状态，该状态下，一个高优先级任务间接的被一个低优先级任务所抢占，使得两个任务的相对优先级反转了。当高、中、低三个优先级任务同时访问使用信号量互斥资源时，可能会引起优先级反转。当高优先级的任务需要的信号量被低优先级任务占用时，处理器资源会调度给低优先级任务。此时如果低优先级需要获取的另一个信号量被中优先级的pend任务所占用，那么低优先级的任务则需要等待中优先级的任务事件到来，并释放信号量，则就出现了 高、中优先级的任务并不是等待一个信号量，但是中优先级任务先运行的现象。如下图：</p>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01zD7nbO1kzNZGRDjRR_!!6000000004754-2-tps-410-240.png" alt="" style="max-width:90%;" class="inline"/> </div><p>任务H具有高优先级，任务M具有中等优先级，任务L具有低优先级，在t0时刻任务H还未运行，任务M因等待信号量2而阻塞，低优先级任务L得到调度占用信号量1；t1时刻，任务H运行并抢占任务L，任务L占用信号量还未释放；t2时刻，任务H阻塞于信号量1，任务L得以继续运行；t3时刻，任务L等待信号量2而阻塞，t4时刻，信号量2被释放，任务M得到运行，此时任务H虽然具有高优先级，但需先等待任务M释放信号量2让任务L运行，并且任务L释放信号量1后才能运行，这种情况即出现了优先级反转。 </p>
-<h3><a class="anchor" id="autotoc_md160"></a>
+<h3><a class="anchor" id="autotoc_md79"></a>
 优先级继承</h3>
 <p>互斥量可以解决优先级反转问题，高优先级的任务获取互斥量时，如果该互斥量被某低优先级的任务占用， 会动态提升该低优先级任务的优先级等于高优先级，并且将该优先级值依次传递给该低优先级任务依赖的互斥量关联的任务，以此递归下去。当某任务释放互斥量时，会查找该任务的基础优先级，以及获取到的互斥量所阻塞的最高优先级的任务的优先级，取两者中高的优先级来重新设定此任务的优先级。总的原则就是，高优先级任务被互斥量阻塞时，会将占用该互斥量的低优先级任务临时提高；互斥量释放时，相应任务的优先级需要恢复。如下图：</p>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN0131uJpc1veH5gWvL3g_!!6000000006197-2-tps-481-250.png" alt="" style="max-width:90%;" class="inline"/> </div><p>任务H具有高优先级，任务M具有中等优先级，任务L具有低优先级，在t0时刻任务H还未运行，任务M获取互斥量2而阻塞，低优先级任务L得到调度获得互斥量1；t1时刻taskH抢占taskL，但因无法获得互斥量1而阻塞，此时taskL的优先级被提升至与taskH一样高，并继续运行；t2时刻taskL因无法获得互斥量2而阻塞，t3时刻互斥量2被释放，taskL因比taskM优先级高获得互斥量2得到运行；在t4时刻，taskL释放互斥量1，并将优先级恢复到之前状态，taskH因获得互斥量1得到运行，该机制消除了优先级反转的发生。 </p>
-<h3><a class="anchor" id="autotoc_md161"></a>
+<h3><a class="anchor" id="autotoc_md80"></a>
 超时时间</h3>
 <p>互斥量获取可设置超时时间，如果任务在超时时间到期后仍未获得互斥量，则任务解除阻塞进入就绪状态。 </p>
-<h3><a class="anchor" id="autotoc_md162"></a>
+<h3><a class="anchor" id="autotoc_md81"></a>
 互斥量功能函数</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -687,17 +687,17 @@ FAQ</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="group__aos__kernel__mutex.html#gab46f7063e81741e5356f91efcf68158a">aos_mutex_is_valid()</a>   </td><td class="markdownTableBodyNone">判断互斥量具柄是否合法函数   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md163"></a>
+<h2><a class="anchor" id="autotoc_md82"></a>
 常用配置</h2>
 <blockquote class="doxtable">
 <p>互斥量优先级继承: 默认关闭，如需修改，在yaml中修改RHINO_CONFIG_MUTEX_INHERIT配置 </p>
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  RHINO_CONFIG_MUTEX_INHERIT: 1</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md164"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md83"></a>
 API说明</h2>
 <p>参见：<a class="el" href="group__aos__kernel__mutex.html">互斥量</a> </p>
-<h2><a class="anchor" id="autotoc_md165"></a>
+<h2><a class="anchor" id="autotoc_md84"></a>
 使用示例</h2>
 <ul>
 <li>示例代码参考example/mutex_example.c，该示例使用互斥量实现共享资源的互斥访问，具体场景为创建任务A和认为B，以及一互斥量。任务A和任务B使用互斥量同时访问共享数据区，访问共享数据区时使用互斥量做保护。</li>
@@ -718,7 +718,7 @@ API说明</h2>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01UKTCDa1kGx9OVO9Yi_!!6000000004657-2-tps-409-251.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
 <li>该示例可配置到helloworld_demo中运行，具体步骤如下： </li>
 </ul>
-<h3><a class="anchor" id="autotoc_md166"></a>
+<h3><a class="anchor" id="autotoc_md85"></a>
 添加示例</h3>
 <blockquote class="doxtable">
 <p>osal_aos组件的package.yaml中添加example </p>
@@ -729,28 +729,28 @@ API说明</h2>
 <div class="line">source_file:</div>
 <div class="line">  - <span class="stringliteral">&quot;*.c&quot;</span></div>
 <div class="line">  - <span class="stringliteral">&quot;example/mutex_example.c&quot;</span> # 添加 mutex_example.c</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md167"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md86"></a>
 添加组件</h3>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - osal_aos: master # helloworld_demo中引入osal_aos组件</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md168"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md87"></a>
 编译链接</h3>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md169"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md88"></a>
 烧录固件</h3>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h3><a class="anchor" id="autotoc_md170"></a>
+<h3><a class="anchor" id="autotoc_md89"></a>
 执行示例</h3>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">mutex_example</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md171"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md90"></a>
 关键日志</h3>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
@@ -764,18 +764,18 @@ API说明</h2>
 <div class="line">[aos_mutex_example][0x34035d80]field1=1406670318, field2=1406670318, field3=1406670318, field4=1406670318</div>
 <div class="line">[aos_mutex_example][0x340358b0]field1=24443955, field2=24443955, field3=24443955, field4=24443955</div>
 <div class="line">[aos_mutex_example][0x34035d80]field1=693331083, field2=693331083, field3=693331083, field4=693331083</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md172"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md91"></a>
 注意事项</h2>
 <ul>
 <li>互斥量只能由获取该互斥量的任务的释放，不能由其他任务释放。</li>
 <li>互斥量已被当前任务获取，若当前任务再次获取互斥量则返回错误。 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md173"></a>
+<h2><a class="anchor" id="autotoc_md92"></a>
 FAQ</h2>
 <p>Q1： 调用aos_mutex_lock()接口无限期的获取互斥量，timeout参数怎么设置？ 答：将timeout赋值为AOS_WAIT_FOREVER。 </p>
-<h1><a class="anchor" id="autotoc_md174"></a>
+<h1><a class="anchor" id="autotoc_md93"></a>
 事件</h1>
-<h2><a class="anchor" id="autotoc_md175"></a>
+<h2><a class="anchor" id="autotoc_md94"></a>
 概述</h2>
 <p>事件是AliOS Things内核提供的一种任务间通信方式，它不同于信号量和互斥量，可以使用事件组实现一个任务同时等待多个事件的发生，或者等待同一个事件的任务在事件发生时解除阻塞状态。事件组是一个32位的数，每一位都对应一个事件标志，事件标志只有两种状态：</p>
 <ul>
@@ -788,10 +788,10 @@ FAQ</h2>
 <li>任务可以等待事件组中设置的任意一个事件发生，即“或”的方式，任务就解除阻塞进入就绪状态；</li>
 <li>如果有多个任务等待同一事件，当事件发生时，若任务等待条件满足均会解除阻塞。</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md176"></a>
+<h3><a class="anchor" id="autotoc_md95"></a>
 超时时间</h3>
 <p>事件等待可设置超时时间，如果任务在超时时间到期后仍未等到事件发生，则任务解除阻塞进入就绪状态。 </p>
-<h3><a class="anchor" id="autotoc_md177"></a>
+<h3><a class="anchor" id="autotoc_md96"></a>
 事件功能函数</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -809,17 +809,17 @@ FAQ</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="group__aos__kernel__event.html#ga93ce979fb2f084ed3f4764a7d2339504">aos_event_is_valid()</a>   </td><td class="markdownTableBodyNone">判断事件具柄是否合法函数   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md178"></a>
+<h2><a class="anchor" id="autotoc_md97"></a>
 常用配置</h2>
 <blockquote class="doxtable">
 <p>事件功能: 默认使能，如需修改，在yaml中修改RHINO_CONFIG_EVENT_FLAG配置 </p>
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  RHINO_CONFIG_EVENT_FLAG: 0</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md179"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md98"></a>
 API说明</h2>
 <p>参见：<a class="el" href="group__aos__kernel__event.html">事件</a> </p>
-<h2><a class="anchor" id="autotoc_md180"></a>
+<h2><a class="anchor" id="autotoc_md99"></a>
 使用示例</h2>
 <ul>
 <li>示例代码参考example/event_example.c，该示例使用事件机制实现任务间同步，具体场景为创建任务A和认为B，以及一事件。任务A以“与”的方式等待事件1和事件2；任务B以“或”的方式等待事件1和事件2。测试任务T设置事件1，则任务B因获取事件得到运行，之后测试任务T设置事件2，则任务A因等到全部事件而得到运行。</li>
@@ -837,7 +837,7 @@ API说明</h2>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01F9Ij8h1vWwkllyh25_!!6000000006181-2-tps-430-250.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
 <li>该示例可配置到helloworld_demo中运行，具体步骤如下： </li>
 </ul>
-<h3><a class="anchor" id="autotoc_md181"></a>
+<h3><a class="anchor" id="autotoc_md100"></a>
 添加示例</h3>
 <blockquote class="doxtable">
 <p>osal_aos组件的package.yaml中添加example </p>
@@ -848,28 +848,28 @@ API说明</h2>
 <div class="line">source_file:</div>
 <div class="line">  - <span class="stringliteral">&quot;*.c&quot;</span></div>
 <div class="line">  - <span class="stringliteral">&quot;example/evnet_example.c&quot;</span> # 添加 evnet_example.c</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md182"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md101"></a>
 添加组件</h3>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - osal_aos: master # helloworld_demo中引入osal_aos组件</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md183"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md102"></a>
 编译链接</h3>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md184"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md103"></a>
 烧录固件</h3>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h3><a class="anchor" id="autotoc_md185"></a>
+<h3><a class="anchor" id="autotoc_md104"></a>
 执行示例</h3>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">event_example</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md186"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md105"></a>
 关键日志</h3>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
@@ -878,23 +878,23 @@ API说明</h2>
 <div class="line">[aos_event_example][taskA]field1=0, field2=0, field3=0, field4=0</div>
 <div class="line">[aos_event_example]set event 2!</div>
 <div class="line">[aos_event_example][taskB]field1=1123961442, field2=1123961442, field3=1123961442, field4=1123961442</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md187"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md106"></a>
 注意事项</h2>
 <ul>
 <li>在删除事件时，如果有任务阻塞在该事件上，则将这些任务从此事件上脱离，这种任务行为像是事件发生导致的，但实际上并非如此。所以删除事件时需要谨慎。 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md188"></a>
+<h2><a class="anchor" id="autotoc_md107"></a>
 FAQ</h2>
 <p>Q1： 调用aos_event_get()接口无限期的等待事件，timeout参数怎么设置？ 答：将timeout赋值为AOS_WAIT_FOREVER。 </p>
-<h1><a class="anchor" id="autotoc_md189"></a>
+<h1><a class="anchor" id="autotoc_md108"></a>
 消息队列</h1>
-<h2><a class="anchor" id="autotoc_md190"></a>
+<h2><a class="anchor" id="autotoc_md109"></a>
 概述</h2>
 <p>消息队列是一种任务间传递数据的有效方式。消息队列使用环形缓冲池（ring buffer）来管理消息的队列缓冲区，并使用类似信号量的机制进行任务间的同步。任务通过消息队列可以发送消息，也可以通过它接收消息，从而实现数据的同步及通信。任务发送的消息会暂存在消息队列中，当接收任务来读时，将暂存的数据传递给接收任务；若接收任务在接收数据时，消息队列中无可读数据，则任务会阻塞，直到有消息到来解除阻塞而进入就绪状态。 </p>
-<h3><a class="anchor" id="autotoc_md191"></a>
+<h3><a class="anchor" id="autotoc_md110"></a>
 超时时间</h3>
 <p>消息接收可设置超时时间，如果任务在超时时间到期后仍未收到消息，则任务解除阻塞进入就绪状态。 </p>
-<h3><a class="anchor" id="autotoc_md192"></a>
+<h3><a class="anchor" id="autotoc_md111"></a>
 消息队列功能函数</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -916,17 +916,17 @@ FAQ</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="group__aos__kernel__queue.html#ga1541e4e6c57b9baef90d63a0ff6b8555">aos_queue_get_count()</a>   </td><td class="markdownTableBodyNone">获取消息队列当前消息数   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md193"></a>
+<h2><a class="anchor" id="autotoc_md112"></a>
 常用配置</h2>
 <blockquote class="doxtable">
 <p>消息队列功能: 默认使能，如需修改，在yaml中修改RHINO_CONFIG_BUF_QUEUE配置 </p>
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  RHINO_CONFIG_BUF_QUEUE: 0</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md194"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md113"></a>
 API说明</h2>
 <p>参见：<a class="el" href="group__aos__kernel__queue.html">消息队列</a> </p>
-<h2><a class="anchor" id="autotoc_md195"></a>
+<h2><a class="anchor" id="autotoc_md114"></a>
 使用示例</h2>
 <ul>
 <li>示例代码参考example/queue_example.c，该示例使用消息队列实现任务间数据同步，具体场景为创建任务A和认为B，以及一消息队列。任务A作为生产者循环向消息队列发送消息，任务B作为消费者循环从消息队列接收消息，一般情况下，消费者处理数据是要花费很长时间，所以会导致消息产生的速度大于消息处理的速度，使得消息队列溢出。所以可以通过调整任务B优先级大于任务A来避免这种情况，或者使用信号量来控制数据收发同步。</li>
@@ -947,7 +947,7 @@ API说明</h2>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01VjMeUN1XLuQimsUEW_!!6000000002908-2-tps-438-190.png" alt="" style="max-width:90%;" class="inline"/> </div><ul>
 <li>该示例可配置到helloworld_demo中运行，具体步骤如下： </li>
 </ul>
-<h3><a class="anchor" id="autotoc_md196"></a>
+<h3><a class="anchor" id="autotoc_md115"></a>
 添加示例</h3>
 <blockquote class="doxtable">
 <p>osal_aos组件的package.yaml中添加example </p>
@@ -958,28 +958,28 @@ API说明</h2>
 <div class="line">source_file:</div>
 <div class="line">  - <span class="stringliteral">&quot;*.c&quot;</span></div>
 <div class="line">  - <span class="stringliteral">&quot;example/queue_example.c&quot;</span> # 添加 queue_example.c</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md197"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md116"></a>
 添加组件</h3>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - osal_aos: master # helloworld_demo中引入osal_aos组件</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md198"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md117"></a>
 编译链接</h3>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md199"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md118"></a>
 烧录固件</h3>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h3><a class="anchor" id="autotoc_md200"></a>
+<h3><a class="anchor" id="autotoc_md119"></a>
 执行示例</h3>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">queue_example</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md201"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md120"></a>
 关键日志</h3>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
@@ -991,12 +991,12 @@ API说明</h2>
 <div class="line">[aos_queue_example]10 recv message : 7890123456</div>
 <div class="line">[aos_queue_example]10 recv message : 8901234567</div>
 <div class="line">[aos_queue_example]10 recv message : 9012345678</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md202"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md121"></a>
 注意事项</h2>
 <ul>
 <li>发送消息时，如果没有任务在等待接收消息，则此消息会暂时保存在环形缓冲区中，如果有任务在等待数据接收，则将消息直接传递给任务。 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md203"></a>
+<h2><a class="anchor" id="autotoc_md122"></a>
 FAQ</h2>
 <p>Q1： 调用aos_queue_recv()接口无限期的等待消息，ms参数怎么设置？ 答：将ms赋值为AOS_WAIT_FOREVER。 </p>
 </div></div><!-- contents -->
@@ -1005,7 +1005,7 @@ FAQ</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 14日 星期三 20:44:48 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 15日 星期四 16:42:30 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

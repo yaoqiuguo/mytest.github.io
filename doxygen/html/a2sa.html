@@ -53,8 +53,8 @@ $(document).ready(function(){initNavTree('a2sa.html',''); initResizable(); });
 <div class="title">a2sa </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><b><a href="https://gitee.com/alios-things/a2sa/blob/rel_3.3.0/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="_contribute__doc.html">贡献说明</a></b></p>
-<h1><a class="anchor" id="autotoc_md204"></a>
+<div class="textblock"><p><b><a href="https://gitee.com/alios-things/a2sa/edit/rel_3.3.0/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="_contribute__doc.html">贡献说明</a></b></p>
+<h1><a class="anchor" id="autotoc_md210"></a>
 概述</h1>
 <p>A2SA是Advanced AliOS Things Sound Architucture的缩写，是AliOS Things音频系统服务框架，包括音频驱动层、音频服务接口层以及音频插件管理等。部分设计理念借鉴了Linux ALSA的设计思路，例如在设备驱动层支持VFS设备驱动挂载访问、支持多声卡管理、PCM/Control音频设备模型、对音频Codec友好抽象等。在音频服务接口层兼容Linux ALSA-Lib的API接口规范,方便基于ALSA-Lib开发的应用组件移植到AliOS Things。同时A2SA的footprint也足够小（23KB），适合在嵌入式IoT设备上移植。 组件支持以下功能：</p><ul>
 <li>最大程度兼容Linux ALSA-Lib API规范，方便Linux应用生态移植到AliOS Things。</li>
@@ -63,12 +63,12 @@ $(document).ready(function(){initNavTree('a2sa.html',''); initResizable(); });
 <li>精简的Audio Codec驱动接口抽象（共11个API），可以方便的对接不同Codec HAL驱动。</li>
 <li>兼容Linux ALSA音频驱动的适配正在开发中。</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md205"></a>
+<h2><a class="anchor" id="autotoc_md211"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md206"></a>
+<h2><a class="anchor" id="autotoc_md212"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">.</div>
 <div class="line">│   ├── driver               # 音频驱动框架</div>
@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('a2sa.html',''); initResizable(); });
 <div class="line">    ├── sound_example_lb.c   # loopback测试代码</div>
 <div class="line">    ├── sound_example_vol.c  # volume测试代码</div>
 <div class="line">    └── sound_example_wav.c  # wav播放器测试代码</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md207"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md213"></a>
 依赖组件</h2>
 <ul>
 <li>rhino</li>
@@ -97,107 +97,96 @@ $(document).ready(function(){initNavTree('a2sa.html',''); initResizable(); });
 <li>ulog</li>
 <li>posix</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md208"></a>
+<h1><a class="anchor" id="autotoc_md214"></a>
 常用配置</h1>
-<p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
-<p>最多支持的声卡个数: 默认5, 如需修改，在yaml中修改AOS_SNDCARD_NUM_MAX配置 </p>
+<p>系统中相关配置已有默认值，如需修改配置，统一在该组件的package.yaml中 <b>def_config</b> 节点修改，具体如下： </p><blockquote class="doxtable">
+<p>最多支持的声卡个数: 默认5, 如需修改，在package.yaml中修改AOS_SNDCARD_NUM_MAX配置 </p>
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  AOS_SNDCARD_NUM_MAX: 5</div>
 </div><!-- fragment --> <blockquote class="doxtable">
-<p>每个声卡最多支持的音频设备节点数，默认5，可按照实际需要修改yaml配置如： </p>
+<p>每个声卡最多支持的音频设备节点数，默认5，可按照实际需要修改package.yaml配置如： </p>
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  AOS_SNDCARD_DEVICE_NUM_MAX: 5</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md209"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md215"></a>
 API说明</h1>
 <ul>
 <li>参考 <b><a href="group__a2sa__pcm__api.html">a2sa_pcm_api</a></b></li>
 <li>参考 <b><a href="group__a2sa__mixer__api.html">a2sa_mixer_api</a></b></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md210"></a>
+<h1><a class="anchor" id="autotoc_md216"></a>
 使用示例</h1>
-<p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的集成开发环境 <b>alios-studio</b> ，所以首先需要参考 <b><a href="_haa_s100__quick__start.html">HaaS100快速开始</a></b> (1 搭建开发环境章节)，下载安装 **alios-studio**。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
-<h2><a class="anchor" id="autotoc_md211"></a>
+<p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的集成开发环境 <b>alios-studio</b> ，所以首先需要参考： <b><a href="_haa_s100__quick__start.html">《aos-studio使用说明之搭建开发环境》</a></b> ，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
+<h2><a class="anchor" id="autotoc_md217"></a>
 步骤1 创建或打开工程</h2>
 <p><b>打开已有工程</b></p>
-<p>如果用于测试的案例工程已存在，可以通过点击 <b>alios-studio</b> 中的“Open folder”按钮打开工程目录。具体参见 <b><a href="_haa_s100__quick__start.html">HaaS100快速开始</a></b> (4 打开工程章节)</p>
+<p>如果用于测试的案例工程已存在，可以在打开 <b>alios-studio</b> 后，选择“Recent”列表中工程目录打开工程。具体参见： <b><a href="_haa_s100__quick__start.html">《aos-studio使用说明之打开工程》</a></b> 。</p>
 <p><b>创建新的工程</b></p>
-<p>包含示例的组件代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例来运行示例代码。helloworld_demo代码的下载可以 参考 <b><a href="_haa_s100__quick__start.html">HaaS100快速开始</a></b> (2 创建工程章节)，即在 <b>alios-studio</b> 界面中，通过点击创建工程图标 <img src="https://img.alicdn.com/imgextra/i2/O1CN01JgJNhw1gGG5Uyoqot_!!6000000004114-2-tps-40-40.png" alt="" style="width:15px;height:15px;" class="inline"/> ，然后选择“helloworld简单示例”来完成。</p>
-<h2><a class="anchor" id="autotoc_md212"></a>
+<p>包含示例的组件代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例来运行示例代码。helloworld_demo代码的下载可以 参考： <b><a href="_haa_s100__quick__start.html">《aos-studio使用说明之创建工程》</a></b> ，即在 <b>alios-studio</b> 界面中，通过点击创建工程图标 <img src="https://img.alicdn.com/imgextra/i2/O1CN01JgJNhw1gGG5Uyoqot_!!6000000004114-2-tps-40-40.png" alt="" style="width:15px;height:15px;" class="inline"/> ，然后选择“helloworld简单示例”来完成。</p>
+<h2><a class="anchor" id="autotoc_md218"></a>
 步骤2 添加组件</h2>
 <p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - a2sa: rel_3.3.0          # helloworld_demo中引入a2sa组件</div>
 <div class="line">  - littlefs: rel_3.3.0      # a2sa组件wav播放器示例依赖littlefs文件系统组件</div>
+<div class="line"> </div>
 <div class="line">def_config:</div>
-<div class="line">  CONFIG_A7_DSP_ENABLE: 1    # 必须：使能HaaS100音频驱动开关</div>
-<div class="line">  CLI_IOBOX_ENABLE: 1        # 可选：使能文件系统测试命令，例如ls, ll, mkdir, touch, echo等</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md213"></a>
+<div class="line">    CONFIG_A7_DSP_ENABLE: 1    # 必须：使能HaaS100音频驱动开关</div>
+<div class="line">    CLI_IOBOX_ENABLE: 1        # 可选：使能文件系统测试命令，例如ls, ll, mkdir, touch, echo等</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md219"></a>
 步骤3 下载组件</h2>
 <p>在 <b>alios-studio</b> 的工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
 <div class="fragment"><div class="line">aos install a2sa</div>
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/a2sa路径。</p>
-<h2><a class="anchor" id="autotoc_md214"></a>
+<h2><a class="anchor" id="autotoc_md220"></a>
 步骤4 添加示例</h2>
-<p>在a2sa组件的package.yaml中添加 <b><a href="https://gitee.com/alios-things/a2sa/tree/rel_3.3.0/example">example示例代码</a></b> </p><div class="fragment"><div class="line">source_file:</div>
+<p>在a2sa组件的package.yaml中添加 <b><a href="https://gitee.com/alios-things/a2sa/tree/rel_3.3.0/example">example示例代码</a></b></p>
+<div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - example/sound_example.c</div>
 <div class="line">  - example/sound_example_lb.c</div>
 <div class="line">  - example/sound_example_vol.c</div>
 <div class="line">  - example/sound_example_wav.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md215"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md221"></a>
 步骤5 编译固件</h2>
-<p>编译AliOS Things案例固件的方法有两种：</p>
-<p>在 <b>alios-studio</b> 界面中，可以通过点击编译图标 <img src="https://img.alicdn.com/imgextra/i3/O1CN013zX6dd1ZwD3TOZbrj_!!6000000003258-2-tps-40-40.png" alt="" style="width:15px;height:15px;" class="inline"/> 来编译固件，具体可以参考 <b><a href="_haa_s100__quick__start.html">HaaS100快速开始</a></b> (3.1 编译工程章节)。</p>
-<h2><a class="anchor" id="autotoc_md216"></a>
+<p>在 <b>alios-studio</b> 界面中，可以通过点击编译图标 <img src="https://img.alicdn.com/imgextra/i3/O1CN013zX6dd1ZwD3TOZbrj_!!6000000003258-2-tps-40-40.png" alt="" style="width:15px;height:15px;" class="inline"/> 来编译固件，具体可以参考： <b><a href="_haa_s100__quick__start.html">《aos-studio使用说明之编译固件》</a></b> 。</p>
+<h2><a class="anchor" id="autotoc_md222"></a>
 步骤6 烧录固件</h2>
-<p>在 <b>alios-studio</b> 界面中，可以通过点击烧录图标 <img src="https://img.alicdn.com/imgextra/i4/O1CN01c7B6Mn1cAz4338685_!!6000000003561-2-tps-40-40.png" alt="" style="width:15px;height:15px;" class="inline"/> 来烧录固件，具体可以参考 <b><a href="_haa_s100__quick__start.html">HaaS100快速开始</a></b> (3.2 烧录镜像章节）。</p>
-<h2><a class="anchor" id="autotoc_md217"></a>
+<p>在 <b>alios-studio</b> 界面中，可以通过点击烧录图标 <img src="https://img.alicdn.com/imgextra/i4/O1CN01c7B6Mn1cAz4338685_!!6000000003561-2-tps-40-40.png" alt="" style="width:15px;height:15px;" class="inline"/> 来烧录固件，具体可以参考： <b><a href="_haa_s100__quick__start.html">《aos-studio使用说明之烧录固件》</a></b> 。</p>
+<h2><a class="anchor" id="autotoc_md223"></a>
 步骤7 打开串口</h2>
-<p>在 <b>alios-studio</b> 界面中，可以通过点击Serial Monitor按钮 <img src="https://img.alicdn.com/imgextra/i1/O1CN01jI7VXw1d5mAyeXppi_!!6000000003685-2-tps-40-40.png" alt="" style="width:15px;height:15px;" class="inline"/> 来打开串口，具体可以参考 <b><a href="_haa_s100__quick__start.html">HaaS100快速开始</a></b> (3.3 查看日志章节）。</p>
+<p>在 <b>alios-studio</b> 界面中，可以通过点击Serial Monitor按钮 <img src="https://img.alicdn.com/imgextra/i1/O1CN01jI7VXw1d5mAyeXppi_!!6000000003685-2-tps-40-40.png" alt="" style="width:15px;height:15px;" class="inline"/> 来打开串口，具体可以参考： <b><a href="_haa_s100__quick__start.html">《aos-studio使用说明之查看日志》</a></b> 。</p>
 <p>串口终端打开成功后，可在串口中输入help来查看示例的测试命令。</p>
-<h2><a class="anchor" id="autotoc_md218"></a>
+<h2><a class="anchor" id="autotoc_md224"></a>
 步骤8 测试示例</h2>
-<h3><a class="anchor" id="autotoc_md219"></a>
-CLI命令行输入：</h3>
-<div class="fragment"><div class="line">sound_install_driver # 安装默认声卡</div>
+<p><b>CLI命令行输入：</b> </p><div class="fragment"><div class="line">sound_install_driver # 安装默认声卡</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">sound install driver test begin ...</div>
 <div class="line">sound install driver test end !!!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md220"></a>
-CLI命令行输入：</h3>
-<div class="fragment"><div class="line">sound_loopback start # 开始声卡录音播放loopback测试</div>
+</div><!-- fragment --><p><b>CLI命令行输入：</b> </p><div class="fragment"><div class="line">sound_loopback start # 开始声卡录音播放loopback测试</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">sound loopback test begin ...</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md221"></a>
-CLI命令行输入：</h3>
-<div class="fragment"><div class="line">sound_loopback stop # 停止声卡录音播放loopback测试</div>
+</div><!-- fragment --><p><b>CLI命令行输入：</b> </p><div class="fragment"><div class="line">sound_loopback stop # 停止声卡录音播放loopback测试</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">sound loopback test end !!!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md222"></a>
-CLI命令行输入：</h3>
-<div class="fragment"><div class="line">sound_setvol 80 # 设置播放音量为80</div>
+</div><!-- fragment --><p><b>CLI命令行输入：</b> </p><div class="fragment"><div class="line">sound_setvol 80 # 设置播放音量为80</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">alsa_volume_set percent 80</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md223"></a>
-CLI命令行输入：</h3>
-<div class="fragment"><div class="line">sound_getvol # 设置播放音量为80</div>
+</div><!-- fragment --><p><b>CLI命令行输入：</b> </p><div class="fragment"><div class="line">sound_getvol # 设置播放音量为80</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">get volume 80</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md224"></a>
-CLI命令行输入：</h3>
-<div class="fragment"><div class="line">sound_wav /data/7.wav # 播放/data/7.wav的音频，仅限于.wav格式的音频</div>
+</div><!-- fragment --><p><b>CLI命令行输入：</b> </p><div class="fragment"><div class="line">sound_wav /data/7.wav # 播放/data/7.wav的音频，仅限于.wav格式的音频</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>关键日志： </p>
 </blockquote>
@@ -212,7 +201,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 14日 星期三 20:44:49 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 15日 星期四 16:42:32 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

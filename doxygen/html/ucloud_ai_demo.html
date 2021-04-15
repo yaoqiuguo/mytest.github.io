@@ -208,22 +208,22 @@ $(document).ready(function(){initNavTree('ucloud_ai_demo.html',''); initResizabl
 </blockquote>
 <h2><a class="anchor" id="autotoc_md1583"></a>
 4.6 AliOS Things开发环境搭建</h2>
-<p>开发环境的搭建请参考 <a class="el" href="_haa_s100__quick__start.html">HaaS100快速开始</a> (搭建开发环境章节)，其中详细的介绍了AliOS Things 3.3的IDE集成开发环境的搭建流程。</p>
+<p>开发环境的搭建请参考 HaaS100_Quick_Start (搭建开发环境章节)，其中详细的介绍了AliOS Things 3.3的IDE集成开发环境的搭建流程。</p>
 <h2><a class="anchor" id="autotoc_md1584"></a>
 4.7 智能语音播放器代码下载</h2>
-<p>云端AI识别的代码下载请参考 <a class="el" href="_haa_s100__quick__start.html">HaaS100快速开始</a> (创建工程章节)，其中： </p><blockquote class="doxtable">
+<p>云端AI识别的代码下载请参考 HaaS100_Quick_Start (创建工程章节)，其中： </p><blockquote class="doxtable">
 <p>选择解决方案: “云端AI案例”或者“ucloud_ai_demo” 选择开发板: HaaS100 </p>
 </blockquote>
 <h2><a class="anchor" id="autotoc_md1585"></a>
 4.8 代码编译、烧录</h2>
-<p>参考 <a class="el" href="_haa_s100__quick__start.html">HaaS100快速开始</a> (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。</p>
+<p>参考 HaaS100_Quick_Start (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。</p>
 <h3><a class="anchor" id="autotoc_md1586"></a>
 4.8.1 文件件系统烧录</h3>
 <p>本组件例子中使用到到图片及字体分别存放在代码中hardware/chip/haas1000/prebuild/data/目录下ai_demo_image及font目录，除烧录ucloud_ai_demo image外，需烧录littlefs文件系统，请将hardware/chip/haas1000/package.yaml文件中以下代码段的注释打开：</p>
 <div class="fragment"><div class="line">program_data_files:</div>
 <div class="line">  - filename: release/write_flash_tool/ota_bin/littlefs.bin</div>
 <div class="line">    address: 0xB32000</div>
-</div><!-- fragment --><p>参考 <a class="el" href="_haa_s100__quick__start.html">HaaS100快速开始</a> (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
+</div><!-- fragment --><p>参考 HaaS100_Quick_Start (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
 <h2><a class="anchor" id="autotoc_md1587"></a>
 4.9 网络连接</h2>
 <p>因为HaaS100开发板需要连接到云端，因此需要连接到一个可以上外网的路由器，WiFi摄像头(ESP32-EYE)也只能使用Station模式连接到同一台路由器。</p>
@@ -242,7 +242,7 @@ $(document).ready(function(){initNavTree('ucloud_ai_demo.html',''); initResizabl
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 14日 星期三 20:44:57 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 15日 星期四 16:42:39 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

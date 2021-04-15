@@ -1,29 +1,22 @@
 var component =
 [
     [ "a2sa", "a2sa.html", [
-      [ "概述", "a2sa.html#autotoc_md204", [
-        [ "版权信息", "a2sa.html#autotoc_md205", null ],
-        [ "目录结构", "a2sa.html#autotoc_md206", null ],
-        [ "依赖组件", "a2sa.html#autotoc_md207", null ]
+      [ "概述", "a2sa.html#autotoc_md210", [
+        [ "版权信息", "a2sa.html#autotoc_md211", null ],
+        [ "目录结构", "a2sa.html#autotoc_md212", null ],
+        [ "依赖组件", "a2sa.html#autotoc_md213", null ]
       ] ],
-      [ "常用配置", "a2sa.html#autotoc_md208", null ],
-      [ "API说明", "a2sa.html#autotoc_md209", null ],
-      [ "使用示例", "a2sa.html#autotoc_md210", [
-        [ "步骤1 创建或打开工程", "a2sa.html#autotoc_md211", null ],
-        [ "步骤2 添加组件", "a2sa.html#autotoc_md212", null ],
-        [ "步骤3 下载组件", "a2sa.html#autotoc_md213", null ],
-        [ "步骤4 添加示例", "a2sa.html#autotoc_md214", null ],
-        [ "步骤5 编译固件", "a2sa.html#autotoc_md215", null ],
-        [ "步骤6 烧录固件", "a2sa.html#autotoc_md216", null ],
-        [ "步骤7 打开串口", "a2sa.html#autotoc_md217", null ],
-        [ "步骤8 测试示例", "a2sa.html#autotoc_md218", [
-          [ "CLI命令行输入：", "a2sa.html#autotoc_md219", null ],
-          [ "CLI命令行输入：", "a2sa.html#autotoc_md220", null ],
-          [ "CLI命令行输入：", "a2sa.html#autotoc_md221", null ],
-          [ "CLI命令行输入：", "a2sa.html#autotoc_md222", null ],
-          [ "CLI命令行输入：", "a2sa.html#autotoc_md223", null ],
-          [ "CLI命令行输入：", "a2sa.html#autotoc_md224", null ]
-        ] ]
+      [ "常用配置", "a2sa.html#autotoc_md214", null ],
+      [ "API说明", "a2sa.html#autotoc_md215", null ],
+      [ "使用示例", "a2sa.html#autotoc_md216", [
+        [ "步骤1 创建或打开工程", "a2sa.html#autotoc_md217", null ],
+        [ "步骤2 添加组件", "a2sa.html#autotoc_md218", null ],
+        [ "步骤3 下载组件", "a2sa.html#autotoc_md219", null ],
+        [ "步骤4 添加示例", "a2sa.html#autotoc_md220", null ],
+        [ "步骤5 编译固件", "a2sa.html#autotoc_md221", null ],
+        [ "步骤6 烧录固件", "a2sa.html#autotoc_md222", null ],
+        [ "步骤7 打开串口", "a2sa.html#autotoc_md223", null ],
+        [ "步骤8 测试示例", "a2sa.html#autotoc_md224", null ]
       ] ],
       [ "FAQ", "a2sa.html#autotoc_md225", null ]
     ] ],

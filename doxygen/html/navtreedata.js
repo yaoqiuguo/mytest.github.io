@@ -34,149 +34,149 @@ var NAVTREE =
       [ "License", "index.html#autotoc_md5", null ]
     ] ],
     [ "快速开始", "quickstart.html", "quickstart" ],
+    [ "开发工具", "devtools.html", "devtools" ],
     [ "内核编程", "aos_kernel.html", [
-      [ "任务管理", "aos_kernel.html#autotoc_md90", [
-        [ "版权信息", "aos_kernel.html#autotoc_md87", null ],
-        [ "目录结构", "aos_kernel.html#autotoc_md88", null ],
-        [ "依赖组件", "aos_kernel.html#autotoc_md89", null ],
-        [ "概述", "aos_kernel.html#autotoc_md91", [
-          [ "任务状态", "aos_kernel.html#autotoc_md92", null ],
-          [ "任务调度", "aos_kernel.html#autotoc_md93", null ],
-          [ "优先级分配", "aos_kernel.html#autotoc_md94", null ],
-          [ "任务栈保护", "aos_kernel.html#autotoc_md95", null ],
-          [ "空闲任务", "aos_kernel.html#autotoc_md96", null ],
-          [ "任务管理函数", "aos_kernel.html#autotoc_md97", null ]
+      [ "任务管理", "aos_kernel.html#autotoc_md9", [
+        [ "版权信息", "aos_kernel.html#autotoc_md6", null ],
+        [ "目录结构", "aos_kernel.html#autotoc_md7", null ],
+        [ "依赖组件", "aos_kernel.html#autotoc_md8", null ],
+        [ "概述", "aos_kernel.html#autotoc_md10", [
+          [ "任务状态", "aos_kernel.html#autotoc_md11", null ],
+          [ "任务调度", "aos_kernel.html#autotoc_md12", null ],
+          [ "优先级分配", "aos_kernel.html#autotoc_md13", null ],
+          [ "任务栈保护", "aos_kernel.html#autotoc_md14", null ],
+          [ "空闲任务", "aos_kernel.html#autotoc_md15", null ],
+          [ "任务管理函数", "aos_kernel.html#autotoc_md16", null ]
         ] ],
-        [ "常用配置", "aos_kernel.html#autotoc_md98", null ],
-        [ "API说明", "aos_kernel.html#autotoc_md99", null ],
-        [ "使用示例", "aos_kernel.html#autotoc_md100", [
-          [ "添加示例", "aos_kernel.html#autotoc_md101", null ],
-          [ "添加组件", "aos_kernel.html#autotoc_md102", null ],
-          [ "编译链接", "aos_kernel.html#autotoc_md103", null ],
-          [ "烧录固件", "aos_kernel.html#autotoc_md104", null ],
-          [ "执行示例", "aos_kernel.html#autotoc_md105", null ],
-          [ "关键日志", "aos_kernel.html#autotoc_md106", null ]
+        [ "常用配置", "aos_kernel.html#autotoc_md17", null ],
+        [ "API说明", "aos_kernel.html#autotoc_md18", null ],
+        [ "使用示例", "aos_kernel.html#autotoc_md19", [
+          [ "添加示例", "aos_kernel.html#autotoc_md20", null ],
+          [ "添加组件", "aos_kernel.html#autotoc_md21", null ],
+          [ "编译链接", "aos_kernel.html#autotoc_md22", null ],
+          [ "烧录固件", "aos_kernel.html#autotoc_md23", null ],
+          [ "执行示例", "aos_kernel.html#autotoc_md24", null ],
+          [ "关键日志", "aos_kernel.html#autotoc_md25", null ]
         ] ],
-        [ "注意事项", "aos_kernel.html#autotoc_md107", null ],
-        [ "FAQ", "aos_kernel.html#autotoc_md108", null ]
+        [ "注意事项", "aos_kernel.html#autotoc_md26", null ],
+        [ "FAQ", "aos_kernel.html#autotoc_md27", null ]
       ] ],
-      [ "软件定时器", "aos_kernel.html#autotoc_md109", [
-        [ "概述", "aos_kernel.html#autotoc_md110", [
-          [ "单次模式", "aos_kernel.html#autotoc_md111", null ],
-          [ "周期性模式", "aos_kernel.html#autotoc_md112", null ],
-          [ "定时器任务", "aos_kernel.html#autotoc_md113", null ],
-          [ "定时器管理函数", "aos_kernel.html#autotoc_md114", null ]
+      [ "软件定时器", "aos_kernel.html#autotoc_md28", [
+        [ "概述", "aos_kernel.html#autotoc_md29", [
+          [ "单次模式", "aos_kernel.html#autotoc_md30", null ],
+          [ "周期性模式", "aos_kernel.html#autotoc_md31", null ],
+          [ "定时器任务", "aos_kernel.html#autotoc_md32", null ],
+          [ "定时器管理函数", "aos_kernel.html#autotoc_md33", null ]
         ] ],
-        [ "常用配置", "aos_kernel.html#autotoc_md115", null ],
-        [ "API说明", "aos_kernel.html#autotoc_md116", null ],
-        [ "使用示例", "aos_kernel.html#autotoc_md117", [
-          [ "添加示例", "aos_kernel.html#autotoc_md118", null ],
-          [ "添加组件", "aos_kernel.html#autotoc_md119", null ],
-          [ "编译链接", "aos_kernel.html#autotoc_md120", null ],
-          [ "烧录固件", "aos_kernel.html#autotoc_md121", null ],
-          [ "执行示例", "aos_kernel.html#autotoc_md122", null ],
-          [ "关键日志", "aos_kernel.html#autotoc_md123", null ]
+        [ "常用配置", "aos_kernel.html#autotoc_md34", null ],
+        [ "API说明", "aos_kernel.html#autotoc_md35", null ],
+        [ "使用示例", "aos_kernel.html#autotoc_md36", [
+          [ "添加示例", "aos_kernel.html#autotoc_md37", null ],
+          [ "添加组件", "aos_kernel.html#autotoc_md38", null ],
+          [ "编译链接", "aos_kernel.html#autotoc_md39", null ],
+          [ "烧录固件", "aos_kernel.html#autotoc_md40", null ],
+          [ "执行示例", "aos_kernel.html#autotoc_md41", null ],
+          [ "关键日志", "aos_kernel.html#autotoc_md42", null ]
         ] ],
-        [ "注意事项", "aos_kernel.html#autotoc_md124", null ],
-        [ "FAQ", "aos_kernel.html#autotoc_md125", null ]
+        [ "注意事项", "aos_kernel.html#autotoc_md43", null ],
+        [ "FAQ", "aos_kernel.html#autotoc_md44", null ]
       ] ],
-      [ "内存管理", "aos_kernel.html#autotoc_md126", [
-        [ "概述", "aos_kernel.html#autotoc_md127", [
-          [ "内存管理函数", "aos_kernel.html#autotoc_md128", null ],
-          [ "内存分配算法", "aos_kernel.html#autotoc_md129", null ]
+      [ "内存管理", "aos_kernel.html#autotoc_md45", [
+        [ "概述", "aos_kernel.html#autotoc_md46", [
+          [ "内存管理函数", "aos_kernel.html#autotoc_md47", null ],
+          [ "内存分配算法", "aos_kernel.html#autotoc_md48", null ]
         ] ],
-        [ "常用配置", "aos_kernel.html#autotoc_md130", null ],
-        [ "API说明", "aos_kernel.html#autotoc_md131", null ],
-        [ "使用示例", "aos_kernel.html#autotoc_md132", [
-          [ "添加示例", "aos_kernel.html#autotoc_md133", null ],
-          [ "添加组件", "aos_kernel.html#autotoc_md134", null ],
-          [ "编译链接", "aos_kernel.html#autotoc_md135", null ],
-          [ "烧录固件", "aos_kernel.html#autotoc_md136", null ],
-          [ "执行示例", "aos_kernel.html#autotoc_md137", null ],
-          [ "关键日志", "aos_kernel.html#autotoc_md138", null ]
+        [ "常用配置", "aos_kernel.html#autotoc_md49", null ],
+        [ "API说明", "aos_kernel.html#autotoc_md50", null ],
+        [ "使用示例", "aos_kernel.html#autotoc_md51", [
+          [ "添加示例", "aos_kernel.html#autotoc_md52", null ],
+          [ "添加组件", "aos_kernel.html#autotoc_md53", null ],
+          [ "编译链接", "aos_kernel.html#autotoc_md54", null ],
+          [ "烧录固件", "aos_kernel.html#autotoc_md55", null ],
+          [ "执行示例", "aos_kernel.html#autotoc_md56", null ],
+          [ "关键日志", "aos_kernel.html#autotoc_md57", null ]
         ] ],
-        [ "注意事项", "aos_kernel.html#autotoc_md139", null ],
-        [ "FAQ", "aos_kernel.html#autotoc_md140", null ]
+        [ "注意事项", "aos_kernel.html#autotoc_md58", null ],
+        [ "FAQ", "aos_kernel.html#autotoc_md59", null ]
       ] ],
-      [ "信号量", "aos_kernel.html#autotoc_md141", [
-        [ "概述", "aos_kernel.html#autotoc_md142", [
-          [ "超时时间", "aos_kernel.html#autotoc_md143", null ],
-          [ "多任务同步", "aos_kernel.html#autotoc_md144", null ],
-          [ "信号量功能函数", "aos_kernel.html#autotoc_md145", null ]
+      [ "信号量", "aos_kernel.html#autotoc_md60", [
+        [ "概述", "aos_kernel.html#autotoc_md61", [
+          [ "超时时间", "aos_kernel.html#autotoc_md62", null ],
+          [ "多任务同步", "aos_kernel.html#autotoc_md63", null ],
+          [ "信号量功能函数", "aos_kernel.html#autotoc_md64", null ]
         ] ],
-        [ "常用配置", "aos_kernel.html#autotoc_md146", null ],
-        [ "API说明", "aos_kernel.html#autotoc_md147", null ],
-        [ "使用示例", "aos_kernel.html#autotoc_md148", [
-          [ "添加示例", "aos_kernel.html#autotoc_md149", null ],
-          [ "添加组件", "aos_kernel.html#autotoc_md150", null ],
-          [ "编译链接", "aos_kernel.html#autotoc_md151", null ],
-          [ "烧录固件", "aos_kernel.html#autotoc_md152", null ],
-          [ "执行示例", "aos_kernel.html#autotoc_md153", null ],
-          [ "关键日志", "aos_kernel.html#autotoc_md154", null ]
+        [ "常用配置", "aos_kernel.html#autotoc_md65", null ],
+        [ "API说明", "aos_kernel.html#autotoc_md66", null ],
+        [ "使用示例", "aos_kernel.html#autotoc_md67", [
+          [ "添加示例", "aos_kernel.html#autotoc_md68", null ],
+          [ "添加组件", "aos_kernel.html#autotoc_md69", null ],
+          [ "编译链接", "aos_kernel.html#autotoc_md70", null ],
+          [ "烧录固件", "aos_kernel.html#autotoc_md71", null ],
+          [ "执行示例", "aos_kernel.html#autotoc_md72", null ],
+          [ "关键日志", "aos_kernel.html#autotoc_md73", null ]
         ] ],
-        [ "注意事项", "aos_kernel.html#autotoc_md155", null ],
-        [ "FAQ", "aos_kernel.html#autotoc_md156", null ]
+        [ "注意事项", "aos_kernel.html#autotoc_md74", null ],
+        [ "FAQ", "aos_kernel.html#autotoc_md75", null ]
       ] ],
-      [ "互斥量", "aos_kernel.html#autotoc_md157", [
-        [ "概述", "aos_kernel.html#autotoc_md158", [
-          [ "优先级反转", "aos_kernel.html#autotoc_md159", null ],
-          [ "优先级继承", "aos_kernel.html#autotoc_md160", null ],
-          [ "超时时间", "aos_kernel.html#autotoc_md161", null ],
-          [ "互斥量功能函数", "aos_kernel.html#autotoc_md162", null ]
+      [ "互斥量", "aos_kernel.html#autotoc_md76", [
+        [ "概述", "aos_kernel.html#autotoc_md77", [
+          [ "优先级反转", "aos_kernel.html#autotoc_md78", null ],
+          [ "优先级继承", "aos_kernel.html#autotoc_md79", null ],
+          [ "超时时间", "aos_kernel.html#autotoc_md80", null ],
+          [ "互斥量功能函数", "aos_kernel.html#autotoc_md81", null ]
         ] ],
-        [ "常用配置", "aos_kernel.html#autotoc_md163", null ],
-        [ "API说明", "aos_kernel.html#autotoc_md164", null ],
-        [ "使用示例", "aos_kernel.html#autotoc_md165", [
-          [ "添加示例", "aos_kernel.html#autotoc_md166", null ],
-          [ "添加组件", "aos_kernel.html#autotoc_md167", null ],
-          [ "编译链接", "aos_kernel.html#autotoc_md168", null ],
-          [ "烧录固件", "aos_kernel.html#autotoc_md169", null ],
-          [ "执行示例", "aos_kernel.html#autotoc_md170", null ],
-          [ "关键日志", "aos_kernel.html#autotoc_md171", null ]
+        [ "常用配置", "aos_kernel.html#autotoc_md82", null ],
+        [ "API说明", "aos_kernel.html#autotoc_md83", null ],
+        [ "使用示例", "aos_kernel.html#autotoc_md84", [
+          [ "添加示例", "aos_kernel.html#autotoc_md85", null ],
+          [ "添加组件", "aos_kernel.html#autotoc_md86", null ],
+          [ "编译链接", "aos_kernel.html#autotoc_md87", null ],
+          [ "烧录固件", "aos_kernel.html#autotoc_md88", null ],
+          [ "执行示例", "aos_kernel.html#autotoc_md89", null ],
+          [ "关键日志", "aos_kernel.html#autotoc_md90", null ]
         ] ],
-        [ "注意事项", "aos_kernel.html#autotoc_md172", null ],
-        [ "FAQ", "aos_kernel.html#autotoc_md173", null ]
+        [ "注意事项", "aos_kernel.html#autotoc_md91", null ],
+        [ "FAQ", "aos_kernel.html#autotoc_md92", null ]
       ] ],
-      [ "事件", "aos_kernel.html#autotoc_md174", [
-        [ "概述", "aos_kernel.html#autotoc_md175", [
-          [ "超时时间", "aos_kernel.html#autotoc_md176", null ],
-          [ "事件功能函数", "aos_kernel.html#autotoc_md177", null ]
+      [ "事件", "aos_kernel.html#autotoc_md93", [
+        [ "概述", "aos_kernel.html#autotoc_md94", [
+          [ "超时时间", "aos_kernel.html#autotoc_md95", null ],
+          [ "事件功能函数", "aos_kernel.html#autotoc_md96", null ]
         ] ],
-        [ "常用配置", "aos_kernel.html#autotoc_md178", null ],
-        [ "API说明", "aos_kernel.html#autotoc_md179", null ],
-        [ "使用示例", "aos_kernel.html#autotoc_md180", [
-          [ "添加示例", "aos_kernel.html#autotoc_md181", null ],
-          [ "添加组件", "aos_kernel.html#autotoc_md182", null ],
-          [ "编译链接", "aos_kernel.html#autotoc_md183", null ],
-          [ "烧录固件", "aos_kernel.html#autotoc_md184", null ],
-          [ "执行示例", "aos_kernel.html#autotoc_md185", null ],
-          [ "关键日志", "aos_kernel.html#autotoc_md186", null ]
+        [ "常用配置", "aos_kernel.html#autotoc_md97", null ],
+        [ "API说明", "aos_kernel.html#autotoc_md98", null ],
+        [ "使用示例", "aos_kernel.html#autotoc_md99", [
+          [ "添加示例", "aos_kernel.html#autotoc_md100", null ],
+          [ "添加组件", "aos_kernel.html#autotoc_md101", null ],
+          [ "编译链接", "aos_kernel.html#autotoc_md102", null ],
+          [ "烧录固件", "aos_kernel.html#autotoc_md103", null ],
+          [ "执行示例", "aos_kernel.html#autotoc_md104", null ],
+          [ "关键日志", "aos_kernel.html#autotoc_md105", null ]
         ] ],
-        [ "注意事项", "aos_kernel.html#autotoc_md187", null ],
-        [ "FAQ", "aos_kernel.html#autotoc_md188", null ]
+        [ "注意事项", "aos_kernel.html#autotoc_md106", null ],
+        [ "FAQ", "aos_kernel.html#autotoc_md107", null ]
       ] ],
-      [ "消息队列", "aos_kernel.html#autotoc_md189", [
-        [ "概述", "aos_kernel.html#autotoc_md190", [
-          [ "超时时间", "aos_kernel.html#autotoc_md191", null ],
-          [ "消息队列功能函数", "aos_kernel.html#autotoc_md192", null ]
+      [ "消息队列", "aos_kernel.html#autotoc_md108", [
+        [ "概述", "aos_kernel.html#autotoc_md109", [
+          [ "超时时间", "aos_kernel.html#autotoc_md110", null ],
+          [ "消息队列功能函数", "aos_kernel.html#autotoc_md111", null ]
         ] ],
-        [ "常用配置", "aos_kernel.html#autotoc_md193", null ],
-        [ "API说明", "aos_kernel.html#autotoc_md194", null ],
-        [ "使用示例", "aos_kernel.html#autotoc_md195", [
-          [ "添加示例", "aos_kernel.html#autotoc_md196", null ],
-          [ "添加组件", "aos_kernel.html#autotoc_md197", null ],
-          [ "编译链接", "aos_kernel.html#autotoc_md198", null ],
-          [ "烧录固件", "aos_kernel.html#autotoc_md199", null ],
-          [ "执行示例", "aos_kernel.html#autotoc_md200", null ],
-          [ "关键日志", "aos_kernel.html#autotoc_md201", null ]
+        [ "常用配置", "aos_kernel.html#autotoc_md112", null ],
+        [ "API说明", "aos_kernel.html#autotoc_md113", null ],
+        [ "使用示例", "aos_kernel.html#autotoc_md114", [
+          [ "添加示例", "aos_kernel.html#autotoc_md115", null ],
+          [ "添加组件", "aos_kernel.html#autotoc_md116", null ],
+          [ "编译链接", "aos_kernel.html#autotoc_md117", null ],
+          [ "烧录固件", "aos_kernel.html#autotoc_md118", null ],
+          [ "执行示例", "aos_kernel.html#autotoc_md119", null ],
+          [ "关键日志", "aos_kernel.html#autotoc_md120", null ]
         ] ],
-        [ "注意事项", "aos_kernel.html#autotoc_md202", null ],
-        [ "FAQ", "aos_kernel.html#autotoc_md203", null ]
+        [ "注意事项", "aos_kernel.html#autotoc_md121", null ],
+        [ "FAQ", "aos_kernel.html#autotoc_md122", null ]
       ] ]
     ] ],
     [ "组件介绍", "component.html", "component" ],
     [ "案例开发", "solution.html", "solution" ],
-    [ "集成开发环境", "aos-ide.html", "aos-ide" ],
     [ "开发者贡献", "contribute.html", "contribute" ],
     [ "API用户手册", "modules.html", "modules" ],
     [ "旧文档中心", "^https://help.aliyun.com/product/123206.html", null ]
@@ -185,17 +185,17 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_contribute__code.html",
-"aos_kernel.html#autotoc_md174",
-"cplusplus.html#autotoc_md374",
-"group__aos__httpclient__api.html#ga3666576f6b88007cc7b8f26c7da596c8",
-"group__aos__ulog.html#ga88b11e6262113fbd4cf403f9daa0ba86",
-"group__uvoice__recoder__api.html#gga0fa633f2dea0ec7108b5d126071e1ed8a4a8ad65d9655e415b770e44345113f22",
-"libc_stub.html#autotoc_md501",
-"packageyaml__user__manual.html#autotoc_md80",
-"st7789.html#autotoc_md1389",
-"timer.html#autotoc_md1510",
-"vfs.html#autotoc_md895"
+"_s_d_l2.html",
+"aos_kernel.html#autotoc_md91",
+"driver.html",
+"group__aos__httpclient__api.html#ga99c4d9bec03443dabffa7142825cb0df",
+"group__cli__aos__api.html#gaa788d1e9549c44cd4f1828af9e951380",
+"group__uvoice__types__api.html#gga64b5cf52df381470edae8cbdd800fe43aff316a6edd6dbe8a31019783a21bc97e",
+"kv.html#autotoc_md1306",
+"oled.html#autotoc_md1378",
+"st7789.html#autotoc_md1382",
+"timer.html#autotoc_md1503",
+"vfs.html#autotoc_md888"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';
