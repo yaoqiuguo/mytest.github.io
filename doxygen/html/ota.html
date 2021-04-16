@@ -53,15 +53,15 @@ $(document).ready(function(){initNavTree('ota.html',''); initResizable(); });
 <div class="title">ota </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md592"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md586"></a>
 概述</h1>
 <p>OTA是over the air的缩写，是AliIOS Things 提供的完备的升级方案，对各种升级场景都有很好的支持。目前AliIOS Things除一般的整包升级外，现有的高阶能力有：压缩升级、差分升级及安全升级；支持的升级通道：http、https、BLE、3G/4G，NB等；复杂场景支持：网关及子设备升级，连接型模组升级非连接主设备的间接升级；完备的配套工具：差分工具、本地签名工具、ymodem辅助升级工具，多固件打包工具等； 主要功能列表如下： 1、支持乒乓升级：固件可在两个分区运行，支持固件版本回退，保证设备安全不变砖； 2、支持断点续传：弱网环境下，支持固件从断点处继续下载； 3、支持固件验签：固件可在云端或用本地签名工具进行数字签名（防止固件被篡改，对固件hash值进行非对称加密），设备端可完成对固件验签（用端侧的公钥对已签名的固件进行验签）； 4、支持https安全下载方式：除支持http下载外，支持https下载方式； 5、支持MD5/SHA256固件完整性检验：为保证固件完成性，固件下载完成后，都有完整性校验； 6、支持网关子设备升级：当HaaS 100 做网关时，HaaS 100 OTA 除支持网关本身的升级外，也支持其子设备的升级；</p>
-<h2><a class="anchor" id="autotoc_md593"></a>
+<h2><a class="anchor" id="autotoc_md587"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md594"></a>
+<h2><a class="anchor" id="autotoc_md588"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">.</div>
 <div class="line">├── 2ndboot                               # 二级boot升级（差分恢复和固件解压缩）</div>
@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('ota.html',''); initResizable(); });
 <div class="line">    ├── upack_data_file.c                 # js轻应用打包解压文件</div>
 <div class="line">    ├── upack_data_file.h                 </div>
 <div class="line">    └── xz                                # xz压缩算法库</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md595"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md589"></a>
 依赖组件</h2>
 <ul>
 <li>cjson</li>
@@ -112,21 +112,21 @@ $(document).ready(function(){initNavTree('ota.html',''); initResizable(); });
 <li>linksdk</li>
 <li>http</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md596"></a>
+<h1><a class="anchor" id="autotoc_md590"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
 <p>是否支持使用https方式: 默认0, 如需修改，在yaml中修改CONFIG_HTTP_SECURE配置 </p>
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  CONFIG_HTTP_SECURE: 1</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md597"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md591"></a>
 API说明</h1>
 <p>ota_service_init ota_service_start ota_service_register_cb</p>
 <p>ota_service_init 订阅mqtt topic和系统上报版本，在mqtt连接成功时候调用 ota_service_start 开始执行升级（如从flash中读取url进行升级） ota_service_register_cb 注册用户升级回调函数</p>
-<h1><a class="anchor" id="autotoc_md598"></a>
+<h1><a class="anchor" id="autotoc_md592"></a>
 使用示例</h1>
 <p>示例代码参考solutions/ota_demo/otaappdemo.c，以运行ota_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md599"></a>
+<h2><a class="anchor" id="autotoc_md593"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>ota_demo中solutions/ota_demo/otaappdemo.c添加示例代码 </p>
@@ -140,25 +140,25 @@ API说明</h1>
 <p>3、在ota升级主函数中调用ota_service_start执行升级 </p><blockquote class="doxtable">
 <p>ota_thread_create(&amp;thread, (void *)ota_service_start, (void *)pctx, NULL, 1024 * 6); </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md600"></a>
+<h2><a class="anchor" id="autotoc_md594"></a>
 app中添加a2sa组件</h2>
 <blockquote class="doxtable">
 <p>ota组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - ota: dev_aos</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md601"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md595"></a>
 编译</h2>
 <div class="fragment"><div class="line">aos make ota_demo@haas100 -c config</div>
 <div class="line">aos make</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md602"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md596"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md603"></a>
+<h2><a class="anchor" id="autotoc_md597"></a>
 OTA示例测试</h2>
-<h3><a class="anchor" id="autotoc_md604"></a>
+<h3><a class="anchor" id="autotoc_md598"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">netmgr -t wifi -c wifi_ssid wifi_password  # 连接wifi</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -167,7 +167,7 @@ CLI命令行输入：</h3>
 <div class="fragment"><div class="line">[  16.497]&lt;D&gt;WIFI_SERVICE NETMGR_WIFI_EVENT_CONNECTED           # wifi连接成功</div>
 <div class="line">[  18.804]&lt;D&gt;WIFI_SERVICE NETMGR_DHCP_SUCCESS                   # DHCP完成，获取到IP地址</div>
 <div class="line">[  19.306]&lt;I&gt;WIFI_SERVICE [sntp] OK: sec 1616741677 usec 989111 # SNTP完成，获取到最新网络时间</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md605"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md599"></a>
 云端执行升级：</h3>
 <blockquote class="doxtable">
 <p>详细参考ota_demo中的文档 <a class="el" href="solutions_2ota__demo_2_r_e_a_d_m_e_8md.html">solutions/ota_demo/README.md</a> </p>
@@ -178,7 +178,7 @@ CLI命令行输入：</h3>
 <div class="fragment"><div class="line">[ 119.366]&lt;I&gt;ota download start upg_flag:0x9669       # 开始ota升级</div>
 <div class="line">[ 130.827]&lt;E&gt;ota download complete:0                  # ota升级完成</div>
 <div class="line">[ 142.523]&lt;E&gt;ota Download complete, rebooting ret:0.  # ota升级完成并重启</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md606"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md600"></a>
 FAQ</h1>
 <p>更多问题请参考：https://blog.csdn.net/HaaSTech/article/details/111057345 </p>
 </div></div><!-- contents -->
@@ -187,7 +187,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 16日 星期五 17:24:54 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 16日 星期五 19:09:02 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

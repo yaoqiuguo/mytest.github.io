@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('modbus.html',''); initResizable(); });
 <div class="title">modbus </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1295"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1289"></a>
 概述</h1>
 <p>AliOS Things Modbus是标准的串行通信协议驱动，提供RTU模式能力，暂不支持ASCII/TCP模式。开发可以通过组件API，在设备端快速对接支持Modbus协议器件的进行读写。</p>
 <p>组件支持以下功能：</p>
@@ -63,12 +63,12 @@ $(document).ready(function(){initNavTree('modbus.html',''); initResizable(); });
 <p class="startli">0x01: 读线圈寄存器 mbmaster_read_coils 0x02: 读离散输入寄存器 mbmaster_read_discrete_inputs 0x03: 读保持寄存器 mbmaster_read_holding_registers 0x04: 读输入寄存器 mbmaster_read_input_registers 0x05: 写单个线圈寄存器 mbmaster_write_single_coil 0x06: 写单个保持寄存器 mbmaster_write_single_register 0x0f: 写多个线圈寄存器 mbmaster_write_multiple_coils 0x10: 写多个保持寄存器 mbmaster_write_multiple_registers</p>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md1296"></a>
+<h2><a class="anchor" id="autotoc_md1290"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md1297"></a>
+<h2><a class="anchor" id="autotoc_md1291"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">src</div>
 <div class="line">├── adu</div>
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('modbus.html',''); initResizable(); });
 <div class="line">├── example</div>
 <div class="line">│   └── modbus_example.c                   # modbus示例代码</div>
 <div class="line">└── package.yaml                           # 编译配置文件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1298"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1292"></a>
 依赖组件</h2>
 <ul>
 <li>uart</li>
@@ -106,16 +106,16 @@ $(document).ready(function(){initNavTree('modbus.html',''); initResizable(); });
 <li>ulog</li>
 <li>posix</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1299"></a>
+<h1><a class="anchor" id="autotoc_md1293"></a>
 常用配置</h1>
-<h1><a class="anchor" id="autotoc_md1300"></a>
+<h1><a class="anchor" id="autotoc_md1294"></a>
 API说明</h1>
 <p><a class="el" href="group__aos__mbmaster.html#ga88a3a97fa14e061cd7b782e18fb5be77">mbmaster_read_coils</a> <a class="el" href="group__aos__mbmaster.html#gae25a1cf4eccd01f4018009f0c75a7ee1">mbmaster_read_discrete_inputs</a> <a class="el" href="group__aos__mbmaster.html#ga226ee427833cbdd6c7eb0da0605ff307">mbmaster_read_holding_registers</a> <a class="el" href="group__aos__mbmaster.html#ga6f17af990f9000a0523788881e76b30d">mbmaster_read_input_registers</a></p>
 <p><a class="el" href="group__aos__mbmaster.html#ga558b472add301c1add95be1115d36c92">mbmaster_write_single_coil</a> <a class="el" href="group__aos__mbmaster.html#ga86058ea84c75fe0fa80255cbd1594b4e">mbmaster_write_single_register</a> <a class="el" href="group__aos__mbmaster.html#ga601da0a0ec0d30b2a69cb009088dc8bd">mbmaster_write_multiple_coils</a> <a class="el" href="group__aos__mbmaster.html#gae93ba702f96eb0fbdd0430d6ae1d08ad">mbmaster_write_multiple_registers</a></p>
-<h1><a class="anchor" id="autotoc_md1301"></a>
+<h1><a class="anchor" id="autotoc_md1295"></a>
 使用示例</h1>
 <p>示例代码参考example/modbus_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md1302"></a>
+<h2><a class="anchor" id="autotoc_md1296"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>modbus组件的package.yaml中添加example示例代码 </p>
@@ -123,7 +123,7 @@ API说明</h1>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - &quot;example/modbus_example.c&quot; # add modbus_example.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1303"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1297"></a>
 app中添加modbus组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
@@ -132,17 +132,17 @@ app中添加modbus组件</h2>
 <div class="line">  - haas100: master</div>
 <div class="line">  - mbmaster: master # helloworld_demo中引入modbus组件</div>
 <div class="line">  - ulog: master</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1304"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1298"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1305"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1299"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md1306"></a>
+<h2><a class="anchor" id="autotoc_md1300"></a>
 Modbus示例测试</h2>
-<h1><a class="anchor" id="autotoc_md1307"></a>
+<h1><a class="anchor" id="autotoc_md1301"></a>
 FAQ</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -150,7 +150,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 16日 星期五 17:24:58 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 16日 星期五 19:09:05 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

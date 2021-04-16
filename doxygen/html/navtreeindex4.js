@@ -1,8 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"group__cli__aos__api.html#gaa788d1e9549c44cd4f1828af9e951380":[7,2,12],
-"group__cli__aos__api.html#gaae9cbeb1b67fd8b456943f21512464eb":[7,2,5],
-"group__cli__aos__api.html#gab4dfa506ecc735e58cff8a009093e066":[7,2,8],
 "group__cli__aos__api.html#gabcd0a22ee4346cad5706adb6d2119429":[7,2,4],
 "group__cli__aos__api.html#gacc57dec2af4a010ed1a59fc10734aeb7":[7,2,10],
 "group__cli__aos__api.html#gad849d9171c18e99bd5c5caca19af5500":[7,2,11],
@@ -121,13 +118,13 @@ var NAVTREEINDEX4 =
 "group__sntp__api.html#ga8d1e5cdabf4210adc6d1dd1bd8f9e3e1":[7,8,19],
 "group__sntp__api.html#ga9eeaa09b6232b79de3e11072119d2d21":[7,8,9],
 "group__sntp__api.html#gac96a8acc43e331b8173cf57b02d6f63f":[7,8,6],
-"group__sntp__api.html#gac994d1b867aab54062cdd1ee94510030":[7,8,1,3],
 "group__sntp__api.html#gac994d1b867aab54062cdd1ee94510030":[7,8,18],
+"group__sntp__api.html#gac994d1b867aab54062cdd1ee94510030":[7,8,1,3],
 "group__sntp__api.html#gac9b481208b43f7c37ed25e446bdec692":[7,8,1,2],
 "group__sntp__api.html#gac9b481208b43f7c37ed25e446bdec692":[7,8,17],
 "group__sntp__api.html#gacbee62c27f54371fc2c5259a834a0f9b":[7,8,3],
-"group__sntp__api.html#gad1696900026b287a87c563b733a21bc3":[7,8,21],
 "group__sntp__api.html#gad1696900026b287a87c563b733a21bc3":[7,8,1,4],
+"group__sntp__api.html#gad1696900026b287a87c563b733a21bc3":[7,8,21],
 "group__sntp__api.html#gad8606d229f6dfa256bfeaf1c426cb777":[7,8,14],
 "group__sntp__api.html#gae5af4ff48939d13d480f87e56a9385d6":[7,8,16],
 "group__sntp__api.html#gae5af4ff48939d13d480f87e56a9385d6":[7,8,1,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX4 =
 "group__uvoice__types__api.html#gga64b5cf52df381470edae8cbdd800fe43aaf1e454cd74ae87257dbe87911de26cf":[7,13,6,2,6],
 "group__uvoice__types__api.html#gga64b5cf52df381470edae8cbdd800fe43ab1996c37e2a826526ba7ca5a5d3d08f1":[7,13,6,2,12],
 "group__uvoice__types__api.html#gga64b5cf52df381470edae8cbdd800fe43adcd53764255a440fde2ae3c06f51418b":[7,13,6,2,2],
-"group__uvoice__types__api.html#gga64b5cf52df381470edae8cbdd800fe43af5c87a4faf56bcf8fcf2b18100fc451e":[7,13,6,2,3]
+"group__uvoice__types__api.html#gga64b5cf52df381470edae8cbdd800fe43af5c87a4faf56bcf8fcf2b18100fc451e":[7,13,6,2,3],
+"group__uvoice__types__api.html#gga64b5cf52df381470edae8cbdd800fe43aff316a6edd6dbe8a31019783a21bc97e":[7,13,6,2,13],
+"gyroscope.html":[5,2,2],
+"gyroscope.html#autotoc_md1044":[5,2,2,0]
 };

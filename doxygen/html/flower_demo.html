@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>物联网操作系统AliOS Things 3.3: flower_demo</title>
+<title>物联网操作系统AliOS Things 3.3: 一步步打造能手机远程管理的HaaS花卉养植系统</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -50,42 +50,42 @@ $(document).ready(function(){initNavTree('flower_demo.html',''); initResizable()
 <div id="doc-content">
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">flower_demo </div>  </div>
+<div class="title">一步步打造能手机远程管理的HaaS花卉养植系统 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1187"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1181"></a>
 1. 案例简介</h1>
 <p>过去，很多人一听嵌入式～～智能硬件～～就有点头大，甚至会感到一丝丝的恐惧。 其实不然，HaaS积木真的就能让智能硬件简单～好玩～普惠。 接下来，就以HaaS打造的花卉养植盒子系统为例，指引开发者如何自己一步步简单快速搭建起属于自己的好玩智能硬件。</p>
-<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01uTFPGy1WVEslbcHQ6_!!6000000002793-1-tps-1440-1080.gif" alt="" style="max-width:90%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md1188"></a>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01uTFPGy1WVEslbcHQ6_!!6000000002793-1-tps-1440-1080.gif" alt="" style="max-width:90%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md1182"></a>
 2. 基础知识</h1>
 <p>本案例主要依赖的硬件环境有：HaaS100、温湿度传感器。 </p>
-<h2><a class="anchor" id="autotoc_md1189"></a>
+<h2><a class="anchor" id="autotoc_md1183"></a>
 2.1  &lt;strong&gt;HaaS100开发板&lt;/strong&gt;</h2>
 <p>**HaaS100**是一款物联网场景中的标准开发板，并配套嵌入到硬件中的软件驱动及功能模块，为用户提供物联网设备高效开发服务。</p>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN011t59YF25YubwEfz98_!!6000000007539-2-tps-443-443.png" alt="" style="max-width:90%;" class="inline"/> </div><p> HaaS100核心板有着丰富的外设接口，如下所示：</p>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN015hi7UZ1WC0FTTOZBs_!!6000000002751-2-tps-586-886.png" alt="" style="max-width:90%;" class="inline"/> </div><p>详细的资料参考<a href="https://help.aliyun.com/document_detail/184186.html?spm=a2c4g.11186623.6.645.718015814zDYZt">HaaS 100 硬件规格</a>。 </p>
-<h2><a class="anchor" id="autotoc_md1190"></a>
+<h2><a class="anchor" id="autotoc_md1184"></a>
 2.2  温湿度传感器</h2>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01G4JbCl1qcplUe5ynk_!!6000000005517-2-tps-1604-872.png" alt="" style="max-width:90%;" class="inline"/> </div><p>DHT11温湿度传感器的工作原理 </p>
-<h3><a class="anchor" id="autotoc_md1191"></a>
+<h3><a class="anchor" id="autotoc_md1185"></a>
 2.2.1 工作时序</h3>
 <p>主机发开始信号-》DHT11响应输出-》DHT11数据信号。（平时默认为高电平，起始信号为低电平）</p>
-<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN017lZ9eZ1cIlnMoyjU3_!!6000000003578-2-tps-1398-352.png" alt="" style="max-width:90%;" class="inline"/> </div><h3><a class="anchor" id="autotoc_md1192"></a>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN017lZ9eZ1cIlnMoyjU3_!!6000000003578-2-tps-1398-352.png" alt="" style="max-width:90%;" class="inline"/> </div><h3><a class="anchor" id="autotoc_md1186"></a>
 2.2.2 起始信号和响应信号的规则</h3>
 <p>主机发开始信号：低电平大于18ms，高电平20-40us； DHT11的响应信号：低电平80us，高电平80us；</p>
-<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01etKzgU1UNKoYVqtxo_!!6000000002505-2-tps-1592-508.png" alt="" style="max-width:90%;" class="inline"/> </div><h3><a class="anchor" id="autotoc_md1193"></a>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01etKzgU1UNKoYVqtxo_!!6000000002505-2-tps-1592-508.png" alt="" style="max-width:90%;" class="inline"/> </div><h3><a class="anchor" id="autotoc_md1187"></a>
 2.2.3数字信号的规则</h3>
 <div class="fragment"><div class="line">一次完整的数据传输为40bit,高位先出。</div>
 <div class="line">数据格式:8bit湿度整数数据+8bit湿度小数数据+8bit温度整数数据+8bit温度小数数据+8bit校验和</div>
 <div class="line">校验和数据=“8bit湿度整数数据+8bit湿度小数数据+8bi温度整数数据+8bit温度小数数据”所得结果的末8位。</div>
 </div><!-- fragment --><p> DHT11传感器如果没有接收到主机发送开始信号,不会主动进行温湿度采集。 数字‘0’信号：低电平50us，高电平26-28us</p>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01BVYeO41aQtaXWn8Di_!!6000000003325-2-tps-1564-850.png" alt="" style="max-width:90%;" class="inline"/> </div><p>数字‘1’信号：低电平50us，高电平70us</p>
-<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01jH1ELf1Z8Hspm5NNC_!!6000000003149-2-tps-1574-730.png" alt="" style="max-width:90%;" class="inline"/> </div> <h1><a class="anchor" id="autotoc_md1194"></a>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01jH1ELf1Z8Hspm5NNC_!!6000000003149-2-tps-1574-730.png" alt="" style="max-width:90%;" class="inline"/> </div> <h1><a class="anchor" id="autotoc_md1188"></a>
 3 物料清单</h1>
 <p>| <b>物料</b> | <b>规格</b> | <b>购买链接</b> | | :&mdash;: | :&mdash;: | :&mdash;: | | HaaS100开发板 | | 阿里云<a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.16.13123b209835rz&amp;id=627354125244&amp;ns=1&amp;abbucket=16">天猫链接</a> | | DHT11温湿度传感器 | 用来采集器空气中的温度和湿度，为单总线数据交互模式 | &#160;Risym <a href="https://detail.tmall.com/item.htm?id=15598344236&amp;ali_refid=a3_430582_1006:1104520036:N:TAiHo9GD8eTurMzH21/csQ==:fc360fe0aaa2a823247db3c6a3bd21fc&amp;ali_trackid=1_fc360fe0aaa2a823247db3c6a3bd21fc&amp;spm=a230r.1.14.1">天猫链接</a> TELESKY <a href="https://detail.tmall.com/item.htm?id=41248630584&amp;ali_refid=a3_430582_1006:1109983619:N:77RKeLgkEXuYPsQPL/pGPA==:31c58e63c712d4a9ee33af685ecb1c61&amp;ali_trackid=1_31c58e63c712d4a9ee33af685ecb1c61&amp;spm=a230r.1.14.6">天猫链接</a> 优信电子 <a href="https://item.taobao.com/item.htm?spm=a230r.1.14.15.77176c121VUnMs&amp;id=522553143872&amp;ns=1&amp;abbucket=12#detail">淘宝链接</a> |</p>
-<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01OkWDVc1Y6AQtrBbaQ_!!6000000003009-2-tps-1488-1234.png" alt="" style="max-width:90%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md1195"></a>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01OkWDVc1Y6AQtrBbaQ_!!6000000003009-2-tps-1488-1234.png" alt="" style="max-width:90%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md1189"></a>
 4. 案例实现</h1>
-<h2><a class="anchor" id="autotoc_md1196"></a>
+<h2><a class="anchor" id="autotoc_md1190"></a>
 4.1 硬件连接</h2>
 <p>HaaS100与温湿度传感器和土壤湿度传感器的接口说明。</p>
 <table class="markdownTable">
@@ -98,9 +98,9 @@ $(document).ready(function(){initNavTree('flower_demo.html',''); initResizable()
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">VCC   </td><td class="markdownTableBodyCenter">3V3   </td><td class="markdownTableBodyCenter">3V3电源   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md1197"></a>
+<h2><a class="anchor" id="autotoc_md1191"></a>
 4.2 软件设计</h2>
-<h3><a class="anchor" id="autotoc_md1198"></a>
+<h3><a class="anchor" id="autotoc_md1192"></a>
 4.2.1 云端创建产品</h3>
 <p>请先点击登陆<a href="https://www.aliyun.com/product/iot/iot_instc_public_cn">物联网平台</a>（未注册阿里云账户的用户，请先完成账户注册），按下面步骤一步步去打造 1、创建项目 注册登入后，如下图所示，前往管理控制台。</p>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01u0AGpn1uEnRRq2WAu_!!6000000006006-2-tps-1308-490.png" alt="" style="max-width:90%;" class="inline"/> </div><p>点击公共实例，进行产品创建</p>
@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('flower_demo.html',''); initResizable()
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01eb1RVm1XpDmMr8cqi_!!6000000002972-2-tps-2538-900.png" alt="" style="max-width:90%;" class="inline"/> </div><p>3、设备管理 在设备列表中增加对应产品的设备。</p>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i4/O1CN015JH11p1cgaO8xzhJ9_!!6000000003630-2-tps-1910-874.png" alt="" style="max-width:90%;" class="inline"/> </div><p>查看设备信息</p>
 <div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN012ZcVF71EK6ADdOaxW_!!6000000000332-2-tps-2734-994.png" alt="" style="max-width:90%;" class="inline"/> </div><p>创建后的设备三元组信息需要同步到设备端的开发代码段中，在3.1章节会介绍。待设备端开发结束，就可以在物联网平台中参看设备在线状态。 </p>
-<h3><a class="anchor" id="autotoc_md1199"></a>
+<h3><a class="anchor" id="autotoc_md1193"></a>
 4.2.2 设备端代码</h3>
 <p>传感器GPIO初始化接口，参考文档路径：solutions/flower_demo/flower_app.c </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> flower_gpio_init(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
@@ -180,7 +180,7 @@ $(document).ready(function(){initNavTree('flower_demo.html',''); initResizable()
 <div class="line">        last_hum = humidity;</div>
 <div class="line">    } </div>
 <div class="line">}</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1200"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1194"></a>
 4.2.3 小程序开发1、 云端钉一体小程序SDK获取</h3>
 <div class="fragment"><div class="line">git clone -b dev_3.1.0_haas https://github.com/alibaba/AliOS-Things.git</div>
 </div><!-- fragment --><p> SDK相关代码及操作readme在application/miniapp/目录下。 2、 SDK目录结构</p>
@@ -232,25 +232,25 @@ $(document).ready(function(){initNavTree('flower_demo.html',''); initResizable()
 <li>DeviceName ProducKey</li>
 </ul>
 <p>这两个参数在<a href="#jSkOe">创建设备</a>时生成。 4、 编译验证 点击小程序IDE右上角“真机调试”按钮，等待二维码生成后，使用钉钉APP扫码，即可发起小程序。</p>
-<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01nYZ1R01FVpveL7bv9_!!6000000000493-2-tps-948-156.png" alt="" style="max-width:90%;" class="inline"/> </div><div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01ixflz91HMKwrURJ2i_!!6000000000743-1-tps-746-1330.gif" alt="" style="max-width:90%;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md1201"></a>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01nYZ1R01FVpveL7bv9_!!6000000000493-2-tps-948-156.png" alt="" style="max-width:90%;" class="inline"/> </div><div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01ixflz91HMKwrURJ2i_!!6000000000743-1-tps-746-1330.gif" alt="" style="max-width:90%;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md1195"></a>
 4.3 开发环境搭建、编译、烧入、运行</h2>
-<h3><a class="anchor" id="autotoc_md1202"></a>
+<h3><a class="anchor" id="autotoc_md1196"></a>
 4.3.1 AliOS Things开发环境搭建</h3>
 <p>开发环境的搭建请参考 HaaS100_Quick_Start (搭建开发环境章节)，其中详细的介绍了AliOS Things 3.3的IDE集成开发环境的搭建流程。</p>
-<h3><a class="anchor" id="autotoc_md1203"></a>
+<h3><a class="anchor" id="autotoc_md1197"></a>
 4.3.2 智能养花系统代码下载</h3>
 <p>智能语音播放器的代码下载请参考 HaaS100_Quick_Start (创建工程章节)，其中， </p><blockquote class="doxtable">
 <p>选择解决方案: “养花案例” 选择开发板: HaaS100 </p>
 </blockquote>
-<h3><a class="anchor" id="autotoc_md1204"></a>
+<h3><a class="anchor" id="autotoc_md1198"></a>
 4.3.3 代码编译、烧录</h3>
 <p>编译flower_demo的过程如下：</p>
 <p>&ndash; 参考 HaaS100_Quick_Start (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。</p>
 <p>&ndash; 参考 HaaS100_Quick_Start (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
-<h3><a class="anchor" id="autotoc_md1205"></a>
+<h3><a class="anchor" id="autotoc_md1199"></a>
 4.3.4 运行</h3>
 <p>运行打印信息</p>
-<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01hpPVq91TUpgUAFEqS_!!6000000002386-2-tps-958-900.png" alt="" style="max-width:90%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md1206"></a>
+<div align="left" display="flex"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01hpPVq91TUpgUAFEqS_!!6000000002386-2-tps-958-900.png" alt="" style="max-width:90%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md1200"></a>
 5. 总结</h1>
 <p>至此，一个简单的能手机远程管理的HaaS花卉养植系统就做好了。是不是很简单？</p>
 <p>当然，这个HaaS花卉养植系统的打造仅仅是一个抛砖引玉，还有很大的扩展空间，比如 湿度过低触发自动洒水，温度过高自动开家里的空调等设备。还有非常大的想象和发挥空间。</p>
@@ -262,7 +262,7 @@ $(document).ready(function(){initNavTree('flower_demo.html',''); initResizable()
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 16日 星期五 17:24:58 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 16日 星期五 19:09:05 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

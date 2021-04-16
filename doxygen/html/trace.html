@@ -53,18 +53,18 @@ $(document).ready(function(){initNavTree('trace.html',''); initResizable(); });
 <div class="title">trace </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md718"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md712"></a>
 概述</h1>
 <p>SystemView 是一个用于分析嵌入式系统性能的工具。SystemView可以分析系统中有哪些中断、任务执行了，以及它们的先后关系。 可以完整的深入观察一个应用程序运行时的行为，它揭示了在任务运行中发生了什么，哪个中断触发了任务切换，中断和任务调用了哪个底层系统的API函数。SystemView 不但可以实时分析和展示数据，而且可以帮助用户进行系统调试和问题诊断，尤其是在开发和处理具有多个任务的复杂系统时。</p>
 <p>SystemView 由两个部分组成：</p>
 <p>SystemView 嵌入式端程序：用于记录嵌入式系统的行为，通过实时传输(Real Time Transfer, RTT)技术将记录的数据通过J-link工具传输到PC机上。</p>
 <p>SystemView PC端程序：用于收集目标板上传的数据信息，并在不同的窗口中显示这些信息。这些记录可以保存到文件中，用于以后的分析。</p>
-<h1><a class="anchor" id="autotoc_md719"></a>
+<h1><a class="anchor" id="autotoc_md713"></a>
 版权信息</h1>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md720"></a>
+<h1><a class="anchor" id="autotoc_md714"></a>
 目录结构</h1>
 <div class="fragment"><div class="line">├── Config</div>
 <div class="line">│   ├── Global.h                             # Global 数据类型定义</div>
@@ -87,12 +87,12 @@ $(document).ready(function(){initNavTree('trace.html',''); initResizable(); });
 <div class="line">├── uart_send.c                              # 用串口传输数据的示例代码</div>
 <div class="line">├── README.md                                # 说明文档</div>
 <div class="line">└── package.yaml                             # 编译配置文件</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md721"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md715"></a>
 依赖组件</h1>
 <ul>
 <li>无</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md722"></a>
+<h1><a class="anchor" id="autotoc_md716"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，如需修改配置，统一在package.yaml中**def_config**节点修改，具体如下：</p>
 <blockquote class="doxtable">
@@ -101,13 +101,13 @@ $(document).ready(function(){initNavTree('trace.html',''); initResizable(); });
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">     SEGGER_SYSVIEW_RTT_BUFFER_SIZE: 4096</div>
 </div><!-- fragment --><p>更多配置可以参考<a href="https://www.segger.com/downloads/free-utilities/UM08027">SystemView用户手册</a> 第4.5章 Generic configuration</p>
-<h1><a class="anchor" id="autotoc_md723"></a>
+<h1><a class="anchor" id="autotoc_md717"></a>
 API说明</h1>
 <p>使用 SEGGER_SYSVIEW_PrintfTarget API通过J-link打印log 信息到时序图和Terminal窗口。</p>
 <div class="fragment"><div class="line">void SEGGER_SYSVIEW_PrintfTarget(const char *s, ...);</div>
 </div><!-- fragment --><p>例子：SEGGER_SYSVIEW_PrintfTarget("hello world! count %d \r\n", count);</p>
 <p>更多的API说明参考<a href="https://www.segger.com/downloads/free-utilities/UM08027">SystemView用户手册</a> 第7章 API reference</p>
-<h1><a class="anchor" id="autotoc_md724"></a>
+<h1><a class="anchor" id="autotoc_md718"></a>
 使用示例</h1>
 <p>将HaaS100 SWDIO、SWCLK和地GND共3根线与J-Link仿真器连接。</p>
 <table class="markdownTable">
@@ -124,7 +124,7 @@ API说明</h1>
 <p><img src="https://img.alicdn.com/imgextra/i4/O1CN01RD9QyS1zD1zYKLKxv_!!6000000006679-2-tps-976-671.png" alt="undefined" style="zoom:70%;" class="inline"/></p>
 <p>以运行helloworld_demo为例，具体步骤如下：</p>
 <p>开发环境的搭建请参考 HaaS100_Quick_Start (搭建开发环境章节)，其中详细的介绍了AliOS Things 3.3的IDE集成开发环境的搭建流程。</p>
-<h2><a class="anchor" id="autotoc_md725"></a>
+<h2><a class="anchor" id="autotoc_md719"></a>
 app中添加trace组件</h2>
 <p>修改文件solutions/helloworld_demo/helloworld.c</p>
 <div class="fragment"><div class="line">添加头文件</div>
@@ -140,31 +140,31 @@ app中添加trace组件</h2>
 <div class="fragment"><div class="line">aos install trace</div>
 </div><!-- fragment --><p>&ndash; 参考HaaS100_Quick_Start (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。</p>
 <p>&ndash; 参考HaaS100_Quick_Start (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
-<h1><a class="anchor" id="autotoc_md726"></a>
+<h1><a class="anchor" id="autotoc_md720"></a>
 运行</h1>
-<h2><a class="anchor" id="autotoc_md727"></a>
+<h2><a class="anchor" id="autotoc_md721"></a>
 1 下载安装SystemView</h2>
 <p><a href="www.segger.com/downloads/systemview">SystemView下载地址</a></p>
 <p>根据你所用的操作系统下载对应版本的SystemView，然后进行安装。</p>
-<h2><a class="anchor" id="autotoc_md728"></a>
+<h2><a class="anchor" id="autotoc_md722"></a>
 2 配置SystemView</h2>
 <p>拷贝components/trace/Config/SYSVIEW_AliOSThings.txt文件到PC机SystemView软件安装目录 C:\Program Files\SEGGER\SystemView\Description下。</p>
-<h2><a class="anchor" id="autotoc_md729"></a>
+<h2><a class="anchor" id="autotoc_md723"></a>
 3 打开SystemView PC软件</h2>
 <p>点击菜单栏Target打开 Recorder Configuration。 <img src="https://img.alicdn.com/imgextra/i2/O1CN01szknPD1ogNbBQBZEU_!!6000000005254-2-tps-488-266.png" alt="undefined" class="inline"/></p>
 <p>参考下图配置参数信息，其中 Address 信息可以从开机串口log 中获取： 例如开机串口log中显示：_SEGGER_RTT:0x34683a1c。</p>
 <p><img src="https://img.alicdn.com/imgextra/i3/O1CN01aiPYrd1Ij4DVZLR9h_!!6000000000928-2-tps-640-762.png" alt="undefined" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md730"></a>
+<h2><a class="anchor" id="autotoc_md724"></a>
 4 开始采集</h2>
 <p>点击菜单栏Target打开 Start Recording <img src="https://img.alicdn.com/imgextra/i2/O1CN01E4UIcZ24f2Hwl6Hco_!!6000000007417-2-tps-452-258.png" alt="undefined" class="inline"/></p>
 <p>采集效果界面显示如下：</p>
 <p><img src="https://img.alicdn.com/imgextra/i3/O1CN01YKD6fE1Pg2uvaaGmx_!!6000000001869-2-tps-2826-1754.png" alt="undefined" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md731"></a>
+<h1><a class="anchor" id="autotoc_md725"></a>
 注意</h1>
 <p>如果SystemView PC端软件提示overflow，可以通过修改package.yaml 文件增大设备端缓存大小。</p>
 <p>修改方式如下：</p>
 <p>def_config: 下添加一行 SEGGER_SYSVIEW_RTT_BUFFER_SIZE: 4096</p>
-<h1><a class="anchor" id="autotoc_md732"></a>
+<h1><a class="anchor" id="autotoc_md726"></a>
 FAQ</h1>
 <p>无 </p>
 </div></div><!-- contents -->
@@ -173,7 +173,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 16日 星期五 17:24:55 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 16日 星期五 19:09:03 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
