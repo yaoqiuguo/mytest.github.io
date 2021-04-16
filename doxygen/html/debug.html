@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('debug.html',''); initResizable(); });
 <div class="title">debug </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md383"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md385"></a>
 概述</h1>
 <p>AliOS Things维测（debug）组件支持以下功能：</p><ul>
 <li>异常管理，在系统异常后接管异常，并输出系统快照coredump信息</li>
@@ -66,7 +66,7 @@ $(document).ready(function(){initNavTree('debug.html',''); initResizable(); });
 <li>p: 查询内存值</li>
 <li>m: 改写内存值</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md384"></a>
+<h2><a class="anchor" id="autotoc_md386"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
@@ -99,14 +99,14 @@ $(document).ready(function(){initNavTree('debug.html',''); initResizable(); });
 <div class="line">    ├── debug_print.h</div>
 <div class="line">    ├── debug_test.c        #一些测试命令</div>
 <div class="line">    └── debug_test.h</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md385"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md387"></a>
 依赖组件</h2>
 <ul>
 <li>rhino</li>
 <li>vfs(lastword功能依赖)</li>
 <li>littlefs(lastword功能依赖)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md386"></a>
+<h1><a class="anchor" id="autotoc_md388"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
 <p>系统异常后进入调试模式，可继续执行cli命令，系统不会自动复位（默认模式），可修改yaml配置如下，修改为0后，系统异常则会自动复位。 </p>
@@ -129,42 +129,42 @@ $(document).ready(function(){initNavTree('debug.html',''); initResizable(); });
 <div class="line"> </div>
 <div class="line">  #可配置写入文件的路径</div>
 <div class="line">  DEBUG_CPUUSAGE_FILE_NAME: &quot;/data/cpuusage&quot;</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md387"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md389"></a>
 API说明</h1>
 <p><a class="el" href="group__debug__aos__api.html">debug</a></p>
-<h1><a class="anchor" id="autotoc_md388"></a>
+<h1><a class="anchor" id="autotoc_md390"></a>
 使用示例</h1>
 <p>示例代码参考example/debug_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md389"></a>
+<h2><a class="anchor" id="autotoc_md391"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>debug组件的package.yaml中添加example </p>
 </blockquote>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - example/*.c ? &lt;AOS_COMP_CLI&gt; # add debug_example.c，同时会自动加上cli组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md390"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md392"></a>
 添加debug组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的pacxkage.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - debug: dev_aos # helloworld_demo中引入cli组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md391"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md393"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md392"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md394"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md393"></a>
+<h2><a class="anchor" id="autotoc_md395"></a>
 debug示例测试</h2>
 <blockquote class="doxtable">
 <p>命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">help</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md394"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md396"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>终端日志： </p>
@@ -176,7 +176,7 @@ debug示例测试</h2>
 <p>命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">debug_api help</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md395"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md397"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>终端日志： </p>
@@ -193,7 +193,7 @@ debug示例测试</h2>
 <div class="line">debug_api 8     --- show backtrace task</div>
 <div class="line">debug_api all   --- show all above</div>
 </div><!-- fragment --><p> &gt;可根据提示使用debug_api 进行相应的接口演示 </p>
-<h1><a class="anchor" id="autotoc_md396"></a>
+<h1><a class="anchor" id="autotoc_md398"></a>
 FAQ</h1>
 <p>Q1： cpuusage命令的使用说明是什么？ </p><div class="fragment"><div class="line">答：</div>
 <div class="line">cpuusage [-d n] [-t m] 命令启动CPU利用率统计，结果输出到串口终端</div>
@@ -258,7 +258,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 16日 星期五 14:18:07 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 16日 星期五 17:24:52 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

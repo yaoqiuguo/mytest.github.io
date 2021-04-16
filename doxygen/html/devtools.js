@@ -3,9 +3,9 @@ var devtools =
     [ "开发环境 aos-studio", "aos-studio.html", "aos-studio" ],
     [ "构建工具 aos-tools", "aos-tools_user_manual.html", null ],
     [ "构建配置 package.yaml", "packageyaml_user_manual.html", [
-      [ "构建规则说明", "packageyaml_user_manual.html#autotoc_md203", null ],
-      [ "构建文件字段说明", "packageyaml_user_manual.html#autotoc_md204", null ],
-      [ "附录", "packageyaml_user_manual.html#autotoc_md205", [
+      [ "构建规则说明", "packageyaml_user_manual.html#autotoc_md205", null ],
+      [ "构建文件字段说明", "packageyaml_user_manual.html#autotoc_md206", null ],
+      [ "附录", "packageyaml_user_manual.html#autotoc_md207", [
         [ "安装 aos-tools", "aos-tools_user_manual.html#autotoc_md129", null ],
         [ "aos-tools 命令", "aos-tools_user_manual.html#autotoc_md130", [
           [ "Visual Studio Code", "setup_env.html#autotoc_md126", null ],
@@ -40,11 +40,11 @@ var devtools =
           [ "create project", "aos-tools_user_manual.html#autotoc_md154", null ],
           [ "sdk", "aos-tools_user_manual.html#autotoc_md155", null ]
         ] ],
-        [ "prebuild、postbuild、postimage脚本示例", "packageyaml_user_manual.html#autotoc_md206", [
-          [ "python版本", "packageyaml_user_manual.html#autotoc_md207", null ],
-          [ "shell版本", "packageyaml_user_manual.html#autotoc_md208", null ]
+        [ "prebuild、postbuild、postimage脚本示例", "packageyaml_user_manual.html#autotoc_md208", [
+          [ "python版本", "packageyaml_user_manual.html#autotoc_md209", null ],
+          [ "shell版本", "packageyaml_user_manual.html#autotoc_md210", null ]
         ] ],
-        [ "制作二次开发SDK", "packageyaml_user_manual.html#autotoc_md209", null ]
+        [ "制作二次开发SDK", "packageyaml_user_manual.html#autotoc_md211", null ]
       ] ]
     ] ]
 ];

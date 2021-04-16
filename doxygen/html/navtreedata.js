@@ -191,9 +191,9 @@ var NAVTREEINDEX =
 "group__aos__httpclient__api.html#ga99c4d9bec03443dabffa7142825cb0df",
 "group__cli__aos__api.html#gaa788d1e9549c44cd4f1828af9e951380",
 "group__uvoice__types__api.html#gga64b5cf52df381470edae8cbdd800fe43aff316a6edd6dbe8a31019783a21bc97e",
-"kv.html#autotoc_md1306",
+"jsoncpp.html#autotoc_md492",
 "oled.html#autotoc_md1378",
-"st7789.html#autotoc_md1382",
+"st7789.html",
 "timer.html#autotoc_md1503",
 "vfs.html#autotoc_md888"
 ];

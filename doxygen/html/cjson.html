@@ -53,15 +53,15 @@ $(document).ready(function(){initNavTree('cjson.html',''); initResizable(); });
 <div class="title">cJSON </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md329"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md331"></a>
 概述</h1>
 <p>cJSON是符合ANSI C标准的极轻量级JSON解析器。</p>
-<h2><a class="anchor" id="autotoc_md330"></a>
+<h2><a class="anchor" id="autotoc_md332"></a>
 版权说明</h2>
 <blockquote class="doxtable">
 <p>The MIT License </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md331"></a>
+<h2><a class="anchor" id="autotoc_md333"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── src</div>
 <div class="line">│   ├── cJSON.c         # 源文件（必需）</div>
@@ -71,17 +71,17 @@ $(document).ready(function(){initNavTree('cjson.html',''); initResizable(); });
 <div class="line">├── package.yaml        # 编译配置文件</div>
 <div class="line">└── example</div>
 <div class="line">    └── cjson_example.c # 示例代码（默认禁用，可在package.yaml中使能）</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md332"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md334"></a>
 依赖组件</h2>
 <ul>
 <li>osal_aos</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md333"></a>
+<h1><a class="anchor" id="autotoc_md335"></a>
 常用配置</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md334"></a>
+<h1><a class="anchor" id="autotoc_md336"></a>
 API说明</h1>
-<h2><a class="anchor" id="autotoc_md335"></a>
+<h2><a class="anchor" id="autotoc_md337"></a>
 将字符串解析为JSON结构体</h2>
 <div class="fragment"><div class="line">cJSON *cJSON_Parse(<span class="keyword">const</span> <span class="keywordtype">char</span> *value);</div>
 </div><!-- fragment --> <table class="markdownTable">
@@ -90,7 +90,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">value   </td><td class="markdownTableBodyLeft">JSON字符串   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md336"></a>
+<h2><a class="anchor" id="autotoc_md338"></a>
 删除JSON结构体</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> cJSON_Delete(cJSON *c);</div>
 </div><!-- fragment --> <table class="markdownTable">
@@ -99,7 +99,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">value   </td><td class="markdownTableBodyLeft">待删除的JSON结构体   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md337"></a>
+<h2><a class="anchor" id="autotoc_md339"></a>
 获取JSON数组包含成员个数</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> cJSON_GetArraySize(<span class="keyword">const</span> cJSON *array);</div>
 </div><!-- fragment --> <table class="markdownTable">
@@ -108,7 +108,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">value   </td><td class="markdownTableBodyLeft">数组类型的JSON结构体   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md338"></a>
+<h2><a class="anchor" id="autotoc_md340"></a>
 获取JSON数组成员</h2>
 <div class="fragment"><div class="line">cJSON *cJSON_GetArrayItem(<span class="keyword">const</span> cJSON *array, <span class="keywordtype">int</span> index);</div>
 </div><!-- fragment --> <table class="markdownTable">
@@ -119,7 +119,7 @@ API说明</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">index   </td><td class="markdownTableBodyLeft">数组成员索引   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md339"></a>
+<h2><a class="anchor" id="autotoc_md341"></a>
 获取JSON对象成员</h2>
 <div class="fragment"><div class="line">cJSON *cJSON_GetObjectItemCaseSensitive(<span class="keyword">const</span> cJSON * <span class="keyword">const</span> <span class="keywordtype">object</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> <span class="keywordtype">string</span>);</div>
 </div><!-- fragment --> <table class="markdownTable">
@@ -130,10 +130,10 @@ API说明</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">string   </td><td class="markdownTableBodyLeft">成员名称（大小写敏感）   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md340"></a>
+<h2><a class="anchor" id="autotoc_md342"></a>
 获取出错信息</h2>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *cJSON_GetErrorPtr(<span class="keywordtype">void</span>);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md341"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md343"></a>
 判断JSON结构体是否为布尔类型</h2>
 <div class="fragment"><div class="line">cJSON_bool cJSON_IsBool(<span class="keyword">const</span> cJSON * <span class="keyword">const</span> item);</div>
 </div><!-- fragment --> <table class="markdownTable">
@@ -142,7 +142,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">item   </td><td class="markdownTableBodyLeft">待判断的JSON结构体   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md342"></a>
+<h2><a class="anchor" id="autotoc_md344"></a>
 判断JSON结构体是否为数值类型</h2>
 <div class="fragment"><div class="line">cJSON_bool cJSON_IsNumber(<span class="keyword">const</span> cJSON * <span class="keyword">const</span> item);</div>
 </div><!-- fragment --> <table class="markdownTable">
@@ -151,7 +151,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">item   </td><td class="markdownTableBodyLeft">待判断的JSON结构体   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md343"></a>
+<h2><a class="anchor" id="autotoc_md345"></a>
 判断JSON结构体是否为字符串类型</h2>
 <div class="fragment"><div class="line">cJSON_bool cJSON_IsString(<span class="keyword">const</span> cJSON * <span class="keyword">const</span> item);</div>
 </div><!-- fragment --> <table class="markdownTable">
@@ -160,7 +160,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">item   </td><td class="markdownTableBodyLeft">待判断的JSON结构体   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md344"></a>
+<h2><a class="anchor" id="autotoc_md346"></a>
 判断JSON结构体是否为数组类型</h2>
 <div class="fragment"><div class="line">cJSON_bool cJSON_IsArray(<span class="keyword">const</span> cJSON * <span class="keyword">const</span> item);</div>
 </div><!-- fragment --> <table class="markdownTable">
@@ -169,7 +169,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">item   </td><td class="markdownTableBodyLeft">待判断的JSON结构体   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md345"></a>
+<h2><a class="anchor" id="autotoc_md347"></a>
 判断JSON结构体是否为对象类型</h2>
 <div class="fragment"><div class="line">cJSON_bool cJSON_IsObject(<span class="keyword">const</span> cJSON * <span class="keyword">const</span> item);</div>
 </div><!-- fragment --> <table class="markdownTable">
@@ -178,38 +178,38 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">item   </td><td class="markdownTableBodyLeft">待判断的JSON结构体   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md346"></a>
+<h1><a class="anchor" id="autotoc_md348"></a>
 使用示例</h1>
 <p>示例代码参考example/cjson_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md347"></a>
+<h2><a class="anchor" id="autotoc_md349"></a>
 添加示例代码</h2>
 <p>cjson组件的package.yaml中添加example </p><div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - &quot;example/cjson_example.c&quot;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md348"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md350"></a>
 添加组件</h2>
 <p>helloworld_demo组件的package.yaml中添加 </p><div class="fragment"><div class="line">depends:</div>
 <div class="line">  - cjson: master</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md349"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md351"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md350"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md352"></a>
 烧录固件</h2>
 <p>参考具体板子的快速开始文档。</p>
-<h2><a class="anchor" id="autotoc_md351"></a>
+<h2><a class="anchor" id="autotoc_md353"></a>
 示例测试</h2>
 <p>CLI命令行输入： </p><div class="fragment"><div class="line">cjson_example</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md352"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md354"></a>
 关键日志</h2>
 <p>CLI日志： </p><div class="fragment"><div class="line">Checking monitor &quot;Awesome 4K&quot;</div>
 <div class="line">1280 x 720.00</div>
 <div class="line">1920 x 1080.00</div>
 <div class="line">3840 x 2160.00</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md353"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md355"></a>
 注意事项</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md354"></a>
+<h1><a class="anchor" id="autotoc_md356"></a>
 FAQ</h1>
 <p>无 </p>
 </div></div><!-- contents -->
@@ -218,7 +218,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 16日 星期五 14:18:06 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 16日 星期五 17:24:52 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

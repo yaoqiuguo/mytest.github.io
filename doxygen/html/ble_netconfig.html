@@ -53,41 +53,41 @@ $(document).ready(function(){initNavTree('ble_netconfig.html',''); initResizable
 <div class="title">ble_netconfig </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md310"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md312"></a>
 概述</h1>
 <p>AliOS Things 3.3提供ble_netconfig组件，用内置的BLE功能给WI-FI配网。</p>
-<h2><a class="anchor" id="autotoc_md311"></a>
+<h2><a class="anchor" id="autotoc_md313"></a>
 功能支持</h2>
 <p>ble_netconfig组件主要支持如下功能：</p>
 <ul>
 <li>开启BLE配网功能</li>
 <li>关闭BLE配网功能</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md312"></a>
+<h2><a class="anchor" id="autotoc_md314"></a>
 版权说明</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md313"></a>
+<h2><a class="anchor" id="autotoc_md315"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">|-- ble_netconfig.c          #BLE配网核心代码</div>
 <div class="line">|-- ble_netconfig.h          #BLE配网头文件</div>
 <div class="line">|-- package.yaml             #makefile</div>
 <div class="line">|-- README.md                #README文档</div>
 <div class="line">|-- BLE_NetConfig.zip        #BLE配网的示例APK,适用于android6.0及以上机型</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md314"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md316"></a>
 依赖组件</h2>
 <ul>
 <li>osal_aos</li>
 <li>ble_host</li>
 <li>netmgr</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md315"></a>
+<h1><a class="anchor" id="autotoc_md317"></a>
 常用配置</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md316"></a>
+<h1><a class="anchor" id="autotoc_md318"></a>
 API说明</h1>
-<h2><a class="anchor" id="autotoc_md317"></a>
+<h2><a class="anchor" id="autotoc_md319"></a>
 API列表</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -97,9 +97,9 @@ API列表</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">BLE_NetCfg_stop   </td><td class="markdownTableBodyLeft">BLE配网功能关闭   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md318"></a>
+<h2><a class="anchor" id="autotoc_md320"></a>
 API详情</h2>
-<h3><a class="anchor" id="autotoc_md319"></a>
+<h3><a class="anchor" id="autotoc_md321"></a>
 BLE_NetCfg_init</h3>
 <p>BLE配网功能初始化。 <b>函数原型</b></p>
 <div class="fragment"><div class="line">BLE_NETCFG_STATE BLE_NetCfg_init(BLE_netCfg_callck callback)</div>
@@ -111,7 +111,7 @@ BLE_NetCfg_init</h3>
 <td class="markdownTableBodyLeft">callback   </td><td class="markdownTableBodyLeft">回调函数   </td></tr>
 </table>
 <p><b>返回参数</b> <code>0：</code>成功， <code>其他值</code>：失败。</p>
-<h3><a class="anchor" id="autotoc_md320"></a>
+<h3><a class="anchor" id="autotoc_md322"></a>
 BLE_NetCfg_start</h3>
 <p>打开BLE配网功能。</p>
 <p><b>函数原型</b></p>
@@ -124,7 +124,7 @@ BLE_NetCfg_start</h3>
 <td class="markdownTableBodyLeft">无   </td><td class="markdownTableBodyLeft"></td></tr>
 </table>
 <p><b>返回参数</b> <code>0：</code>成功， <code>其他值</code>：失败。</p>
-<h3><a class="anchor" id="autotoc_md321"></a>
+<h3><a class="anchor" id="autotoc_md323"></a>
 BLE_NetCfg_stop</h3>
 <p>关闭BLE配网功能。 <b>函数原型</b></p>
 <div class="fragment"><div class="line">BLE_NETCFG_STATE BLE_NetCfg_stop(void)</div>
@@ -136,15 +136,15 @@ BLE_NetCfg_stop</h3>
 <td class="markdownTableBodyLeft">无   </td><td class="markdownTableBodyLeft"></td></tr>
 </table>
 <p><b>返回参数</b> <code>0：</code>成功， <code>其他值</code>：失败。</p>
-<h1><a class="anchor" id="autotoc_md322"></a>
+<h1><a class="anchor" id="autotoc_md324"></a>
 使用示例</h1>
-<h2><a class="anchor" id="autotoc_md323"></a>
+<h2><a class="anchor" id="autotoc_md325"></a>
 案例工具</h2>
 <ul>
 <li>串口工具</li>
 <li>安卓BLE配网测试APK（BLE_NetConfig.apk）</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md324"></a>
+<h2><a class="anchor" id="autotoc_md326"></a>
 案例修改</h2>
 <p>以helloworld的案例为例，修改solutions/helloworld_demo/package.yaml的depends，增加ble_netconfig，如下 </p><div class="fragment"><div class="line">depends:</div>
 <div class="line">  - ble_netconfig: master</div>
@@ -170,13 +170,13 @@ BLE_NetCfg_stop</h3>
 <div class="line">        aos_msleep(1000);</div>
 <div class="line">    };</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md325"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md327"></a>
 编译烧录</h2>
 <p>在solutions/helloworld_demo中执行aos make，编译成功后烧录进haas100开发板。</p>
-<h2><a class="anchor" id="autotoc_md326"></a>
+<h2><a class="anchor" id="autotoc_md328"></a>
 运行观测</h2>
 <p>打开串口工具，在串口工具中输入ble_netCfg，可看到ble_netCfg的cli命令集。 <img src="https://img.alicdn.com/imgextra/i4/O1CN01R0MwTj1cIJOanG8Sq_!!6000000003577-2-tps-832-98.png#align=left&amp;display=inline&amp;height=49&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=98&amp;originWidth=832&amp;size=25099&amp;status=done&amp;style=none&amp;width=416" alt="image.png" class="inline"/> </p>
-<h2><a class="anchor" id="autotoc_md327"></a>
+<h2><a class="anchor" id="autotoc_md329"></a>
 BLE配网示例</h2>
 <p>在串口工具中输入ble_netCfg start，可以在串口日志中看到如下打印 </p><div class="fragment"><div class="line">[15:10:06.498]收←◆ble_netCfg start</div>
 <div class="line">[ 141.509]&lt;E&gt;BLE_NETCFG BLE_NetCfg_start: state = 0</div>
@@ -189,7 +189,7 @@ BLE配网示例</h2>
 <li>点击SETTING按钮，等待显示“**设置SSID与密码成功”**的提示。</li>
 </ul>
 <p><img src="https://img.alicdn.com/imgextra/i2/O1CN01ea2Bma1VtgP4ELRs6_!!6000000002711-2-tps-664-858.png#align=left&amp;display=inline&amp;height=429&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=858&amp;originWidth=664&amp;size=104536&amp;status=done&amp;style=none&amp;width=332" alt="image.png" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md328"></a>
+<h1><a class="anchor" id="autotoc_md330"></a>
 常见问题</h1>
 <div class="fragment"><div class="line">Q：是否有IOS版的配网工具</div>
 <div class="line">A：目前没有，后续推出跨平台的小程序用于配网。</div>
@@ -199,7 +199,7 @@ BLE配网示例</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 16日 星期五 14:18:06 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 16日 星期五 17:24:52 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

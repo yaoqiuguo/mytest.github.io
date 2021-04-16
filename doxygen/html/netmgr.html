@@ -53,15 +53,15 @@ $(document).ready(function(){initNavTree('netmgr.html',''); initResizable(); });
 <div class="title">netmgr </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md575"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md577"></a>
 概述</h1>
 <p>Netmgr是AliOS Things为支持不同的网络连接芯片类型和多元的应用场景，提供的一套完善的网络管理框架，包括网络接入管理、连接设备管理等功能。</p>
-<h2><a class="anchor" id="autotoc_md576"></a>
+<h2><a class="anchor" id="autotoc_md578"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md577"></a>
+<h2><a class="anchor" id="autotoc_md579"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── example</div>
 <div class="line">│   └── netmgr_example.c           # netmgr示例代码</div>
@@ -82,7 +82,7 @@ $(document).ready(function(){initNavTree('netmgr.html',''); initResizable(); });
 <div class="line">    ├── netmgr_service.c           # netmgr服务管理</div>
 <div class="line">    ├── netmgr_wifi.c              # wifi网络管理</div>
 <div class="line">    └── string_convert.c           # 字符转换</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md578"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md580"></a>
 依赖组件</h2>
 <ul>
 <li>drivers</li>
@@ -91,20 +91,20 @@ $(document).ready(function(){initNavTree('netmgr.html',''); initResizable(); });
 <li>sntp</li>
 <li>posix</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md579"></a>
+<h1><a class="anchor" id="autotoc_md581"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，可以在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
 <p>是否上报激活信息 </p>
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  AOS_COMP_ACTIVATION: y</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md580"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md582"></a>
 API说明</h1>
 <p><a class="el" href="group__netmgr__api.html">netmgr</a></p>
-<h1><a class="anchor" id="autotoc_md581"></a>
+<h1><a class="anchor" id="autotoc_md583"></a>
 使用示例</h1>
 <p>示例代码参考example/netmgr_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md582"></a>
+<h2><a class="anchor" id="autotoc_md584"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>netmgr组件的package.yaml中添加example </p>
@@ -116,23 +116,23 @@ API说明</h1>
 <div class="line">  - src/string_convert.c</div>
 <div class="line">  - activation/*.c ? &lt;AOS_COMP_ACTIVATION&gt;</div>
 <div class="line">  - example/*.c</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md583"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md585"></a>
 app中添加netmgr组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - netmgr: dev_aos</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md584"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md586"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md585"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md587"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md586"></a>
+<h2><a class="anchor" id="autotoc_md588"></a>
 netmgr示例测试</h2>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment"> * Copyright (C) 2015-2021 Alibaba Group Holding Limited</span></div>
@@ -179,19 +179,19 @@ netmgr示例测试</h2>
 <p>CLI命令行输入netmgr -t wifi -c wifi_ssid(根据情况输入自己的wifi名) wifi_password(输入wifi密码) </p>
 </blockquote>
 <div class="fragment"><div class="line">netmgr -t wifi -c HUAWEI_AP abcdefg1234</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md587"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md589"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">netmgr test</div>
 </div><!-- fragment --> <div class="fragment"><div class="line">Got IP</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md588"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md590"></a>
 注意事项</h1>
 <ul>
 <li>netmgr对系统的event service有依赖，需要在调用netmgr_service_init前，先调用event_service_init函数。</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md589"></a>
+<h1><a class="anchor" id="autotoc_md591"></a>
 FAQ</h1>
 <ul>
 <li>NA </li>
@@ -202,7 +202,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 16日 星期五 14:18:09 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 16日 星期五 17:24:54 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

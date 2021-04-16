@@ -53,44 +53,44 @@ $(document).ready(function(){initNavTree('compass.html',''); initResizable(); })
 <div class="title">电子罗盘 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1000"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1002"></a>
 实验介绍</h1>
 <p>“电子罗盘”，作为一种非常常见的功能，目前市场上的智能手机几乎都默认配备了。在生活中，它可以帮助我们找准方向，进行辅助定位等等。除了手机之外，电子罗盘也广泛应用于航空、航天、机器人、航海、车辆自主导航等领域。在本实验中，我们也来实现一个“电子罗盘”。</p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01yRJYEH1qpCSZuKNk3_!!6000000005544-1-tps-1200-800.gif" alt="" style="zoom:50%;" class="inline"/> </div><p>从上图中可以看到，随着方向的转动，屏幕上的指针和度数也在发生着变化，指针指向的刻度标明了箭头所指方向的角度度数。实现这个效果的方法很简单，只需要获取电子罗盘传感器的读数，然后根据读数绘制罗盘界面即可。 </p>
-<h1><a class="anchor" id="autotoc_md1001"></a>
+<h1><a class="anchor" id="autotoc_md1003"></a>
 涉及知识点</h1>
 <ul>
 <li>QMC5883L 三轴AMR磁传感器的原理和使用</li>
 <li>OLED绘图</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1002"></a>
+<h1><a class="anchor" id="autotoc_md1004"></a>
 开发环境准备</h1>
-<h2><a class="anchor" id="autotoc_md1003"></a>
+<h2><a class="anchor" id="autotoc_md1005"></a>
 硬件</h2>
 <p>开发用电脑一台 HAAS EDU K1 开发板一块 USB2TypeC 数据线一根</p>
-<h2><a class="anchor" id="autotoc_md1004"></a>
+<h2><a class="anchor" id="autotoc_md1006"></a>
 软件</h2>
-<h3><a class="anchor" id="autotoc_md1005"></a>
+<h3><a class="anchor" id="autotoc_md1007"></a>
 AliOS Things开发环境搭建</h3>
 <p>开发环境的搭建请参考 HaaS_EDU_K1_Quick_Start (搭建开发环境章节)，其中详细的介绍了AliOS Things 3.3的IDE集成开发环境的搭建流程。</p>
-<h3><a class="anchor" id="autotoc_md1006"></a>
+<h3><a class="anchor" id="autotoc_md1008"></a>
 HaaS EDU K1 DEMO 代码下载</h3>
 <p>HaaS EDU K1 DEMO 的代码下载请参考 HaaS_EDU_K1_Quick_Start (创建工程章节)，其中， 选择解决方案: 基于教育开发板的示例 选择开发板: haaseduk1 board configure</p>
-<h3><a class="anchor" id="autotoc_md1007"></a>
+<h3><a class="anchor" id="autotoc_md1009"></a>
 代码编译、烧录</h3>
 <p>参考 HaaS_EDU_K1_Quick_Start (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。 参考 HaaS_EDU_K1_Quick_Start (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
-<h1><a class="anchor" id="autotoc_md1008"></a>
+<h1><a class="anchor" id="autotoc_md1010"></a>
 硬件介绍 - QMC5883L</h1>
-<h2><a class="anchor" id="autotoc_md1009"></a>
+<h2><a class="anchor" id="autotoc_md1011"></a>
 DataSheet</h2>
 <p>了解一款IC最快捷和精准的方法是查阅它的DataSheet。这款IC的DataSheet可以在以下链接获取。 <a href="https://nettigo.pl/attachments/440">QMC5883L-Datasheet-1.0.pdf</a> </p>
-<h2><a class="anchor" id="autotoc_md1010"></a>
+<h2><a class="anchor" id="autotoc_md1012"></a>
 硬件规格</h2>
 <p>QMC5883L是一款多芯片三轴磁传感器。旨在用于无人机，机器人，移动和个人手持设备中的指南针，导航和游戏等高精度应用。HMC5883L 采用异相磁阻（anisotropic magnetoresistance AMR）技术，这些各向异性传感器具有在轴向高灵敏度和线性高精度的特点。传感器具有的对正交轴低灵敏度的固相结构能用于测量地球磁场的方向和大小，其测量范围从毫高斯到 8 高斯。它具有低噪声，高精度，低功耗，失调消除和温度补偿的优点。 QMC5883L可实现1°至2°的罗盘航向精度。 使用I2C串行总线简化接口。 更详细的硬件规格参数可以参考 DataSheet 的 2.1 Product Specifications </p>
-<h2><a class="anchor" id="autotoc_md1011"></a>
+<h2><a class="anchor" id="autotoc_md1013"></a>
 传感原理</h2>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01yUeybI1n44rRZrsUB_!!6000000005035-2-tps-854-465.png" alt="" style="zoom:50%;" class="inline"/> </div><p>通过这张内部原理图我们可以很清楚地看出，在QMC5883L内部，存在三组两两正交的磁阻，这种特殊的电阻的阻值会随着施加的磁场而变化，因此使用模数转换器读取这种变化，就能够获得器件在磁场中的变化信息，进而判断器件的指向。 </p>
-<h3><a class="anchor" id="autotoc_md1012"></a>
+<h3><a class="anchor" id="autotoc_md1014"></a>
 名词释义</h3>
 <ul>
 <li>AMR Bridge：三轴异相磁阻传感器，其结构是一个电阻电桥，其电阻会随着所施加的磁场而变化。三个传感器相互正交，从而能够得出三个方向上的磁场强度。</li>
@@ -103,9 +103,9 @@ DataSheet</h2>
 <li>Reference：用于内部偏移的电压/电流基准。</li>
 <li>Temperature Sensor：用于内部精度/偏移的温度传感器，也可以用于测量温度并输出。 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md1013"></a>
+<h2><a class="anchor" id="autotoc_md1015"></a>
 驱动方式</h2>
-<h3><a class="anchor" id="autotoc_md1014"></a>
+<h3><a class="anchor" id="autotoc_md1016"></a>
 通讯接口</h3>
 <p>由DataSheet可知，QMC5883L采用的通讯方式为I2C。默认7bit设备地址：0x0D &#160; &#160;&#160;(DataSheet P10 5.4) 在 AliOS Things 中，开发者只需要关心器件的设备地址即可，因为只要知道了设备地址，读写地址也可以计算出，AliOS Things 会自动处理这些计算。因此： I2C设备的写地址 = I2C设备地址 &lt;&lt; 1 = 0x0D &lt;&lt; 1 = 0x1A I2C设备的读地址 = (I2C设备地址 &lt;&lt; 1) + 1 = 0x1B 这也符合在&#160;(DataSheet P14 I2C R/W Operation) 中给出的结论。 如果我们需要为了QMC5883L初始化I2C接口，那么对应的代码为： </p><div class="fragment"><div class="line"><span class="keyword">static</span> i2c_dev_t i2c_dev;</div>
 <div class="line"> </div>
@@ -116,18 +116,18 @@ DataSheet</h2>
 <div class="line">i2c_dev.config.dev_addr      = QMC5883L_ADDR;                                   <span class="comment">// QMC5883L_ADDR 0x0D</span></div>
 <div class="line"> </div>
 <div class="line"> hal_i2c_init(&amp;i2c_dev);</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1015"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1017"></a>
 寄存器地址</h3>
 <p>一般，使用I2C通讯的器件，都是通过读写寄存器的方式来完成对设备的读取和配置，因此了解寄存器的分布就非常重要。查阅 DataSheet(from DataSheet P16 9.1 Register Map) 可以得到：</p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01ejfcuf20HRQJGWzLf_!!6000000006824-2-tps-1890-902.png" alt="" style="zoom:50%;" class="inline"/> </div><p>其中，根据Access属性的不同，我们分为只读寄存器和读写寄存器，来分析一些驱动过程中较为重要的寄存器。 </p>
-<h4><a class="anchor" id="autotoc_md1016"></a>
+<h4><a class="anchor" id="autotoc_md1018"></a>
 只读寄存器（输出寄存器）</h4>
 <p>只读寄存器一般用于读取设备的状态和采样数据。 Table 14. Output Data Register</p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01DpXHst1XyNhPzAmhj_!!6000000002992-2-tps-2454-548.png" alt="" style="zoom:50%;" class="inline"/> </div><ul>
 <li>Data Output X Y Z LSB&amp;MSB <b>00H-05H</b></li>
 </ul>
 <p>三轴的采样数据，每个轴输出的数据大小均为16bit，分别存储在2个8bit寄存器中。 </p>
-<h4><a class="anchor" id="autotoc_md1017"></a>
+<h4><a class="anchor" id="autotoc_md1019"></a>
 读写寄存器（配置寄存器）</h4>
 <p>读写寄存器一般用于配置器件。对于QMC5883L而言，它的初始化只需要关心这一个寄存器**09H**。 Table 18. Control Register 1</p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i3/O1CN014ksAji284AsJZJW1k_!!6000000007878-2-tps-2634-684.png" alt="" style="zoom:50%;" class="inline"/> </div><ul>
@@ -146,7 +146,7 @@ DataSheet</h2>
 <li>MODE</li>
 </ul>
 <p>模式控制寄存器。用于配置器件是否开启连续测量模式。在连续测量模式下，Data Output X Y Z 6个寄存器会连续刷新数据，只需要 从Data Output 地址处连续读取即可获得实时的测量数据。 </p>
-<h3><a class="anchor" id="autotoc_md1018"></a>
+<h3><a class="anchor" id="autotoc_md1020"></a>
 驱动实现</h3>
 <p>完成I2C的初始化之后，我们就可以针对QMC5883L来进行初始化。在AliOS Things中，我们已经对器件进行了部分抽象，可以在初始化时配置。 </p><div class="fragment"><div class="line"><span class="comment">// components\peripherals\sensor\drv\drv_mag_honeywell_qmc5883l.c</span></div>
 <div class="line"><span class="comment">// components\peripherals\sensor\include\qmc5883l.h</span></div>
@@ -208,9 +208,9 @@ DataSheet</h2>
 </div><!-- fragment --><p> 至此，就可以从QMC5883L中读出采样数据。由于电子罗盘只需要平面的方向信息，因此只需要使用 </p><div class="fragment"><div class="line">atan2(x_fit, y_fit) * 180.0 / M_PI;</div>
 <div class="line"><span class="comment">// atan2(x, y) 返回以弧度表示的 y/x 的反正切</span></div>
 </div><!-- fragment --><p> 就可以得到当前的指向信息。 但是这样通过原始数据得到的角度，会表现出非常不准确。因此，接下来我们需要对数据进行校准。 </p>
-<h2><a class="anchor" id="autotoc_md1019"></a>
+<h2><a class="anchor" id="autotoc_md1021"></a>
 数据校准</h2>
-<h3><a class="anchor" id="autotoc_md1020"></a>
+<h3><a class="anchor" id="autotoc_md1022"></a>
 原始数据采样</h3>
 <p>通过前文中实现的 int qmc5883l_readRaw(int16_t *x, int16_t *y, int16_t *z) 函数，我们可以实现对器件在各个方向上的采样，由于我们主要关心 X，Y 轴的数据，因此我们需要将器件在水平面上遍历各个方向并读取数据。数据通过 printf("get org data [%d,%d,%d]\n", x, y, z) 打印在串口上。 具体的做法就是，在水平面上缓缓旋转 HaaS EDK 至少覆盖完整的一圈，并且在此过程中保证周围没有磁场干扰（比如任何包含磁性的物体）。</p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01gN42Az1TdzbSG78Fr_!!6000000002406-1-tps-1200-1200.gif" alt="" style="zoom:50%;" class="inline"/> </div><p>采集完后的数据如下： </p><div class="fragment"><div class="line">org_list = [</div>
@@ -266,7 +266,7 @@ DataSheet</h2>
 <div class="line">}</div>
 </div><!-- fragment --><p> 下图是添加了修正算法后得到的数据，可以看到，随着颜色变浅，数据量增加，散点逐渐拟合到一个圆形上，且圆心处于 (0,0) 位置。</p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01SAnRV91Giwt0DUF2M_!!6000000000657-2-tps-266-248.png" alt="" class="inline"/> </div><p>至此，我们就得到了较为准确的朝向数据。 </p>
-<h1><a class="anchor" id="autotoc_md1021"></a>
+<h1><a class="anchor" id="autotoc_md1023"></a>
 界面开发</h1>
 <p>在本实验的界面开发中，使用到了以下方法： </p><div class="fragment"><div class="line"><span class="keywordflow">while</span> (1)</div>
 <div class="line">{</div>
@@ -287,7 +287,7 @@ DataSheet</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 16日 星期五 14:18:12 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 16日 星期五 17:24:57 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
