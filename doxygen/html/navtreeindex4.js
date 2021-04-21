@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"group__aos__mbmaster.html#gga326a2117e67e99892992e874e24efeb7a1eb8d775c8b65f71298049a2adacc0ff":[7,14,9,5],
 "group__aos__mbmaster.html#gga326a2117e67e99892992e874e24efeb7a234426146b0c9c9371d84bb1430f3d09":[7,14,9,2],
 "group__aos__mbmaster.html#gga326a2117e67e99892992e874e24efeb7a23f766506d67bd5fcbf84b89a459bd04":[7,14,9,4],
 "group__aos__mbmaster.html#gga326a2117e67e99892992e874e24efeb7a3006c35601f8b4701f13ed639534893c":[7,14,9,1],
@@ -179,14 +180,14 @@ var NAVTREEINDEX4 =
 "group__sntp__api.html#gac96a8acc43e331b8173cf57b02d6f63f":[7,8,6],
 "group__sntp__api.html#gac994d1b867aab54062cdd1ee94510030":[7,8,1,3],
 "group__sntp__api.html#gac994d1b867aab54062cdd1ee94510030":[7,8,18],
-"group__sntp__api.html#gac9b481208b43f7c37ed25e446bdec692":[7,8,1,2],
 "group__sntp__api.html#gac9b481208b43f7c37ed25e446bdec692":[7,8,17],
+"group__sntp__api.html#gac9b481208b43f7c37ed25e446bdec692":[7,8,1,2],
 "group__sntp__api.html#gacbee62c27f54371fc2c5259a834a0f9b":[7,8,3],
 "group__sntp__api.html#gad1696900026b287a87c563b733a21bc3":[7,8,1,4],
 "group__sntp__api.html#gad1696900026b287a87c563b733a21bc3":[7,8,21],
 "group__sntp__api.html#gad8606d229f6dfa256bfeaf1c426cb777":[7,8,14],
-"group__sntp__api.html#gae5af4ff48939d13d480f87e56a9385d6":[7,8,16],
 "group__sntp__api.html#gae5af4ff48939d13d480f87e56a9385d6":[7,8,1,1],
+"group__sntp__api.html#gae5af4ff48939d13d480f87e56a9385d6":[7,8,16],
 "group__ucamera__aos__api.html":[7,11],
 "group__ucamera__aos__api.html#ga84937cfe717803c1fda4a1a2ea4738fd":[7,11,0],
 "group__ucamera__aos__api.html#ga90423e229cd72fab8d3f0fffc4b385cd":[7,11,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "group__uvoice__event__api.html#gaa2022cf12dca939103ed3480f5c17642":[7,13,0,7],
 "group__uvoice__event__api.html#gab6521adfcd9b172e2ba2a22e99dd24fe":[7,13,0,13],
 "group__uvoice__event__api.html#gac62d35b12e9fe287c6632c560c2477ce":[7,13,0,16],
-"group__uvoice__event__api.html#gac7a3e5f5f4acd057885c68b2e0a5f406":[7,13,0,5],
-"group__uvoice__event__api.html#gafeb20acc1382a679298f4f573c892b59":[7,13,0,15]
+"group__uvoice__event__api.html#gac7a3e5f5f4acd057885c68b2e0a5f406":[7,13,0,5]
 };

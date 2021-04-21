@@ -54,7 +54,7 @@ $(document).ready(function(){initNavTree('watchdog.html',''); initResizable(); }
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><b><a href="https://gitee.com/alios-things/watchdog/edit/rel_3.3.0/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></b></p>
-<h1><a class="anchor" id="autotoc_md1671"></a>
+<h1><a class="anchor" id="autotoc_md1684"></a>
 概述</h1>
 <blockquote class="doxtable">
 <p>WATCHDOG VFS驱动子系统，该驱动的目的是给应用或组件提供通过VFS形式（open/close/ioctl）访问WATCHDOG控制器驱动对上层提供复位看门狗的接口。 该组件初始化过程中，会根据hardware/chip/&lt;chip_name&gt;/package.yaml中定义的CONFIG_WDG_NUM来依此创建如下名称的设备节点： </p>
@@ -68,12 +68,12 @@ $(document).ready(function(){initNavTree('watchdog.html',''); initResizable(); }
 <blockquote class="doxtable">
 <p>WATCHDOG VFS驱动子系统内部会将open/close/ioctl请求转换成对应硬件的HAL层接口调用，通过HAL层接口发起复位看门狗的请求。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md1672"></a>
+<h2><a class="anchor" id="autotoc_md1685"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md1673"></a>
+<h2><a class="anchor" id="autotoc_md1686"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">│── src</div>
 <div class="line">│   └── wdg_dev.c      # WATCHDOG VFS驱动程序源代码</div>
@@ -86,22 +86,22 @@ $(document).ready(function(){initNavTree('watchdog.html',''); initResizable(); }
 <div class="line">│   └── vfsdev</div>
 <div class="line">│       └── wdg_dev.h  # WATCHDOG VFS驱动子系统对应用/组件提供的接口声明文件</div>
 <div class="line">└── package.yaml       # WATCHDOG VFS驱动子系统的组件配置文件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1674"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1687"></a>
 依赖组件</h2>
 <ul>
 <li>base # 最底层核心驱动模型、驱动自动加载机制以及Device VFS core</li>
 <li>vfs # VFS API抽象库</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1675"></a>
+<h1><a class="anchor" id="autotoc_md1688"></a>
 常用配置</h1>
 <blockquote class="doxtable">
 <p>本组件可以通过CONFIG_WDG_NUM配置对上层提供设备节点的数量，CONFIG_WDG_NUM代表WATCHDOG设备节点的数量。 CONFIG_WDG_NUM默认是在hardware/chip/&lt;chip_name&gt;/package.yaml中的**define**节点进行配置。 如果没有定义CONFIG_WDG_NUM，则代码中会定义默认对外输出的设备节点数量。 设备节点数量: 默认1个, 如需修改，在hardware/chip/&lt;chip_name&gt;/package.yaml中修改CONFIG_WDG_NUM配置，一般来说一个产品只需要一个watchdog功能 </p>
 </blockquote>
 <div class="fragment"><div class="line">define:</div>
 <div class="line">  CONFIG_WDG_NUM: 1</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1676"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1689"></a>
 API说明</h1>
-<h2><a class="anchor" id="autotoc_md1677"></a>
+<h2><a class="anchor" id="autotoc_md1690"></a>
 打开设备节点</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> open(<span class="keyword">const</span> <span class="keywordtype">char</span> *pathname, <span class="keywordtype">int</span> flags);</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -113,25 +113,25 @@ API说明</h1>
 <td class="markdownTableBodyLeft">flags   </td><td class="markdownTableBodyLeft">目前固定为0值   </td></tr>
 </table>
 <p>兼容POSIX标准的open接口。其中参数*pathname*为*/dev/wdg*加看门狗外设id，例如*/dev/wdg0*。</p>
-<h2><a class="anchor" id="autotoc_md1678"></a>
+<h2><a class="anchor" id="autotoc_md1691"></a>
 关闭设备节点</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> close(<span class="keywordtype">int</span> fd);</div>
 </div><!-- fragment --><p> 兼容POSIX标准的close接口。</p>
-<h2><a class="anchor" id="autotoc_md1679"></a>
+<h2><a class="anchor" id="autotoc_md1692"></a>
 复位看门狗</h2>
 <p>在应用层需要复位看门狗操作时呼叫此API </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> ioctl(<span class="keywordtype">int</span> fd, IOC_WDG_RELOAD, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> arg);</div>
 <div class="line"><span class="comment">// arg固定传入0即可</span></div>
 <div class="line">ioctl (fd, IOC_WDG_RELOAD, 0);</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1680"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1693"></a>
 使用示例</h1>
 <p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
-<h2><a class="anchor" id="autotoc_md1681"></a>
+<h2><a class="anchor" id="autotoc_md1694"></a>
 步骤1 创建或打开工程</h2>
 <p><b>打开已有工程</b></p>
 <p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
 <p><b>创建新的工程</b></p>
 <p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
-<h2><a class="anchor" id="autotoc_md1682"></a>
+<h2><a class="anchor" id="autotoc_md1695"></a>
 步骤2 添加组件</h2>
 <blockquote class="doxtable">
 <p>如果芯片内部含有WATCHDOG控制器，则芯片厂在操作系统对接的时候已经将WATCHDOG组件添加在了芯片级别配置文件“hardware/chip/&lt;chip_name&gt;/package.yaml”中，此配置主要包含“设置组件依赖关系”及“设置芯片内部所含WATCHDOG控制器数量”两个配置。 </p>
@@ -143,12 +143,12 @@ API说明</h1>
 <div class="line"># 设置芯片内部所含WATCHDOG控制器数量</div>
 <div class="line">define:</div>
 <div class="line">  CONFIG_WDG_NUM: 1</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1683"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1696"></a>
 步骤3 下载组件</h2>
 <p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
 <div class="fragment"><div class="line">aos install watchdog</div>
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/drivers/peripheral/watchdog路径中。</p>
-<h2><a class="anchor" id="autotoc_md1684"></a>
+<h2><a class="anchor" id="autotoc_md1697"></a>
 步骤4 添加示例</h2>
 <p>在i2c组件的package.yaml中添加<a href="https://gitee.com/alios-things/watchdog/tree/master/example">example示例代码</a>：</p>
 <div class="fragment"><div class="line">source_file:</div>
@@ -156,17 +156,17 @@ API说明</h1>
 <div class="line">  - src/wdg_dev.c ? &lt;CONFIG_U_WATCHDOG_DEV&gt;</div>
 <div class="line">#WATCHDOG VFS driver example</div>
 <div class="line">- example/wdg_example.c ? &lt;CONFIG_U_WATCHDOG_DEV&gt;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1685"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1698"></a>
 步骤5 编译固件</h2>
 <p>在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
-<h2><a class="anchor" id="autotoc_md1686"></a>
+<h2><a class="anchor" id="autotoc_md1699"></a>
 步骤6 烧录固件</h2>
 <p>helloworld_demo案例的固件生成后，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/burn_image.html">《aos-studio使用说明之烧录固件》</a>来烧录固件。</p>
-<h2><a class="anchor" id="autotoc_md1687"></a>
+<h2><a class="anchor" id="autotoc_md1700"></a>
 步骤7 打开串口</h2>
 <p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/view_log.html">《aos-studio使用说明之查看日志》</a>。</p>
 <p>当串口终端打开成功后，可在串口中输入help来查看已添加的测试命令。</p>
-<h2><a class="anchor" id="autotoc_md1688"></a>
+<h2><a class="anchor" id="autotoc_md1701"></a>
 步骤8 测试示例</h2>
 <p><b>CLI命令行输入：</b> </p><div class="fragment"><div class="line">wdg_reload &lt;count&gt; &lt;period, in unit of ms&gt;</div>
 <div class="line"># 向WATCHDOG通道0（watchdog_example.c中设定）以200ms为周期连续输出15个重置看门狗的信号</div>
@@ -175,12 +175,12 @@ API说明</h1>
 <p>关键日志 </p>
 </blockquote>
 <div class="fragment"><div class="line">wdg comp output test success!</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1689"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1702"></a>
 注意事项</h1>
 <blockquote class="doxtable">
 <p>WATCHDOG测试是输出硬件信号复位看门狗，可以通过示波器来量测watchdog复位引脚的波形图 </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md1690"></a>
+<h1><a class="anchor" id="autotoc_md1703"></a>
 FAQ</h1>
 <blockquote class="doxtable">
 <p>无 </p>
@@ -191,7 +191,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:09 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:31 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

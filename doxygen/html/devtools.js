@@ -32,14 +32,14 @@ var devtools =
       ] ]
     ] ],
     [ "构建配置 package.yaml", "packageyaml_user_manual.html", [
-      [ "构建规则说明", "packageyaml_user_manual.html#autotoc_md232", null ],
-      [ "构建文件字段说明", "packageyaml_user_manual.html#autotoc_md233", null ],
-      [ "附录", "packageyaml_user_manual.html#autotoc_md234", [
-        [ "prebuild、postbuild、postimage脚本示例", "packageyaml_user_manual.html#autotoc_md235", [
-          [ "python版本", "packageyaml_user_manual.html#autotoc_md236", null ],
-          [ "shell版本", "packageyaml_user_manual.html#autotoc_md237", null ]
+      [ "构建规则说明", "packageyaml_user_manual.html#autotoc_md233", null ],
+      [ "构建文件字段说明", "packageyaml_user_manual.html#autotoc_md234", null ],
+      [ "附录", "packageyaml_user_manual.html#autotoc_md235", [
+        [ "prebuild、postbuild、postimage脚本示例", "packageyaml_user_manual.html#autotoc_md236", [
+          [ "python版本", "packageyaml_user_manual.html#autotoc_md237", null ],
+          [ "shell版本", "packageyaml_user_manual.html#autotoc_md238", null ]
         ] ],
-        [ "制作二次开发SDK", "packageyaml_user_manual.html#autotoc_md238", null ]
+        [ "制作二次开发SDK", "packageyaml_user_manual.html#autotoc_md239", null ]
       ] ]
     ] ]
 ];

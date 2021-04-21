@@ -54,7 +54,7 @@ $(document).ready(function(){initNavTree('vfs.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href="https://gitee.com/alios-things/vfs/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
-<h1><a class="anchor" id="autotoc_md959"></a>
+<h1><a class="anchor" id="autotoc_md967"></a>
 概述</h1>
 <p>VFS 虚拟文件系统为各种文件（包括设备文件和普通文件）提供统一的操作接口。它是具体设备文件和文件系统之上的抽象层。其目的是允许应用程序以统一的方式访问不同类型的具体文件和设备。用户可以将ramfs,little fs等具体的文件系统注册到 VFS 中，然后使用标准操作接口（open,read,write,close 等）访问其中的文件。</p>
 <p>组件支持以下功能：</p>
@@ -64,12 +64,12 @@ $(document).ready(function(){initNavTree('vfs.html',''); initResizable(); });
 <li>inode 管理</li>
 <li>文件描述符管理</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md960"></a>
+<h2><a class="anchor" id="autotoc_md968"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md961"></a>
+<h2><a class="anchor" id="autotoc_md969"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── src</div>
 <div class="line">│   ├── vfs_adapt.c   # vfs OS adapt layer 具体实现代码</div>
@@ -89,12 +89,12 @@ $(document).ready(function(){initNavTree('vfs.html',''); initResizable(); });
 <div class="line">├── package.yaml      # 编译配置文件</div>
 <div class="line">└── example</div>
 <div class="line">    └── vfs_example.c # VFS 示例代码</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md962"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md970"></a>
 依赖组件</h2>
 <ul>
 <li>无</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md963"></a>
+<h1><a class="anchor" id="autotoc_md971"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
 <p>VFS 设备node数量，默认4096, 可修改yaml配置如： </p>
@@ -116,9 +116,9 @@ $(document).ready(function(){initNavTree('vfs.html',''); initResizable(); });
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  VFS_CONFIG_MAX_FILE_NUM: 50</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md964"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md972"></a>
 API说明</h1>
-<h2><a class="anchor" id="autotoc_md965"></a>
+<h2><a class="anchor" id="autotoc_md973"></a>
 初始化虚拟文件系统</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> vfs_init(<span class="keywordtype">void</span>);</div>
 </div><!-- fragment --><ul>
@@ -132,7 +132,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md966"></a>
+<h2><a class="anchor" id="autotoc_md974"></a>
 通过路径打开文件</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> aos_open(<span class="keyword">const</span> <span class="keywordtype">char</span> *path, <span class="keywordtype">int</span> flags);</div>
 </div><!-- fragment --><ul>
@@ -166,7 +166,7 @@ API说明</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">O_EXCL   </td><td class="markdownTableBodyNone">如果存在指定文件，返回出错   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md967"></a>
+<h2><a class="anchor" id="autotoc_md975"></a>
 关闭文件</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> aos_close(<span class="keywordtype">int</span> fd);</div>
 </div><!-- fragment --><ul>
@@ -180,7 +180,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md968"></a>
+<h2><a class="anchor" id="autotoc_md976"></a>
 读取文件内容</h2>
 <div class="fragment"><div class="line">ssize_t aos_read(<span class="keywordtype">int</span> fd, <span class="keywordtype">void</span> *buf, <span class="keywordtype">size_t</span> nbytes);</div>
 </div><!-- fragment --><ul>
@@ -197,7 +197,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md969"></a>
+<h2><a class="anchor" id="autotoc_md977"></a>
 向文件写入内容</h2>
 <div class="fragment"><div class="line">ssize_t aos_write(<span class="keywordtype">int</span> fd, <span class="keyword">const</span> <span class="keywordtype">void</span> *buf, <span class="keywordtype">size_t</span> nbytes);</div>
 </div><!-- fragment --><ul>
@@ -213,7 +213,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md970"></a>
+<h2><a class="anchor" id="autotoc_md978"></a>
 发送特定命令控制接口</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> aos_ioctl(<span class="keywordtype">int</span> fd, <span class="keywordtype">int</span> cmd, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> arg);</div>
 </div><!-- fragment --><ul>
@@ -228,7 +228,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md971"></a>
+<h2><a class="anchor" id="autotoc_md979"></a>
 在打开的文件描述符上执行下面描述的操作，操作由 cmd 确定</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> aos_fcntl(<span class="keywordtype">int</span> fd, <span class="keywordtype">int</span> cmd, <span class="keywordtype">int</span> val);</div>
 </div><!-- fragment --><ul>
@@ -244,7 +244,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md972"></a>
+<h2><a class="anchor" id="autotoc_md980"></a>
 设置下次读取文件的位置</h2>
 <div class="fragment"><div class="line">off_t aos_lseek(<span class="keywordtype">int</span> fd, off_t offset, <span class="keywordtype">int</span> whence);</div>
 </div><!-- fragment --><ul>
@@ -261,7 +261,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md973"></a>
+<h2><a class="anchor" id="autotoc_md981"></a>
 同步文件</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> aos_sync(<span class="keywordtype">int</span> fd);</div>
 </div><!-- fragment --><ul>
@@ -275,7 +275,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md974"></a>
+<h2><a class="anchor" id="autotoc_md982"></a>
 获取文件状态</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> aos_stat(<span class="keyword">const</span> <span class="keywordtype">char</span> *path, <span class="keyword">struct</span> stat *st);</div>
 </div><!-- fragment --><ul>
@@ -290,7 +290,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md975"></a>
+<h2><a class="anchor" id="autotoc_md983"></a>
 删除指定目录下的文件</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> aos_unlink(<span class="keyword">const</span> <span class="keywordtype">char</span> *path);</div>
 </div><!-- fragment --><ul>
@@ -304,7 +304,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md976"></a>
+<h2><a class="anchor" id="autotoc_md984"></a>
 重命名文件</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> aos_rename(<span class="keyword">const</span> <span class="keywordtype">char</span> *oldpath, <span class="keyword">const</span> <span class="keywordtype">char</span> *newpath);</div>
 </div><!-- fragment --><ul>
@@ -319,7 +319,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md977"></a>
+<h2><a class="anchor" id="autotoc_md985"></a>
 打开目录</h2>
 <div class="fragment"><div class="line">aos_dir_t *aos_opendir(<span class="keyword">const</span> <span class="keywordtype">char</span> *path);</div>
 </div><!-- fragment --><ul>
@@ -333,7 +333,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md978"></a>
+<h2><a class="anchor" id="autotoc_md986"></a>
 关闭目录</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> aos_closedir(aos_dir_t *dir);</div>
 </div><!-- fragment --><ul>
@@ -347,7 +347,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md979"></a>
+<h2><a class="anchor" id="autotoc_md987"></a>
 读取下个目录</h2>
 <div class="fragment"><div class="line">aos_dirent_t *aos_readdir(aos_dir_t *dir);</div>
 </div><!-- fragment --><ul>
@@ -361,7 +361,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md980"></a>
+<h2><a class="anchor" id="autotoc_md988"></a>
 创建目录</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> aos_mkdir(<span class="keyword">const</span> <span class="keywordtype">char</span> *path);</div>
 </div><!-- fragment --><ul>
@@ -375,7 +375,7 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md981"></a>
+<h2><a class="anchor" id="autotoc_md989"></a>
 删除目录</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> aos_rmdir(<span class="keyword">const</span> <span class="keywordtype">char</span> *path);</div>
 </div><!-- fragment --><ul>
@@ -389,45 +389,45 @@ API说明</h1>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md982"></a>
+<h1><a class="anchor" id="autotoc_md990"></a>
 使用示例</h1>
 <p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
-<h2><a class="anchor" id="autotoc_md983"></a>
+<h2><a class="anchor" id="autotoc_md991"></a>
 步骤1 创建或打开工程</h2>
 <p><b>打开已有工程</b></p>
 <p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
 <p><b>创建新的工程</b></p>
 <p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
-<h2><a class="anchor" id="autotoc_md984"></a>
+<h2><a class="anchor" id="autotoc_md992"></a>
 步骤2 添加组件</h2>
 <p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖： </p><blockquote class="doxtable">
 <p>在helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - vfs: dev_aos # helloworld_demo中引入vfs组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md985"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md993"></a>
 步骤3 下载组件</h2>
 <p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
 <div class="fragment"><div class="line">aos install vfs</div>
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/vfs路径中。</p>
-<h2><a class="anchor" id="autotoc_md986"></a>
+<h2><a class="anchor" id="autotoc_md994"></a>
 步骤4 添加示例</h2>
 <blockquote class="doxtable">
 <p>vfs组件的package.yaml中添加<a href="https://gitee.com/alios-things/vfs/tree/rel_3.3.0/example">example示例代码</a>： </p>
 </blockquote>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;example/vfs_example.c&quot; # add vfs_example.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md987"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md995"></a>
 步骤5 编译固件</h2>
 <p>在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
-<h2><a class="anchor" id="autotoc_md988"></a>
+<h2><a class="anchor" id="autotoc_md996"></a>
 步骤6 烧录固件</h2>
 <p>helloworld_demo案例的固件生成后，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/burn_image.html">《aos-studio使用说明之烧录固件》</a>来烧录固件。</p>
-<h2><a class="anchor" id="autotoc_md989"></a>
+<h2><a class="anchor" id="autotoc_md997"></a>
 步骤7 打开串口</h2>
 <p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/view_log.html">《aos-studio使用说明之查看日志》</a>。</p>
 <p>当串口终端打开成功后，可在串口中输入help来查看已添加的测试命令。</p>
-<h2><a class="anchor" id="autotoc_md990"></a>
+<h2><a class="anchor" id="autotoc_md998"></a>
 步骤8 测试示例</h2>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
@@ -443,7 +443,7 @@ API说明</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:05 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:27 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

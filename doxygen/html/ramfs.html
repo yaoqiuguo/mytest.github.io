@@ -53,19 +53,19 @@ $(document).ready(function(){initNavTree('ramfs.html',''); initResizable(); });
 <div class="title">ramfs </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md704"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md712"></a>
 概述</h1>
 <p>ramfs是AliOS Things提供的基于RAM不依赖flash驱动的可读可写的文件系统。和ROMFS的区别在于ROMFS为只读，RAMFS可读写。 主要特性包括：</p><ul>
 <li>不依赖flash设备和驱动</li>
 <li>可读写创建文件等</li>
 <li>掉电不保存</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md705"></a>
+<h2><a class="anchor" id="autotoc_md713"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md706"></a>
+<h2><a class="anchor" id="autotoc_md714"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── src</div>
 <div class="line">│   ├── ramfs_adapt.c # ramfs和内核的对接层</div>
@@ -76,60 +76,60 @@ $(document).ready(function(){initNavTree('ramfs.html',''); initResizable(); });
 <div class="line">├── include           # 对外头文件</div>
 <div class="line">│   └── ramfs.h</div>
 <div class="line">└── internal          # 内部头文件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md707"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md715"></a>
 依赖组件</h2>
 <p>只依赖内核模块</p>
-<h1><a class="anchor" id="autotoc_md708"></a>
+<h1><a class="anchor" id="autotoc_md716"></a>
 常用配置</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md709"></a>
+<h1><a class="anchor" id="autotoc_md717"></a>
 API说明</h1>
 <p><a class="el" href="group__ramfs__aos__api.html">ramfs</a> 注：ramfs本身只提供注册去注册接口；其他文件操作接口统一使用vfs接口/posix接口。</p>
-<h1><a class="anchor" id="autotoc_md710"></a>
+<h1><a class="anchor" id="autotoc_md718"></a>
 使用示例</h1>
 <p>使用示例参考**example/ramfs_example.c**，</p>
 <p>以运行helloworld_demo为例，添加运行组件的具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md711"></a>
+<h2><a class="anchor" id="autotoc_md719"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>ramfs组件的package.yaml中添加example </p>
 </blockquote>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - example/*.c</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md712"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md720"></a>
 添加ramfs组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - ramfs: dev_aos # helloworld_demo中引入ramfs组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md713"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md721"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
 </div><!-- fragment --><p> 其他单板修改haas100即可。</p>
-<h2><a class="anchor" id="autotoc_md714"></a>
+<h2><a class="anchor" id="autotoc_md722"></a>
 烧录固件</h2>
 <blockquote class="doxtable">
 <p>参考具体板子的快速开始文档。 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md715"></a>
+<h2><a class="anchor" id="autotoc_md723"></a>
 ramfs示例测试</h2>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">ramfs_example</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md716"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md724"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">ramfs: fd test success!</div>
 <div class="line">ramfs comp test success!</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md717"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md725"></a>
 注意事项</h1>
 <p>ramfs_register是ramfs的初始化接口，用户可自定义根路径，默认为"/RAMFS"； ramfs需要对接vfs使用，对外统一使用标准的open/read/write/close接口；</p>
-<h1><a class="anchor" id="autotoc_md718"></a>
+<h1><a class="anchor" id="autotoc_md726"></a>
 FAQ</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -137,7 +137,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:04 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:26 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

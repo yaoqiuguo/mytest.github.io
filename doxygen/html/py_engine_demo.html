@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('py_engine_demo.html',''); initResizabl
 <div class="title">micropython示例 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1361"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1369"></a>
 1. 案例简介</h1>
 <p>py_engine (Python轻应用引擎) 以MicroPython为基础打造而成, 基于py_engine可以快速实现IoT场景连云、控端、AI等最常见功能。快速上手文档和编程接口请参考<a href="https://g.alicdn.com/HaaSAI/PythonDoc/quickstart/index.html">Python轻应用快速上手</a></p><ul>
 <li>连云：支持基于linkit连接阿里云物联网平台</li>
@@ -67,9 +67,9 @@ $(document).ready(function(){initNavTree('py_engine_demo.html',''); initResizabl
 <li>启动python虚拟机</li>
 </ul>
 <p>py_engine_demo 只有一个appdemo.c,注册了python cli 命令后就退出了，等待用户指令启动python虚拟机</p>
-<h1><a class="anchor" id="autotoc_md1362"></a>
+<h1><a class="anchor" id="autotoc_md1370"></a>
 2. 基础知识</h1>
-<h2><a class="anchor" id="autotoc_md1363"></a>
+<h2><a class="anchor" id="autotoc_md1371"></a>
 2.1 组件依赖方法</h2>
 <ul>
 <li>在package.yaml 中增加py_engine组件依赖 <div class="fragment"><div class="line">depends:</div>
@@ -81,19 +81,19 @@ $(document).ready(function(){initNavTree('py_engine_demo.html',''); initResizabl
 <div class="line">mpy_run(argc, argv);</div>
 </div><!-- fragment --></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1364"></a>
+<h1><a class="anchor" id="autotoc_md1372"></a>
 3. 物料清单</h1>
-<h2><a class="anchor" id="autotoc_md1365"></a>
+<h2><a class="anchor" id="autotoc_md1373"></a>
 3.1 HaaS100 硬件</h2>
 <p><a href="https://help.aliyun.com/document_detail/184426.html">HaaS100 硬件简介</a></p>
 <p><img src="https://img.alicdn.com/imgextra/i4/O1CN01XxD6Xo217CB3FZnEU_!!6000000006937-2-tps-746-497.png" alt="" style="max-width:90%;" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md1366"></a>
+<h1><a class="anchor" id="autotoc_md1374"></a>
 4. 案例实现</h1>
-<h2><a class="anchor" id="autotoc_md1367"></a>
+<h2><a class="anchor" id="autotoc_md1375"></a>
 4.1 硬件连接</h2>
 <p>该案例只需要连接电源线以及串口线，如下图所示：</p>
 <p><img src="https://img.alicdn.com/imgextra/i2/O1CN01S9jkJw1dihpqURQH4_!!6000000003770-0-tps-1280-960.jpg" alt="" style="max-width:90%;" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md1368"></a>
+<h2><a class="anchor" id="autotoc_md1376"></a>
 4.2 软件实现</h2>
 <ul>
 <li><p class="startli">AliOS Things开发环境搭建</p>
@@ -114,13 +114,13 @@ $(document).ready(function(){initNavTree('py_engine_demo.html',''); initResizabl
 <div class="line">  - filename: release/write_flash_tool/ota_bin/littlefs.bin</div>
 <div class="line">    address: 0xB32000</div>
 </div><!-- fragment --> <pre class="fragment">参考 @ref HaaS100_Quick_Start (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。
-</pre> <h2><a class="anchor" id="autotoc_md1369"></a>
+</pre> <h2><a class="anchor" id="autotoc_md1377"></a>
 4.3 验证Python功能</h2>
 <p>连接串口，通过python命令进入python repl模式 </p><div class="fragment"><div class="line"># python</div>
 <div class="line"># python on HaaS100 by 2021-03-17， press ctrl+d to exit！</div>
 <div class="line">&gt;&gt;&gt; print(&quot;hello-world&quot;)</div>
 <div class="line">hello-world</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1370"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1378"></a>
 5. 总结</h1>
 <p>该demo只依赖AliOS Things，不依赖具体的硬件,通过这个demo ，默认可以将py_engine 按照两种不同的方式运行。 </p>
 </div></div><!-- contents -->
@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('py_engine_demo.html',''); initResizabl
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:07 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:29 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

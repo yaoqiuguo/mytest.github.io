@@ -54,7 +54,7 @@ $(document).ready(function(){initNavTree('cli.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href="https://gitee.com/alios-things/cli/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
-<h1><a class="anchor" id="autotoc_md384"></a>
+<h1><a class="anchor" id="autotoc_md385"></a>
 概述</h1>
 <p>在日常嵌入式开发中，用户经常会自行实现一套类似Linux Shell的交互工具来实现通过串口命令控制设备进入某种特定的状态，或执行某个特定的操作。如系统自检，模拟运行，或者进入手动模式进行设备点动。AliOS Things原生实现了一套名为CLI（Command-Line Interface）的命令行交互工具，在提供基本的系统交互命令的基础上，也支持用户自定义命令。 组件支持以下功能：</p><ul>
 <li>cli commands register</li>
@@ -62,12 +62,12 @@ $(document).ready(function(){initNavTree('cli.html',''); initResizable(); });
 <li>cli commands show</li>
 <li>fs cmds support </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md385"></a>
+<h2><a class="anchor" id="autotoc_md386"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md386"></a>
+<h2><a class="anchor" id="autotoc_md387"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── include</div>
 <div class="line">│   └── aos</div>
@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('cli.html',''); initResizable(); });
 <div class="line">    │   ├── pwd.c</div>
 <div class="line">    │   ├── rm.c</div>
 <div class="line">    │   └── touch.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md387"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md388"></a>
 依赖组件</h2>
 <ul>
 <li>rhino</li>
@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('cli.html',''); initResizable(); });
 <li>vfs(使用文件系统操作命令)</li>
 <li>littlefs(使用文件系统操作命令)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md388"></a>
+<h1><a class="anchor" id="autotoc_md389"></a>
 常用配置</h1>
 <p>系统中相关配置已有默认值，如需修改配置，在相应app下的package.yaml中**def_config**节点修改。例如：若运行的app为helloworld_demo，则在helloworld_demo下的package.yaml中修改： </p><blockquote class="doxtable">
 <p>cli 输入缓冲区大小: 默认256 bytes，即cli单次可接收的输入最大字节数 </p>
@@ -166,31 +166,31 @@ $(document).ready(function(){initNavTree('cli.html',''); initResizable(); });
 </blockquote>
 <div class="fragment"><div class="line">def_config:</div>
 <div class="line">  CLI_IOBOX_ENABLE: 0</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md389"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md390"></a>
 API说明</h1>
 <ul>
 <li>参考 <a href="https://dev.g.alicdn.com/alios-things-3.3/doc/group__cli__aos__api.html">cli_aos_api</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md390"></a>
+<h1><a class="anchor" id="autotoc_md391"></a>
 使用示例</h1>
 <p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
-<h2><a class="anchor" id="autotoc_md391"></a>
+<h2><a class="anchor" id="autotoc_md392"></a>
 步骤1 创建或打开工程</h2>
 <p><b>打开已有工程</b></p>
 <p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
 <p><b>创建新的工程</b></p>
 <p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
-<h2><a class="anchor" id="autotoc_md392"></a>
+<h2><a class="anchor" id="autotoc_md393"></a>
 步骤2 添加组件</h2>
 <p>案例下载完成后，以运行helloworld_demo为例，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - cli: dev_aos  # helloworld_demo中引入cli组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md393"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md394"></a>
 步骤3 下载组件</h2>
 <p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
 <div class="fragment"><div class="line">aos install cli</div>
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/cli路径中。</p>
-<h2><a class="anchor" id="autotoc_md394"></a>
+<h2><a class="anchor" id="autotoc_md395"></a>
 步骤4 添加示例</h2>
 <p>下面示例演示了注册cli命令的三种方式，分别是：</p><ol type="1">
 <li>注册单个cli命令</li>
@@ -261,7 +261,7 @@ API说明</h1>
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"><a class="code" href="group__cli__aos__api.html#ga9b313b8e90fe34d85db65c3ba8f4d8f0">ALIOS_CLI_CMD_REGISTER</a>(test_cmd3, test3, show test3 info)</div>
 <div class="ttc" id="agroup__cli__aos__api_html_ga9b313b8e90fe34d85db65c3ba8f4d8f0"><div class="ttname"><a href="group__cli__aos__api.html#ga9b313b8e90fe34d85db65c3ba8f4d8f0">ALIOS_CLI_CMD_REGISTER</a></div><div class="ttdeci">#define ALIOS_CLI_CMD_REGISTER(name, cmd, desc)</div><div class="ttdef"><b>Definition:</b> <a href="cli_8h_source.html#l00040">cli.h:40</a></div></div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md395"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md396"></a>
 代码示例</h3>
 <p>helloworld_demo注册cli命令，修改helloworld.c如下： </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="init_8h.html">aos/init.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;board.h&quot;</span></div>
@@ -340,16 +340,16 @@ API说明</h1>
 <div class="ttc" id="agroup__init__aos__api_html_ga55ef20a4d055aed8a8b3b25a90f8aee4"><div class="ttname"><a href="group__init__aos__api.html#ga55ef20a4d055aed8a8b3b25a90f8aee4">application_start</a></div><div class="ttdeci">int application_start(int argc, char **argv)</div></div>
 <div class="ttc" id="ainit_8h_html"><div class="ttname"><a href="init_8h.html">init.h</a></div></div>
 <div class="ttc" id="akernel_8h_html"><div class="ttname"><a href="kernel_8h.html">kernel.h</a></div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md396"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md397"></a>
 步骤5 编译固件</h2>
 <p>在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
-<h2><a class="anchor" id="autotoc_md397"></a>
+<h2><a class="anchor" id="autotoc_md398"></a>
 步骤6 烧录固件</h2>
 <p>helloworld_demo案例的固件生成后，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_image.html">《aos-studio使用说明之烧录固件》</a>来烧录固件。</p>
-<h2><a class="anchor" id="autotoc_md398"></a>
+<h2><a class="anchor" id="autotoc_md399"></a>
 步骤7 打开串口</h2>
 <p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="_haa_s100__quick__start.html">《aos-studio使用说明之查看日志》</a>。</p>
-<h2><a class="anchor" id="autotoc_md399"></a>
+<h2><a class="anchor" id="autotoc_md400"></a>
 步骤8 测试示例</h2>
 <p><b>CLI命令行输入：</b> </p><div class="fragment"><div class="line">help</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -360,7 +360,7 @@ API说明</h1>
 <div class="line">test2</div>
 <div class="line">test3</div>
 </div><!-- fragment --><p> 执行不同的命令，有相应的日志输出</p>
-<h1><a class="anchor" id="autotoc_md400"></a>
+<h1><a class="anchor" id="autotoc_md401"></a>
 FAQ</h1>
 <p>Q1： 如何打开文件系统操作命令集？ 答： cli组件支持文件系统操作命令，默认关闭，打开方式为： 以运行helloworld_demo为例，在其package.yaml中添加</p>
 <div class="fragment"><div class="line">def_config:</div>
@@ -382,7 +382,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:02 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:23 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

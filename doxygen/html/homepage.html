@@ -53,14 +53,14 @@ $(document).ready(function(){initNavTree('homepage.html',''); initResizable(); }
 <div class="title">首页信息屏 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1166"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1174"></a>
 实验介绍</h1>
 <p>本章主要介绍首页信息屏的实现，作为第一页，首页信息实现了类手机的界面，其中包含了丰富的内容。 1）产品名称 2) 版本信息 3) 系统状态，系统时间，WIFI连接，蓝牙连接。 4) IP地址 </p>
-<h4><a class="anchor" id="autotoc_md1167"></a>
+<h4><a class="anchor" id="autotoc_md1175"></a>
 显示效果</h4>
 <p>界面显示效果如下：</p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01MhNElU1M8fCNezy7v_!!6000000001390-2-tps-1200-800.png" alt="" style="zoom:50%;" class="inline"/> </div><p>本章包含的内容非常多，通过本章的学习，可以学到多个知识点，比如OLED的驱动显示，ADC获取电量信息，Wi-Fi连接状态获取等等。 </p>
-<h1><a class="anchor" id="autotoc_md1168"></a>
+<h1><a class="anchor" id="autotoc_md1176"></a>
 涉及知识点</h1>
 <ul>
 <li>ADC的配置以及使用</li>
@@ -68,107 +68,110 @@ $(document).ready(function(){initNavTree('homepage.html',''); initResizable(); }
 <li>Wi-Fi配网</li>
 <li>系统时钟获取（NTP网络对时）</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1169"></a>
+<h1><a class="anchor" id="autotoc_md1177"></a>
 开发环境准备</h1>
-<h2><a class="anchor" id="autotoc_md1170"></a>
+<h2><a class="anchor" id="autotoc_md1178"></a>
 硬件</h2>
 <p>开发用电脑一台 HAAS EDU K1 开发板一块 USB2TypeC 数据线一根</p>
-<h2><a class="anchor" id="autotoc_md1171"></a>
+<h2><a class="anchor" id="autotoc_md1179"></a>
 软件</h2>
-<h3><a class="anchor" id="autotoc_md1172"></a>
+<h3><a class="anchor" id="autotoc_md1180"></a>
 AliOS Things开发环境搭建</h3>
 <p>开发环境的搭建请参考 HaaS_EDU_K1_Quick_Start (搭建开发环境章节)，其中详细的介绍了AliOS Things 3.3的IDE集成开发环境的搭建流程。</p>
-<h3><a class="anchor" id="autotoc_md1173"></a>
+<h3><a class="anchor" id="autotoc_md1181"></a>
 HaaS EDU K1 DEMO 代码下载</h3>
 <p>HaaS EDU K1 DEMO 的代码下载请参考 HaaS_EDU_K1_Quick_Start (创建工程章节)，其中， 选择解决方案: 基于教育开发板的示例 选择开发板: haaseduk1 board configure</p>
-<h3><a class="anchor" id="autotoc_md1174"></a>
+<h3><a class="anchor" id="autotoc_md1182"></a>
 代码编译、烧录</h3>
 <p>参考 HaaS_EDU_K1_Quick_Start (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。 参考 HaaS_EDU_K1_Quick_Start (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
-<h1><a class="anchor" id="autotoc_md1175"></a>
+<h1><a class="anchor" id="autotoc_md1183"></a>
 各实验介绍</h1>
-<h2><a class="anchor" id="autotoc_md1176"></a>
+<h2><a class="anchor" id="autotoc_md1184"></a>
 OLED开发与显示</h2>
-<h3><a class="anchor" id="autotoc_md1177"></a>
+<h3><a class="anchor" id="autotoc_md1185"></a>
 OLED背景介绍</h3>
 <p>OLED，即有机发光二极管（Organic Light-Emitting Diode），又称为有机电激光显示（Organic Electroluminesence Display，OELD）。OLED由于同时具备自发光，不需背光源、对比度高、厚度薄、视角广、反应速度快、可用于挠曲性面板、使用温度范围广、构造及制程较简单等优异之特性，被认为是下一代的平面显示器新兴应用技术。 LCD都需要背光，而OLED不需要，因为它是自发光的。这样同样的显示，OLED效果要来得好一些。以目前的技术，OLED的尺寸还难以大型化，但是分辨率确可以做到很高。 </p>
-<h3><a class="anchor" id="autotoc_md1178"></a>
+<h3><a class="anchor" id="autotoc_md1186"></a>
 硬件设计</h3>
 <p>在本实验中，OLED作为一个小板固定在前面板上，中间通过排线与主板相连。 本实验采用的OLED屏有以下特点： 1）模块为单色显示、黑底白字 2）显示尺寸为1.3寸 3）高分辨率，该模块的分辨率为132*64 4）硬件接口采用SPI总线接口</p>
 <p>板载OLED原理图：</p>
-<div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01gZptiv1Bun2rnrAxi_!!6000000000006-2-tps-1052-1162.png" alt="" style="zoom:50%;" class="inline"/> </div><p> &#160; <br  />
-</p>
-<div align="center"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01fE0Xyc1IsgXFTHDm8_!!6000000000949-2-tps-594-388.png" alt="" style="zoom:50%;" class="inline"/> </div><h3><a class="anchor" id="autotoc_md1179"></a>
+<div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01gZptiv1Bun2rnrAxi_!!6000000000006-2-tps-1052-1162.png" alt="" style="zoom:50%;" class="inline"/> </div><p> &#160;</p>
+<div align="center"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01fE0Xyc1IsgXFTHDm8_!!6000000000949-2-tps-594-388.png" alt="" style="zoom:50%;" class="inline"/> </div><h3><a class="anchor" id="autotoc_md1187"></a>
 软件设计</h3>
 <p>关于OLED的详细原理介绍以及使用，请参考第三章OLED部分。这里主要介绍如何使用，从原理图的得知，OLED连接的主板的SPI0，采用的是4线SPI模式。 </p>
-<h4><a class="anchor" id="autotoc_md1180"></a>
+<h4><a class="anchor" id="autotoc_md1188"></a>
 初始化</h4>
-<p>首先初始化SPI0,这个可以在总入口函数中找到： application/example/edu_demo/app_entry.c </p><div class="fragment"><div class="line">sh1106_init();</div>
-</div><!-- fragment --><p> sh1106_init 初始化包含了SPI0的初始化以及GPIO初始化。 </p><div class="fragment"><div class="line">uint8_t sh1106_init(void)</div>
+<p>首先初始化SPI0,这个可以在总入口函数中找到： solutions/eduk1_demo/app_start.c </p><div class="fragment"><div class="line">sh1106_init();</div>
+</div><!-- fragment --><p> sh1106_init 初始化包含了SPI0的初始化以及GPIO初始化。 </p><div class="fragment"><div class="line">uint8_t sh1106_init(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
-<div class="line">        uint8_t err_code;</div>
-<div class="line">        err_code = hardware_init();</div>
-<div class="line">        if (err_code != 0)</div>
-<div class="line">        {</div>
-<div class="line">                return err_code;</div>
-<div class="line">        }</div>
-<div class="line">        command_list();</div>
-<div class="line">        return err_code;</div>
+<div class="line">    uint8_t err_code;</div>
+<div class="line"> </div>
+<div class="line">    err_code = hardware_init();</div>
+<div class="line">    <span class="keywordflow">if</span> (err_code != 0) {</div>
+<div class="line">        <span class="keywordflow">return</span> err_code;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    command_list();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> err_code;</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md1181"></a>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md1189"></a>
 显示部分</h4>
-<p>代码位于solutions/eduk1_demo/k1_apps/homepage/homepage.c 以显示版本信息为例： </p><div class="fragment"><div class="line">OLED_Clear(); // 清屏函数       </div>
-<div class="line">OLED_Show_String(40, (12 + 4) * 1, &quot;HaaS EDU&quot;, 12, 1); / 将字符串填入显示缓存</div>
-<div class="line">snprintf(image_version, 21, &quot;VER: %s&quot;, BUILD_VERSION); // 格式化字符串</div>
-<div class="line">OLED_Show_String(33, (12 + 4) * 2, image_version, 12, 1); // 将格式化后的字符串-</div>
-<div class="line">                                                                                                                                                                                                                                        //版本信息填入缓存</div>
-<div class="line">OLED_Refresh_GRAM(); // 刷新显存到屏幕上</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1182"></a>
+<p>代码位于solutions/eduk1_demo/k1_apps/homepage/homepage.c 以显示版本信息为例： </p><div class="fragment"><div class="line">OLED_Clear(); <span class="comment">// 清屏函数</span></div>
+<div class="line">OLED_Show_String(40, (12 + 4) * 1, <span class="stringliteral">&quot;HaaS EDU&quot;</span>, 12, 1); / 将字符串填入显示缓存</div>
+<div class="line">snprintf(image_version, 21, <span class="stringliteral">&quot;VER: %s&quot;</span>, BUILD_VERSION); <span class="comment">// 格式化字符串</span></div>
+<div class="line">OLED_Show_String(33, (12 + 4) * 2, image_version, 12, 1); <span class="comment">// 将格式化后的字符串-</span></div>
+<div class="line">                                                                                                                                                                                                                                        <span class="comment">//版本信息填入缓存</span></div>
+<div class="line">OLED_Refresh_GRAM(); <span class="comment">// 刷新显存到屏幕上</span></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1190"></a>
 ADC操作与电量获取</h2>
-<h3><a class="anchor" id="autotoc_md1183"></a>
+<h3><a class="anchor" id="autotoc_md1191"></a>
 背景介绍</h3>
 <p>ADC即模拟数字转换器（英语：Analog-to-digital converter）是用于将模拟形式的连续信号转换为数字形式的离散信号的一类设备。与之相对的设备成为数字模拟转换器（DAC）。 典型的模拟数字转换器将模拟信号转换为表示一定比例电压值的数字信号。然而，有一些模拟数字转换器并非纯的电子设备，例如旋转编码器，也可以被视为模拟数字转换器。 </p>
-<h3><a class="anchor" id="autotoc_md1184"></a>
+<h3><a class="anchor" id="autotoc_md1192"></a>
 硬件设计</h3>
 <p>原理图如下：</p>
-<div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01vwWwcp1qAtbVBGzet_!!6000000005456-2-tps-790-552.png" alt="" style="zoom:50%;" class="inline"/> </div><div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01RhdcEn1GyykObx9kd_!!6000000000692-2-tps-1866-570.png" alt="" style="zoom:50%;" class="inline"/> </div><p> &#160; 电压检测主要需要注意如下几点： 1、电压检测使用的是MCU的GADC1通道。 2、带USB供电时，检测点电压恒定为为4.8~5.2V之间，切换为电池供电时（断掉USB供电），电压浮动在3.65V~4.2V之间，此时电量标志才会有变化。 3、因为GADC量程有限，电压检测采用分频，如原理图所示，ADC实测值约为VOLT的1/3，加上ADC内阻的损耗，实际比值为3.208。 </p>
-<h3><a class="anchor" id="autotoc_md1185"></a>
+<div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01vwWwcp1qAtbVBGzet_!!6000000005456-2-tps-790-552.png" alt="" style="zoom:50%;" class="inline"/> </div><div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01RhdcEn1GyykObx9kd_!!6000000000692-2-tps-1866-570.png" alt="" style="zoom:50%;" class="inline"/> </div><p> &#160; 电压检测主要需要注意如下几点： 1、电压检测使用的是MCU的GADC1通道。 2、带USB供电时，检测点电压恒定为为4.8~5.2V之间，切换为电池供电时（断掉USB供电），电压浮动在3.65V~4.2V之间，此时电量标志才会有变化。 3、因为GADC量程有限，电压检测采用分频，如原理图所示，ADC实测值约为VOLT的1/3，加上ADC内阻的损耗，实际比值为3.208。</p>
+<h3><a class="anchor" id="autotoc_md1193"></a>
 软件设计</h3>
-<h4><a class="anchor" id="autotoc_md1186"></a>
+<h4><a class="anchor" id="autotoc_md1194"></a>
 驱动初始化</h4>
-<div class="fragment"><div class="line">adc_dev_t adc = {1, 1000, 0x12345678};   //初始化ADC1</div>
-<div class="line">ret = hal_adc_init(&amp;adc);</div>
-<div class="line">if (ret)</div>
-<div class="line">{</div>
-<div class="line">  printf(&quot;\r\n=====adc test : adc init failed===\r\n&quot;);</div>
-<div class="line">  return -1;</div>
+<p>在 AliOS Things 3.3中，对ADC的操作才用了VFS的方式，开发者只需要open相应的device设备，通过提供的到的IOCTL接口，完成start、get，stop等一系列动作。</p>
+<div class="fragment"><div class="line"><span class="comment">// open相应的adc设备</span></div>
+<div class="line">snprintf(name, <span class="keyword">sizeof</span>(name), <span class="stringliteral">&quot;/dev/adc%d&quot;</span>, index);</div>
+<div class="line">fd = open(name, 0);</div>
+<div class="line"><span class="comment">// start adc 设备</span></div>
+<div class="line"><span class="keywordflow">if</span> (fd &gt;= 0) {</div>
+<div class="line">        ret = ioctl(fd, IOC_ADC_START, sampling_cycle);</div>
+<div class="line">        usleep(1000);</div>
+<div class="line">        adc_arg.value = 0;</div>
+<div class="line">        adc_arg.timeout = 500000; <span class="comment">// in unit of us</span></div>
 <div class="line">}</div>
-</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md1187"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md1195"></a>
 获取电压值</h4>
-<p>1、读取十次， 2、去掉最大最小值，然后取平均 </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (int32_t i = 0; i &lt; 10; i++)</div>
-<div class="line">   {</div>
-<div class="line">       hal_adc_value_get(&amp;adc, &amp;output, 200);</div>
-<div class="line">       test_sum += output;</div>
+<p>1、读取十次， 2、去掉最大最小值，然后取平均。 </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (int32_t i = 0; i &lt; 10; i++) {</div>
+<div class="line">    ret = ioctl(fd, IOC_ADC_GET_VALUE, (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)&amp;adc_arg);</div>
+<div class="line">    test_sum += adc_arg.value;</div>
 <div class="line"> </div>
-<div class="line">       <span class="comment">/* the min sampling voltage */</span></div>
-<div class="line">       <span class="keywordflow">if</span> (test_min &gt;= output)</div>
-<div class="line">       {</div>
-<div class="line">           test_min = output;</div>
-<div class="line">       }</div>
-<div class="line">       <span class="comment">/* the max sampling voltage */</span></div>
-<div class="line">       <span class="keywordflow">if</span> (test_max &lt;= output)</div>
-<div class="line">       {</div>
-<div class="line">           test_max = output;</div>
-<div class="line">       }</div>
-<div class="line">       osDelay(1);</div>
-<div class="line">   }</div>
+<div class="line">    <span class="comment">/* the min sampling voltage */</span></div>
+<div class="line">    <span class="keywordflow">if</span> (test_min &gt;= adc_arg.value) {</div>
+<div class="line">        test_min = adc_arg.value;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">/* the max sampling voltage */</span></div>
+<div class="line">    <span class="keywordflow">if</span> (test_max &lt;= adc_arg.value) {</div>
+<div class="line">        test_max = adc_arg.value;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line">usleep(1000);</div>
+<div class="line">ret = ioctl(fd, IOC_ADC_STOP, 0);</div>
+<div class="line">close(fd);</div>
 <div class="line"> </div>
-<div class="line">   hal_adc_finalize(&amp;adc);</div>
-<div class="line"> </div>
-<div class="line">   test_avrg = (test_sum - test_min - test_max) &gt;&gt; 3;</div>
-<div class="line">   <span class="comment">//printf(&quot;\r\n=====adc test : the samping volage is:%dmv===\r\n&quot;, test_avrg);</span></div>
-<div class="line">   test_avrg *= 3.208;</div>
-<div class="line">   *volage = test_avrg;</div>
-</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md1188"></a>
+<div class="line">test_avrg = (test_sum - test_min - test_max) &gt;&gt; 3;</div>
+<div class="line"><a class="code" href="group__aos__ulog.html#gac8083d8831aced1183f24d2778829c86">LOGD</a>(EDU_TAG, <span class="stringliteral">&quot;the samping volage is:%dmv\n&quot;</span>, test_avrg);</div>
+<div class="line">test_avrg *= 3.208;</div>
+<div class="line">*volage = test_avrg;</div>
+<div class="ttc" id="agroup__aos__ulog_html_gac8083d8831aced1183f24d2778829c86"><div class="ttname"><a href="group__aos__ulog.html#gac8083d8831aced1183f24d2778829c86">LOGD</a></div><div class="ttdeci">#define LOGD(mod,...)</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00137">ulog.h:137</a></div></div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md1196"></a>
 返回电量等级</h4>
 <p>实际电压值为ADC*3.208，然后根据这个值返回不同的level，主要分为五档，分别是0，25，50 ，75，100。 </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (test_avrg &gt; 4100)</div>
 <div class="line">{</div>
@@ -191,28 +194,28 @@ ADC操作与电量获取</h2>
 <div class="line">    *level = 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> 看到代码很多人可能会有疑问，为什么4100毫伏到4200毫伏代表100，4100毫伏到3980毫伏代表75，并不是一个线性的值。其实原因很简单，锂电池的电池放电曲线不是一个线性的。</p>
-<h4><a class="anchor" id="autotoc_md1189"></a>
+<h4><a class="anchor" id="autotoc_md1197"></a>
 显示图标</h4>
-<p>显示不同单色电池图标代码如下： </p><div class="fragment"><div class="line">if (0 == get_battery(&amp;battery_level))</div>
+<p>显示不同单色电池图标代码如下： </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (0 == get_battery(&amp;battery_level))</div>
 <div class="line">{</div>
-<div class="line">  //printf(&quot;get_battery success %d\n&quot;, battery_level);</div>
+<div class="line">  <span class="comment">//printf(&quot;get_battery success %d\n&quot;, battery_level);</span></div>
 <div class="line">  OLED_Icon_Draw(110, 0, &amp;icon_battery_20_12[battery_level], 0);</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1190"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1198"></a>
 系统Wi-Fi以及网络对时</h2>
-<h3><a class="anchor" id="autotoc_md1191"></a>
+<h3><a class="anchor" id="autotoc_md1199"></a>
 背景介绍</h3>
-<h4><a class="anchor" id="autotoc_md1192"></a>
+<h4><a class="anchor" id="autotoc_md1200"></a>
 Wi-Fi</h4>
 <p>Wi-Fi这个名词想必大家都不陌生，就是联网的代名词。简单来说Wi-Fi(WirelessFidelity)是一种网络传输标准，与蓝牙技术一样，它同属于短距离无线技术。随着网络的应用普及，它给人们带来极大的方便，也因此得到了广泛应用，Wi-Fi让我们随时随地、的上网成为可能。 经常在路由器的包装中看到802.11b/g/n 2.4Ghz这类字样，那么这个是什么来的？这个是无线网络通信的标准，IEEE 802.11是现今无线局域网通用的标准，它是由电气和电子工程师协会（IEEE）所定义的。后面的这些后缀是协议迭代的版本号。</p>
-<h4><a class="anchor" id="autotoc_md1193"></a>
+<h4><a class="anchor" id="autotoc_md1201"></a>
 2.4GHz频段</h4>
 <ol type="1">
 <li>802.11b/g/n中桂东 Wi-Fi无线电可以在2.4 GHz频带中传输，共有14个可用信道，工作频率范围是2.402GHz - 2.483Ghz。中国可用13个信道（1-13）。每相邻的2个信道之间的频宽就是5Mhz。如果使用信道1，频宽为20Mhz,则信道2,3,4,5都被占用。</li>
 <li>每个信道的带宽为22MHz，不过有效带宽只有20MHz，为了减少相邻信道的干扰，两侧预留1MHz的带宽边界。</li>
 <li>只有三个频道（1、6和11）不共享频率空间。 </li>
 </ol>
-<h4><a class="anchor" id="autotoc_md1194"></a>
+<h4><a class="anchor" id="autotoc_md1202"></a>
 5GHz频段</h4>
 <ol type="1">
 <li>802.11a/n/ac中规定Wi-Fi无线电可以在5GHz频带中传输，共有25个可用信道。中心频率范围5.150GHz-5.850GMz，中国可以使用的信道有低信道36,40, 44, 48, 52, 56, 60, 64, 高信道149,153,157, 161, 165。信道之间没有重叠。</li>
@@ -220,28 +223,34 @@ Wi-Fi</h4>
 <ol type="1">
 <li>每个频宽为20MHz，如果使用信道149，当要用80Mhz时，则153,157,161都要被占用。</li>
 </ol>
-<h4><a class="anchor" id="autotoc_md1195"></a>
+<h4><a class="anchor" id="autotoc_md1203"></a>
 系统时钟获取（SNTP网络对时）</h4>
 <p>在界面左上角显示的就是当前的系统时间，HaaS EDU K1本身没有带RTC芯片，所以不能自动保存时间。 那么如何获取准确的时间呢？这里就需要用到SNTP协议，SNTP是基于NTP协议的。 </p>
-<h4><a class="anchor" id="autotoc_md1196"></a>
+<h4><a class="anchor" id="autotoc_md1204"></a>
 SNTP协议</h4>
 <p>简单网络时间协议（Simple Network Time Protocol），由NTP改编而来，主要用来同步因特网中的计算机时钟。在 RFC2030 中定义。 SNTP协议采用客户端/服务器的工作方式，可以采用单播（点对点）或者广播（一点对多点）模式操作。SNTP服务器通过接收GPS信号或自带的原子钟作为系统的时间基准。单播模式下，SNTP客户端能够通过定期访问SNTP服务器获得准确的时间信息，用于调整客户端自身所在系统的时间，达到同步时间的目的。广播模式下，SNTP服务器周期性地发送消息给指定的IP单播地址或者IP多播地址。SNTP客户端通过监听这些地址来获得时间信息。 </p>
-<h3><a class="anchor" id="autotoc_md1197"></a>
+<h3><a class="anchor" id="autotoc_md1205"></a>
 硬件设计</h3>
-<p>本实验所用到的Wi-Fi模块已经包含在MCU之中，不需要额外提供。 </p>
-<h3><a class="anchor" id="autotoc_md1198"></a>
+<p>本实验所用到的Wi-Fiy硬件模块已经包含在MCU之中，不需要额外提供。 </p>
+<h3><a class="anchor" id="autotoc_md1206"></a>
 软件设计</h3>
-<h4><a class="anchor" id="autotoc_md1199"></a>
+<h4><a class="anchor" id="autotoc_md1207"></a>
 Wi-Fi模块</h4>
-<p>AliOS Things中关于Wi-Fi部分已经封装到netmgr，edu_demo已经默认打开了初始化。 代码位于application/example/edu_demo/app_entry.c </p><div class="fragment"><div class="line">netmgr_init();</div>
-<div class="line">netmgr_start(true);</div>
-<div class="line">aos_register_event_filter(EV_WIFI, wifi_service_event, NULL);</div>
-</div><!-- fragment --><p> netmgr_init 开启了wifi_service相关的task。其中包含Wi-Fi硬件初始化，wifi_service模块的初始化。 netmgr_start 启动了Wi-Fi自动回连的task。 aos_register_event_filter(EV_WIFI, wifi_service_event, NULL);这里则是注册了wifi_event的回调函数。 </p>
-<h4><a class="anchor" id="autotoc_md1200"></a>
+<p>AliOS Things中关于Wi-Fi部分也已经封装成了netmgr组件，eduk1_demo的package.yaml已经默认包含。 </p><div class="fragment"><div class="line">depends:</div>
+<div class="line">  - netmgr: dev_aos</div>
+</div><!-- fragment --><p> 代码位于solutions/eduk1_demo/app_start.c </p><div class="fragment"><div class="line">event_service_init(NULL);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="group__netmgr__api.html#ga037f20bfbc422d247f25fa1b92824d8f">netmgr_service_init</a>(NULL);</div>
+<div class="line">event_subscribe(EVENT_NETMGR_DHCP_SUCCESS, wifi_event_cb, NULL);</div>
+<div class="ttc" id="agroup__netmgr__api_html_ga037f20bfbc422d247f25fa1b92824d8f"><div class="ttname"><a href="group__netmgr__api.html#ga037f20bfbc422d247f25fa1b92824d8f">netmgr_service_init</a></div><div class="ttdeci">int netmgr_service_init(utask_t *task)</div><div class="ttdoc">net manager init.</div></div>
+</div><!-- fragment --><p> event_service_init(NULL)， event_service 初始化。 netmgr_service_init netmgr服务初始化,主要包含CLI的注册，WIFi设备创建，相关信号量以及task的初始化，Wi-Fi硬件初始化等。 event_subscribe(EVENT_NETMGR_DHCP_SUCCESS, wifi_event_cb, NULL);这里则是注册了wifi_event的回调函数。 </p>
+<h4><a class="anchor" id="autotoc_md1208"></a>
 使用Wi-Fi</h4>
-<p>当前可以通过代码配置或者命令行的形式配置将WI-FI名称（SSID）以及密码配置到EDU中。 比如命令行 </p><div class="fragment"><div class="line">netmgr -t wifi -c haas-open 12345678</div>
-</div><!-- fragment --><p> 连接成功后，会自动保存到文件系统中。新的WIFI连接失败或者重新上电都会自动回连到该WIFI。</p>
-<h4><a class="anchor" id="autotoc_md1201"></a>
+<p>当前可以通过代码配置或者命令行的形式配置将WI-FI名称（SSID）以及密码配置到EDU中。</p>
+<p>填入SSID以及密码 </p><div class="fragment"><div class="line">netmgr -t wifi -c haas-open 12345678</div>
+</div><!-- fragment --><p>手动保存ssid和password到文件系统中。 </p><div class="fragment"><div class="line">netmgr -t wifi -b 1</div>
+</div><!-- fragment --><p>重启之后，手动重新连接。 </p><div class="fragment"><div class="line">netmgr -t wifi -a 1</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md1209"></a>
 网络对时（SNTP）</h4>
 <p>edu在连接网络之后，就会自动获取网络对时。并更新到本地时钟。</p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01T0ht7Z21GM6JjwbrD_!!6000000006957-2-tps-2702-222.png" alt="" style="zoom:50%;" class="inline"/> </div><p>此时如果需要获取系统时间，直接调用系统函数clock_gettime即可。 </p><div class="fragment"><div class="line">struct tm *info;</div>
@@ -259,7 +268,7 @@ Wi-Fi模块</h4>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:06 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:28 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
