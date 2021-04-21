@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('libc_stub.html',''); initResizable(); 
 <div class="title">libc_stub </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md519"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md550"></a>
 概述</h1>
 <p>libc_stub组件是对C库桩函数（stubs）的实现，用于AliOS Things与C库的对接。支持gcc(newlibc)、icc、armcc三种类型编译器的C库。 对接的功能包括：</p><ul>
 <li>内存申请释放：malloc/free/realloc/calloc</li>
@@ -62,12 +62,12 @@ $(document).ready(function(){initNavTree('libc_stub.html',''); initResizable(); 
 <li>输出printf</li>
 </ul>
 <p>该组件只对接C库相关接口，posix标准接口请参考posix组件；文件系统相关请参考vfs组件。</p>
-<h2><a class="anchor" id="autotoc_md520"></a>
+<h2><a class="anchor" id="autotoc_md551"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md521"></a>
+<h2><a class="anchor" id="autotoc_md552"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── newlib_stub.c # gcc newlibc库的重定向实现</div>
 <div class="line">├── compilers</div>
@@ -75,24 +75,24 @@ $(document).ready(function(){initNavTree('libc_stub.html',''); initResizable(); 
 <div class="line">│   ├── gcc       # gcc对接头文件修改</div>
 <div class="line">│   └── iar       # icc库的重定向实现</div>
 <div class="line">└── package.yaml  # 编译配置文件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md522"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md553"></a>
 依赖组件</h2>
 <ul>
 <li>osal_aos</li>
 <li>vfs</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md523"></a>
+<h1><a class="anchor" id="autotoc_md554"></a>
 常用配置</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md524"></a>
+<h1><a class="anchor" id="autotoc_md555"></a>
 API说明</h1>
 <p>参考标准C库接口即可。</p>
-<h1><a class="anchor" id="autotoc_md525"></a>
+<h1><a class="anchor" id="autotoc_md556"></a>
 使用示例</h1>
 <p>目前使用的gcc编译器都是使用的newlibc库，因此一般都要加上**libc_stub**组件。如果采用其他C库如musl库，则不需要添加。</p>
 <p>使用示例参考**example/libc_stub_example.c**，</p>
 <p>以运行helloworld_demo为例，添加运行组件的具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md526"></a>
+<h2><a class="anchor" id="autotoc_md557"></a>
 添加示例代码</h2>
 <blockquote class="doxtable">
 <p>libc_stub组件的package.yaml中添加example </p>
@@ -101,14 +101,14 @@ API说明</h1>
 <div class="line">  - &quot;example/*.c&quot;</div>
 </div><!-- fragment --><p> 由于libc_stub_example.c中要测试open文件系统相关接口，因此需要依赖文件系统，本示例以通用的ramfs为例，增加ramfs组件 </p><div class="fragment"><div class="line">depends:</div>
 <div class="line">  - ramfs：master</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md527"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md558"></a>
 添加libc_stub组件</h2>
 <blockquote class="doxtable">
 <p>helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - libc_stub: master # helloworld_demo中引入libc_stub组件</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md528"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md559"></a>
 编译与下载</h2>
 <p>开发环境的搭建请参考 HaaS100_Quick_Start (搭建开发环境章节)，其中详细的介绍了AliOS Things 3.3的IDE集成开发环境的搭建流程。</p>
 <p>helloworld_demo与libc_stub组件的代码下载请参考 HaaS100_Quick_Start (创建工程章节)，</p>
@@ -116,13 +116,13 @@ API说明</h1>
 <p>*&gt; 选择开发板: Haas100 board configure*</p>
 <p>&ndash; 参考 HaaS100_Quick_Start (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。</p>
 <p>&ndash; 参考 HaaS100_Quick_Start (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
-<h2><a class="anchor" id="autotoc_md529"></a>
+<h2><a class="anchor" id="autotoc_md560"></a>
 libc_stub示例测试</h2>
 <blockquote class="doxtable">
 <p>CLI命令行输入： </p>
 </blockquote>
 <div class="fragment"><div class="line">libc_example</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md530"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md561"></a>
 关键日志</h2>
 <blockquote class="doxtable">
 <p>CLI日志： </p>
@@ -130,10 +130,10 @@ libc_stub示例测试</h2>
 <div class="fragment"><div class="line">libc_stub: malloc OK!</div>
 <div class="line">libc_stub: ramfs test success!</div>
 <div class="line">libc_stub comp test success!</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md531"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md562"></a>
 注意事项</h1>
 <p>该模块只对接内核启动相关必要的接口，其他posix标准接口请参考posix组件；文件系统相关请参考vfs组件。</p>
-<h1><a class="anchor" id="autotoc_md532"></a>
+<h1><a class="anchor" id="autotoc_md563"></a>
 FAQ</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -141,7 +141,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:03 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:03 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

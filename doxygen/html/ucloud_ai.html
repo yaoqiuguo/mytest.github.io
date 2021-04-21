@@ -54,15 +54,15 @@ $(document).ready(function(){initNavTree('ucloud_ai.html',''); initResizable(); 
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><b><a href="https://gitee.com/alios-things/ucloud_ai/edit/rel_3.3.0/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></b></p>
-<h1><a class="anchor" id="autotoc_md809"></a>
+<h1><a class="anchor" id="autotoc_md851"></a>
 概述</h1>
 <p>ucloud ai是基于alicloud OpenAPI实现的云端AI推理引擎，对接的阿里云视觉智能开放平台AI能力，目前支持15种AI模型：人脸识别、表情识别、人物动漫化、物体检测、主体检测、通用分割、人脸分割、身份证识别、银行卡识别、文字识别、垃圾分类、水果识别、图像人体擦除、风格迁移，未来将加入更多AI能力。</p>
-<h2><a class="anchor" id="autotoc_md810"></a>
+<h2><a class="anchor" id="autotoc_md852"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md811"></a>
+<h2><a class="anchor" id="autotoc_md853"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── include</div>
 <div class="line">│   ├── model</div>
@@ -102,12 +102,12 @@ $(document).ready(function(){initNavTree('ucloud_ai.html',''); initResizable(); 
 <div class="line">└── example</div>
 <div class="line">      ├── image                      # 测试用例中使用到的图片资源文件</div>
 <div class="line">      └── ucloud_ai_example.c        # 测试用例</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md812"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md854"></a>
 依赖组件</h2>
 <ul>
 <li>http</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md813"></a>
+<h1><a class="anchor" id="autotoc_md855"></a>
 常用配置</h1>
 <div class="fragment"><div class="line">def_config:                              # 组件的可配置项</div>
 <div class="line">  CONFIG_ALICLOUD_FACEBODY_ENABLE: 1</div>
@@ -120,21 +120,21 @@ $(document).ready(function(){initNavTree('ucloud_ai.html',''); initResizable(); 
 </div><!-- fragment --> <blockquote class="doxtable">
 <p>配置支持的云端AI模型 </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md814"></a>
+<h1><a class="anchor" id="autotoc_md856"></a>
 API说明</h1>
 <ul>
 <li>参考 <a href="https://g.alicdn.com/alios-things-3.3/doc/group__ucloud__ai__aos__api.html">ucloud_ai_aos_api</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md815"></a>
+<h1><a class="anchor" id="autotoc_md857"></a>
 使用示例</h1>
 <p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
-<h2><a class="anchor" id="autotoc_md816"></a>
+<h2><a class="anchor" id="autotoc_md858"></a>
 步骤1 创建或打开工程</h2>
 <p><b>打开已有工程</b></p>
 <p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
 <p><b>创建新的工程</b></p>
 <p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
-<h2><a class="anchor" id="autotoc_md817"></a>
+<h2><a class="anchor" id="autotoc_md859"></a>
 步骤2 添加组件</h2>
 <p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
@@ -144,12 +144,12 @@ API说明</h1>
 <div class="line"> </div>
 <div class="line">def_config:</div>
 <div class="line">    CLI_IOBOX_ENABLE: 1        # 可选：使能文件系统测试命令，例如ls, ll, mkdir, touch, echo等</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md818"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md860"></a>
 步骤3 下载组件</h2>
 <p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
 <div class="fragment"><div class="line">aos install ucloud_ai</div>
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/ucloud_ai路径中。</p>
-<h2><a class="anchor" id="autotoc_md819"></a>
+<h2><a class="anchor" id="autotoc_md861"></a>
 步骤4 添加示例</h2>
 <p>在ucloud_ai组件的package.yaml中添加<a href="https://gitee.com/alios-things/ucloud_ai/tree/rel_3.3.0/example">example示例代码</a>：</p>
 <div class="fragment"><div class="line">source_file:</div>
@@ -157,7 +157,7 @@ API说明</h1>
 <div class="line"> </div>
 <div class="line">build_config:</div>
 <div class="line"> prebuild_script: cp_resources.py  #编译时cp_resources.py会对资源文件进行拷贝，系统自动打包资源文件到littlefs文件系统中</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md820"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md862"></a>
 云端功能开通</h3>
 <ol type="1">
 <li>如没有阿里云账号，请登陆<a href="http://www.aliyun.com">阿里云官网</a>开通。</li>
@@ -170,7 +170,7 @@ API说明</h1>
 <div class="line">c. Bucket名称全小写</div>
 </div><!-- fragment --> </li>
 </ol>
-<h3><a class="anchor" id="autotoc_md821"></a>
+<h3><a class="anchor" id="autotoc_md863"></a>
 配置OSS信息</h3>
 <p>在components/ucloud_ai/package.yaml中替换你的OSS信息</p>
 <div class="fragment"><div class="line">OSS_ACCESS_KEY: &quot;Your-Access-Key&quot;</div>
@@ -180,35 +180,35 @@ API说明</h1>
 <div class="line"> </div>
 <div class="line">OSS_ACCESS_KEY以及OSS_ACCESS_SECRET获取链接: https://usercenter.console.aliyun.com/#/accesskey</div>
 <div class="line">ENDPOINT默认使用“oss-cn-shanghai-internal.aliyuncs.com”，BUCKET请使用你创建好的Bucket名称。</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md822"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md864"></a>
 步骤5 编译固件</h2>
 <p>在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
-<h2><a class="anchor" id="autotoc_md823"></a>
+<h2><a class="anchor" id="autotoc_md865"></a>
 步骤6 烧录固件</h2>
-<h3><a class="anchor" id="autotoc_md824"></a>
+<h3><a class="anchor" id="autotoc_md866"></a>
 文件系统烧录</h3>
 <p>本组件例子中使用到到图片存放在代码中hardware/chip/haas1000/prebuild/data/目录下ucloud_ai_image目录，除烧录helloworld_demo image外，需烧录littlefs文件系统，请将hardware/chip/haas1000/package.yaml文件中以下代码段的注释打开：</p>
 <div class="fragment"><div class="line">program_data_files:</div>
 <div class="line">  - filename: release/write_flash_tool/ota_bin/littlefs.bin</div>
 <div class="line">    address: 0xB32000</div>
 </div><!-- fragment --><p>上述步骤执行后，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_image.html">《aos-studio使用说明之烧录固件》</a>来烧录固件。</p>
-<h2><a class="anchor" id="autotoc_md825"></a>
+<h2><a class="anchor" id="autotoc_md867"></a>
 步骤7 打开串口</h2>
 <p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="_haa_s100__quick__start.html">《aos-studio使用说明之查看日志》</a>。</p>
 <p>当串口终端打开成功后，可在串口中输入help来查看已添加的测试命令。</p>
-<h2><a class="anchor" id="autotoc_md826"></a>
+<h2><a class="anchor" id="autotoc_md868"></a>
 步骤8 测试示例</h2>
 <p>测试步骤： </p><div class="fragment"><div class="line">$ ucloud_ai init # 初始化ucloud_ai组件</div>
 <div class="line">$ netmgr -t wifi -c {ssid} {password}  # 请将ssid修改为您路由器的WiFi名称，paasword填入路由器的WiFi密码</div>
 <div class="line">$ ucloud_ai -m {0 ~ 14} # 测试AI用例</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md827"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md869"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai init # 在执行下面的测试命令前，该命令需要优先执行，仅需执行一次即可</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">ucloud_ai comp init successfully!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md828"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md870"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 0  # 人脸比对</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -219,14 +219,14 @@ CLI命令行输入：</h3>
 <div class="line">y:76</div>
 <div class="line">w:143</div>
 <div class="line">h194</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md829"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md871"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 1  # 人物动漫化</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">image url:http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/person-image-cartoonizer/5BE7565D-59CE-43EE-8169-09ED2821CE21_b301_20210331-093707.jpg?Expires=1617185228&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=8zhYdqxKgz9eDz970l1BXmpPAiQ%3D</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md830"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md872"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 2  # 表情识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -237,7 +237,7 @@ CLI命令行输入：</h3>
 <div class="line">y:873405208</div>
 <div class="line">w:4</div>
 <div class="line">h:872835304</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md831"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md873"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 3  # 目标检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -282,7 +282,7 @@ CLI命令行输入：</h3>
 <div class="line">object boxes.y:479</div>
 <div class="line">object boxes.w:750</div>
 <div class="line">object boxes.h:528</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md832"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md874"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 4  # 主体检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -292,7 +292,7 @@ CLI命令行输入：</h3>
 <div class="line">object y:177</div>
 <div class="line">object width:661</div>
 <div class="line">object height:209</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md833"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md875"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 5  # 通用分割</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -303,14 +303,14 @@ CLI命令行输入：</h3>
 <div class="line">0height: 209</div>
 <div class="line">0x: 153</div>
 <div class="line">0y: 66</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md834"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md876"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 6  # 面部分割</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">image url: http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_humansegmenter/2021-3-31/invi_humansegmenter_016171860047301086642_0V057V.jpg?Expires=1617187804&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=TiqmpoQqCon9KHPXEF8W6sf2vuY%3D</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md835"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md877"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 7  # 身份证正面识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -342,7 +342,7 @@ CLI命令行输入：</h3>
 <div class="line">3cardAreas.y: 460</div>
 <div class="line">3faceRectVertices.x: 713.895</div>
 <div class="line">3faceRectVertices.y: 194.52</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md836"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md878"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 8  # 身份证反面识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -351,7 +351,7 @@ CLI命令行输入：</h3>
 <div class="fragment"><div class="line">startDate: 20131010</div>
 <div class="line">issue: 杭州市公安局余杭分局</div>
 <div class="line">endDate: 20231010</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md837"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md879"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 9  # 银行卡识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -360,7 +360,7 @@ CLI命令行输入：</h3>
 <div class="fragment"><div class="line">bankName: 中国工商银行</div>
 <div class="line">cardNumber: 6212262315007683105</div>
 <div class="line">validDate: 07/26</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md838"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md880"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 10  # 文本识别</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -416,7 +416,7 @@ CLI命令行输入：</h3>
 <div class="line">6text top: 261</div>
 <div class="line">6text height: 18</div>
 <div class="line">6text: width:104</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md839"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md881"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 11  # 垃圾分类</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -427,7 +427,7 @@ CLI命令行输入：</h3>
 <div class="line">0category: 可回收垃圾</div>
 <div class="line">0categoryScore: 1</div>
 <div class="line">0rubbishScore: 1</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md840"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md882"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 12  # 水果检测</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -439,14 +439,14 @@ CLI命令行输入：</h3>
 <div class="line">box.ymin: 44.830513000488281</div>
 <div class="line">box.xmax: 723.5120849609375</div>
 <div class="line">box.ymax: 482.88070678710938</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md841"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md883"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 13  # 图像人体擦除</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
 <div class="fragment"><div class="line">imageUrl: http://algo-app-isr-lab-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/remove-person/2021-03-31_10%3A20%3A46.011134_person_org.jpg?Expires=1617187846&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=OwLEg5pWNVDwXrvAbGsUU7q5Dbs%3D</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md842"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md884"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucloud_ai -m 14  # 风格迁移</div>
 </div><!-- fragment --><blockquote class="doxtable">
@@ -454,10 +454,10 @@ CLI命令行输入：</h3>
 </blockquote>
 <div class="fragment"><div class="line">outMajorURL:</div>
 <div class="line">outImageURL: http://viapi-cn-shanghai-dha-filter.oss-cn-shanghai.aliyuncs.com/upload/result_/2021-3-31/invi__016171860565631021659_XIqH26.jpg?Expires=1617187856&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRpDvh1&amp;Signature=tqJqHHoPSvga6LyET31TZsvOXFs%3D</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md843"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md885"></a>
 注意事项</h1>
 <p>使用过程中如果想要验证自己的图片是否可以正常识别可通过http://vision.aliyun.com进入能力中心中对应的体验页面进行验证。</p>
-<h1><a class="anchor" id="autotoc_md844"></a>
+<h1><a class="anchor" id="autotoc_md886"></a>
 FAQ</h1>
 <p>如果遇到： </p><blockquote class="doxtable">
 <p>error code: InvalidAction.NotFound </p>
@@ -483,7 +483,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:05 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:05 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

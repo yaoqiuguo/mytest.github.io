@@ -54,7 +54,7 @@ $(document).ready(function(){initNavTree('timer.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><b><a href="https://gitee.com/alios-things/timer/edit/rel_3.3.0/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></b></p>
-<h1><a class="anchor" id="autotoc_md1572"></a>
+<h1><a class="anchor" id="autotoc_md1624"></a>
 概述</h1>
 <p>Timer，即通用硬件定时器。 该组件是Timer VFS驱动子系统，给应用或组件提供通过VFS形式（open/close/ioctl）访问硬件Timer驱动对上层提供服务的接口。该组件初始化过程中，会根据hardware/chip/&lt;chip_name&gt;/package.yaml中定义的CONFIG_TIMER_NUM来依此创建如下名称的设备节点：</p><ul>
 <li>/dev/timer0</li>
@@ -67,12 +67,12 @@ $(document).ready(function(){initNavTree('timer.html',''); initResizable(); });
 <li>设置中断回调函数</li>
 <li>启动/停止定时器</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md1573"></a>
+<h2><a class="anchor" id="autotoc_md1625"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md1574"></a>
+<h2><a class="anchor" id="autotoc_md1626"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">.</div>
 <div class="line">├── example</div>
@@ -87,22 +87,22 @@ $(document).ready(function(){initNavTree('timer.html',''); initResizable(); });
 <div class="line">├── README.md             #使用文档</div>
 <div class="line">└── src</div>
 <div class="line">    └── timer_dev.c       #Timer设备实现代码</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1575"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1627"></a>
 依赖组件</h2>
 <ul>
 <li>base # 最底层核心驱动模型、驱动自动加载机制以及Device VFS core</li>
 <li>vfs # VFS API抽象库</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1576"></a>
+<h1><a class="anchor" id="autotoc_md1628"></a>
 常用配置</h1>
 <p>本组件可以通过CONFIG_TIMER_NUM配置对上层提供设备节点的数量，CONFIG_TIMER_NUM代表芯片内部的硬件定时器控制器的数量。 CONFIG_TIMER_NUM默认是在hardware/chip/&lt;chip_name&gt;/package.yaml中的**define**节点进行配置。 如果没有定义CONFIG_TIMER_NUM，则代码中会定义默认对外输出的设备节点数量。 </p><blockquote class="doxtable">
 <p>设备节点数量: 默认4个, 如需修改，在hardware/chip/&lt;chip_name&gt;/package.yaml中修改CONFIG_TIMER_NUM配置 </p>
 </blockquote>
 <div class="fragment"><div class="line">define:</div>
 <div class="line">  CONFIG_TIMER_NUM: 1</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1577"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1629"></a>
 API说明</h1>
-<h2><a class="anchor" id="autotoc_md1578"></a>
+<h2><a class="anchor" id="autotoc_md1630"></a>
 打开设备节点</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> open(<span class="keyword">const</span> <span class="keywordtype">char</span> *pathname, <span class="keywordtype">int</span> flags);</div>
 </div><!-- fragment --><table class="markdownTable">
@@ -114,11 +114,11 @@ API说明</h1>
 <td class="markdownTableBodyLeft">flags   </td><td class="markdownTableBodyLeft">目前固定为0值   </td></tr>
 </table>
 <p>兼容POSIX标准的open接口。其中参数*pathname*为*/dev/timer*加硬件定时器外设id，例如*/dev/timer0*。</p>
-<h2><a class="anchor" id="autotoc_md1579"></a>
+<h2><a class="anchor" id="autotoc_md1631"></a>
 关闭设备节点</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> close(<span class="keywordtype">int</span> fd);</div>
 </div><!-- fragment --><p> 兼容POSIX标准的close接口。</p>
-<h2><a class="anchor" id="autotoc_md1580"></a>
+<h2><a class="anchor" id="autotoc_md1632"></a>
 设置定时器参数</h2>
 <p>在需要设定硬件定时器的定时及超时处理函数的时候呼叫此API </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> ioctl(<span class="keywordtype">int</span> fd, IOC_TIMER_IRQP_SET, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> arg);</div>
 <div class="line"><span class="comment">// arg为指向timer_alarm_t结构体的指针</span></div>
@@ -129,14 +129,14 @@ API说明</h1>
 <div class="line">alarm.period = 500000;        <span class="comment">// 单位:ms</span></div>
 <div class="line">alarm.auto_reload = <span class="keyword">true</span>;     <span class="comment">// 开启自动重新加载硬件定时器功能</span></div>
 <div class="line">ioctl (fd, IOC_TIMER_IRQP_SET, &amp;ralarm);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1581"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1633"></a>
 获取定时器当前设定参数</h2>
 <p>在需要获取硬件定时器的当前的定时参数的时候呼叫此API </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> ioctl(<span class="keywordtype">int</span> fd, IOC_TIMER_IRQP_GET, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> arg);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// 示例代码</span></div>
 <div class="line">timer_alarm_t ralarm;</div>
 <div class="line">ioctl (fd, IOC_TIMER_IRQP_GET, &amp;alarm);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1582"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1634"></a>
 开启/停止定时器</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> ioctl(<span class="keywordtype">int</span> fd, IOC_TIMER_CONTROL, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> arg);</div>
 <div class="line"> </div>
@@ -144,7 +144,7 @@ API说明</h1>
 <div class="line">ioctl (fd, IOC_TIMER_CONTROL, IO_TIMER_START)</div>
 <div class="line"><span class="comment">// arg为IO_TIMER_STOP代表停止定时器</span></div>
 <div class="line">ioctl (fd, IOC_TIMER_CONTROL, IO_TIMER_STOP)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1583"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1635"></a>
 控制定时器是否自动重新加载</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> ioctl(<span class="keywordtype">int</span> fd, IOC_TIMER_RELOAD, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> arg);</div>
 <div class="line"> </div>
@@ -152,40 +152,40 @@ API说明</h1>
 <div class="line">ioctl (fd, IOC_TIMER_RELOAD, <span class="keyword">true</span>)</div>
 <div class="line"><span class="comment">// arg为false代表停止自动重载定时器功能, 示例代码：</span></div>
 <div class="line">ioctl (fd, IOC_TIMER_RELOAD, false)</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1584"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1636"></a>
 使用示例</h1>
 <p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
-<h2><a class="anchor" id="autotoc_md1585"></a>
+<h2><a class="anchor" id="autotoc_md1637"></a>
 步骤1 创建或打开工程</h2>
 <p><b>打开已有工程</b></p>
 <p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
 <p><b>创建新的工程</b></p>
 <p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
-<h2><a class="anchor" id="autotoc_md1586"></a>
+<h2><a class="anchor" id="autotoc_md1638"></a>
 步骤2 添加组件</h2>
 <p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖： </p><div class="fragment"><div class="line">depends:</div>
 <div class="line">  - timer: dev_aos # helloworld_demo中引入timer组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1587"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1639"></a>
 步骤3 下载组件</h2>
 <p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
 <div class="fragment"><div class="line">aos install timer</div>
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/drivers/peripheral/timer路径中。</p>
-<h2><a class="anchor" id="autotoc_md1588"></a>
+<h2><a class="anchor" id="autotoc_md1640"></a>
 步骤4 添加示例</h2>
 <p>在timer组件的package.yaml中添加<a href="https://gitee.com/alios-things/timer/tree/rel_3.3.0/example">example示例代码</a>： </p><div class="fragment"><div class="line">source_file:</div>
 <div class="line">  原有其他文件</div>
 <div class="line">  - example/timer_example.c # add timer_example.c</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1589"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1641"></a>
 步骤5 编译固件</h2>
 <p>在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
-<h2><a class="anchor" id="autotoc_md1590"></a>
+<h2><a class="anchor" id="autotoc_md1642"></a>
 步骤6 烧录固件</h2>
 <p>helloworld_demo案例的固件生成后，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/burn_image.html">《aos-studio使用说明之烧录固件》</a>来烧录固件。</p>
-<h2><a class="anchor" id="autotoc_md1591"></a>
+<h2><a class="anchor" id="autotoc_md1643"></a>
 步骤7 打开串口</h2>
 <p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/view_log.html">《aos-studio使用说明之查看日志》</a>。</p>
 <p>当串口终端打开成功后，可在串口中输入help来查看已添加的测试命令。</p>
-<h2><a class="anchor" id="autotoc_md1592"></a>
+<h2><a class="anchor" id="autotoc_md1644"></a>
 步骤8 测试示例</h2>
 <p><b>CLI命令行输入：</b> </p><div class="fragment"><div class="line">timer_example id</div>
 </div><!-- fragment --><p> 其中id取值范围：[0, CONFIG_TIMER_NUM)</p>
@@ -193,10 +193,10 @@ API说明</h1>
 <p>关键日志 </p>
 </blockquote>
 <div class="fragment"><div class="line">vfs timer test success, ret:0</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1593"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1645"></a>
 注意事项</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md1594"></a>
+<h1><a class="anchor" id="autotoc_md1646"></a>
 FAQ</h1>
 <p>无 </p>
 </div></div><!-- contents -->
@@ -205,7 +205,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:10 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:09 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

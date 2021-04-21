@@ -53,37 +53,37 @@ $(document).ready(function(){initNavTree('greedy_snake.html',''); initResizable(
 <div class="title">贪吃蛇 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1072"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1117"></a>
 实验介绍</h1>
 <p>**贪吃蛇**是一个起源于1976年的街机游戏 Blockade。此类游戏在1990年代由于一些具有小型屏幕的移动电话的引入而再度流行起来，在现在的手机上基本都可安装此小游戏。版本亦有所不同。 在游戏中，玩家操控一条细长的蛇，它会不停前进，玩家只能操控蛇的头部朝向（上下左右），一路拾起触碰到食物，并要避免触碰到自身或者其他障碍物。每次贪吃蛇吃掉一件食物，它的身体便增长一些。</p>
-<div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01I9rGrL1cdq0ojzFbz_!!6000000003624-1-tps-1200-800.gif" alt="" style="zoom:50%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md1073"></a>
+<div align="center"> <img src="https://img.alicdn.com/imgextra/i4/O1CN01I9rGrL1cdq0ojzFbz_!!6000000003624-1-tps-1200-800.gif" alt="" style="zoom:50%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md1118"></a>
 涉及知识点</h1>
 <p>OLED绘图 按键事件</p>
-<h1><a class="anchor" id="autotoc_md1074"></a>
+<h1><a class="anchor" id="autotoc_md1119"></a>
 开发环境准备</h1>
-<h2><a class="anchor" id="autotoc_md1075"></a>
+<h2><a class="anchor" id="autotoc_md1120"></a>
 硬件</h2>
 <p>开发用电脑一台 HAAS EDU K1 开发板一块 USB2TypeC 数据线一根</p>
-<h2><a class="anchor" id="autotoc_md1076"></a>
+<h2><a class="anchor" id="autotoc_md1121"></a>
 软件</h2>
-<h3><a class="anchor" id="autotoc_md1077"></a>
+<h3><a class="anchor" id="autotoc_md1122"></a>
 AliOS Things开发环境搭建</h3>
 <p>开发环境的搭建请参考 HaaS_EDU_K1_Quick_Start (搭建开发环境章节)，其中详细的介绍了AliOS Things 3.3的IDE集成开发环境的搭建流程。</p>
-<h3><a class="anchor" id="autotoc_md1078"></a>
+<h3><a class="anchor" id="autotoc_md1123"></a>
 HaaS EDU K1 DEMO 代码下载</h3>
 <p>HaaS EDU K1 DEMO 的代码下载请参考 HaaS_EDU_K1_Quick_Start (创建工程章节)，其中， 选择解决方案: 基于教育开发板的示例 选择开发板: haaseduk1 board configure</p>
-<h3><a class="anchor" id="autotoc_md1079"></a>
+<h3><a class="anchor" id="autotoc_md1124"></a>
 代码编译、烧录</h3>
 <p>参考 HaaS_EDU_K1_Quick_Start (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。 参考 HaaS_EDU_K1_Quick_Start (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
-<h1><a class="anchor" id="autotoc_md1080"></a>
+<h1><a class="anchor" id="autotoc_md1125"></a>
 设计思路</h1>
-<h2><a class="anchor" id="autotoc_md1081"></a>
+<h2><a class="anchor" id="autotoc_md1126"></a>
 游戏空间映射到逻辑空间</h2>
 <p>当玩家在体验游戏时，他们能操作的都是游戏空间，包括按键的上下左右，对象物体的运动等等。对于开发者而言，我们需要将这些设想的游戏空间映射到逻辑空间中，做好对用户输入的判断，对象运动的处理，对象间交互的判定，游戏整体进程的把控，以及最终将逻辑空间再次映射回游戏空间，返回给玩家。 </p>
-<h2><a class="anchor" id="autotoc_md1082"></a>
+<h2><a class="anchor" id="autotoc_md1127"></a>
 对象定义</h2>
 <p>这一步是将游戏空间中涉及到的对象抽象化。在C语言的实现中，我们将对象抽象为结构体，对象属性抽象为结构体的成员。 </p>
-<h3><a class="anchor" id="autotoc_md1083"></a>
+<h3><a class="anchor" id="autotoc_md1128"></a>
 蛇</h3>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
 <div class="line">{</div>
@@ -93,7 +93,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">    uint8_t cur_dir;    <span class="comment">// 蛇头的运行方向</span></div>
 <div class="line">    uint8_t alive;              <span class="comment">// 存活状态</span></div>
 <div class="line">} Snake;</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1084"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1129"></a>
 食物</h3>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
 <div class="line">{</div>
@@ -101,7 +101,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">    int16_t y;                  <span class="comment">// 食物逻辑坐标</span></div>
 <div class="line">    uint8_t eaten;              <span class="comment">// 食物是否被吃掉 </span></div>
 <div class="line">} Food;</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1085"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1130"></a>
 地图</h3>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
 <div class="line">{</div>
@@ -111,7 +111,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">    int16_t border_left;        <span class="comment">// 边界像素坐标</span></div>
 <div class="line">    int16_t block_size;         <span class="comment">// 网格大小 在本实验的实现中 蛇身和食物的大小被统一约束进网格的大小中</span></div>
 <div class="line">} Map;</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1086"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1131"></a>
 游戏</h3>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
 <div class="line">{</div>
@@ -120,7 +120,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">    int16_t pos_y_max;          <span class="comment">// 逻辑最大y坐标      pos_y_max = (map.border_botton - map.border_top) / map.block_size;</span></div>
 <div class="line">} snake_game_t;</div>
 </div><!-- fragment --><p> 通过Map和snake_game_t的定义，我们将屏幕的 (border_left, border_top, border_bottom, border_right) 部分设定为游戏区域，并且将其切分为 pos_x_max* pos_y_max 个大小为 block_size 的块。继而，我们可以在每个块中绘制蛇、食物等对象。 </p>
-<h2><a class="anchor" id="autotoc_md1087"></a>
+<h2><a class="anchor" id="autotoc_md1132"></a>
 对象初始化</h2>
 <p>在游戏每一次开始时，我们需要给对象一些初始的属性，例如蛇的长度、位置、存活状态，食物的位置、状态， 地图的边界、块大小等等。 </p><div class="fragment"><div class="line">Food food = {-1, -1, 1};</div>
 <div class="line">Snake snake = {4, NULL, NULL, 0, 1};</div>
@@ -187,10 +187,10 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1088"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1133"></a>
 对象绘画</h2>
 <p>这一步其实是将逻辑空间重新映射到游戏空间，理应是整个游戏逻辑的最后一步，但是在我们开发过程中，也需要来自游戏空间的反馈，来验证我们的实现是否符合预期。因此我们在这里提前实现它。 </p>
-<h3><a class="anchor" id="autotoc_md1089"></a>
+<h3><a class="anchor" id="autotoc_md1134"></a>
 蛇</h3>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i3/O1CN01PLODHI1CWnv7gzRRc_!!6000000000089-2-tps-682-137.png" alt="" style="zoom:50%;" class="inline"/> </div><div class="fragment"><div class="line"><span class="keyword">static</span> uint8_t icon_data_snake1_4_4[] = {0x0f, 0x0f, 0x0f, 0x0f};       <span class="comment">// 纯色方块</span></div>
 <div class="line"><span class="keyword">static</span> icon_t icon_snake1_4_4 = {icon_data_snake1_4_4, 4, 4, NULL};</div>
@@ -225,7 +225,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">        0</div>
 <div class="line">    );  <span class="comment">// 蛇头一定使用纯色方块</span></div>
 <div class="line">}</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1090"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1135"></a>
 食物</h3>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01nNY7wm1TIvNus5RHz_!!6000000002360-2-tps-137-137.png" alt="" style="zoom:50%;" class="inline"/> </div><div class="fragment"><div class="line"><span class="keyword">static</span> uint8_t icon_data_food_4_4[] = {0x06, 0x09, 0x09, 0x06};</div>
 <div class="line"><span class="keyword">static</span> icon_t icon_food_4_4 = {icon_data_food_4_4, 4, 4, NULL};</div>
@@ -241,9 +241,9 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">            0);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1091"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1136"></a>
 对象行为</h2>
-<h3><a class="anchor" id="autotoc_md1092"></a>
+<h3><a class="anchor" id="autotoc_md1137"></a>
 蛇的运动</h3>
 <p>在贪吃蛇中，对象蛇发生运动，有两种情况，一是在用户无操作的情况下，蛇按照目前的方向继续运动，而是用户按键触发蛇的运动。总而言之，都是蛇的运动，只是运动的方向不同，所以我们可以将蛇的行为抽象为 void Snake_Run(uint8_t dir)。 这里以向上走为例。</p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i2/O1CN01l6K3Ls292AlGKKn17_!!6000000008009-1-tps-3288-1188.gif" alt="" style="zoom:25%;" class="inline"/> </div><div class="fragment"><div class="line"><span class="keywordtype">void</span> Snake_Run(uint8_t dir)</div>
@@ -287,7 +287,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">    draw_snake();</div>
 <div class="line">    draw_food();</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1093"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1138"></a>
 死亡判定</h3>
 <p>在蛇每次运动的过程中，都涉及到对整个游戏新的更新，包括上述过程中出现的 check_snake_alive check_food_eaten 等。 对于 check_snake_alive， 分为两种情况：蛇碰到地图边界/蛇吃到自己。 </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> check_snake_alive()</div>
 <div class="line">{</div>
@@ -310,7 +310,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1094"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md1139"></a>
 吃食判定</h3>
 <p>在贪吃蛇中，食物除了被吃的份，还有就是随机生成。生成食物在上一节已经实现，因此这一节我们就来实现检测食物是否被吃。 </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> check_food_eaten()</div>
 <div class="line">{</div>
@@ -330,7 +330,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">        gen_food();</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1095"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1140"></a>
 绑定用户操作</h2>
 <p>在贪吃蛇中，唯一的用户操作就是用户按键触发蛇的运动。好在我们已经对这个功能实现了良好的封装，即void Snake_Run(uint8_t dir) 我们只需要在按键回调函数中，接收来自底层上报的key_code即可。 </p><div class="fragment"><div class="line"><span class="preprocessor">#define SNAKE_UP        EDK_KEY_2</span></div>
 <div class="line"><span class="preprocessor">#define SNAKE_LEFT      EDK_KEY_1</span></div>
@@ -341,7 +341,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">{</div>
 <div class="line">    Snake_Run(key_code);</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1096"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1141"></a>
 游戏全局控制</h2>
 <p>在这个主循环里，我们需要对游戏整体进行刷新、绘图，对玩家的输赢、得分进行判定，并提示玩家游戏结果。 </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> greedySnake_task(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
@@ -378,7 +378,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__aos__kernel__time_html_ga198267174bf34247bca2163293c20d5c"><div class="ttname"><a href="group__aos__kernel__time.html#ga198267174bf34247bca2163293c20d5c">aos_msleep</a></div><div class="ttdeci">void aos_msleep(uint32_t ms)</div></div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1097"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1142"></a>
 实现效果</h2>
 <p>接下来请欣赏笔者的操作。</p>
 <div align="center"> <img src="https://img.alicdn.com/imgextra/i1/O1CN01pMnXKQ1eoUSHcZoof_!!6000000003918-1-tps-1200-800.gif" alt="" style="zoom:50%;" class="inline"/> </div> </div></div><!-- contents -->
@@ -387,7 +387,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:07 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:06 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

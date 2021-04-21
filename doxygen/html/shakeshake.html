@@ -53,37 +53,37 @@ $(document).ready(function(){initNavTree('shakeshake.html',''); initResizable();
 <div class="title">分歧争端机 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1225"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1270"></a>
 实验介绍</h1>
 <p>分歧争端机使用的场景是当出现分歧时，分别摇一摇HaaS EDU K1来摇出一个0到100之间的数字，通过比较谁摇出的数字大来解决分歧的一种方法。本质是通过摇一摇这个动作来随机产生一个数字。这个实验的核心如何通过加速度传感器来检测到摇一摇这个动作，并随机生成一个数字。</p>
 <p><b>显示效果</b></p>
-<div align="center"> <img src="https://img.alicdn.com/imgextra/i2/O1CN019OP4kF22I19ZudgVF_!!6000000007096-1-tps-1200-800.gif" alt="" style="zoom:50%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md1226"></a>
+<div align="center"> <img src="https://img.alicdn.com/imgextra/i2/O1CN019OP4kF22I19ZudgVF_!!6000000007096-1-tps-1200-800.gif" alt="" style="zoom:50%;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md1271"></a>
 涉及知识点</h1>
 <ul>
 <li>三轴加速度传感器的原理和使用</li>
 <li>随机数生成的方法</li>
 <li>OLED绘图</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1227"></a>
+<h1><a class="anchor" id="autotoc_md1272"></a>
 开发环境准备</h1>
-<h2><a class="anchor" id="autotoc_md1228"></a>
+<h2><a class="anchor" id="autotoc_md1273"></a>
 硬件</h2>
 <p>开发用电脑一台 HAAS EDU K1 开发板一块 USB2TypeC 数据线一根</p>
-<h2><a class="anchor" id="autotoc_md1229"></a>
+<h2><a class="anchor" id="autotoc_md1274"></a>
 软件</h2>
-<h3><a class="anchor" id="autotoc_md1230"></a>
+<h3><a class="anchor" id="autotoc_md1275"></a>
 AliOS Things开发环境搭建</h3>
 <p>开发环境的搭建请参考 HaaS_EDU_K1_Quick_Start (搭建开发环境章节)，其中详细的介绍了AliOS Things 3.3的IDE集成开发环境的搭建流程。</p>
-<h3><a class="anchor" id="autotoc_md1231"></a>
+<h3><a class="anchor" id="autotoc_md1276"></a>
 HaaS EDU K1 DEMO 代码下载</h3>
 <p>HaaS EDU K1 DEMO 的代码下载请参考 HaaS_EDU_K1_Quick_Start (创建工程章节)，其中， 选择解决方案: 基于教育开发板的示例 选择开发板: haaseduk1 board configure</p>
-<h3><a class="anchor" id="autotoc_md1232"></a>
+<h3><a class="anchor" id="autotoc_md1277"></a>
 代码编译、烧录</h3>
 <p>参考 HaaS_EDU_K1_Quick_Start (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。 参考 HaaS_EDU_K1_Quick_Start (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
-<h1><a class="anchor" id="autotoc_md1233"></a>
+<h1><a class="anchor" id="autotoc_md1278"></a>
 硬件介绍 - MPU-6050</h1>
 <p>请参考《陀螺仪小球》中的相同章节。</p>
-<h1><a class="anchor" id="autotoc_md1234"></a>
+<h1><a class="anchor" id="autotoc_md1279"></a>
 应用开发</h1>
 <p>本实验通过MPU_Get_Accelerometer去获得三轴加速度传感器的原始值。然后计算出在y方向上和z方向上的差值，作为震动大小的强弱标志。当两个方向上的震动大小都超过了阈值，就认为是一次有效的摇晃，就生成随机数。生成随机的方法直接采用OS自动的rand()方法，他的返回值对100进行取模，保证是一个小于100的数字。然后将这个数据显示在OLED屏幕上。</p>
 <div class="fragment"><div class="line">void shakeshake_task()</div>
@@ -127,7 +127,7 @@ HaaS EDU K1 DEMO 代码下载</h3>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:08 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:07 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

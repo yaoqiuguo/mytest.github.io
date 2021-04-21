@@ -55,16 +55,16 @@ $(document).ready(function(){initNavTree('aos-tools_user_manual.html',''); initR
 <div class="contents">
 <div class="textblock"><p>aos-tools 是 AliOS Things 的命令行编译系统，支持组件管理、程序编译、烧录等功能。<br  />
 aos-tools 使用git 来获取组件的代码和维护代码的版本管理。 </p>
-<h1><a class="anchor" id="autotoc_md138"></a>
+<h1><a class="anchor" id="autotoc_md148"></a>
 安装 aos-tools</h1>
 <p>使用miniconda3创建一个虚拟环境，并在其虚拟环境中安装aos-tools。 </p><div class="fragment"><div class="line">pip install -U aos-tools</div>
 </div><!-- fragment --><p> 详细安装操作请参考《<a href="https://dev.g.alicdn.com/aos3.3-doc-test/cdn/0.0.8/_haa_s100__quick__start.html">HaaS100快速开始</a>》。 </p>
-<h1><a class="anchor" id="autotoc_md139"></a>
+<h1><a class="anchor" id="autotoc_md149"></a>
 aos-tools 命令</h1>
 <p>使用 aos-tools 需遵循的格式如下： </p><div class="fragment"><div class="line">aos command options</div>
 </div><!-- fragment --><p> 可选元素显示在方括号 [ ] 中。例如，许多命令会用到<code>组件名</code>参数： </p><div class="fragment"><div class="line">aos install [component0 component1 ... componentn]</div>
 <div class="line">aos list [-r]</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md140"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md150"></a>
 help</h2>
 <p>通过 aos 的 help 命令，可以查看 aos-tools 支持哪些命令，并可以获取该命令完整的使用说明。 </p><div class="fragment"><div class="line">aos help</div>
 </div><!-- fragment --><p> 可以通过在 aos 工作目录下运行以下命令来查看有关某个命令的详细信息： </p><div class="fragment"><div class="line">aos help command</div>
@@ -72,7 +72,7 @@ help</h2>
 </div><!-- fragment --><p> 如果您仅想查看可用选项的列表，请运行： </p><div class="fragment"><div class="line">aos command --help</div>
 </div><!-- fragment --><p> 或者 </p><div class="fragment"><div class="line">aos command -h</div>
 </div><!-- fragment --><p> 例如： </p><div class="fragment"><div class="line">aos init --help</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md141"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md151"></a>
 init</h2>
 <p>通过 aos init 命令来初始AliOS Things 的工作区： </p><div class="fragment"><div class="line">mkdir alios_iot</div>
 <div class="line">cd alios_iot</div>
@@ -82,10 +82,10 @@ init</h2>
 <div class="line">repo: https://gitee.com/alios-things/manifest.git</div>
 <div class="line">branch: master</div>
 </div><!-- fragment --><p> 如果使用定制化的manifest仓库(包含各个组件的类型、仓库url、版本等)，如git@gitlab.alibaba-inc.com:alios_iot/manifest.git，分支为v1.0.0，则使用一下命令初始化工作区： </p><div class="fragment"><div class="line">aos init git@gitlab.alibaba-inc.com:alios_iot/manifest.git -b v1.0.0</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md142"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md152"></a>
 search</h2>
 <p>在aos工作目录下使用。 根据关键字从云端查找相应的组件，并列出组件的简单描述。 </p><div class="fragment"><div class="line">aos search rhino</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md143"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md153"></a>
 install</h2>
 <div class="fragment"><div class="line">aos install helloworld_demo</div>
 </div><!-- fragment --><p> 下载 <code>helloworld_demo</code> 示例工程，以及该所依赖的组件，每一个组件都对应一个 git 仓库，通过 <code>git clone</code> 命令将远程代码库中代码复制到本地目录。下载完组件后，当前的工作目录结构如下： </p><div class="fragment"><div class="line">components/</div>
@@ -96,10 +96,10 @@ install</h2>
 <div class="line">solutions/helloworld_demo/</div>
 </div><!-- fragment --><p> 如果下载指定branch或tag的组件，则使用 <code>-b</code>选项，如下载v1.0.0分支。 </p><div class="fragment"><div class="line">aos install cli -b v1.0.0</div>
 </div><!-- fragment --><p> 如果从本地的组件压缩包，安装组件，则使用： </p><div class="fragment"><div class="line">aos install -L xxx_v1.0.zip</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md144"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md154"></a>
 uninstall</h2>
 <p>删除单个组件，不修改其它组件的依赖关系。 </p><div class="fragment"><div class="line">aos uninstall component1</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md145"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md155"></a>
 list</h2>
 <p>在 aos 工作目录下使用。显示单个或者多个组件的描述信息。 下面介绍几种典型场景的使用：</p>
 <ul>
@@ -123,7 +123,7 @@ list</h2>
 <div class="line">aos list -m</div>
 </div><!-- fragment --> </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md146"></a>
+<h2><a class="anchor" id="autotoc_md156"></a>
 rename</h2>
 <p>在 aos 工作目录下使用。此命令不会对云端进行操作。一般是在用户基于某个已经存在的组件进行开发，当开发完毕时需要修改组件名字时用到。 运行此命令会修改以下几部分的内容：</p>
 <ul>
@@ -131,22 +131,22 @@ rename</h2>
 <li><code>package.yaml</code>里面<code>name</code>字段</li>
 <li>当被其他组件依赖时，在其他组件的<code>package.yaml</code>文件里的<code>depend</code>字段内容也会进行修改 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md147"></a>
+<h2><a class="anchor" id="autotoc_md157"></a>
 copy</h2>
 <p>复制一个已有组件为一个新的组件。运行该命令会修改：</p>
 <ul>
 <li>文件夹名字</li>
 <li><code>package.yaml</code>里面<code>name</code>字段 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md148"></a>
+<h2><a class="anchor" id="autotoc_md158"></a>
 show</h2>
 <p>在 aos 工作目录下的solution类型组件下使用。用于显示方案依赖的组件列表、库(路径)、头文件、宏定义、变量、编译选项、链接选项、链接脚本、工具链、组件源码等信息。<br  />
 当一个solution依赖单个或者多个board组件时，可以通过命令 <code>aos show -b board_name</code> 来查看方案依赖的组件列表和指定的board信息。 </p>
-<h2><a class="anchor" id="autotoc_md149"></a>
+<h2><a class="anchor" id="autotoc_md159"></a>
 toolchain</h2>
 <p>可以在任意目录下使用。可以安装csky和arm的工具链，安装路径在<code>~/.aliot</code>下。<br  />
 可以使用<code>-d</code>选项删除已安装的toolchain。 </p>
-<h2><a class="anchor" id="autotoc_md150"></a>
+<h2><a class="anchor" id="autotoc_md160"></a>
 export</h2>
 <p>在aos工作目录下使用。 此命令可以将AliOS Things工作目录下的单个组件或者多个组件以及这些组件所依赖的组件全部导出到指定的目录。</p>
 <ul>
@@ -154,16 +154,16 @@ export</h2>
 <li>在其他目录下使用此命令可以导出除solution组件外的其他组件到指定目录 <div class="fragment"><div class="line">aos export csi_pangu button /tmp/1</div>
 </div><!-- fragment --> </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md151"></a>
+<h2><a class="anchor" id="autotoc_md161"></a>
 pack</h2>
 <p>在aos工作目录下使用。 此命令可以将AliOS Things工作目录下的单个组件，压缩成zip包后导出到指定的目录。该命令与 <code>aos install -L</code>&#160;配合使用， <code>aos pack</code>&#160;负责将组件打成压缩包，然后共享给其他开发者；其他开发者获取到该压缩包后，可使用<code>aos install -L</code>命令安装 </p><div class="fragment"><div class="line">aos pack component1 ../destdir</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md152"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md162"></a>
 upgrade</h2>
 <p>在aos目录下使用，将package.yaml里面的version作为仓库分支，更新组件代码。 </p>
-<h2><a class="anchor" id="autotoc_md153"></a>
+<h2><a class="anchor" id="autotoc_md163"></a>
 format</h2>
 <p>在aos工作目录下使用此命令可以格式化组件的<code>package.yaml</code>文件，并保存到组件相应的目录中。 </p><div class="fragment"><div class="line">aos format component1</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md154"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md164"></a>
 config</h2>
 <p>在solution类型组件目录下使用该命令可以将该solution的配置变量显示出来。比如： </p><div class="fragment"><div class="line">BOARD_PATH = /home/xxx/work/git_project/yoc7.3/boards/csky/pangu_cpu0</div>
 <div class="line">BOARD      = PANGU_CPU0</div>
@@ -177,10 +177,10 @@ config</h2>
 <div class="line">CONFIG_DECODER_AMRWB = 1</div>
 <div class="line">CONFIG_DECODER_PCM = 1</div>
 <div class="line">CHIP_PATH  = /home/xxx/work/git_project/yoc7.3/components/csi_pangu</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md155"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md165"></a>
 convert</h2>
 <p>在aos工作目录下使用。 当用户想把一个源码目录快速变为一个 AliOS Things 组件时，可以使用这个命令。 执行以下命令会在<code>&lt;dir&gt;</code>目录下生成<code>package.yaml</code>文件模板，用户可根据需求再适当的调整修改<code>package.yaml</code>文件。 </p><div class="fragment"><div class="line">aos convert &lt;dir&gt;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md156"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md166"></a>
 make</h2>
 <p>当您通过 <code>aos install helloworld_demo</code> 命令下载了一个示例工程后，对应的工程代码及相关的组件代码已经安装到AliOS Things 工作环境中，可以通过以下命令，实现工程的编译： </p><div class="fragment"><div class="line">cd solutions/helloworld_demo</div>
 <div class="line">aos make</div>
@@ -190,32 +190,32 @@ make</h2>
 <div class="line">scons: Building targets ...</div>
 </div><!-- fragment --><p> 使用solution组件依赖的其它板子，如haas100，编译工程，则输入命令： </p><div class="fragment"><div class="line">aos make -b haas100</div>
 </div><!-- fragment --><p> 使用<code>V=1</code>可以查看编译的详细信息。 </p><div class="fragment"><div class="line">aos make V=1</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md157"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md167"></a>
 make clean</h2>
 <p>在solution目录下使用，清除当前solution的编译信息。 </p><div class="fragment"><div class="line">aos make clean</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md158"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md168"></a>
 make distclean</h2>
 <p>在solution目录下使用，清除当前solution的编译信息。 </p><div class="fragment"><div class="line">aos make distclean</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md159"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md169"></a>
 burn</h2>
 <p>在solution目录下使用，使用aos make编译完成后，使用该命令烧录固件。烧录的参数配置，烧录工具，由当前solution使用的board组件或chip组件指定；烧录的文件，从solution组件的SConstruct文件中获取。 </p><div class="fragment"><div class="line">aos burn</div>
 </div><!-- fragment --><p> 如果是使用aos make -b &lt;board_name&gt;编译的话，则烧录固件时，也需要指定同样的板子。比如： </p><div class="fragment"><div class="line"># 编译时指定板子haas100</div>
 <div class="line">aos make -b haas100</div>
 <div class="line"># 烧录固件时也必须指定同样的板子</div>
 <div class="line">aos burn -b haas100</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md160"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md170"></a>
 debug</h2>
 <p>在solution目录下使用，启动gdb server。配合Visual Studio Code的调试功能使用。 </p>
-<h2><a class="anchor" id="autotoc_md161"></a>
+<h2><a class="anchor" id="autotoc_md171"></a>
 monitor</h2>
 <p>在solution目录下使用，使用该命令打开串口。该命令成功执行之后，将在当前目录生成&lt;tt&gt;.config_monitor文件，保存串口号和波特率。下次可直接使用 <code>aos monitor</code>&#160;，而无需再指定串口和波特率。 </p><div class="fragment"><div class="line">aos monitor [port] [baudrate]</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md162"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md172"></a>
 make solution@board -c config</h2>
 <p>为了兼容aos-cube的功能，保留该指令。<br  />
 在aos顶层目录下使用，配置当前需要编译的solution和board。该命令将在当前目录下生成一个 <code>.config</code>文件。 </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
 </div><!-- fragment --><p> 当配置完成以后，上述的<code>aos make</code> 、<code>aos make clean</code> 、<code>aos make distclean</code> 、<code>aos burn</code> 指令也随之升级，可以在aos顶层目录下使用。<br  />
 另外，相比于<code>aos make clean</code>的功能， <code>aos make distclean</code> 命令将会额外执行删除&lt;tt&gt;.config文件的操作。 </p>
-<h2><a class="anchor" id="autotoc_md163"></a>
+<h2><a class="anchor" id="autotoc_md173"></a>
 create project</h2>
 <p>在非AliOS Things仓库目录下运行，创建工作区，并下载指定的solution作为模板解决方案，进行二次开发。 </p><div class="fragment"><div class="line">aos create project -b &lt;board&gt; -t &lt;solution&gt; -d &lt;destdir&gt; &lt;solution_name&gt;</div>
 </div><!-- fragment --><p> 其中 -b 选项，指定 开发板名称，如haas100；<br  />
@@ -225,7 +225,7 @@ create project</h2>
 -B 选项，指定 远程manifest仓库的分支，默认为 <code>master</code>;<br  />
 solution_name，指定新的solution名字，是将 -t选项 指定的解决方案 重命名。 </p><div class="fragment"><div class="line"># 根据模板helloworld_demo，创建一个新的解决方案mysolution</div>
 <div class="line">aos create project -b haas100 -t helloworld_demo -d /home/johnny/myworkspace mysolution</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md164"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md174"></a>
 sdk</h2>
 <p>在solution目录下使用，复制当前solution的所依赖组件的头文件和库文件至aos_sdk目录下。用户可将该solution目录提供给其他开发者，做二次开发。<br  />
  </p>
@@ -235,7 +235,7 @@ sdk</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:01 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:01 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

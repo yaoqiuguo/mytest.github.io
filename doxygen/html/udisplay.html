@@ -54,15 +54,15 @@ $(document).ready(function(){initNavTree('udisplay.html',''); initResizable(); }
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><b><a href="https://gitee.com/alios-things/udisplay/edit/rel_3.3.0/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></b></p>
-<h1><a class="anchor" id="autotoc_md845"></a>
+<h1><a class="anchor" id="autotoc_md887"></a>
 概述</h1>
 <p>udisplay是AliOS Things一套显示接口组件，udisplay通过posix接口调用fbdev设备及backlight设备驱动，避免用户和LCD显示驱动直接交互，调用udisplay组件中的函数来进行framebuffer及背光调节相关操作。</p>
-<h1><a class="anchor" id="autotoc_md846"></a>
+<h1><a class="anchor" id="autotoc_md888"></a>
 版权信息</h1>
 <blockquote class="doxtable">
 <p>Apache 2.0 License </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md847"></a>
+<h1><a class="anchor" id="autotoc_md889"></a>
 目录结构</h1>
 <div class="fragment"><div class="line">├── include</div>
 <div class="line">│   ├── udisplay.h            # 对外头文件</div>
@@ -72,32 +72,32 @@ $(document).ready(function(){initNavTree('udisplay.html',''); initResizable(); }
 <div class="line">│   └── udisplay.c            # udisplay核心处理层</div>
 <div class="line">└──example</div>
 <div class="line">    └── udisplay_example.c    # udisplay测试用例</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md848"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md890"></a>
 依赖组件</h1>
 <ul>
 <li>osal_aos</li>
 <li>fbdev</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md849"></a>
+<h1><a class="anchor" id="autotoc_md891"></a>
 常用配置</h1>
 <div class="fragment"><div class="line">def_config:                              # 组件的可配置项</div>
 <div class="line">  AOS_COMP_UDISPLAY: 1                   # 使能组件宏定义</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md850"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md892"></a>
 API说明</h1>
 <ul>
 <li>参考 <a href="https://g.alicdn.com/alios-things-3.3/doc/group__udisplay__aos__api.html">udisplay_aos_api</a></li>
 <li>参考 <a href="https://g.alicdn.com/alios-things-3.3/doc/group__udisplay__cli__aos__api.html">udisplay_cli_aos_api</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md851"></a>
+<h1><a class="anchor" id="autotoc_md893"></a>
 使用示例</h1>
 <p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
-<h2><a class="anchor" id="autotoc_md852"></a>
+<h2><a class="anchor" id="autotoc_md894"></a>
 步骤1 创建或打开工程</h2>
 <p><b>打开已有工程</b></p>
 <p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
 <p><b>创建新的工程</b></p>
 <p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
-<h2><a class="anchor" id="autotoc_md853"></a>
+<h2><a class="anchor" id="autotoc_md895"></a>
 步骤2 添加组件</h2>
 <p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
@@ -106,34 +106,34 @@ API说明</h1>
 <div class="line"> </div>
 <div class="line">def_config:</div>
 <div class="line">    CLI_IOBOX_ENABLE: 1        # 可选：使能文件系统测试命令，例如ls, ll, mkdir, touch, echo等</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md854"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md896"></a>
 步骤3 下载组件</h2>
 <p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
 <div class="fragment"><div class="line">aos install udisplay</div>
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/udisplay路径中。</p>
-<h2><a class="anchor" id="autotoc_md855"></a>
+<h2><a class="anchor" id="autotoc_md897"></a>
 步骤4 添加示例</h2>
 <p>在udisplay组件的package.yaml中添加<a href="https://gitee.com/alios-things/udisplay/tree/rel_3.3.0/example">example示例代码</a>：</p>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;example/udisplay_example.c&quot; # add udisplay_example.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md856"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md898"></a>
 LCD连线</h2>
 <p>使用本测试示例时，请先连接SPI LCD屏幕。</p>
 <p>LCD购买链接<a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.768d2e8d9D3S7s&amp;id=38842179442&amp;_u=m1tg6s6048c2">https://item.taobao.com/item.htm?spm=a1z09.2.0.0.768d2e8d9D3S7s&amp;id=38842179442&amp;_u=m1tg6s6048c2</a></p>
 <p>请选择购买2.4寸屏。</p>
 <p>HaaS100开发板请务必使用V1.1以上的版本，HaaS100扩展口：</p>
 <div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/b18b27ec7957e010d0380e76ebb33e98.png" alt="" style="max-width:90%;" class="inline"/> </div><p>LCD与HaaS100接线对应pin脚：</p>
-<div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/5b2c8c014991f028978f5743ba22d193.png" alt="" style="max-width:90%;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md857"></a>
+<div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/5b2c8c014991f028978f5743ba22d193.png" alt="" style="max-width:90%;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md899"></a>
 步骤5 编译固件</h2>
 <p>在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
-<h2><a class="anchor" id="autotoc_md858"></a>
+<h2><a class="anchor" id="autotoc_md900"></a>
 步骤6 烧录固件</h2>
 <p>上述步骤执行后，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_image.html">《aos-studio使用说明之烧录固件》</a>来烧录固件。</p>
-<h2><a class="anchor" id="autotoc_md859"></a>
+<h2><a class="anchor" id="autotoc_md901"></a>
 步骤7 打开串口</h2>
 <p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="_haa_s100__quick__start.html">《aos-studio使用说明之查看日志》</a>。</p>
 <p>当串口终端打开成功后，可在串口中输入help来查看已添加的测试命令。</p>
-<h2><a class="anchor" id="autotoc_md860"></a>
+<h2><a class="anchor" id="autotoc_md902"></a>
 步骤8 测试示例</h2>
 <p>测试步骤： </p><div class="fragment"><div class="line">$ udisplay_init  # 初始化udisplay组件</div>
 <div class="line">$ udisplay pattern 16 0x0000  # 绘制pattern颜色为黑色</div>
@@ -150,7 +150,7 @@ LCD连线</h2>
 <li>16: ili9341 屏幕为 RGB565</li>
 <li>0x0000 RGB565 颜色设置</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md861"></a>
+<h1><a class="anchor" id="autotoc_md903"></a>
 FAQ</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -158,7 +158,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:05 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 16:00:05 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

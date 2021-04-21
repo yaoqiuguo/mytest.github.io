@@ -203,15 +203,15 @@ var NAVTREEINDEX =
 [
 "_s_d_l2.html",
 "aos_kernel.html#autotoc_md78",
-"cplusplus.html#autotoc_md393",
-"group__aiagent__aos__api.html#ga046762581ee41aba41551af47b120c48",
-"group__aos__mbmaster.html#ggaf6f8d6043ac94599dafecc62fbdda6d1a5786284fe284b4a23889bf5b444d5142",
-"group__uvoice__player__api.html#gga2282a264f9691d1742756ac5e4929238a40783f36e975a5190844583badb9752c",
-"ili9341.html#autotoc_md1381",
-"mbmaster.html#autotoc_md1359",
-"sensor.html#autotoc_md723",
-"structuvoice__player__t.html",
-"udisplay.html#autotoc_md860"
+"cplusplus.html#autotoc_md401",
+"group__a2sa__pcm__api.html#gga932fb9282ed32ffe0302012a1fdba1dda009214d5478265ca8d5703220f8440d1",
+"group__aos__mbmaster.html#gga326a2117e67e99892992e874e24efeb7a234426146b0c9c9371d84bb1430f3d09",
+"group__uvoice__init__api.html",
+"i2c.html#autotoc_md1574",
+"mbedtls.html#autotoc_md620",
+"select.html#autotoc_md675",
+"structnetmgr__msg__t.html#a72c7107bd190cb9b337c4567f6ed3a61",
+"ucloud_ai_demo.html"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';
