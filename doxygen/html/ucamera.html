@@ -53,18 +53,18 @@ $(document).ready(function(){initNavTree('ucamera.html',''); initResizable(); })
 <div class="title">ucamera </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md741"></a>
+<div class="textblock"><p><b><a href="https://gitee.com/alios-things/ucamera/edit/rel_3.3.0/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></b></p>
+<h1><a class="anchor" id="autotoc_md777"></a>
 概述</h1>
 <p>ucamera组件是摄像头图像数据处理中间框架，支持不同类型摄像头数据接入，目前已接入wifi摄像头，在使用该组件时，需要使用netmgr网络组件连接网络。</p>
-<h2><a class="anchor" id="autotoc_md742"></a>
+<h2><a class="anchor" id="autotoc_md778"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache 2.0 License </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md743"></a>
-目录结构</h2>
-<div class="fragment"><div class="line">.</div>
-<div class="line">├── include</div>
+<h1><a class="anchor" id="autotoc_md779"></a>
+目录结构</h1>
+<div class="fragment"><div class="line">├── include</div>
 <div class="line">│   ├── ucamera_common.h                 # 对外头文件</div>
 <div class="line">│   ├── ucamera_device.h                 # 摄像头device相关头文件定义</div>
 <div class="line">│   ├── ucamera_service.h                # 摄像头service相关头文件定义</div>
@@ -73,88 +73,84 @@ $(document).ready(function(){initNavTree('ucamera.html',''); initResizable(); })
 <div class="line">│             ├── wifi_camera.h           # wifi摄像头device注册函数头文件</div>
 <div class="line">│             └── dechunk.h</div>
 <div class="line">├── package.yaml                          # 编译配置文件</div>
-<div class="line">└── src</div>
-<div class="line">    ├── ucamera_device.c                  # 摄像头设备相关函数实现</div>
-<div class="line">    ├── ucamera_service.c                 # 摄像头服务相关函数实现</div>
-<div class="line">    ├── example</div>
-<div class="line">    │    └── ucamera_example.c            # 使用示例代码</div>
-<div class="line">    └── device</div>
-<div class="line">         └── wifi</div>
-<div class="line">              ├── wifi_camera.c           # wifi摄像头device注册函数实现</div>
-<div class="line">              └── dechunk</div>
-<div class="line">                    └── dechunk.c         # http数据解析代码实现</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md744"></a>
+<div class="line">├── src</div>
+<div class="line">│   ├── ucamera_device.c                  # 摄像头设备相关函数实现</div>
+<div class="line">│   ├── ucamera_service.c                 # 摄像头服务相关函数实现</div>
+<div class="line">│   └── device</div>
+<div class="line">│        └── wifi</div>
+<div class="line">│             ├── wifi_camera.c           # wifi摄像头device注册函数实现</div>
+<div class="line">│             └── dechunk</div>
+<div class="line">│                   └── dechunk.c         # http数据解析代码实现</div>
+<div class="line">└── example</div>
+<div class="line">    └── ucamera_example.c                 # 测试用例</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md780"></a>
 依赖组件</h2>
 <ul>
 <li>http</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md745"></a>
+<h1><a class="anchor" id="autotoc_md781"></a>
 常用配置</h1>
-<h1><a class="anchor" id="autotoc_md746"></a>
+<div class="fragment"><div class="line">def_config:                              # 组件的可配置项</div>
+<div class="line">  CONFIG_WIFI_CAMERA_ENABLE: 1           # 使能WiFi摄像头</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md782"></a>
 API说明</h1>
-<p><a class="el" href="group__ucamera__aos__api.html">ucamera</a></p>
-<h1><a class="anchor" id="autotoc_md747"></a>
+<ul>
+<li>参考 <a href="https://g.alicdn.com/alios-things-3.3/doc/group__ucamera__aos__api.html">ucamera_aos_api</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md783"></a>
 使用示例</h1>
-<p>示例代码参考example/ucamera_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md748"></a>
-添加示例代码</h2>
-<blockquote class="doxtable">
-<p>ucamera组件的package.yaml中添加 </p>
-</blockquote>
-<div class="fragment"><div class="line">source_file:</div>
-<div class="line">  - src/example/ucamera_example.c # add ucamera_example.c</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md749"></a>
-app中添加ucamera组件</h2>
-<blockquote class="doxtable">
-<p>helloworld_demo组件的package.yaml中添加 </p>
-</blockquote>
+<p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
+<h2><a class="anchor" id="autotoc_md784"></a>
+步骤1 创建或打开工程</h2>
+<p><b>打开已有工程</b></p>
+<p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
+<p><b>创建新的工程</b></p>
+<p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
+<h2><a class="anchor" id="autotoc_md785"></a>
+步骤2 添加组件</h2>
+<p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
 <div class="line">  - ucamera: dev_aos # helloworld_demo中引入ucamera组件</div>
 <div class="line">  - netmgr: dev_aos  # helloworld_demo中引入netmgr组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md750"></a>
-代码编译、烧录</h2>
-<p>参考 HaaS100_Quick_Start (3.1 编译工程章节)，点击 ✅ 即可完成编译固件。</p>
-<h3><a class="anchor" id="autotoc_md751"></a>
-文件件系统烧录</h3>
-<p>本组件例子中使用到文件系统存储图片，需烧录littlefs文件系统，请将hardware/chip/haas1000/package.yaml文件中以下代码段的注释打开：</p>
-<div class="fragment"><div class="line">program_data_files:</div>
-<div class="line">  - filename: release/write_flash_tool/ota_bin/littlefs.bin</div>
-<div class="line">    address: 0xB32000</div>
-</div><!-- fragment --><p>参考 HaaS100_Quick_Start (3.2 烧录镜像章节)，点击 "⚡️" 即可完成烧录固件。</p>
-<h2><a class="anchor" id="autotoc_md752"></a>
-ucamera示例测试</h2>
-<blockquote class="doxtable">
-<p>ucamera测试依赖WiFi摄像头，本案例测试使用ESP32-EYE进行测试。 </p>
-</blockquote>
-<h3><a class="anchor" id="autotoc_md753"></a>
-ESP32-EYE开发配置</h3>
-<h4><a class="anchor" id="autotoc_md754"></a>
-代码下载</h4>
+<div class="line"> </div>
+<div class="line">def_config:</div>
+<div class="line">    CLI_IOBOX_ENABLE: 1        # 使能文件系统测试命令，例如ls, ll, mkdir, touch, echo等</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md786"></a>
+步骤3 下载组件</h2>
+<p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
+<div class="fragment"><div class="line">aos install ucamera</div>
+</div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/ucamera路径中。</p>
+<h2><a class="anchor" id="autotoc_md787"></a>
+步骤4 添加示例</h2>
+<p>在ucamera组件的package.yaml中添加<a href="https://gitee.com/alios-things/ucamera/tree/rel_3.3.0/example">example示例代码</a>：</p>
+<div class="fragment"><div class="line">source_file:</div>
+<div class="line">  - &quot;example/ucamera_example.c&quot; # add ucamera_example.c</div>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md788"></a>
+WiFi摄像头安装</h3>
+<p>ucamera测试依赖WiFi摄像头，本案例测试使用ESP32-EYE进行测试。 ESP32-EYE购买链接: <a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.1.150d6a6ftZ6h4K&amp;id=611790371635&amp;ns=1&amp;abbucket=3">https://detail.tmall.com/item.htm?spm=a230r.1.14.1.150d6a6ftZ6h4K&amp;id=611790371635&amp;ns=1&amp;abbucket=3</a></p>
+<h4><a class="anchor" id="autotoc_md789"></a>
+1. 代码下载</h4>
 <div class="fragment"><div class="line">$git clone --recursive https://github.com/espressif/esp-who.git</div>
-</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md755"></a>
-Python环境创建</h4>
-<p>这一个步骤不是必须的，不过如果你有多个python环境的需求，也安装过conda可以使用该步骤为esp32的开发创建一个独立的python开发环境，避免不同开发环境的相互影响，这里也可以参考[《**VSCode中搭建Python虚拟环境SOP**》]<a href="https://blog.csdn.net/HaaSTech/article/details/113512377">https://blog.csdn.net/HaaSTech/article/details/113512377</a>)。 </p><div class="fragment"><div class="line">$conda create -n esp32 python=3.8</div>
-</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md756"></a>
-ESP-IDF安装</h4>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md790"></a>
+2. ESP-IDF安装</h4>
 <p>不同的操作系统安装的步骤也有所差异，请参考官网文档进行安装： <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/index.html#get-started-set-up-env">https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/index.html#get-started-set-up-env</a></p>
-<h4><a class="anchor" id="autotoc_md757"></a>
-环境变量设置</h4>
-<p>这里以Macbook为例进行环境变量设置： </p><div class="fragment"><div class="line">$cd ~/esp/esp-idf</div>
-<div class="line">$./install.sh</div>
-<div class="line">¥. ./export.sh</div>
-</div><!-- fragment --><p> 注意： 每次重启终端后都需要执行该步骤，否则找不到idf.py命令，或者可以加入到根目录.bashrc中不用每次再输入该命令。</p>
-<h4><a class="anchor" id="autotoc_md758"></a>
-ESP32 EYE网络设置</h4>
-<blockquote class="doxtable">
-<p>SoftAP模式 </p>
-</blockquote>
+<h4><a class="anchor" id="autotoc_md791"></a>
+3. 环境变量设置</h4>
+<p>这里以Macbook为例进行环境变量设置：</p>
+<div class="fragment"><div class="line">$ cd ~/esp/esp-idf</div>
+<div class="line">$ ./install.sh</div>
+<div class="line">$ . ./export.sh</div>
+</div><!-- fragment --><p>注意： 每次重启终端后都需要执行该步骤，否则找不到idf.py命令，或者可以加入到根目录.bashrc中不用每次再输入该命令。</p>
+<h4><a class="anchor" id="autotoc_md792"></a>
+4. ESP32 EYE网络设置</h4>
+<p><b>SoftAP模式</b></p>
 <p>默认启动后ESP32 EYE已经开启了SSID为ESP32-Camera的AP，可以使用电脑连接该AP。 <img src="https://img-blog.csdnimg.cn/img_convert/d0078a4e4bfb521beb04291497d94970.png" alt="image.png" class="inline"/> 也可以通过修改sdkconfig来改变ssid/password、station连接数量、AP信道、服务器IP等，然后重新进行编译： </p>
-<h4><a class="anchor" id="autotoc_md759"></a>
+<h4><a class="anchor" id="autotoc_md793"></a>
 &lt;img src="https://img-blog.csdnimg.cn/img_convert/bea6f1ff0946804d77c5a01e3d59271c.png" alt="image.png"/&gt;</h4>
-<h4><a class="anchor" id="autotoc_md760"></a>
-分辨率配置</h4>
+<h4><a class="anchor" id="autotoc_md794"></a>
+5. 分辨率配置</h4>
 <blockquote class="doxtable">
-<p>因为本案例中使用的LCD是320x240的，摄像头采集的画面也相应的设置为QVGA(320x240)减少传输带宽占用，esp-who/examples/single_chip/camera_web_server/main/app_httpd.c中添加代码： </p>
+<p>为了减少传输带宽占用，摄像头采集的画面设置为QVGA(分辨率320x240)，esp-who/examples/single_chip/camera_web_server/main/app_httpd.c中添加代码： </p>
 </blockquote>
 <div class="fragment"><div class="line">static esp_err_t capture_handler(httpd_req_t *req)</div>
 <div class="line">{</div>
@@ -170,55 +166,78 @@ ESP32 EYE网络设置</h4>
 <div class="line">    }</div>
 <div class="line">    ......</div>
 <div class="line">}</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md761"></a>
-代码编译</h4>
-<blockquote class="doxtable">
-<p>ESP32-EYE的代码中提供了多个Demo，使用camera_web_server来建立一个web服务器，该Demo中摄像头采集的数据以jpeg格式提供，并且提供了以http请求的方式获取jpeg图像数据。编译需要进入到Demo的目录中： </p>
-</blockquote>
-<div class="fragment"><div class="line">$cd examples/single_chip/camera_web_server/</div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md795"></a>
+6. 代码编译</h4>
+<p>使用camera_web_server来建立一个web服务器，该Demo中摄像头采集的数据以jpeg格式提供，并且提供了以http请求的方式获取jpeg图像数据。编译需要进入到Demo的目录中： </p><div class="fragment"><div class="line">$cd examples/single_chip/camera_web_server/</div>
 <div class="line">$idf.py build</div>
-</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md762"></a>
-代码烧录</h4>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md796"></a>
+7. 代码烧录</h4>
 <div class="fragment"><div class="line">$idf.py -p [port] flash</div>
-</div><!-- fragment --><p> 例如： idf.py -p /dev/cu.SLAB_USBtoUART flash </p>
-<h4><a class="anchor" id="autotoc_md763"></a>
-Log监视器</h4>
+</div><!-- fragment --><p> 例如： idf.py -p /dev/cu.SLAB_USBtoUART flash</p>
+<h4><a class="anchor" id="autotoc_md797"></a>
+8. Log监视器</h4>
 <p>查看串口log，进入到camera_web_server所在目录执行。 </p><div class="fragment"><div class="line">$idf.py -p [port] monitor</div>
 </div><!-- fragment --><p> 例如： idf.py -p /dev/cu.SLAB_USBtoUART monitor</p>
-<h4><a class="anchor" id="autotoc_md764"></a>
-检查摄像头画面采集</h4>
-<blockquote class="doxtable">
-<p>为了确认ESP32-EYE摄像头是否正常，电脑连接ESP32-EYE的WiFi网络ESP32-Camera，先通过电脑方式查看web界面http://192.168.4.1:80/capture： </p>
-</blockquote>
-<p>抓取当前画面http://192.168.4.1:80/capture： <img src="https://img-blog.csdnimg.cn/20210127165159696.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hhYVNUZWNo,size_16,color_FFFFFF,t_70" alt="Pasted Graphic.tiff" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md765"></a>
-ai_agent示例测试</h2>
-<p>测试步骤： </p><div class="fragment"><div class="line">$ ucamera init # 初始化ucamera</div>
-<div class="line">$ netmgr -t wifi -c ESP32-Camera  #  连接WiFi摄像头</div>
-<div class="line">$ ucamera -t wifi # 获取一帧画面</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md766"></a>
+<h4><a class="anchor" id="autotoc_md798"></a>
+9. 检查摄像头画面采集</h4>
+<p>为了确认ESP32-EYE摄像头是否正常，电脑连接ESP32-EYE的WiFi网络ESP32-Camera，先通过电脑方式查看web界面http://192.168.4.1:80/capture： 抓取当前画面http://192.168.4.1:80/capture： <img src="https://img-blog.csdnimg.cn/20210127165159696.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hhYVNUZWNo,size_16,color_FFFFFF,t_70" alt="Pasted Graphic.tiff" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md799"></a>
+配置WiFi摄像头IP</h3>
+<p>在ucamera/package.yaml中配置WiFi摄像头URL： </p><div class="fragment"><div class="line">WIFICAMERA_URL: &quot;http://192.168.4.1:80/capture&quot;</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md800"></a>
+步骤5 编译固件</h2>
+<p>在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
+<h2><a class="anchor" id="autotoc_md801"></a>
+步骤6 烧录固件</h2>
+<h3><a class="anchor" id="autotoc_md802"></a>
+文件系统烧录</h3>
+<p>本组件示例在抓取图像后保存图像到littlefs文件系统，需烧录littlefs文件系统，请将hardware/chip/haas1000/package.yaml文件中以下代码段的注释打开：</p>
+<div class="fragment"><div class="line">program_data_files:</div>
+<div class="line">  - filename: release/write_flash_tool/ota_bin/littlefs.bin</div>
+<div class="line">    address: 0xB32000</div>
+</div><!-- fragment --><p>上述步骤执行后，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_image.html">《aos-studio使用说明之烧录固件》</a>来烧录固件。</p>
+<h2><a class="anchor" id="autotoc_md803"></a>
+步骤7 打开串口</h2>
+<p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="_haa_s100__quick__start.html">《aos-studio使用说明之查看日志》</a>。</p>
+<p>当串口终端打开成功后，可在串口中输入help来查看已添加的测试命令。</p>
+<h2><a class="anchor" id="autotoc_md804"></a>
+步骤8 测试示例</h2>
+<p>测试步骤： </p><div class="fragment"><div class="line">$ ucamera init                    # 初始化ucamera</div>
+<div class="line">$ netmgr -t wifi -c ESP32-Camera  # 连接WiFi摄像头</div>
+<div class="line">$ ucamera -t wifi                 # 获取一帧画面</div>
+<div class="line">$ ls /data                        # 查看是否有capture.jpg文件生成</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md805"></a>
 CLI命令行输入：</h3>
-<div class="fragment"><div class="line">ucamera init #在执行下面的测试命令前，该命令需要优先执行，仅需执行一次即可。</div>
+<div class="fragment"><div class="line">ucamera init # 在执行下面的测试命令前，该命令需要优先执行，仅需执行一次即可。</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">ucamera service init ok!</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md767"></a>
+<div class="fragment"><div class="line">ucamera comp init successfully!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md806"></a>
 CLI命令行输入：</h3>
 <div class="fragment"><div class="line">ucamera -t wifi</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>CLI关键日志： </p>
 </blockquote>
-<div class="fragment"><div class="line">ucamera get frame OK!  #测试结果正常确认(说明从wifi摄像头获取到图像数据)</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md768"></a>
+<div class="fragment"><div class="line">ucamera get frame OK!  # 测试结果正常确认(说明从wifi摄像头获取到图像数据)</div>
+<div class="line">save image to /data/capture.jpg successfully!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md807"></a>
+CLI命令行输入：</h3>
+<div class="fragment"><div class="line">ls /data</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">capture.jpg  # 生成的文件</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md808"></a>
 FAQ</h1>
+<p>NA </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 19日 星期一 15:51:55 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:05 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

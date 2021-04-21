@@ -19,6 +19,8 @@ var group__cli__aos__api =
     [ "aos_cli_printf", "group__cli__aos__api.html#gab4dfa506ecc735e58cff8a009093e066", null ],
     [ "aos_cli_register_command", "group__cli__aos__api.html#ga0bedf67ee7ec64305141156e82619704", null ],
     [ "aos_cli_register_commands", "group__cli__aos__api.html#gacc57dec2af4a010ed1a59fc10734aeb7", null ],
+    [ "aos_cli_resume", "group__cli__aos__api.html#ga65e6ee7cf3af865a479946688d8e9976", null ],
+    [ "aos_cli_suspend", "group__cli__aos__api.html#ga4aa472856b622642493d267497f33254", null ],
     [ "aos_cli_unregister_command", "group__cli__aos__api.html#gad849d9171c18e99bd5c5caca19af5500", null ],
     [ "aos_cli_unregister_commands", "group__cli__aos__api.html#gaa788d1e9549c44cd4f1828af9e951380", null ]
 ];

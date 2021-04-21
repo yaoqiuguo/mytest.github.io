@@ -64,7 +64,7 @@ $(document).ready(function(){initNavTree('group__ramfs__aos__api.html',''); init
 <tr class="separator:ga812deae3a0f05f1c98b9c99bde9d7059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<p>ramfs API. Used for projects' inside components. Use aos api for APP. </p>
+<p>ramfs 对外API. </p>
 <h2 class="groupheader">函数说明</h2>
 <a id="gad462877c6ae69e877bee03cc6f6abeea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad462877c6ae69e877bee03cc6f6abeea">&#9670;&nbsp;</a></span>ramfs_register()</h2>
@@ -81,8 +81,13 @@ $(document).ready(function(){initNavTree('group__ramfs__aos__api.html',''); init
         </tr>
       </table>
 </div><div class="memdoc">
-<p>ramfs register</p>
-<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure </dd></dl>
+<p>ramfs文件系统注册接口 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mount_path</td><td>该文件系统挂载路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 表示注册成功, 负数表示失败 </dd></dl>
 
 </div>
 </div>
@@ -101,8 +106,13 @@ $(document).ready(function(){initNavTree('group__ramfs__aos__api.html',''); init
         </tr>
       </table>
 </div><div class="memdoc">
-<p>ramfs unregister</p>
-<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure </dd></dl>
+<p>ramfs文件系统去注册接口 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mount_path</td><td>该文件系统挂载路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 表示去注册成功, 负数表示失败 </dd></dl>
 
 </div>
 </div>
@@ -111,7 +121,7 @@ $(document).ready(function(){initNavTree('group__ramfs__aos__api.html',''); init
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 19日 星期一 15:52:01 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:14 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

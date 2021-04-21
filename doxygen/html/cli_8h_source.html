@@ -110,14 +110,20 @@ $(document).ready(function(){initNavTree('cli_8h_source.html',''); initResizable
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
 <div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="group__cli__aos__api.html#gab4dfa506ecc735e58cff8a009093e066">  111</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__cli__aos__api.html#gab4dfa506ecc735e58cff8a009093e066">aos_cli_printf</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="group__cli__aos__api.html#ga4aa472856b622642493d267497f33254">  119</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__cli__aos__api.html#ga4aa472856b622642493d267497f33254">aos_cli_suspend</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* AOS_CLI_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="group__cli__aos__api.html#ga65e6ee7cf3af865a479946688d8e9976">  127</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__cli__aos__api.html#ga65e6ee7cf3af865a479946688d8e9976">aos_cli_resume</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* AOS_CLI_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
 <div class="ttc" id="agroup__cli__aos__api_html_ga0bedf67ee7ec64305141156e82619704"><div class="ttname"><a href="group__cli__aos__api.html#ga0bedf67ee7ec64305141156e82619704">aos_cli_register_command</a></div><div class="ttdeci">int aos_cli_register_command(const struct cli_command *cmd)</div><div class="ttdoc">This function register a command with the command-line interface</div></div>
 <div class="ttc" id="agroup__cli__aos__api_html_ga14ab9e06d8c6409b4b5593e70769e9dc"><div class="ttname"><a href="group__cli__aos__api.html#ga14ab9e06d8c6409b4b5593e70769e9dc">aos_cli_init</a></div><div class="ttdeci">int aos_cli_init(void)</div><div class="ttdoc">Initialize the CLI module</div></div>
+<div class="ttc" id="agroup__cli__aos__api_html_ga4aa472856b622642493d267497f33254"><div class="ttname"><a href="group__cli__aos__api.html#ga4aa472856b622642493d267497f33254">aos_cli_suspend</a></div><div class="ttdeci">int aos_cli_suspend(void)</div><div class="ttdoc">Suspend cli task</div></div>
+<div class="ttc" id="agroup__cli__aos__api_html_ga65e6ee7cf3af865a479946688d8e9976"><div class="ttname"><a href="group__cli__aos__api.html#ga65e6ee7cf3af865a479946688d8e9976">aos_cli_resume</a></div><div class="ttdeci">int aos_cli_resume(void)</div><div class="ttdoc">Resume cli task</div></div>
 <div class="ttc" id="agroup__cli__aos__api_html_ga813640d2b0e96dd1c54291f33903efca"><div class="ttname"><a href="group__cli__aos__api.html#ga813640d2b0e96dd1c54291f33903efca">cmd_fun_t</a></div><div class="ttdeci">void(* cmd_fun_t)(char *outbuf, int len, int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="cli_8h_source.html#l00018">cli.h:18</a></div></div>
 <div class="ttc" id="agroup__cli__aos__api_html_gaa788d1e9549c44cd4f1828af9e951380"><div class="ttname"><a href="group__cli__aos__api.html#gaa788d1e9549c44cd4f1828af9e951380">aos_cli_unregister_commands</a></div><div class="ttdeci">int aos_cli_unregister_commands(const struct cli_command *cmds, int num)</div><div class="ttdoc">This function unregisters multi CLI commands</div></div>
 <div class="ttc" id="agroup__cli__aos__api_html_gaae9cbeb1b67fd8b456943f21512464eb"><div class="ttname"><a href="group__cli__aos__api.html#gaae9cbeb1b67fd8b456943f21512464eb">cli_region_func</a></div><div class="ttdeci">int(* cli_region_func)(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="cli_8h_source.html#l00030">cli.h:30</a></div></div>
@@ -137,7 +143,7 @@ $(document).ready(function(){initNavTree('cli_8h_source.html',''); initResizable
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_e1ebd30124e073b84874d421f2ab915b.html">cli</a></li><li class="navelem"><a class="el" href="dir_e541521bd3b4d86c478074ab08c70e73.html">include</a></li><li class="navelem"><a class="el" href="dir_b885d9757d0a5efa7fa4923244259edb.html">aos</a></li><li class="navelem"><a class="el" href="cli_8h.html">cli.h</a></li>
-    <li class="footer">生成于 2021年 四月 19日 星期一 15:51:35 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 14:18:40 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

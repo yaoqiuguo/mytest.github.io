@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('select.html',''); initResizable(); });
 <div class="title">select </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md616"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md644"></a>
 概述</h1>
 <p>select组件实现了IO多路复用机制select和poll。</p>
 <p>组件支持以下功能：</p><ul>
@@ -64,14 +64,13 @@ $(document).ready(function(){initNavTree('select.html',''); initResizable(); });
 <li>socket fd事件通知；</li>
 <li>VFS fd事件通知；</li>
 <li>socket与VFS fd混合通知。</li>
-<li></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md617"></a>
+<h2><a class="anchor" id="autotoc_md645"></a>
 版权信息</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md618"></a>
+<h2><a class="anchor" id="autotoc_md646"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">.</div>
 <div class="line">├── example        #示例程序</div>
@@ -85,68 +84,56 @@ $(document).ready(function(){initNavTree('select.html',''); initResizable(); });
 <div class="line">├── README.md      # 说明文档</div>
 <div class="line">└── select</div>
 <div class="line">    └── select.c   # aos_select接口实现</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md619"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md647"></a>
 依赖组件</h2>
 <ul>
 <li>osal_aos</li>
 <li>vfs</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md620"></a>
+<h1><a class="anchor" id="autotoc_md648"></a>
 常用配置</h1>
-<p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
-<p>配置fd_set中fd最大值: </p>
-</blockquote>
-<div class="fragment"><div class="line">def_config:</div>
-<div class="line">  FD_SETSIZE: 1024  # 配置fd_set大小，建议默认值。</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md621"></a>
+<p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下：</p>
+<p>配置fd_set中fd最大值: </p><div class="fragment"><div class="line">def_config:</div>
+<div class="line">  FD_SETSIZE: 64  # 配置fd_set大小。注意必须大于VFS组件中的 VFS_CONFIG_FD_OFFSET 数值！</div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md649"></a>
 API说明</h1>
-<p>select_aos_api</p>
-<p>aos_select/aos_poll功能定义与posix标准的select/poll兼容，可参考posix相关接口文档: <a href="https://riptutorial.com/posix/example/22411/select">https://riptutorial.com/posix/example/22411/select</a> <a href="https://riptutorial.com/posix/example/22410/poll">https://riptutorial.com/posix/example/22410/poll</a></p>
-<h1><a class="anchor" id="autotoc_md622"></a>
+<p>aos_select/aos_poll功能定义与posix标准的select/poll兼容，可参考linux相关接口文档:</p>
+<p><a href="https://man7.org/linux/man-pages/man2/select.2.html">select</a> <a href="https://man7.org/linux/man-pages/man2/poll.2.html">poll</a></p>
+<h1><a class="anchor" id="autotoc_md650"></a>
 使用示例</h1>
-<p>示例代码参考example/select_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md623"></a>
+<p>示例代码参考example/select_example.c，以运行helloworld_demo为例，具体步骤如下。</p>
+<h2><a class="anchor" id="autotoc_md651"></a>
 添加示例代码</h2>
-<blockquote class="doxtable">
-<p>select组件的package.yaml中添加example </p>
-</blockquote>
-<div class="fragment"><div class="line">source_file:</div>
+<p>select组件的package.yaml中添加example： </p><div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - &quot;example/*.c&quot; # add example source</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md624"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md652"></a>
 app中添加select组件</h2>
-<blockquote class="doxtable">
-<p>helloworld_demo组件的package.yaml中添加 </p>
-</blockquote>
-<div class="fragment"><div class="line">depends:</div>
-<div class="line">  - select: master # helloworld_demo中引入select组件</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md625"></a>
+<p>helloworld_demo组件的package.yaml中添加： </p><div class="fragment"><div class="line">depends:</div>
+<div class="line">  - select: dev_aos # helloworld_demo中引入select组件</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md653"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md626"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md654"></a>
 烧录固件</h2>
-<blockquote class="doxtable">
-<p>参考具体板子的快速开始文档。 </p>
-</blockquote>
-<h2><a class="anchor" id="autotoc_md627"></a>
+<p>参考具体板子的快速开始文档。</p>
+<h2><a class="anchor" id="autotoc_md655"></a>
 运行</h2>
-<blockquote class="doxtable">
-<p>烧入固件后，输入cli命令： </p>
-</blockquote>
-<div class="fragment"><div class="line">select_example</div>
-</div><!-- fragment --><p> 可看到如下打印： </p><div class="fragment"><div class="line">+++++++select example+++++++++</div>
+<p>烧入固件后，输入cli命令： </p><div class="fragment"><div class="line">select_example</div>
+</div><!-- fragment --><p> 可看到如下打印： </p><div class="fragment"><div class="line">select_example</div>
+<div class="line">+++++++select example+++++++++</div>
 <div class="line">aos_select timeout:ret = 0</div>
 <div class="line">aos_select ret = 1</div>
-<div class="line"> read fd =513,data = 1</div>
+<div class="line"> read fd =49,data = 1</div>
 <div class="line">+++++++poll example+++++++++</div>
 <div class="line">aos_poll timeout, ret = 0</div>
 <div class="line">aos_poll ret = 1</div>
-<div class="line"> read fd =513,data = 1</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md628"></a>
+<div class="line"> read fd =49,data = 1</div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md656"></a>
 注意事项</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md629"></a>
+<h1><a class="anchor" id="autotoc_md657"></a>
 FAQ</h1>
 <p>无 </p>
 </div></div><!-- contents -->
@@ -155,7 +142,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 19日 星期一 15:51:54 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:04 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

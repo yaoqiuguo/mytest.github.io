@@ -53,15 +53,15 @@ $(document).ready(function(){initNavTree('gpio.html',''); initResizable(); });
 <div class="title">GPIO </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1429"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1491"></a>
 概述</h1>
 <p>GPIO设备VFS驱动子系统。</p>
-<h2><a class="anchor" id="autotoc_md1430"></a>
+<h2><a class="anchor" id="autotoc_md1492"></a>
 版权说明</h2>
 <blockquote class="doxtable">
 <p>Apache license v2.0 </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md1431"></a>
+<h2><a class="anchor" id="autotoc_md1493"></a>
 目录结构</h2>
 <div class="fragment"><div class="line">├── src</div>
 <div class="line">│   └── gpio_dev.c          # HAL to VFS适配</div>
@@ -74,34 +74,34 @@ $(document).ready(function(){initNavTree('gpio.html',''); initResizable(); });
 <div class="line">├── package.yaml            # 编译配置文件</div>
 <div class="line">└── example</div>
 <div class="line">    └── gpio_example.c      # 示例代码（默认禁用，可在package.yaml中使能）</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1432"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1494"></a>
 依赖组件</h2>
 <ul>
 <li>base</li>
 <li>vfs</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md1433"></a>
+<h1><a class="anchor" id="autotoc_md1495"></a>
 常用配置</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md1434"></a>
+<h1><a class="anchor" id="autotoc_md1496"></a>
 API说明</h1>
-<h2><a class="anchor" id="autotoc_md1435"></a>
+<h2><a class="anchor" id="autotoc_md1497"></a>
 打开</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> open(<span class="keyword">const</span> <span class="keywordtype">char</span> *pathname, <span class="keywordtype">int</span> flags);</div>
 </div><!-- fragment --> <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">args   </th><th class="markdownTableHeadLeft">description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">pathname   </td><td class="markdownTableBodyLeft">固定为*/dev/gpio*    </td></tr>
+<td class="markdownTableBodyLeft">pathname   </td><td class="markdownTableBodyLeft">固定为<code>"/dev/gpio"</code>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">flags   </td><td class="markdownTableBodyLeft">目前固定为0值   </td></tr>
 </table>
 <p>兼容POSIX标准的open接口。</p>
-<h2><a class="anchor" id="autotoc_md1436"></a>
+<h2><a class="anchor" id="autotoc_md1498"></a>
 关闭</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> close(<span class="keywordtype">int</span> fd);</div>
 </div><!-- fragment --><p> 兼容POSIX标准的close接口。</p>
-<h2><a class="anchor" id="autotoc_md1437"></a>
+<h2><a class="anchor" id="autotoc_md1499"></a>
 配置输入属性并获取输入电平</h2>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>gpio_io_config {</div>
 <div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> id : 8;        <span class="comment">// GPIO id</span></div>
@@ -110,7 +110,7 @@ API说明</h1>
 <div class="line">} gpio_io_config_t;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> ioctl(<span class="keywordtype">int</span> fd, IOC_GPIO_GET, gpio_io_config_t *config);</div>
-</div><!-- fragment --><p> 参数config中的id成员变量表示GPIO pin编号。 参数config中的config成员变量表示输入属性： </p><table class="markdownTable">
+</div><!-- fragment --><p> 参数config中的id成员变量表示GPIO pin ID。 参数config中的config成员变量表示输入属性： </p><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">符号   </th><th class="markdownTableHeadLeft">含义    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -121,10 +121,10 @@ API说明</h1>
 <td class="markdownTableBodyLeft">GPIO_IO_INPUT | GPIO_IO_INPUT_HI   </td><td class="markdownTableBodyLeft">输入高阻   </td></tr>
 </table>
 <p>参数config中的data成员变量无意义。 返回值等于0表示输入为低电平，大于0表示输入为高电平，小于0表示出错。</p>
-<h2><a class="anchor" id="autotoc_md1438"></a>
-配置输出属性并获取输出电平</h2>
+<h2><a class="anchor" id="autotoc_md1500"></a>
+配置输出属性并设置输出电平</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> ioctl(<span class="keywordtype">int</span> fd, IOC_GPIO_SET, gpio_io_config_t *config);</div>
-</div><!-- fragment --><p> 参数config中的id成员变量表示GPIO pin编号。 参数config中的config成员变量表示输出属性： </p><table class="markdownTable">
+</div><!-- fragment --><p> 参数config中的id成员变量表示GPIO pin ID。 参数config中的config成员变量表示输出属性： </p><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">符号   </th><th class="markdownTableHeadLeft">含义    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -137,7 +137,7 @@ API说明</h1>
 <td class="markdownTableBodyLeft">GPIO_IO_TOGGLE   </td><td class="markdownTableBodyLeft">翻转输出电平   </td></tr>
 </table>
 <p>参数config中的data成员变量表示输出电平，0表示低电平，1表示高电平；config为GPIO_IO_TOGGLE时data无意义。 返回值等于0表示成功，小于0表示出错。</p>
-<h2><a class="anchor" id="autotoc_md1439"></a>
+<h2><a class="anchor" id="autotoc_md1501"></a>
 配置中断</h2>
 <div class="fragment"><div class="line"><span class="keyword">typedef</span> int (*io_irq_handler_t)(<span class="keywordtype">void</span> *arg);</div>
 <div class="line"> </div>
@@ -149,7 +149,7 @@ API说明</h1>
 <div class="line">} gpio_irq_config_t;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> ioctl(<span class="keywordtype">int</span> fd, IOC_GPIO_SET_IRQ, gpio_irq_config_t *config);</div>
-</div><!-- fragment --><p> 参数config中的id成员变量表示GPIO pin编号。 参数config中的config成员变量表示中断属性： </p><table class="markdownTable">
+</div><!-- fragment --><p> 参数config中的id成员变量表示GPIO pin ID。 参数config中的config成员变量表示中断属性： </p><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">符号   </th><th class="markdownTableHeadLeft">含义    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -161,44 +161,52 @@ API说明</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">GPIO_IRQ_DISABLE   </td><td class="markdownTableBodyLeft">禁用中断   </td></tr>
 </table>
-<p>返回值等于0表示成功，小于0表示出错。</p>
-<h1><a class="anchor" id="autotoc_md1440"></a>
+<p>参数config中的cb成员变量表示中断回调函数。 参数config中的arg成员变量表示传递给中断回调函数的参数。 返回值等于0表示成功，小于0表示出错。</p>
+<h1><a class="anchor" id="autotoc_md1502"></a>
 使用示例</h1>
 <p>示例代码参考example/gpio_example.c，以运行helloworld_demo为例，具体步骤如下：</p>
-<h2><a class="anchor" id="autotoc_md1441"></a>
+<h2><a class="anchor" id="autotoc_md1503"></a>
 添加示例代码</h2>
 <p>gpio组件的package.yaml中添加example </p><div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - &quot;example/gpio_example.c&quot;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1442"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1504"></a>
 添加组件</h2>
 <p>helloworld_demo组件默认已依赖gpio组件。</p>
-<h2><a class="anchor" id="autotoc_md1443"></a>
+<h2><a class="anchor" id="autotoc_md1505"></a>
 编译</h2>
 <div class="fragment"><div class="line">cd solutions/helloworld_demo &amp;&amp; aos make</div>
 </div><!-- fragment --><p> 其中具体单板还需要先配置环境： </p><div class="fragment"><div class="line">aos make helloworld_demo@haas100 -c config</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1444"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1506"></a>
 烧录固件</h2>
 <p>参考具体板子的快速开始文档。</p>
-<h2><a class="anchor" id="autotoc_md1445"></a>
+<h2><a class="anchor" id="autotoc_md1507"></a>
 示例测试</h2>
-<p>CLI命令行输入： </p><div class="fragment"><div class="line">gpiot</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1446"></a>
+<p>CLI命令行输入： </p><div class="fragment"><div class="line">gpiot &lt;pin ID&gt;</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1508"></a>
 关键日志</h2>
-<p>以GPIO实际输入、输出数据为准。</p>
-<h1><a class="anchor" id="autotoc_md1447"></a>
+<p>示例测试日志显示： </p><div class="fragment"><div class="line">open gpio success, fd:&lt;fd&gt;</div>
+<div class="line">gpio read &lt;pin ID&gt; return &lt;ioctl IOC_GPIO_GET返回值&gt;</div>
+<div class="line">gpio write &lt;pin ID&gt; return &lt;ioctl IOC_GPIO_SET（配置输出）返回值&gt;</div>
+<div class="line">gpio toggle &lt;pin ID&gt; return &lt;ioctl IOC_GPIO_SET（翻转输出）返回值&gt;</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1509"></a>
 注意事项</h1>
 <p>无</p>
-<h1><a class="anchor" id="autotoc_md1448"></a>
+<h1><a class="anchor" id="autotoc_md1510"></a>
 FAQ</h1>
-<p>无 </p>
+<ol type="1">
+<li>API中的pin ID如何填写？ <blockquote class="doxtable">
+<p>一般来说GPIO是分组的。以HaaS100为例，它的GPIO pin是8个一组。如果某GPIO pin名称为GPIO_2_6，则pin ID应为2 * 8 + 6 = 22。其它pin ID的计算方法依此类推。 </p>
+</blockquote>
+</li>
+</ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 19日 星期一 15:51:58 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:10 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

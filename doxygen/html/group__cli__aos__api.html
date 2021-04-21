@@ -102,6 +102,12 @@ $(document).ready(function(){initNavTree('group__cli__aos__api.html',''); initRe
 <tr class="memitem:gab4dfa506ecc735e58cff8a009093e066"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cli__aos__api.html#gab4dfa506ecc735e58cff8a009093e066">aos_cli_printf</a> (const char *fmt,...)</td></tr>
 <tr class="memdesc:gab4dfa506ecc735e58cff8a009093e066"><td class="mdescLeft">&#160;</td><td class="mdescRight">use aos_cli_printf instead of printf in cli cmd  <a href="group__cli__aos__api.html#gab4dfa506ecc735e58cff8a009093e066">更多...</a><br /></td></tr>
 <tr class="separator:gab4dfa506ecc735e58cff8a009093e066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4aa472856b622642493d267497f33254"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cli__aos__api.html#ga4aa472856b622642493d267497f33254">aos_cli_suspend</a> (void)</td></tr>
+<tr class="memdesc:ga4aa472856b622642493d267497f33254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend cli task  <a href="group__cli__aos__api.html#ga4aa472856b622642493d267497f33254">更多...</a><br /></td></tr>
+<tr class="separator:ga4aa472856b622642493d267497f33254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65e6ee7cf3af865a479946688d8e9976"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cli__aos__api.html#ga65e6ee7cf3af865a479946688d8e9976">aos_cli_resume</a> (void)</td></tr>
+<tr class="memdesc:ga65e6ee7cf3af865a479946688d8e9976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume cli task  <a href="group__cli__aos__api.html#ga65e6ee7cf3af865a479946688d8e9976">更多...</a><br /></td></tr>
+<tr class="separator:ga65e6ee7cf3af865a479946688d8e9976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <h2 class="groupheader">宏定义说明</h2>
@@ -349,6 +355,48 @@ $(document).ready(function(){initNavTree('group__cli__aos__api.html',''); initRe
 
 </div>
 </div>
+<a id="ga65e6ee7cf3af865a479946688d8e9976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65e6ee7cf3af865a479946688d8e9976">&#9670;&nbsp;</a></span>aos_cli_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int aos_cli_resume </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resume cli task </p>
+<dl class="section return"><dt>返回</dt><dd>0 on success, otherwise failed </dd></dl>
+
+</div>
+</div>
+<a id="ga4aa472856b622642493d267497f33254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4aa472856b622642493d267497f33254">&#9670;&nbsp;</a></span>aos_cli_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int aos_cli_suspend </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Suspend cli task </p>
+<dl class="section return"><dt>返回</dt><dd>0 on success, otherwise failed </dd></dl>
+
+</div>
+</div>
 <a id="gad849d9171c18e99bd5c5caca19af5500"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad849d9171c18e99bd5c5caca19af5500">&#9670;&nbsp;</a></span>aos_cli_unregister_command()</h2>
 
@@ -419,7 +467,7 @@ $(document).ready(function(){initNavTree('group__cli__aos__api.html',''); initRe
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 19日 星期一 15:51:59 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 21日 星期三 14:19:12 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
