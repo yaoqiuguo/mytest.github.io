@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: /Users/yaoqiuguo/Documents/work/AOS3.3/aos/aostest/components/a2sa/include/sound_mixer.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('sound__mixer_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">sound_mixer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sound__mixer_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2015-2017 Alibaba Group Holding Limited</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SOUND_CONTROL_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SOUND_CONTROL_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;errno.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;aos/list.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="kernel_8h.html">aos/kernel.h</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef HAAS_AUDIO_DEMO</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;sys/ioctl.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;audio_drv.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">/* 音频mixer设备节点描述信息 */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structaos__mixer__t.html">   41</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structaos__mixer__t.html#a6f8059414f0228f0256115e024eeed4b">   42</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structaos__mixer__t.html#a6f8059414f0228f0256115e024eeed4b">fd</a>;                                  </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structaos__mixer__t.html#acd789e381a684163a021e2d228653afd">   43</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structaos__mixer__t.html#acd789e381a684163a021e2d228653afd">card</a>;                                </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structaos__mixer__t.html#a896883fb2c64d5f41d2f7d26ca2524af">   44</a></span>&#160;    <span class="keywordtype">char</span> *name;                              </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">struct </span>audio_ctl_card_info card_info;    </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structaos__mixer__t.html#a859689ac079434ca9d6dff78186e1838">   46</a></span>&#160;    <span class="keyword">struct </span>audio_ctl_elem_info *<a class="code" href="structaos__mixer__t.html#a859689ac079434ca9d6dff78186e1838">elem_info</a>;   </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structaos__mixer__t.html#a16ff2d8e15ade4948398b0aeb80124a8">   47</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structaos__mixer__t.html#a16ff2d8e15ade4948398b0aeb80124a8">count</a>;                      </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <a class="code" href="structaos__mixer__t.html">aos_mixer_t</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="group__a2sa__mixer__api.html#gaa71b6a2535b3a966f357f2f5bbc1781b">   58</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__a2sa__mixer__api.html#gaa71b6a2535b3a966f357f2f5bbc1781b">aos_mixer_open</a>(<a class="code" href="structaos__mixer__t.html">aos_mixer_t</a> **mixer, <span class="keywordtype">int</span> card);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="group__a2sa__mixer__api.html#ga4f23f3efe1c40940ba145588a050089e">   67</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__a2sa__mixer__api.html#ga4f23f3efe1c40940ba145588a050089e">aos_mixer_print_info</a>(<a class="code" href="structaos__mixer__t.html">aos_mixer_t</a> *mixer);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="group__a2sa__mixer__api.html#ga5b95095cad9746b6b02352a05e456c5a">   78</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__a2sa__mixer__api.html#ga5b95095cad9746b6b02352a05e456c5a">aos_mixer_set_int_value</a>(<a class="code" href="structaos__mixer__t.html">aos_mixer_t</a> *mixer, <span class="keywordtype">char</span> *name, <span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="group__a2sa__mixer__api.html#ga12fda02361b104df3578c280630dc97f">   89</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__a2sa__mixer__api.html#ga12fda02361b104df3578c280630dc97f">aos_mixer_get_int_value</a>(<a class="code" href="structaos__mixer__t.html">aos_mixer_t</a> *mixer, <span class="keywordtype">char</span> *name, <span class="keywordtype">int</span> *value);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="group__a2sa__mixer__api.html#gaf19d9d9a9e2d93eec6f67940dd390e51">   98</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__a2sa__mixer__api.html#gaf19d9d9a9e2d93eec6f67940dd390e51">aos_mixer_close</a>(<a class="code" href="structaos__mixer__t.html">aos_mixer_t</a> *mixer);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="group__a2sa__mixer__api.html#ga1a5ef757583823d77897529e19c7eaf6">  107</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__a2sa__mixer__api.html#ga1a5ef757583823d77897529e19c7eaf6">aos_set_master_volume</a>(<span class="keywordtype">int</span> volume);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="group__a2sa__mixer__api.html#gaaf1f8683ae95a502ba088113f17627db">  116</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__a2sa__mixer__api.html#gaaf1f8683ae95a502ba088113f17627db">aos_get_master_volume</a>(<span class="keywordtype">int</span> *volume);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="group__a2sa__mixer__api.html#ga8e10f7a311498cdbf2d9e1f439815efa">  125</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__a2sa__mixer__api.html#ga8e10f7a311498cdbf2d9e1f439815efa">aos_set_mute_state</a>(<span class="keywordtype">int</span> mute);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="group__a2sa__mixer__api.html#gadb37d145205964c28d825445fb72b84d">  134</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__a2sa__mixer__api.html#gadb37d145205964c28d825445fb72b84d">aos_get_mute_state</a>(<span class="keywordtype">int</span> *mute);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SOUND_CONTROL_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="agroup__a2sa__mixer__api_html_ga12fda02361b104df3578c280630dc97f"><div class="ttname"><a href="group__a2sa__mixer__api.html#ga12fda02361b104df3578c280630dc97f">aos_mixer_get_int_value</a></div><div class="ttdeci">int aos_mixer_get_int_value(aos_mixer_t *mixer, char *name, int *value)</div></div>
+<div class="ttc" id="agroup__a2sa__mixer__api_html_ga1a5ef757583823d77897529e19c7eaf6"><div class="ttname"><a href="group__a2sa__mixer__api.html#ga1a5ef757583823d77897529e19c7eaf6">aos_set_master_volume</a></div><div class="ttdeci">int aos_set_master_volume(int volume)</div></div>
+<div class="ttc" id="agroup__a2sa__mixer__api_html_ga4f23f3efe1c40940ba145588a050089e"><div class="ttname"><a href="group__a2sa__mixer__api.html#ga4f23f3efe1c40940ba145588a050089e">aos_mixer_print_info</a></div><div class="ttdeci">int aos_mixer_print_info(aos_mixer_t *mixer)</div></div>
+<div class="ttc" id="agroup__a2sa__mixer__api_html_ga5b95095cad9746b6b02352a05e456c5a"><div class="ttname"><a href="group__a2sa__mixer__api.html#ga5b95095cad9746b6b02352a05e456c5a">aos_mixer_set_int_value</a></div><div class="ttdeci">int aos_mixer_set_int_value(aos_mixer_t *mixer, char *name, int value)</div></div>
+<div class="ttc" id="agroup__a2sa__mixer__api_html_ga8e10f7a311498cdbf2d9e1f439815efa"><div class="ttname"><a href="group__a2sa__mixer__api.html#ga8e10f7a311498cdbf2d9e1f439815efa">aos_set_mute_state</a></div><div class="ttdeci">int aos_set_mute_state(int mute)</div></div>
+<div class="ttc" id="agroup__a2sa__mixer__api_html_gaa71b6a2535b3a966f357f2f5bbc1781b"><div class="ttname"><a href="group__a2sa__mixer__api.html#gaa71b6a2535b3a966f357f2f5bbc1781b">aos_mixer_open</a></div><div class="ttdeci">int aos_mixer_open(aos_mixer_t **mixer, int card)</div></div>
+<div class="ttc" id="agroup__a2sa__mixer__api_html_gaaf1f8683ae95a502ba088113f17627db"><div class="ttname"><a href="group__a2sa__mixer__api.html#gaaf1f8683ae95a502ba088113f17627db">aos_get_master_volume</a></div><div class="ttdeci">int aos_get_master_volume(int *volume)</div></div>
+<div class="ttc" id="agroup__a2sa__mixer__api_html_gadb37d145205964c28d825445fb72b84d"><div class="ttname"><a href="group__a2sa__mixer__api.html#gadb37d145205964c28d825445fb72b84d">aos_get_mute_state</a></div><div class="ttdeci">int aos_get_mute_state(int *mute)</div></div>
+<div class="ttc" id="agroup__a2sa__mixer__api_html_gaf19d9d9a9e2d93eec6f67940dd390e51"><div class="ttname"><a href="group__a2sa__mixer__api.html#gaf19d9d9a9e2d93eec6f67940dd390e51">aos_mixer_close</a></div><div class="ttdeci">int aos_mixer_close(aos_mixer_t *mixer)</div></div>
+<div class="ttc" id="akernel_8h_html"><div class="ttname"><a href="kernel_8h.html">kernel.h</a></div></div>
+<div class="ttc" id="astructaos__mixer__t_html"><div class="ttname"><a href="structaos__mixer__t.html">aos_mixer_t</a></div><div class="ttdef"><b>Definition:</b> <a href="sound__mixer_8h_source.html#l00041">sound_mixer.h:41</a></div></div>
+<div class="ttc" id="astructaos__mixer__t_html_a16ff2d8e15ade4948398b0aeb80124a8"><div class="ttname"><a href="structaos__mixer__t.html#a16ff2d8e15ade4948398b0aeb80124a8">aos_mixer_t::count</a></div><div class="ttdeci">unsigned int count</div><div class="ttdef"><b>Definition:</b> <a href="sound__mixer_8h_source.html#l00047">sound_mixer.h:47</a></div></div>
+<div class="ttc" id="astructaos__mixer__t_html_a6f8059414f0228f0256115e024eeed4b"><div class="ttname"><a href="structaos__mixer__t.html#a6f8059414f0228f0256115e024eeed4b">aos_mixer_t::fd</a></div><div class="ttdeci">int fd</div><div class="ttdef"><b>Definition:</b> <a href="sound__mixer_8h_source.html#l00042">sound_mixer.h:42</a></div></div>
+<div class="ttc" id="astructaos__mixer__t_html_a859689ac079434ca9d6dff78186e1838"><div class="ttname"><a href="structaos__mixer__t.html#a859689ac079434ca9d6dff78186e1838">aos_mixer_t::elem_info</a></div><div class="ttdeci">struct audio_ctl_elem_info * elem_info</div><div class="ttdef"><b>Definition:</b> <a href="sound__mixer_8h_source.html#l00046">sound_mixer.h:46</a></div></div>
+<div class="ttc" id="astructaos__mixer__t_html_acd789e381a684163a021e2d228653afd"><div class="ttname"><a href="structaos__mixer__t.html#acd789e381a684163a021e2d228653afd">aos_mixer_t::card</a></div><div class="ttdeci">int card</div><div class="ttdef"><b>Definition:</b> <a href="sound__mixer_8h_source.html#l00043">sound_mixer.h:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_f7628bf394e0d5e4b7f8fb44f999c2e1.html">a2sa</a></li><li class="navelem"><a class="el" href="dir_e3a573d07cbc1686eaa35b2d670af6ea.html">include</a></li><li class="navelem"><a class="el" href="sound__mixer_8h.html">sound_mixer.h</a></li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 13:24:39 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

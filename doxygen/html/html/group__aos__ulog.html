@@ -1,0 +1,763 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: ulog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__aos__ulog.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">ulog</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga40de422355f363376eb4cc383ac02e9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga40de422355f363376eb4cc383ac02e9c">ULOG_TAG</a>&#160;&#160;&#160;__FILE__, __LINE__</td></tr>
+<tr class="separator:ga40de422355f363376eb4cc383ac02e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c6e8b60c2512dfc0e0224d25a61cb2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga5c6e8b60c2512dfc0e0224d25a61cb2c">LOG_EMERG</a>&#160;&#160;&#160;0 /* system is unusable */</td></tr>
+<tr class="separator:ga5c6e8b60c2512dfc0e0224d25a61cb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12b2a3bb9e3adfeb35b4e5514e7d9043"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga12b2a3bb9e3adfeb35b4e5514e7d9043">LOG_ALERT</a>&#160;&#160;&#160;1 /* action must be taken immediately */</td></tr>
+<tr class="separator:ga12b2a3bb9e3adfeb35b4e5514e7d9043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa731313f5c63e855fefb5f6519c3283"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#gaaa731313f5c63e855fefb5f6519c3283">LOG_CRIT</a>&#160;&#160;&#160;2 /* critical conditions */</td></tr>
+<tr class="separator:gaaa731313f5c63e855fefb5f6519c3283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96fad55b3f5adf08c39e4c877cf185e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga96fad55b3f5adf08c39e4c877cf185e3">LOG_ERR</a>&#160;&#160;&#160;3 /* error conditions */</td></tr>
+<tr class="separator:ga96fad55b3f5adf08c39e4c877cf185e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf4476a6a4ea6c74231c826e899d7189"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#gadf4476a6a4ea6c74231c826e899d7189">LOG_WARNING</a>&#160;&#160;&#160;4 /* warning conditions */</td></tr>
+<tr class="separator:gadf4476a6a4ea6c74231c826e899d7189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad89ee324d180cdcd7defcc709ff9ca42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#gad89ee324d180cdcd7defcc709ff9ca42">LOG_NOTICE</a>&#160;&#160;&#160;5 /* normal, but significant, condition */</td></tr>
+<tr class="separator:gad89ee324d180cdcd7defcc709ff9ca42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb4f36db01bd128c7afeac5889dac311"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#gaeb4f36db01bd128c7afeac5889dac311">LOG_INFO</a>&#160;&#160;&#160;6 /* informational message */</td></tr>
+<tr class="separator:gaeb4f36db01bd128c7afeac5889dac311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ff63e8955665c4a58b1598f2b07c51a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga6ff63e8955665c4a58b1598f2b07c51a">LOG_DEBUG</a>&#160;&#160;&#160;7 /* debug-level message */</td></tr>
+<tr class="separator:ga6ff63e8955665c4a58b1598f2b07c51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1632479322efa3952798f98177b54471"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga1632479322efa3952798f98177b54471">LOG_NONE</a>&#160;&#160;&#160;8 /* used in stop filter, all log will pop out */</td></tr>
+<tr class="separator:ga1632479322efa3952798f98177b54471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3577749fb48d57a158b8ac1a0b3ab57e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga3577749fb48d57a158b8ac1a0b3ab57e">LOG</a>(...)&#160;&#160;&#160;<a class="el" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a>(<a class="el" href="group__aos__ulog.html#ga12b2a3bb9e3adfeb35b4e5514e7d9043">LOG_ALERT</a>, &quot;AOS&quot;, ULOG_TAG, __VA_ARGS__)</td></tr>
+<tr class="separator:ga3577749fb48d57a158b8ac1a0b3ab57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga88b11e6262113fbd4cf403f9daa0ba86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga88b11e6262113fbd4cf403f9daa0ba86">LOGF</a>(mod, ...)&#160;&#160;&#160;<a class="el" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a>(<a class="el" href="group__aos__ulog.html#gaaa731313f5c63e855fefb5f6519c3283">LOG_CRIT</a>, mod, <a class="el" href="group__aos__ulog.html#ga40de422355f363376eb4cc383ac02e9c">ULOG_TAG</a>, __VA_ARGS__)</td></tr>
+<tr class="separator:ga88b11e6262113fbd4cf403f9daa0ba86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga003e24d8e56582a5466eb3fd2d689307"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga003e24d8e56582a5466eb3fd2d689307">LOGE</a>(mod, ...)&#160;&#160;&#160;<a class="el" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a>(<a class="el" href="group__aos__ulog.html#ga96fad55b3f5adf08c39e4c877cf185e3">LOG_ERR</a>, mod, <a class="el" href="group__aos__ulog.html#ga40de422355f363376eb4cc383ac02e9c">ULOG_TAG</a>, __VA_ARGS__)</td></tr>
+<tr class="separator:ga003e24d8e56582a5466eb3fd2d689307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a297278242e1a9237a9818d14d6c3c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga6a297278242e1a9237a9818d14d6c3c8">LOGW</a>(mod, ...)&#160;&#160;&#160;<a class="el" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a>(<a class="el" href="group__aos__ulog.html#gadf4476a6a4ea6c74231c826e899d7189">LOG_WARNING</a>, mod, <a class="el" href="group__aos__ulog.html#ga40de422355f363376eb4cc383ac02e9c">ULOG_TAG</a>, __VA_ARGS__)</td></tr>
+<tr class="separator:ga6a297278242e1a9237a9818d14d6c3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8f100a73967d2ea62691afabbbfba92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#gae8f100a73967d2ea62691afabbbfba92">LOGI</a>(mod, ...)&#160;&#160;&#160;<a class="el" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a>(<a class="el" href="group__aos__ulog.html#gaeb4f36db01bd128c7afeac5889dac311">LOG_INFO</a>, mod, <a class="el" href="group__aos__ulog.html#ga40de422355f363376eb4cc383ac02e9c">ULOG_TAG</a>, __VA_ARGS__)</td></tr>
+<tr class="separator:gae8f100a73967d2ea62691afabbbfba92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac8083d8831aced1183f24d2778829c86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#gac8083d8831aced1183f24d2778829c86">LOGD</a>(mod, ...)</td></tr>
+<tr class="separator:gac8083d8831aced1183f24d2778829c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gab5415466dbe3b11b98f39d2c428bac16"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#gab5415466dbe3b11b98f39d2c428bac16">aos_log_level_t</a> { <br />
+&#160;&#160;<a class="el" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a3d3817cf3437c7e4d2bd76c00c1e0dfb">AOS_LL_NONE</a> = LOG_EMERG
+, <a class="el" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16adbd5e767489ec45919a809f3aad0a7af">AOS_LL_FATAL</a> = LOG_CRIT
+, <a class="el" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a255814b1df4f22bc3a77520d6fd5369d">AOS_LL_ERROR</a> = LOG_ERR
+, <a class="el" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a1af960ee8037c2934c6ba732dcdfe164">AOS_LL_WARN</a> = LOG_WARNING
+, <br />
+&#160;&#160;<a class="el" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a23dea4909200c215b6c7d339cb7ad2f1">AOS_LL_INFO</a> = LOG_INFO
+, <a class="el" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a9baa99965557842c0816d965acc07907">AOS_LL_DEBUG</a> = LOG_DEBUG
+<br />
+ }</td></tr>
+<tr class="separator:gab5415466dbe3b11b98f39d2c428bac16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga2ff71c8dd521c5fb8a41a238ff0613af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a> (const unsigned char s, const char *mod, const char *f, const unsigned long l, const char *fmt,...)</td></tr>
+<tr class="separator:ga2ff71c8dd521c5fb8a41a238ff0613af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacbfc22f02687b515dad860248ce82960"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#gacbfc22f02687b515dad860248ce82960">aos_set_log_level</a> (<a class="el" href="group__aos__ulog.html#gab5415466dbe3b11b98f39d2c428bac16">aos_log_level_t</a> log_level)</td></tr>
+<tr class="separator:gacbfc22f02687b515dad860248ce82960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae75e478d749131636e991421b259b6f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#gae75e478d749131636e991421b259b6f8">ulog_init</a> (void)</td></tr>
+<tr class="separator:gae75e478d749131636e991421b259b6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae569ebc100786c9d7067edb29eefebd0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#gae569ebc100786c9d7067edb29eefebd0">ulog_man</a> (const char *cmd_str)</td></tr>
+<tr class="separator:gae569ebc100786c9d7067edb29eefebd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e8922820bd4c37b0b8ae5d92427bc58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga4e8922820bd4c37b0b8ae5d92427bc58">aos_get_ulog_list</a> (char *buf, const unsigned short len)</td></tr>
+<tr class="separator:ga4e8922820bd4c37b0b8ae5d92427bc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga83a4107e1086d330dd922691bbfa7a9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aos__ulog.html#ga83a4107e1086d330dd922691bbfa7a9f">aos_log_hexdump</a> (const char *tag, char *buffer, int len)</td></tr>
+<tr class="separator:ga83a4107e1086d330dd922691bbfa7a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>Optional policy of log, which can output into default direction, virtual file system, mqtt channel and syslog udp. </p>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="ga3577749fb48d57a158b8ac1a0b3ab57e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3577749fb48d57a158b8ac1a0b3ab57e">&#9670;&nbsp;</a></span>LOG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a>(<a class="el" href="group__aos__ulog.html#ga12b2a3bb9e3adfeb35b4e5514e7d9043">LOG_ALERT</a>, &quot;AOS&quot;, ULOG_TAG, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Log at the alert level, brief using of ulog.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>same as printf() usage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00075">75</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga12b2a3bb9e3adfeb35b4e5514e7d9043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga12b2a3bb9e3adfeb35b4e5514e7d9043">&#9670;&nbsp;</a></span>LOG_ALERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_ALERT&#160;&#160;&#160;1 /* action must be taken immediately */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00032">32</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gaaa731313f5c63e855fefb5f6519c3283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa731313f5c63e855fefb5f6519c3283">&#9670;&nbsp;</a></span>LOG_CRIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_CRIT&#160;&#160;&#160;2 /* critical conditions */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga6ff63e8955665c4a58b1598f2b07c51a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6ff63e8955665c4a58b1598f2b07c51a">&#9670;&nbsp;</a></span>LOG_DEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_DEBUG&#160;&#160;&#160;7 /* debug-level message */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga5c6e8b60c2512dfc0e0224d25a61cb2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c6e8b60c2512dfc0e0224d25a61cb2c">&#9670;&nbsp;</a></span>LOG_EMERG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_EMERG&#160;&#160;&#160;0 /* system is unusable */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga96fad55b3f5adf08c39e4c877cf185e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96fad55b3f5adf08c39e4c877cf185e3">&#9670;&nbsp;</a></span>LOG_ERR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_ERR&#160;&#160;&#160;3 /* error conditions */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00034">34</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gaeb4f36db01bd128c7afeac5889dac311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb4f36db01bd128c7afeac5889dac311">&#9670;&nbsp;</a></span>LOG_INFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_INFO&#160;&#160;&#160;6 /* informational message */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00037">37</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga1632479322efa3952798f98177b54471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1632479322efa3952798f98177b54471">&#9670;&nbsp;</a></span>LOG_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_NONE&#160;&#160;&#160;8 /* used in stop filter, all log will pop out */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gad89ee324d180cdcd7defcc709ff9ca42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad89ee324d180cdcd7defcc709ff9ca42">&#9670;&nbsp;</a></span>LOG_NOTICE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_NOTICE&#160;&#160;&#160;5 /* normal, but significant, condition */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gadf4476a6a4ea6c74231c826e899d7189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf4476a6a4ea6c74231c826e899d7189">&#9670;&nbsp;</a></span>LOG_WARNING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_WARNING&#160;&#160;&#160;4 /* warning conditions */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gac8083d8831aced1183f24d2778829c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac8083d8831aced1183f24d2778829c86">&#9670;&nbsp;</a></span>LOGD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGD</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">mod, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Log at debug level, brief using of ulog.</p>
+<dl class="section note"><dt>注解</dt><dd>: This Log API take effect only the switcher 'DEBUG' is switch on. </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mod</td><td>string description of module. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>same as printf() usage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00137">137</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga003e24d8e56582a5466eb3fd2d689307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga003e24d8e56582a5466eb3fd2d689307">&#9670;&nbsp;</a></span>LOGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">mod, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a>(<a class="el" href="group__aos__ulog.html#ga96fad55b3f5adf08c39e4c877cf185e3">LOG_ERR</a>, mod, <a class="el" href="group__aos__ulog.html#ga40de422355f363376eb4cc383ac02e9c">ULOG_TAG</a>, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Log at error level, brief using of ulog.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mod</td><td>string description of module. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>same as printf() usage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00103">103</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga88b11e6262113fbd4cf403f9daa0ba86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga88b11e6262113fbd4cf403f9daa0ba86">&#9670;&nbsp;</a></span>LOGF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGF</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">mod, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a>(<a class="el" href="group__aos__ulog.html#gaaa731313f5c63e855fefb5f6519c3283">LOG_CRIT</a>, mod, <a class="el" href="group__aos__ulog.html#ga40de422355f363376eb4cc383ac02e9c">ULOG_TAG</a>, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Log at fatal level, brief using of ulog.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mod</td><td>string description of module. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>same as printf() usage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00093">93</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gae8f100a73967d2ea62691afabbbfba92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8f100a73967d2ea62691afabbbfba92">&#9670;&nbsp;</a></span>LOGI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGI</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">mod, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a>(<a class="el" href="group__aos__ulog.html#gaeb4f36db01bd128c7afeac5889dac311">LOG_INFO</a>, mod, <a class="el" href="group__aos__ulog.html#ga40de422355f363376eb4cc383ac02e9c">ULOG_TAG</a>, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Log at info level, brief using of ulog.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mod</td><td>string description of module. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>same as printf() usage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00123">123</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga6a297278242e1a9237a9818d14d6c3c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a297278242e1a9237a9818d14d6c3c8">&#9670;&nbsp;</a></span>LOGW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGW</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">mod, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a>(<a class="el" href="group__aos__ulog.html#gadf4476a6a4ea6c74231c826e899d7189">LOG_WARNING</a>, mod, <a class="el" href="group__aos__ulog.html#ga40de422355f363376eb4cc383ac02e9c">ULOG_TAG</a>, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Log at warning level, brief using of ulog.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mod</td><td>string description of module. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>same as printf() usage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00113">113</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga40de422355f363376eb4cc383ac02e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40de422355f363376eb4cc383ac02e9c">&#9670;&nbsp;</a></span>ULOG_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ULOG_TAG&#160;&#160;&#160;__FILE__, __LINE__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Important!!! Switch on NDEBUG will make no log produced(except use API LOG), it doesn't work even you try to increase log level. </p>
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00029">29</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="gab5415466dbe3b11b98f39d2c428bac16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5415466dbe3b11b98f39d2c428bac16">&#9670;&nbsp;</a></span>aos_log_level_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__aos__ulog.html#gab5415466dbe3b11b98f39d2c428bac16">aos_log_level_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggab5415466dbe3b11b98f39d2c428bac16a3d3817cf3437c7e4d2bd76c00c1e0dfb"></a>AOS_LL_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggab5415466dbe3b11b98f39d2c428bac16adbd5e767489ec45919a809f3aad0a7af"></a>AOS_LL_FATAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggab5415466dbe3b11b98f39d2c428bac16a255814b1df4f22bc3a77520d6fd5369d"></a>AOS_LL_ERROR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggab5415466dbe3b11b98f39d2c428bac16a1af960ee8037c2934c6ba732dcdfe164"></a>AOS_LL_WARN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggab5415466dbe3b11b98f39d2c428bac16a23dea4909200c215b6c7d339cb7ad2f1"></a>AOS_LL_INFO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggab5415466dbe3b11b98f39d2c428bac16a9baa99965557842c0816d965acc07907"></a>AOS_LL_DEBUG&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="ulog_8h_source.html">ulog.h</a> 第 <a class="el" href="ulog_8h_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga4e8922820bd4c37b0b8ae5d92427bc58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e8922820bd4c37b0b8ae5d92427bc58">&#9670;&nbsp;</a></span>aos_get_ulog_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int aos_get_ulog_list </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned short&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function prototype for get ulog list recorded in file system. Precondition of use this function is switch on ULOG_POP_FS_ENABLE The result is usually like below: {"time":"   4.500",list:[{"idx":1,"start":"   0.000","end":""}]} context of time is system time when called, list show the start time and end time of special index. If value of end time is empty, means this log file is logging.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>buffer received the context of file list </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>length of buffer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 sucessfully, -EINVAL param illegal, -ENOMEM not enough room to receive file list, -EIO system error. </dd></dl>
+
+</div>
+</div>
+<a id="ga83a4107e1086d330dd922691bbfa7a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga83a4107e1086d330dd922691bbfa7a9f">&#9670;&nbsp;</a></span>aos_log_hexdump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int aos_log_hexdump </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dump buffer by hex. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tag</td><td>tag </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>buffer len </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>zero on success. On error, yoc_err is returned </dd></dl>
+
+</div>
+</div>
+<a id="gacbfc22f02687b515dad860248ce82960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacbfc22f02687b515dad860248ce82960">&#9670;&nbsp;</a></span>aos_set_log_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int aos_set_log_level </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__aos__ulog.html#gab5415466dbe3b11b98f39d2c428bac16">aos_log_level_t</a>&#160;</td>
+          <td class="paramname"><em>log_level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the log level.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">log_level</td><td>level to be set,must be one of AOS_LL_NONE,AOS_LL_FATAL, AOS_LL_ERROR,AOS_LL_WARN,AOS_LL_INFO or AOS_LL_DEBUG.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
+
+</div>
+</div>
+<a id="ga2ff71c8dd521c5fb8a41a238ff0613af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ff71c8dd521c5fb8a41a238ff0613af">&#9670;&nbsp;</a></span>ulog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ulog </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>mod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned long&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function prototype for syncronized log text, Recommed using below brief API LOGX instead of this.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>Serverity of Log </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mod</td><td>Module name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>Usually File name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>Usually Line number of comment </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fmt,...</td><td>Variable Parameter, support format print to log</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on success, negative error on failure. </dd></dl>
+
+</div>
+</div>
+<a id="gae75e478d749131636e991421b259b6f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae75e478d749131636e991421b259b6f8">&#9670;&nbsp;</a></span>ulog_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ulog_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function prototype for log init. This is called in system level automatically, it is not necessary calling it in application. </p>
+
+</div>
+</div>
+<a id="gae569ebc100786c9d7067edb29eefebd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae569ebc100786c9d7067edb29eefebd0">&#9670;&nbsp;</a></span>ulog_man()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ulog_man </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cmd_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function prototype for ulog management.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_str</td><td>command string, user fill the command string to manage ulog, format shall as below: "tcpip service=1" or "tcpip service=0" to notice the tcpip feature is install or not, which have impact on the ulog pop out via udp session; "listen ip=16777343" to nofice the syslog listener's address is 127.0.0.1; "fspause=1" or "fspause=0" to command pause/resume into file system or not; "ulog file up=1" to notify upload log file 1 via http.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 on Success, -EINVAL: invalid parameter, -EPERM: ulog module not initied yet, -EACCES: this function not work as there is no ASYNC method using. Other fail reason may come from kernel message queue. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2021年 四月 23日 星期五 13:24:40 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

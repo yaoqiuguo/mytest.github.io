@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: oled</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('oled.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">oled </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://gitee.com/alios-things/sh1106/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<h1><a class="anchor" id="autotoc_md1482"></a>
+概述</h1>
+<p>OLED，即有机发光二极管（Organic Light-Emitting Diode）。OLED 由于同时具备自发光，不需背光源、对比度高、厚度薄、视角广、反应速度快、可用于挠曲性面板、使用温度范围广、构造及制程较简单等优异之特性。 与LCD相比，LCD需要背光，同样的显示，OLED 效果要来得好一些，OLED分辨率可以做到很高。 本组件是为1.3寸OLED屏驱动IC-SSD1106（与0.96寸OLED稍有不同，SSD1306），SSD1106点阵132*64，SSD1306点阵128*64，都是8页的显存，SSD1106每页132字节，SSD1306每页128字节。 下面看一下其对应关系（SSD1106 1.3寸OLED为例） <img src="https://img.alicdn.com/imgextra/i2/O1CN01mlGbcq1LHXFq3FGkJ_!!6000000001274-2-tps-1362-656.png" alt="" class="inline"/> 与HaaS100的连接 <img src="https://img.alicdn.com/imgextra/i3/O1CN01RRxCJH1zqsS4JH5zh_!!6000000006766-2-tps-1118-582.png" alt="" class="inline"/> </p>
+<h2><a class="anchor" id="autotoc_md1483"></a>
+版权信息</h2>
+<blockquote class="doxtable">
+<p>Apache license v2.0 </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md1484"></a>
+目录结构</h2>
+<div class="fragment"><div class="line">├── src</div>
+<div class="line">│   └── sh1106.c          # 基于sh1106 OLED组件服务</div>
+<div class="line">├── include</div>
+<div class="line">│   ├── front.h           # 字模库文件。</div>
+<div class="line">│   ├── icon.h            # 声卡pcm设备驱动，例如录音、播放等。</div>
+<div class="line">│   ├── sh1106.h          # 基于sh1106 OLED组件服务API。</div>
+<div class="line">│   └── sh1106_hdconfig.h # sh1106硬件相关配置</div>
+<div class="line">├── package.yaml          # 编译配置文件</div>
+<div class="line">└── example</div>
+<div class="line">    └── sh1106_example.c  # oled显示测试代码</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1485"></a>
+依赖组件</h2>
+<ul>
+<li>rhino</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md1486"></a>
+常用配置</h1>
+<p>系统中相关配置已有默认值，如需修改配置，统一在sh1106_hdconfig.h修改，具体如下：</p>
+<blockquote class="doxtable">
+<p>选择访问sh1106芯片的模式，设置为1，支持软件模拟SPI；设置为0，支持硬件SPI访问： </p>
+</blockquote>
+<div class="fragment"><div class="line">#define USE_SOFT_SPI 1</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>选择是否支持录屏功能，设置为0，录屏功能关闭；设置为1，录屏功能打开： </p>
+</blockquote>
+<div class="fragment"><div class="line">#define RECORD_SCREEN   0</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>是否支持fb框架，设置为0，不支持fb框架，支持输出显示；设置为1，支持fb框架： </p>
+</blockquote>
+<div class="fragment"><div class="line">#define FB_FRAME_EN     0</div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md1487"></a>
+API说明</h1>
+<blockquote class="doxtable">
+<p>sh1106初始化API接口 </p>
+</blockquote>
+<div class="fragment"><div class="line">uint8_t sh1106_init(void);</div>
+</div><!-- fragment --> <blockquote class="doxtable">
+<p>sh1106 OLED屏幕显示API接口 (x,y)是显示的坐标，*p是字符串的首地址，size是字符点集大小(12/16/24) ,mode(0-反显 1-正显) </p>
+</blockquote>
+<div class="fragment"><div class="line">void sh1106_show_string(uint8_t x, uint8_t y, const uint8_t *p, uint8_t size, uint8_t mode);</div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md1488"></a>
+使用示例</h1>
+<p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
+<h2><a class="anchor" id="autotoc_md1489"></a>
+步骤1 创建或打开工程</h2>
+<p><b>打开已有工程</b></p>
+<p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
+<p><b>创建新的工程</b></p>
+<p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
+<h2><a class="anchor" id="autotoc_md1490"></a>
+步骤2 app中添加sh1106组件</h2>
+<blockquote class="doxtable">
+<p>helloworld_demo组件的package.yaml中添加 </p>
+</blockquote>
+<div class="fragment"><div class="line">depends:</div>
+<div class="line">  - sh1106: rel_3.3.0 # helloworld_demo中引入sh1106组件</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1491"></a>
+步骤3 下载组件</h2>
+<p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
+<div class="fragment"><div class="line">aos install sh1106</div>
+</div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/drivers/external_device路径中。</p>
+<h2><a class="anchor" id="autotoc_md1492"></a>
+步骤4 添加示例代码</h2>
+<blockquote class="doxtable">
+<p>sh1106组件的package.yaml中添加example示例代码 </p>
+</blockquote>
+<div class="fragment"><div class="line">source_file:</div>
+<div class="line">  - src/sh1106.c</div>
+<div class="line">  - example/sh1106_example.c</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1493"></a>
+步骤5 编译固件</h2>
+<p>在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
+<h2><a class="anchor" id="autotoc_md1494"></a>
+步骤6 烧录固件</h2>
+<p>helloworld_demo案例的固件生成后，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_image.html">《aos-studio使用说明之烧录固件》</a>来烧录固件。</p>
+<h2><a class="anchor" id="autotoc_md1495"></a>
+步骤7 打开串口</h2>
+<p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="_haa_s100__quick__start.html">《aos-studio使用说明之查看日志》</a>。</p>
+<p>当串口终端打开成功后，可在串口中输入help来查看已添加的测试命令。</p>
+<h2><a class="anchor" id="autotoc_md1496"></a>
+步骤8 SH1106示例测试</h2>
+<blockquote class="doxtable">
+<p>CLI命令行输入： </p>
+</blockquote>
+<div class="fragment"><div class="line">sh1106_init  # 默认初始化sh1106</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">sh1106 init test begin ...</div>
+<div class="line">open gpio success, fd:513</div>
+<div class="line">sh1106 init test end !!!</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI命令行输入： </p>
+</blockquote>
+<div class="fragment"><div class="line">sh1106_display # 在oled信息屏上显示测试</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">sh1106 display test begin ...</div>
+<div class="line">sh1106 display test end !!!</div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md1497"></a>
+FAQ</h1>
+<p>Q1： 本组件只适合sh1106芯片吗？ 答：是的，由于不同的硬件环境，不同的OLED驱动，配置的寄存器是不一样的，所以本组件是根据sh1106驱动芯片特性打造出的组件，所以只适合sh1106芯片。如果，其他的oled驱动芯片，建议参考sh1106_init()的实现。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2021年 四月 23日 星期五 13:24:39 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

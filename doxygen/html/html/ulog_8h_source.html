@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: /Users/yaoqiuguo/Documents/work/AOS3.3/aos/aostest/components/ulog/include/ulog/ulog.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('ulog_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">ulog.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ulog_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef ULOG_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define ULOG_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifdef NDEBUG</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define CONFIG_LOGMACRO_SILENT</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#if defined(CONFIG_DEBUG) &amp;&amp; CONFIG_DEBUG</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define DEBUG</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga40de422355f363376eb4cc383ac02e9c">   29</a></span>&#160;<span class="preprocessor">#define ULOG_TAG __FILE__, __LINE__</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga5c6e8b60c2512dfc0e0224d25a61cb2c">   31</a></span>&#160;<span class="preprocessor">#define LOG_EMERG   0 </span><span class="comment">/* system is unusable */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga12b2a3bb9e3adfeb35b4e5514e7d9043">   32</a></span>&#160;<span class="preprocessor">#define LOG_ALERT   1 </span><span class="comment">/* action must be taken immediately */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#gaaa731313f5c63e855fefb5f6519c3283">   33</a></span>&#160;<span class="preprocessor">#define LOG_CRIT    2 </span><span class="comment">/* critical conditions */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga96fad55b3f5adf08c39e4c877cf185e3">   34</a></span>&#160;<span class="preprocessor">#define LOG_ERR     3 </span><span class="comment">/* error conditions */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#gadf4476a6a4ea6c74231c826e899d7189">   35</a></span>&#160;<span class="preprocessor">#define LOG_WARNING 4 </span><span class="comment">/* warning conditions */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#gad89ee324d180cdcd7defcc709ff9ca42">   36</a></span>&#160;<span class="preprocessor">#define LOG_NOTICE  5 </span><span class="comment">/* normal, but significant, condition */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#gaeb4f36db01bd128c7afeac5889dac311">   37</a></span>&#160;<span class="preprocessor">#define LOG_INFO    6 </span><span class="comment">/* informational message */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga6ff63e8955665c4a58b1598f2b07c51a">   38</a></span>&#160;<span class="preprocessor">#define LOG_DEBUG   7 </span><span class="comment">/* debug-level message */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga1632479322efa3952798f98177b54471">   39</a></span>&#160;<span class="preprocessor">#define LOG_NONE    8 </span><span class="comment">/* used in stop filter, all log will pop out */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#gab5415466dbe3b11b98f39d2c428bac16">   41</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a3d3817cf3437c7e4d2bd76c00c1e0dfb">   42</a></span>&#160;    <a class="code" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a3d3817cf3437c7e4d2bd76c00c1e0dfb">AOS_LL_NONE</a>  = <a class="code" href="group__aos__ulog.html#ga5c6e8b60c2512dfc0e0224d25a61cb2c">LOG_EMERG</a>,   <span class="comment">/* disable log */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16adbd5e767489ec45919a809f3aad0a7af">   43</a></span>&#160;    <a class="code" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16adbd5e767489ec45919a809f3aad0a7af">AOS_LL_FATAL</a> = <a class="code" href="group__aos__ulog.html#gaaa731313f5c63e855fefb5f6519c3283">LOG_CRIT</a>,    <span class="comment">/* fatal log will output */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a255814b1df4f22bc3a77520d6fd5369d">   44</a></span>&#160;    <a class="code" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a255814b1df4f22bc3a77520d6fd5369d">AOS_LL_ERROR</a> = <a class="code" href="group__aos__ulog.html#ga96fad55b3f5adf08c39e4c877cf185e3">LOG_ERR</a>,     <span class="comment">/* fatal + error log will output */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a1af960ee8037c2934c6ba732dcdfe164">   45</a></span>&#160;    <a class="code" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a1af960ee8037c2934c6ba732dcdfe164">AOS_LL_WARN</a>  = <a class="code" href="group__aos__ulog.html#gadf4476a6a4ea6c74231c826e899d7189">LOG_WARNING</a>, <span class="comment">/* fatal + warn + error log will output(default level) */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a23dea4909200c215b6c7d339cb7ad2f1">   46</a></span>&#160;    <a class="code" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a23dea4909200c215b6c7d339cb7ad2f1">AOS_LL_INFO</a>  = <a class="code" href="group__aos__ulog.html#gaeb4f36db01bd128c7afeac5889dac311">LOG_INFO</a>,    <span class="comment">/* info + warn + error log will output */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a9baa99965557842c0816d965acc07907">   47</a></span>&#160;    <a class="code" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a9baa99965557842c0816d965acc07907">AOS_LL_DEBUG</a> = <a class="code" href="group__aos__ulog.html#ga6ff63e8955665c4a58b1598f2b07c51a">LOG_DEBUG</a>,   <span class="comment">/* debug + info + warn + error + fatal log will output */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <a class="code" href="group__aos__ulog.html#gab5415466dbe3b11b98f39d2c428bac16">aos_log_level_t</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">   65</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> s, <span class="keyword">const</span> <span class="keywordtype">char</span> *mod, <span class="keyword">const</span> <span class="keywordtype">char</span> *f,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> l, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga3577749fb48d57a158b8ac1a0b3ab57e">   75</a></span>&#160;<span class="preprocessor">#define LOG(...) ulog(LOG_ALERT, &quot;AOS&quot;</span>, ULOG_TAG, __VA_ARGS__)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#ifdef CONFIG_LOGMACRO_SILENT</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#define LOGF(mod, ...)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#define LOGE(mod, ...)</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#define LOGW(mod, ...)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#define LOGI(mod, ...)</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#define LOGD(mod, ...)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#else </span><span class="comment">/* !CONFIG_LOGMACRO_SILENT */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga88b11e6262113fbd4cf403f9daa0ba86">   93</a></span>&#160;<span class="preprocessor">#define LOGF(mod, ...) ulog(LOG_CRIT, mod, ULOG_TAG, __VA_ARGS__)</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga003e24d8e56582a5466eb3fd2d689307">  103</a></span>&#160;<span class="preprocessor">#define LOGE(mod, ...) ulog(LOG_ERR, mod, ULOG_TAG, __VA_ARGS__)</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga6a297278242e1a9237a9818d14d6c3c8">  113</a></span>&#160;<span class="preprocessor">#define LOGW(mod, ...) ulog(LOG_WARNING, mod, ULOG_TAG, __VA_ARGS__)</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#gae8f100a73967d2ea62691afabbbfba92">  123</a></span>&#160;<span class="preprocessor">#define LOGI(mod, ...) ulog(LOG_INFO, mod, ULOG_TAG, __VA_ARGS__)</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#ifdef DEBUG</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#define LOGD(mod, ...) ulog(LOG_DEBUG, mod, ULOG_TAG,  __VA_ARGS__)</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#gac8083d8831aced1183f24d2778829c86">  137</a></span>&#160;<span class="preprocessor">#define LOGD(mod, ...)</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CONFIG_LOGMACRO_SILENT */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#gacbfc22f02687b515dad860248ce82960">  150</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__aos__ulog.html#gacbfc22f02687b515dad860248ce82960">aos_set_log_level</a>(<a class="code" href="group__aos__ulog.html#gab5415466dbe3b11b98f39d2c428bac16">aos_log_level_t</a> log_level);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#gae75e478d749131636e991421b259b6f8">  157</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__aos__ulog.html#gae75e478d749131636e991421b259b6f8">ulog_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#gae569ebc100786c9d7067edb29eefebd0">  174</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__aos__ulog.html#gae569ebc100786c9d7067edb29eefebd0">ulog_man</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *cmd_str);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga4e8922820bd4c37b0b8ae5d92427bc58">  190</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__aos__ulog.html#ga4e8922820bd4c37b0b8ae5d92427bc58">aos_get_ulog_list</a>(<span class="keywordtype">char</span> *buf, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> len);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="group__aos__ulog.html#ga83a4107e1086d330dd922691bbfa7a9f">  199</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__aos__ulog.html#ga83a4107e1086d330dd922691bbfa7a9f">aos_log_hexdump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* tag, <span class="keywordtype">char</span> *buffer, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ULOG_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="ttc" id="agroup__aos__ulog_html_ga2ff71c8dd521c5fb8a41a238ff0613af"><div class="ttname"><a href="group__aos__ulog.html#ga2ff71c8dd521c5fb8a41a238ff0613af">ulog</a></div><div class="ttdeci">int ulog(const unsigned char s, const char *mod, const char *f, const unsigned long l, const char *fmt,...)</div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ga4e8922820bd4c37b0b8ae5d92427bc58"><div class="ttname"><a href="group__aos__ulog.html#ga4e8922820bd4c37b0b8ae5d92427bc58">aos_get_ulog_list</a></div><div class="ttdeci">int aos_get_ulog_list(char *buf, const unsigned short len)</div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ga5c6e8b60c2512dfc0e0224d25a61cb2c"><div class="ttname"><a href="group__aos__ulog.html#ga5c6e8b60c2512dfc0e0224d25a61cb2c">LOG_EMERG</a></div><div class="ttdeci">#define LOG_EMERG</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00031">ulog.h:31</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ga6ff63e8955665c4a58b1598f2b07c51a"><div class="ttname"><a href="group__aos__ulog.html#ga6ff63e8955665c4a58b1598f2b07c51a">LOG_DEBUG</a></div><div class="ttdeci">#define LOG_DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00038">ulog.h:38</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ga83a4107e1086d330dd922691bbfa7a9f"><div class="ttname"><a href="group__aos__ulog.html#ga83a4107e1086d330dd922691bbfa7a9f">aos_log_hexdump</a></div><div class="ttdeci">int aos_log_hexdump(const char *tag, char *buffer, int len)</div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ga96fad55b3f5adf08c39e4c877cf185e3"><div class="ttname"><a href="group__aos__ulog.html#ga96fad55b3f5adf08c39e4c877cf185e3">LOG_ERR</a></div><div class="ttdeci">#define LOG_ERR</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00034">ulog.h:34</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_gaaa731313f5c63e855fefb5f6519c3283"><div class="ttname"><a href="group__aos__ulog.html#gaaa731313f5c63e855fefb5f6519c3283">LOG_CRIT</a></div><div class="ttdeci">#define LOG_CRIT</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00033">ulog.h:33</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_gab5415466dbe3b11b98f39d2c428bac16"><div class="ttname"><a href="group__aos__ulog.html#gab5415466dbe3b11b98f39d2c428bac16">aos_log_level_t</a></div><div class="ttdeci">aos_log_level_t</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00041">ulog.h:41</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_gacbfc22f02687b515dad860248ce82960"><div class="ttname"><a href="group__aos__ulog.html#gacbfc22f02687b515dad860248ce82960">aos_set_log_level</a></div><div class="ttdeci">int aos_set_log_level(aos_log_level_t log_level)</div></div>
+<div class="ttc" id="agroup__aos__ulog_html_gadf4476a6a4ea6c74231c826e899d7189"><div class="ttname"><a href="group__aos__ulog.html#gadf4476a6a4ea6c74231c826e899d7189">LOG_WARNING</a></div><div class="ttdeci">#define LOG_WARNING</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00035">ulog.h:35</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_gae569ebc100786c9d7067edb29eefebd0"><div class="ttname"><a href="group__aos__ulog.html#gae569ebc100786c9d7067edb29eefebd0">ulog_man</a></div><div class="ttdeci">int ulog_man(const char *cmd_str)</div></div>
+<div class="ttc" id="agroup__aos__ulog_html_gae75e478d749131636e991421b259b6f8"><div class="ttname"><a href="group__aos__ulog.html#gae75e478d749131636e991421b259b6f8">ulog_init</a></div><div class="ttdeci">void ulog_init(void)</div></div>
+<div class="ttc" id="agroup__aos__ulog_html_gaeb4f36db01bd128c7afeac5889dac311"><div class="ttname"><a href="group__aos__ulog.html#gaeb4f36db01bd128c7afeac5889dac311">LOG_INFO</a></div><div class="ttdeci">#define LOG_INFO</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00037">ulog.h:37</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ggab5415466dbe3b11b98f39d2c428bac16a1af960ee8037c2934c6ba732dcdfe164"><div class="ttname"><a href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a1af960ee8037c2934c6ba732dcdfe164">AOS_LL_WARN</a></div><div class="ttdeci">@ AOS_LL_WARN</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00045">ulog.h:45</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ggab5415466dbe3b11b98f39d2c428bac16a23dea4909200c215b6c7d339cb7ad2f1"><div class="ttname"><a href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a23dea4909200c215b6c7d339cb7ad2f1">AOS_LL_INFO</a></div><div class="ttdeci">@ AOS_LL_INFO</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00046">ulog.h:46</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ggab5415466dbe3b11b98f39d2c428bac16a255814b1df4f22bc3a77520d6fd5369d"><div class="ttname"><a href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a255814b1df4f22bc3a77520d6fd5369d">AOS_LL_ERROR</a></div><div class="ttdeci">@ AOS_LL_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00044">ulog.h:44</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ggab5415466dbe3b11b98f39d2c428bac16a3d3817cf3437c7e4d2bd76c00c1e0dfb"><div class="ttname"><a href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a3d3817cf3437c7e4d2bd76c00c1e0dfb">AOS_LL_NONE</a></div><div class="ttdeci">@ AOS_LL_NONE</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00042">ulog.h:42</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ggab5415466dbe3b11b98f39d2c428bac16a9baa99965557842c0816d965acc07907"><div class="ttname"><a href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a9baa99965557842c0816d965acc07907">AOS_LL_DEBUG</a></div><div class="ttdeci">@ AOS_LL_DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00047">ulog.h:47</a></div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ggab5415466dbe3b11b98f39d2c428bac16adbd5e767489ec45919a809f3aad0a7af"><div class="ttname"><a href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16adbd5e767489ec45919a809f3aad0a7af">AOS_LL_FATAL</a></div><div class="ttdeci">@ AOS_LL_FATAL</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00043">ulog.h:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_6af09adb0ee1ec77d5dee9c4d127d682.html">ulog</a></li><li class="navelem"><a class="el" href="dir_95babe3f41d6593dc7824d3b8478d1bf.html">include</a></li><li class="navelem"><a class="el" href="dir_f19b354cfac416f8f4d56f21761bbee5.html">ulog</a></li><li class="navelem"><a class="el" href="ulog_8h.html">ulog.h</a></li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 13:24:39 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
