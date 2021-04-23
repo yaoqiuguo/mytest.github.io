@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('adc.html',''); initResizable(); });
 <div class="title">adc </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://gitee.com/alios-things/adc/edit/master/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<div class="textblock"><p><a href="https://gitee.com/alios-things/adc/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
 <h1><a class="anchor" id="autotoc_md1521"></a>
 概述</h1>
 <p>ADC（Analog-to-Digital Converter），即模拟数字转换器，用于将模拟形式的连续信号转换为数字形式的离散信号的一类设备。典型的ADC设备将模拟信号转换为表示一定比例电压值的数字信号。 该组件是ADC VFS驱动子系统，给应用或组件提供通过VFS形式（open/close/ioctl）访问ADC控制器驱动对上层提供服务的接口。该组件初始化过程中，会根据hardware/chip/&lt;chip_name&gt;/package.yaml中定义的CONFIG_ADC_NUM来依此创建如下名称的设备节点：</p><ul>
@@ -114,7 +114,7 @@ API说明</h1>
 步骤2 添加组件</h2>
 <p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
-<div class="line">  - adc: master          # helloworld_demo中引入adc组件</div>
+<div class="line">  - adc: rel_3.3.0          # helloworld_demo中引入adc组件</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md1530"></a>
 步骤3 下载组件</h2>
 <p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
@@ -122,7 +122,7 @@ API说明</h1>
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/adc路径中。</p>
 <h2><a class="anchor" id="autotoc_md1531"></a>
 步骤4 添加示例</h2>
-<p>在adc组件的package.yaml中添加<a href="https://gitee.com/alios-things/adc/tree/master/example">example示例代码</a>：</p>
+<p>在adc组件的package.yaml中添加<a href="https://gitee.com/alios-things/adc/tree/rel_3.3.0/example">example示例代码</a>：</p>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - &quot;example/adc_example.c&quot;</div>
@@ -155,7 +155,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 23日 星期五 11:08:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 11:28:49 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

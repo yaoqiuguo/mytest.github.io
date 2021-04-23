@@ -80,7 +80,7 @@ var peripheral =
         [ "关闭设备节点", "i2c.html#autotoc_md1583", null ],
         [ "I2C 参数设置", "i2c.html#autotoc_md1584", [
           [ "编译工程", "build_project.html#autotoc_md138", null ],
-          [ "烧录镜像", "build_image.html#autotoc_md139", null ],
+          [ "烧录镜像", "burn_image.html#autotoc_md139", null ],
           [ "查看日志", "view_log.html#autotoc_md147", null ],
           [ "I2C 数据传输频率", "i2c.html#autotoc_md1585", null ],
           [ "I2C 地址模式、角色及从设备地址设置", "i2c.html#autotoc_md1586", null ],

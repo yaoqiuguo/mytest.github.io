@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('ai_agent.html',''); initResizable(); }
 <div class="title">ai_agent </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><b><a href="https://gitee.com/alios-things/ai_agent/edit/master/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></b></p>
+<div class="textblock"><p><b><a href="https://gitee.com/alios-things/ai_agent/edit/rel_3.3.0/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></b></p>
 <h1><a class="anchor" id="autotoc_md256"></a>
 概述</h1>
 <p>AI Agent作为AI的代理引擎框架，支持不同推理引擎的注册，对用户提供统一的接口，简化用户操作，目前注册的AI引擎为ucloud-ai云端推理引擎，用户可以根据需要注册其他推理引擎。</p>
@@ -109,9 +109,9 @@ API说明</h1>
 步骤2 添加组件</h2>
 <p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
-<div class="line">  - ai_agent: master   # helloworld_demo中引入ai_agent组件</div>
-<div class="line">  - netmgr: master     # helloworld_demo中引入netmgr组件</div>
-<div class="line">  - littlefs: master   # helloworld_demo中引入littlefs组件</div>
+<div class="line">  - ai_agent: rel_3.3.0   # helloworld_demo中引入ai_agent组件</div>
+<div class="line">  - netmgr: rel_3.3.0     # helloworld_demo中引入netmgr组件</div>
+<div class="line">  - littlefs: rel_3.3.0   # helloworld_demo中引入littlefs组件</div>
 <div class="line"> </div>
 <div class="line">def_config:</div>
 <div class="line">    CLI_IOBOX_ENABLE: 1        # 可选：使能文件系统测试命令，例如ls, ll, mkdir, touch, echo等</div>
@@ -122,7 +122,7 @@ API说明</h1>
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/ai_agent路径中。</p>
 <h2><a class="anchor" id="autotoc_md266"></a>
 步骤4 添加示例</h2>
-<p>在ai_agent组件的package.yaml中添加<a href="https://gitee.com/alios-things/ai_agent/tree/master/example">example示例代码</a>：</p>
+<p>在ai_agent组件的package.yaml中添加<a href="https://gitee.com/alios-things/ai_agent/tree/rel_3.3.0/example">example示例代码</a>：</p>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;example/aiagent_example.c&quot; # add aiagent_example.c</div>
 </div><!-- fragment --><p>在ucloud_ai组件的package.yaml中添加：</p>
@@ -370,7 +370,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 23日 星期五 11:08:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 11:28:49 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

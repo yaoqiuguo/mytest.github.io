@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('ota.html',''); initResizable(); });
 <div class="title">ota </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://gitee.com/alios-things/ota/edit/master/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<div class="textblock"><p><a href="https://gitee.com/alios-things/ota/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
 <h1><a class="anchor" id="autotoc_md658"></a>
 概述</h1>
 <p>OTA是over the air的缩写，是AliIOS Things 提供的完备的升级方案，对各种升级场景都有很好的支持。目前AliIOS Things除一般的整包升级外，现有的高阶能力有：压缩升级、差分升级及安全升级；支持的升级通道：http、https、BLE、3G/4G，NB等；复杂场景支持：网关及子设备升级，连接型模组升级非连接主设备的间接升级；完备的配套工具：差分工具、本地签名工具、ymodem辅助升级工具，多固件打包工具等； 主要功能列表如下： 1、支持乒乓升级：固件可在两个分区运行，支持固件版本回退，保证设备安全不变砖； 2、支持断点续传：弱网环境下，支持固件从断点处继续下载； 3、支持固件验签：固件可在云端或用本地签名工具进行数字签名（防止固件被篡改，对固件hash值进行非对称加密），设备端可完成对固件验签（用端侧的公钥对已签名的固件进行验签）； 4、支持https安全下载方式：除支持http下载外，支持https下载方式； 5、支持MD5/SHA256固件完整性检验：为保证固件完成性，固件下载完成后，都有完整性校验； 6、支持网关子设备升级：当HaaS 100 做网关时，HaaS 100 OTA 除支持网关本身的升级外，也支持其子设备的升级；</p>
@@ -137,7 +137,7 @@ API说明</h1>
 <p>ota_thread_create(&amp;thread, (void *)ota_service_start, (void *)pctx, NULL, 1024 * 6); </p>
 </blockquote>
 <p>depends:</p><ul>
-<li>ota: master <div class="fragment"><div class="line">## 烧录固件</div>
+<li>ota: rel_3.3.0 <div class="fragment"><div class="line">## 烧录固件</div>
 <div class="line">&gt; 详细参考ota_demo中的文档 solutions/ota_demo/README.md的基础固件烧录章节</div>
 <div class="line"> </div>
 <div class="line">## OTA示例测试</div>
@@ -170,7 +170,7 @@ API说明</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 23日 星期五 11:08:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 11:28:49 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

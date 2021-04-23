@@ -96,8 +96,8 @@
         <topic label="编译固件" href="build_project.html">
               <topic label="编译工程" href="build_project.html#autotoc_md138"/>
         </topic>
-        <topic label="烧录固件" href="build_image.html">
-              <topic label="烧录镜像" href="build_image.html#autotoc_md139"/>
+        <topic label="烧录固件" href="burn_image.html">
+              <topic label="烧录镜像" href="burn_image.html#autotoc_md139"/>
         </topic>
         <topic label="查看日志" href="view_log.html">
               <topic label="查看日志" href="view_log.html#autotoc_md147"/>

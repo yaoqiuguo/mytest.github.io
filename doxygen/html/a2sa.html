@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('a2sa.html',''); initResizable(); });
 <div class="title">a2sa </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://gitee.com/alios-things/a2sa/edit/master/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<div class="textblock"><p><a href="https://gitee.com/alios-things/a2sa/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
 <h1><a class="anchor" id="autotoc_md240"></a>
 概述</h1>
 <p>A2SA是Advanced AliOS Things Sound Architucture的缩写，是AliOS Things音频系统服务框架，包括音频驱动层、音频服务接口层以及音频插件管理等。部分设计理念借鉴了Linux ALSA的设计思路，例如在设备驱动层支持VFS设备驱动挂载访问、支持多声卡管理、PCM/Control音频设备模型、对音频Codec友好抽象等。在音频服务接口层兼容Linux ALSA-Lib的API接口规范,方便基于ALSA-Lib开发的应用组件移植到AliOS Things。同时A2SA的footprint也足够小（23KB），适合在嵌入式IoT设备上移植。 组件支持以下功能：</p><ul>
@@ -128,8 +128,8 @@ API说明</h1>
 步骤2 添加组件</h2>
 <p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
-<div class="line">  - a2sa: master          # helloworld_demo中引入a2sa组件</div>
-<div class="line">  - littlefs: master      # a2sa组件wav播放器示例依赖littlefs文件系统组件</div>
+<div class="line">  - a2sa: rel_3.3.0          # helloworld_demo中引入a2sa组件</div>
+<div class="line">  - littlefs: rel_3.3.0      # a2sa组件wav播放器示例依赖littlefs文件系统组件</div>
 <div class="line"> </div>
 <div class="line">def_config:</div>
 <div class="line">    CONFIG_A7_DSP_ENABLE: 1    # 必须：使能HaaS100音频驱动开关</div>
@@ -141,7 +141,7 @@ API说明</h1>
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/a2sa路径中。</p>
 <h2><a class="anchor" id="autotoc_md250"></a>
 步骤4 添加示例</h2>
-<p>在a2sa组件的package.yaml中添加<a href="https://gitee.com/alios-things/a2sa/tree/master/example">example示例代码</a>：</p>
+<p>在a2sa组件的package.yaml中添加<a href="https://gitee.com/alios-things/a2sa/tree/rel_3.3.0/example">example示例代码</a>：</p>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - example/sound_example.c</div>
@@ -207,7 +207,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 23日 星期五 11:08:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 11:28:49 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

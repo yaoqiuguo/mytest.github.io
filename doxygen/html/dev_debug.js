@@ -11,6 +11,6 @@ var dev_debug =
         [ "输入项目名称和路径", "create_project.html#autotoc_md143", null ]
       ] ]
     ] ],
-    [ "烧录固件", "build_image.html", null ],
+    [ "烧录固件", "burn_image.html", null ],
     [ "查看日志", "view_log.html", null ]
 ];
