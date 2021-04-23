@@ -49,7 +49,7 @@ $(document).ready(function(){initNavTree('fatfs.html',''); initResizable(); });
 </script>
 <div id="doc-content">
 <div class="PageDoc"><div class="contents">
-<div class="textblock"><p><a href="https://gitee.com/alios-things/fatfs/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<div class="textblock"><p><a href="https://gitee.com/alios-things/fatfs/edit/master/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
 <h1><a class="anchor" id="autotoc_md457"></a>
 概述</h1>
 <p><b>fatfs</b> is a generic FAT/exFAT filesystem module for small embedded system. The fatfs module is written in compliance with ANSI C (C89). It attempts to provide AOS-compatible filesystem behaviour. 组件支持以下功能</p><ul>
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('fatfs.html',''); initResizable(); });
 步骤2 添加组件</h2>
 <p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
-<div class="line">  - fatfs: dev_aos # helloworld_demo中引入fatfs组件</div>
+<div class="line">  - fatfs: master # helloworld_demo中引入fatfs组件</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md465"></a>
 步骤3 下载组件</h2>
 <p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('fatfs.html',''); initResizable(); });
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/fatfs路径中。</p>
 <h2><a class="anchor" id="autotoc_md466"></a>
 步骤4 添加示例</h2>
-<p>在fatfs组件的package.yaml中添加<a href="https://gitee.com/alios-things/a2sa/tree/rel_3.3.0/example">example示例代码</a>： 示例代码参考example/fatfs_example.c。</p>
+<p>在fatfs组件的package.yaml中添加<a href="https://gitee.com/alios-things/a2sa/tree/master/example">example示例代码</a>： 示例代码参考example/fatfs_example.c。</p>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - &quot;example/fatfs_example.c&quot; # add fatfs_example.c</div>
@@ -166,7 +166,7 @@ $(document).ready(function(){initNavTree('fatfs.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:24 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 11:08:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

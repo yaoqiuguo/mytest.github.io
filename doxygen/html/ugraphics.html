@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('ugraphics.html',''); initResizable(); 
 <div class="title">ugraphics </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><b><a href="https://gitee.com/alios-things/ugraphics/edit/rel_3.3.0/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></b></p>
+<div class="textblock"><p><b><a href="https://gitee.com/alios-things/ugraphics/edit/master/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></b></p>
 <h1><a class="anchor" id="autotoc_md912"></a>
 概述</h1>
 <p>ugraphics组件是基于SDL2封装的接口，支持JPEG/PNG图像解码绘制、点/线/框图像等绘制、图像旋转、RGB格式转换、中英文字符绘制等功能，方便用户进行基础的图像应用开发。</p>
@@ -115,8 +115,8 @@ API说明</h1>
 步骤2 添加组件</h2>
 <p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
-<div class="line">  - ugraphics: dev_aos            # helloworld_demo 中引入ugraphics组件</div>
-<div class="line">  - ili9341: dev_aos              # helloworld_demo 中引入ili9341屏幕驱动</div>
+<div class="line">  - ugraphics: master            # helloworld_demo 中引入ugraphics组件</div>
+<div class="line">  - ili9341: master              # helloworld_demo 中引入ili9341屏幕驱动</div>
 <div class="line"> </div>
 <div class="line">def_config:</div>
 <div class="line">    CLI_IOBOX_ENABLE: 1        # 可选：使能文件系统测试命令，例如ls, ll, mkdir, touch, echo等</div>
@@ -127,7 +127,7 @@ API说明</h1>
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/ugraphics路径中。</p>
 <h2><a class="anchor" id="autotoc_md922"></a>
 步骤4 添加示例</h2>
-<p>在ugraphics组件的package.yaml中添加<a href="https://gitee.com/alios-things/ugraphics/tree/rel_3.3.0/example">example示例代码</a>：</p>
+<p>在ugraphics组件的package.yaml中添加<a href="https://gitee.com/alios-things/ugraphics/tree/master/example">example示例代码</a>：</p>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;example/ugraphics_example.c&quot; # add ugraphics_example.c</div>
 <div class="line"> </div>
@@ -238,7 +238,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:26 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 11:08:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

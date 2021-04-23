@@ -189,8 +189,8 @@ $(document).ready(function(){initNavTree('helloworld_demo.html',''); initResizab
 5.1 yaml增加组件</h2>
 <ul>
 <li>在helloworld_demo的yaml文件中添加组件依赖ramfs。由于需要使用标准vfs接口，因此还需要加上vfs组件。 <div class="fragment"><div class="line">depends:</div>
-<div class="line">  - ramfs: dev_aos</div>
-<div class="line">  - vfs: dev_aos</div>
+<div class="line">  - ramfs: master</div>
+<div class="line">  - vfs: master</div>
 </div><!-- fragment --> 至于ramfs本身依赖的组件，则在ramfs自身的yaml中需要添加完全。</li>
 <li>在helloworld_demo的app入口helloworld.c中添加ramfs头文件引用以及初始化函数调用， 如下图，先注册一个根目录为**/test**的ramfs：</li>
 </ul>
@@ -253,7 +253,7 @@ $(document).ready(function(){initNavTree('helloworld_demo.html',''); initResizab
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:28 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 11:08:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

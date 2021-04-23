@@ -49,7 +49,7 @@ $(document).ready(function(){initNavTree('littlefs.html',''); initResizable(); }
 </script>
 <div id="doc-content">
 <div class="PageDoc"><div class="contents">
-<div class="textblock"><p><a href="https://gitee.com/alios-things/littlefs/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<div class="textblock"><p><a href="https://gitee.com/alios-things/littlefs/edit/master/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
 <h1><a class="anchor" id="autotoc_md578"></a>
 概述</h1>
 <p>littlefs是一个高度完整的嵌入式文件系统，可以用在自身不带坏块处理、磨损平衡等功能的内存芯片上，如裸的NAND Flash芯片；同时littlefs也充分考虑了异常掉电情况下的数据保护。 组件支持以下功能</p><ul>
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('littlefs.html',''); initResizable(); }
 步骤2 添加组件</h2>
 <p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
-<div class="line">  - littlefs: dev_aos # helloworld_demo中引入littlefs组件</div>
+<div class="line">  - littlefs: master # helloworld_demo中引入littlefs组件</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md586"></a>
 步骤3 下载组件</h2>
 <p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('littlefs.html',''); initResizable(); }
 </div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/littlefs路径中。</p>
 <h2><a class="anchor" id="autotoc_md587"></a>
 步骤4 添加示例</h2>
-<p>在littlefs组件的package.yaml中添加<a href="https://gitee.com/alios-things/littlefs/tree/rel_3.3.0/example">example示例代码</a>：</p>
+<p>在littlefs组件的package.yaml中添加<a href="https://gitee.com/alios-things/littlefs/tree/master/example">example示例代码</a>：</p>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;src/*.c&quot;</div>
 <div class="line">  - &quot;example/littlefs_example.c&quot; # add fatfs_example.c</div>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('littlefs.html',''); initResizable(); }
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:24 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 11:08:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

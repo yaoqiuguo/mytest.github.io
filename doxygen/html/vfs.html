@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('vfs.html',''); initResizable(); });
 <div class="title">vfs </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://gitee.com/alios-things/vfs/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<div class="textblock"><p><a href="https://gitee.com/alios-things/vfs/edit/master/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
 <h1><a class="anchor" id="autotoc_md967"></a>
 概述</h1>
 <p>VFS 虚拟文件系统为各种文件（包括设备文件和普通文件）提供统一的操作接口。它是具体设备文件和文件系统之上的抽象层。其目的是允许应用程序以统一的方式访问不同类型的具体文件和设备。用户可以将ramfs,little fs等具体的文件系统注册到 VFS 中，然后使用标准操作接口（open,read,write,close 等）访问其中的文件。</p>
@@ -404,7 +404,7 @@ API说明</h1>
 <p>在helloworld_demo组件的package.yaml中添加 </p>
 </blockquote>
 <div class="fragment"><div class="line">depends:</div>
-<div class="line">  - vfs: dev_aos # helloworld_demo中引入vfs组件</div>
+<div class="line">  - vfs: master # helloworld_demo中引入vfs组件</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md993"></a>
 步骤3 下载组件</h2>
 <p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
@@ -413,7 +413,7 @@ API说明</h1>
 <h2><a class="anchor" id="autotoc_md994"></a>
 步骤4 添加示例</h2>
 <blockquote class="doxtable">
-<p>vfs组件的package.yaml中添加<a href="https://gitee.com/alios-things/vfs/tree/rel_3.3.0/example">example示例代码</a>： </p>
+<p>vfs组件的package.yaml中添加<a href="https://gitee.com/alios-things/vfs/tree/master/example">example示例代码</a>： </p>
 </blockquote>
 <div class="fragment"><div class="line">source_file:</div>
 <div class="line">  - &quot;example/vfs_example.c&quot; # add vfs_example.c</div>
@@ -443,7 +443,7 @@ API说明</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:27 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 11:08:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

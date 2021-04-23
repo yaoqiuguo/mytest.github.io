@@ -53,7 +53,7 @@ $(document).ready(function(){initNavTree('cli.html',''); initResizable(); });
 <div class="title">cli </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://gitee.com/alios-things/cli/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<div class="textblock"><p><a href="https://gitee.com/alios-things/cli/edit/master/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
 <h1><a class="anchor" id="autotoc_md385"></a>
 概述</h1>
 <p>在日常嵌入式开发中，用户经常会自行实现一套类似Linux Shell的交互工具来实现通过串口命令控制设备进入某种特定的状态，或执行某个特定的操作。如系统自检，模拟运行，或者进入手动模式进行设备点动。AliOS Things原生实现了一套名为CLI（Command-Line Interface）的命令行交互工具，在提供基本的系统交互命令的基础上，也支持用户自定义命令。 组件支持以下功能：</p><ul>
@@ -184,7 +184,7 @@ API说明</h1>
 步骤2 添加组件</h2>
 <p>案例下载完成后，以运行helloworld_demo为例，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
 <div class="fragment"><div class="line">depends:</div>
-<div class="line">  - cli: dev_aos  # helloworld_demo中引入cli组件</div>
+<div class="line">  - cli: master  # helloworld_demo中引入cli组件</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md394"></a>
 步骤3 下载组件</h2>
 <p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
@@ -382,7 +382,7 @@ FAQ</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 四月 21日 星期三 16:33:23 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 11:08:20 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
