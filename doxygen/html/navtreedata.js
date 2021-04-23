@@ -195,7 +195,7 @@ var NAVTREE =
     [ "案例开发", "solution.html", "solution" ],
     [ "开发者贡献", "contribute.html", "contribute" ],
     [ "API用户手册", "modules.html", "modules" ],
-    [ "旧文档中心", "^https://help.aliyun.com/product/123206.html", null ]
+    [ "文档中心", "^https://help.aliyun.com/product/123206.html", null ]
   ] ]
 ];
 
