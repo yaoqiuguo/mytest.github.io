@@ -5,7 +5,8 @@
             "cmd":[
                 "tnpm install",
                 "node minify.js",
-                "mv ./doxygen/html $BUILD_DEST"
+                "mv ./doxygen/html $BUILD_DEST",
+                "mv ./resource $BUILD_DEST"
             ]
         }
     }
