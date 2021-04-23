@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: ulog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('ulog.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">ulog </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://gitee.com/alios-things/ulog/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<h1><a class="anchor" id="autotoc_md939"></a>
+概述</h1>
+<p>ulog是AliOS Things的日志模块，同时支持经典同步机制和异步日志机制，异步机制使其他逻辑任务保持正常工作，基于简短的日志格式和syslog协议格式，日志内容可以通过不同方式输出（uart udp vfs uagent）， 此外，文件系统中的日志文件可以通过http上传至云端。 组件支持以下功能：</p><ul>
+<li>通过串口输出日志</li>
+<li>通过UDP输出日志</li>
+<li>通过文件系统输出日志</li>
+<li>通过uagent输出日志到云端</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md940"></a>
+版权信息</h2>
+<blockquote class="doxtable">
+<p>Apache license v2.0 </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md941"></a>
+目录结构</h2>
+<div class="fragment"><div class="line">ulog</div>
+<div class="line">├── README.md #ulog说明文档</div>
+<div class="line">├── example</div>
+<div class="line">│   └── ulog_example.c      #ulog使用demo</div>
+<div class="line">├── include</div>
+<div class="line">│   ├── ulog_config.h       #ulog相关配置头文件</div>
+<div class="line">│   └── ulog</div>
+<div class="line">│       └── ulog.h          #ulog使用API头文件</div>
+<div class="line">├── internal                #内部头文件</div>
+<div class="line">│   ├──ulog_api.h</div>
+<div class="line">│   ├──ulog_ring_fifo.h</div>
+<div class="line">│   └──ulog_session_file.h</div>
+<div class="line">├── src</div>
+<div class="line">│   ├── ulog_async.c        #ulog 异步日志输出功能</div>
+<div class="line">│   ├── ulog.c              #ulog 整体功能</div>
+<div class="line">│   ├── ulog_fs_cfg.c       #ulog 文件系统配置</div>
+<div class="line">│   ├── ulog_init.c         #ulog 初始化</div>
+<div class="line">│   ├── ulog_ring_fifo.c    #ulog ring fifo功能，供异步使用</div>
+<div class="line">│   ├── ulog_session_file.c #ulog 日志到文件系统</div>
+<div class="line">│   ├── ulog_session_udp.c  #ulog 日志通过UDP发出</div>
+<div class="line">│   └── ulog_utility.c      #ulog 通用功能</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md942"></a>
+依赖组件</h2>
+<ul>
+<li>vfs</li>
+<li>uagent</li>
+<li>linksdk</li>
+<li>fatfs</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md943"></a>
+常用配置</h1>
+<p>系统中相关配置已有默认值，如需修改配置，统一在yaml中**def_config**节点修改，具体如下： </p><blockquote class="doxtable">
+<p>开启异步打印: 默认0, 如需修改，在yaml中修改ULOG_CONFIG_ASYNC配置 </p>
+</blockquote>
+<div class="fragment"><div class="line">def_config:</div>
+<div class="line">  ULOG_CONFIG_ASYNC: 1</div>
+</div><!-- fragment --> <blockquote class="doxtable">
+<p>支持日志实时上传到云，默认不开启，可按照实际需要修改yaml配置如： </p>
+</blockquote>
+<div class="fragment"><div class="line">def_config:</div>
+<div class="line">  ULOG_CONFIG_POP_CLOUD: 0</div>
+<div class="line">  ULOG_CONFIG_STOP_FILTER_CLOUD: 5</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md944"></a>
+API说明</h1>
+<p><a class="el" href="group__aos__ulog.html#ga3577749fb48d57a158b8ac1a0b3ab57e">LOG</a> <a class="el" href="group__aos__ulog.html#ga88b11e6262113fbd4cf403f9daa0ba86">LOGF</a> <a class="el" href="group__aos__ulog.html#ga003e24d8e56582a5466eb3fd2d689307">LOGE</a> <a class="el" href="group__aos__ulog.html#ga6a297278242e1a9237a9818d14d6c3c8">LOGW</a> <a class="el" href="group__aos__ulog.html#gae8f100a73967d2ea62691afabbbfba92">LOGI</a> <a class="el" href="group__aos__ulog.html#gac8083d8831aced1183f24d2778829c86">LOGD</a> <a class="el" href="group__aos__ulog.html#ga4e8922820bd4c37b0b8ae5d92427bc58">aos_get_ulog_list</a> <a class="el" href="group__aos__ulog.html#gae569ebc100786c9d7067edb29eefebd0">ulog_man</a> <a class="el" href="ulog.html">ulog</a></p>
+<h1><a class="anchor" id="autotoc_md945"></a>
+使用示例</h1>
+<p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
+<h2><a class="anchor" id="autotoc_md946"></a>
+步骤1 创建或打开工程</h2>
+<p><b>打开已有工程</b></p>
+<p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
+<p><b>创建新的工程</b></p>
+<p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
+<h2><a class="anchor" id="autotoc_md947"></a>
+步骤2 添加组件</h2>
+<p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
+<div class="fragment"><div class="line">depends:</div>
+<div class="line">  - ulog: rel_3.3.0 # helloworld_demo中引入ulog组件</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md948"></a>
+步骤3 下载组件</h2>
+<p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
+<div class="fragment"><div class="line">aos install ulog</div>
+</div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/ulog路径中。</p>
+<h2><a class="anchor" id="autotoc_md949"></a>
+步骤4 添加示例</h2>
+<blockquote class="doxtable">
+<p>ulog组件的package.yaml中添加<a href="https://gitee.com/alios-things/ulog/tree/rel_3.3.0/example">example示例代码</a>： </p>
+</blockquote>
+<div class="fragment"><div class="line">source_file:</div>
+<div class="line">  - src/ulog_async.c? &lt;ULOG_CONFIG_ASYNC&gt;</div>
+<div class="line">  - src/ulog.c</div>
+<div class="line">  - src/ulog_fs_cfg.c? &lt;ULOG_CONFIG_POP_FS&gt;</div>
+<div class="line">  - src/ulog_init.c</div>
+<div class="line">  - src/ulog_ring_fifo.c</div>
+<div class="line">  - src/ulog_session_file.c? &lt;ULOG_CONFIG_POP_FS&gt;</div>
+<div class="line">  - src/ulog_session_udp.c? &lt;ULOG_CONFIG_POP_UDP&gt;</div>
+<div class="line">  - src/ulog_utility.c</div>
+<div class="line">  - example/ulog_example.c #add ulog example code</div>
+</div><!-- fragment --> <blockquote class="doxtable">
+<p>ulog 设置日志输出等级，默认为不输出 </p>
+</blockquote>
+<div class="fragment"><div class="line">    <a class="code" href="group__aos__ulog.html#gacbfc22f02687b515dad860248ce82960">aos_set_log_level</a>(<a class="code" href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a9baa99965557842c0816d965acc07907">AOS_LL_DEBUG</a>);</div>
+<div class="line">````</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">## 步骤5 编译固件</span></div>
+<div class="line"> </div>
+<div class="line">在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考[《aos-studio使用说明之编译固件》](https:<span class="comment">//g.alicdn.com/alios-things-3.3/doc/build_project.html)。</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">## 步骤6 烧录固件</span></div>
+<div class="line"> </div>
+<div class="line">helloworld_demo案例的固件生成后，可参考[《aos-studio使用说明之烧录固件》](https:<span class="comment">//g.alicdn.com/alios-things-3.3/doc/burn_image.html)来烧录固件。</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">## 步骤7 打开串口</span></div>
+<div class="line"> </div>
+<div class="line">固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考[《aos-studio使用说明之查看日志》](https:<span class="comment">//g.alicdn.com/alios-things-3.3/doc/view_log.html)。</span></div>
+<div class="line"> </div>
+<div class="line">当串口终端打开成功后，可在串口中输入help来查看已添加的测试命令。</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">## 步骤8 测试示例</span></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">### CLI命令行输入：</span></div>
+<div class="line">```sh</div>
+<div class="line">ulog_example_test</div>
+<div class="ttc" id="agroup__aos__ulog_html_gacbfc22f02687b515dad860248ce82960"><div class="ttname"><a href="group__aos__ulog.html#gacbfc22f02687b515dad860248ce82960">aos_set_log_level</a></div><div class="ttdeci">int aos_set_log_level(aos_log_level_t log_level)</div></div>
+<div class="ttc" id="agroup__aos__ulog_html_ggab5415466dbe3b11b98f39d2c428bac16a9baa99965557842c0816d965acc07907"><div class="ttname"><a href="group__aos__ulog.html#ggab5415466dbe3b11b98f39d2c428bac16a9baa99965557842c0816d965acc07907">AOS_LL_DEBUG</a></div><div class="ttdeci">@ AOS_LL_DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="ulog_8h_source.html#l00047">ulog.h:47</a></div></div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md950"></a>
+FAQ</h1>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2021年 四月 23日 星期五 16:41:44 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

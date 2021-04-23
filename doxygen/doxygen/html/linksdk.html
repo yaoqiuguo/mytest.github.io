@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: linksdk</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('linksdk.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">linksdk </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://gitee.com/alios-things/linksdk/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<h1><a class="anchor" id="autotoc_md569"></a>
+概述</h1>
+<p>Link SDK由阿里云提供给设备厂商，由设备厂商集成到设备上后通过该SDK将设备安全地接入到阿里云IoT物联网平台，继而让设备可以被阿里云IoT物联网平台进行管理。设备需要支持TCP/IP协议栈才能集成Link SDK。另外Zigbee、433、KNX这样的非IP设备需要通过网关设备接入到阿里云IoT物联网平台，网关设备需要集成Link SDK。</p>
+<p>说明:Link SDK以前名称为Link Kit SDK，现更名为Link SDK。</p>
+<p>该组件支持以下功能：</p><ul>
+<li>MQTT连云</li>
+<li>HTTP连云</li>
+<li>设备认证</li>
+<li>物模型</li>
+<li>时间同步</li>
+<li>RRPC</li>
+<li>设备连接异常告警</li>
+<li>日志上报</li>
+<li>设备引导服务</li>
+<li>子设备管理</li>
+<li>设备诊断</li>
+<li>OTA(在AliOS THings场景建议使用OS自带OTA)</li>
+</ul>
+<p>更多详情，请参考阿里云Link SDK<a href="https://help.aliyun.com/document_detail/163755.html?spm=a2c4g.11186623.6.558.38557748p9kUy6">说明文档</a> 。</p>
+<h2><a class="anchor" id="autotoc_md570"></a>
+版权信息</h2>
+<blockquote class="doxtable">
+<p>Apache 2.0 License </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md571"></a>
+目录结构</h2>
+<div class="fragment"><div class="line">.</div>
+<div class="line">├── ChangeLog.md           #变更日志</div>
+<div class="line">├── components</div>
+<div class="line">│   ├── bootstrap          #设备引导服务</div>
+<div class="line">│   ├── data-model         #物模型</div>
+<div class="line">│   ├── devinfo            #设备信息</div>
+<div class="line">│   ├── diag               #设备诊断</div>
+<div class="line">│   ├── dynreg             #基于HTTP动态注册</div>
+<div class="line">│   ├── dynreg-mqtt        #基于MQTT的动态注册</div>
+<div class="line">│   ├── logpost            #日志上报</div>
+<div class="line">│   ├── ntp                #ntp时间</div>
+<div class="line">│   ├── ota                #ota功能</div>
+<div class="line">│   ├── shadow             #设备影子</div>
+<div class="line">│   └── subdev             #子设备</div>
+<div class="line">├── core</div>
+<div class="line">│   ├── aiot_http_api.c    #HTTP核心api实现</div>
+<div class="line">│   ├── aiot_http_api.h    #HTTP对外头文件</div>
+<div class="line">│   ├── aiot_mqtt_api.c    #MQTT核心api实现</div>
+<div class="line">│   ├── aiot_mqtt_api.h    #MQTT对外头文件</div>
+<div class="line">│   ├── aiot_state_api.c   #状态码</div>
+<div class="line">│   ├── aiot_state_api.h   #状态码头文件</div>
+<div class="line">│   ├── aiot_sysdep_api.h  #系统相关头文件</div>
+<div class="line">│   ├── README.md</div>
+<div class="line">│   ├── sysdep             #系统相关实现</div>
+<div class="line">│   └── utils              #工具类接口</div>
+<div class="line">├── external</div>
+<div class="line">│   ├── ali_ca_cert.c      #cert证书</div>
+<div class="line">│   └── README.md</div>
+<div class="line">├── package.yaml           #编译文件</div>
+<div class="line">├── portfiles</div>
+<div class="line">│   ├── aiot_port          #AliOS Things适配层</div>
+<div class="line">│   └── README.md</div>
+<div class="line">└── README.md</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md572"></a>
+依赖组件</h2>
+<ul>
+<li>osal_aos</li>
+<li>cjson</li>
+<li>mbedtls</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md573"></a>
+常用配置</h1>
+<p>无</p>
+<h1><a class="anchor" id="autotoc_md574"></a>
+API说明</h1>
+<p><a class="el" href="linksdk.html">linksdk</a> API 请参考阿里云Link SDK<a href="https://help.aliyun.com/document_detail/163764.html?spm=a2c4g.11186623.6.568.3d00316fqDi9YJ">编程手册</a>。</p>
+<h1><a class="anchor" id="autotoc_md575"></a>
+使用示例</h1>
+<p>solutions中提供了以下demo供用户选择使用：</p><ul>
+<li><a class="el" href="solutions_2linksdk__demo_2_r_e_a_d_m_e_8md.html">link_sdk_demo 物模型单品用例</a></li>
+<li><a class="el" href="solutions_2linksdk__demo_2_r_e_a_d_m_e_8md.html">link_sdk_gateway_demo 物模型网关代理子设备上云用例</a></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md576"></a>
+添加Link SDK功能模块</h2>
+<p>默认仅使能能物模型及网关子设备功能。如需编译其他功能，请在package.yaml中包含对应的头文件路径及源码编译路径。如需使能动态注册： </p><div class="fragment"><div class="line">source_file:</div>
+<div class="line">  - &quot;components/dynreg/*.c&quot;</div>
+<div class="line"> </div>
+<div class="line">include:</div>
+<div class="line">  - components/dynreg</div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md577"></a>
+FAQ</h1>
+<p>常见问题可参考阿里云官网设备接入<a href="https://help.aliyun.com/document_detail/96598.html?spm=a2c4g.11186623.6.554.2042557fWpe2Ps">常见问题</a>。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2021年 四月 23日 星期五 16:41:43 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

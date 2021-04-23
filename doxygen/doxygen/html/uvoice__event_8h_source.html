@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: /Users/yaoqiuguo/Documents/work/AOS3.3/aos/aostest/components/uvoice/include/uvoice_event.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('uvoice__event_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">uvoice_event.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="uvoice__event_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2015-2020 Alibaba Group Holding Limited</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef __UVOICE_EVENT_H__</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define __UVOICE_EVENT_H__</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga8e17d85c3f2d1e3ce1263bf432433d90">   13</a></span>&#160;<span class="preprocessor">#define UVOICE_EV_PLAYER                                0x0111</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga02aed030634ab523b4b21cb125a694df">   14</a></span>&#160;<span class="preprocessor">#define UVOICE_CODE_PLAYER_STATE                1</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga6ed8151e1fb6b8ee047b40247f114716">   15</a></span>&#160;<span class="preprocessor">#define UVOICE_CODE_PALYER_CACHE_CPLT   2</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga838885898cce594465aff402c96af5a0">   16</a></span>&#160;<span class="preprocessor">#define UVOICE_CODE_PALYER_DLOAD_CPLT   3</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga50d7fe0da1d83480bbf1a404a52f1be4">   18</a></span>&#160;<span class="preprocessor">#define UVOICE_EV_RECORDER                              0x0112</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#gac7a3e5f5f4acd057885c68b2e0a5f406">   19</a></span>&#160;<span class="preprocessor">#define UVOICE_CODE_RECORDER_STATE              1</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#gab6521adfcd9b172e2ba2a22e99dd24fe">   21</a></span>&#160;<span class="preprocessor">#define UVOICE_EV_SW                                    0x0113</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga43862bc7ac5fbcf57c0038863ad6cc4a">   22</a></span>&#160;<span class="preprocessor">#define UVOICE_CODE_HEADPHONE                   1</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga8e44e7b1563af8bc064884db4aa91a5a">   23</a></span>&#160;<span class="preprocessor">#define UVOICE_CODE_HEADSET                             2</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga2c565b803ae3c55722ae713c54422251">   25</a></span>&#160;<span class="preprocessor">#define UVOICE_EV_ST                                    0x0114</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#gaa2022cf12dca939103ed3480f5c17642">   26</a></span>&#160;<span class="preprocessor">#define UVOICE_CODE_VAD_START                   1</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga5fbbae82177b2ff4af6fbce84efe2eef">   27</a></span>&#160;<span class="preprocessor">#define UVOICE_CODE_VAD_END                             2</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga5a626469729c53868d8aba245bbd20cb">   28</a></span>&#160;<span class="preprocessor">#define UVOICE_CODE_VOICE_WAKEUP                3</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga50603cbcdc06e9aa73071cc1ae86e457">   30</a></span>&#160;<span class="preprocessor">#define UVOICE_EV_ASR_RESULT                    0x0115</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#ifdef UVOICE_EVENT_BY_BUFFER_QUEUE</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        uint16_t type;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        uint16_t code;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">int</span> value;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;} <a class="code" href="group__uvoice__event__api.html#gafeb20acc1382a679298f4f573c892b59">uvoice_event_t</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#elif defined(UVOICE_EVENT_BY_MESSAGE_QUEUE)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">long</span> msgtype;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        uint16_t type;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        uint16_t code;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">int</span> value;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} <a class="code" href="group__uvoice__event__api.html#gafeb20acc1382a679298f4f573c892b59">uvoice_event_t</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#gafeb20acc1382a679298f4f573c892b59">   46</a></span>&#160;<span class="keyword">typedef</span> input_event_t <a class="code" href="group__uvoice__event__api.html#gafeb20acc1382a679298f4f573c892b59">uvoice_event_t</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga9e5cd276ed6d8dcd299db33452edaa87">   49</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="group__uvoice__event__api.html#ga9e5cd276ed6d8dcd299db33452edaa87">uvoice_event_cb</a>)(<a class="code" href="group__uvoice__event__api.html#gafeb20acc1382a679298f4f573c892b59">uvoice_event_t</a> *event, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#gac62d35b12e9fe287c6632c560c2477ce">   50</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__uvoice__event__api.html#gac62d35b12e9fe287c6632c560c2477ce">uvoice_event_post</a>(uint16_t type, uint16_t code, <span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga0352ae5695e77342f2dd6cbe9b29e389">   51</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__uvoice__event__api.html#ga0352ae5695e77342f2dd6cbe9b29e389">uvoice_event_register</a>(uint16_t type, <a class="code" href="group__uvoice__event__api.html#ga9e5cd276ed6d8dcd299db33452edaa87">uvoice_event_cb</a> cb, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="group__uvoice__event__api.html#ga6553cd3ad1a1e176ea3f077acabd3c57">   52</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__uvoice__event__api.html#ga6553cd3ad1a1e176ea3f077acabd3c57">uvoice_event_unregister</a>(uint16_t type, <a class="code" href="group__uvoice__event__api.html#ga9e5cd276ed6d8dcd299db33452edaa87">uvoice_event_cb</a> cb, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __UVOICE_EVENT_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="ttc" id="agroup__uvoice__event__api_html_ga0352ae5695e77342f2dd6cbe9b29e389"><div class="ttname"><a href="group__uvoice__event__api.html#ga0352ae5695e77342f2dd6cbe9b29e389">uvoice_event_register</a></div><div class="ttdeci">int uvoice_event_register(uint16_t type, uvoice_event_cb cb, void *data)</div></div>
+<div class="ttc" id="agroup__uvoice__event__api_html_ga6553cd3ad1a1e176ea3f077acabd3c57"><div class="ttname"><a href="group__uvoice__event__api.html#ga6553cd3ad1a1e176ea3f077acabd3c57">uvoice_event_unregister</a></div><div class="ttdeci">int uvoice_event_unregister(uint16_t type, uvoice_event_cb cb, void *data)</div></div>
+<div class="ttc" id="agroup__uvoice__event__api_html_ga9e5cd276ed6d8dcd299db33452edaa87"><div class="ttname"><a href="group__uvoice__event__api.html#ga9e5cd276ed6d8dcd299db33452edaa87">uvoice_event_cb</a></div><div class="ttdeci">void(* uvoice_event_cb)(uvoice_event_t *event, void *data)</div><div class="ttdef"><b>Definition:</b> <a href="uvoice__event_8h_source.html#l00049">uvoice_event.h:49</a></div></div>
+<div class="ttc" id="agroup__uvoice__event__api_html_gac62d35b12e9fe287c6632c560c2477ce"><div class="ttname"><a href="group__uvoice__event__api.html#gac62d35b12e9fe287c6632c560c2477ce">uvoice_event_post</a></div><div class="ttdeci">int uvoice_event_post(uint16_t type, uint16_t code, int value)</div></div>
+<div class="ttc" id="agroup__uvoice__event__api_html_gafeb20acc1382a679298f4f573c892b59"><div class="ttname"><a href="group__uvoice__event__api.html#gafeb20acc1382a679298f4f573c892b59">uvoice_event_t</a></div><div class="ttdeci">input_event_t uvoice_event_t</div><div class="ttdef"><b>Definition:</b> <a href="uvoice__event_8h_source.html#l00046">uvoice_event.h:46</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_9979507fa415acdc30e194265eb9dab9.html">uvoice</a></li><li class="navelem"><a class="el" href="dir_c9a3a185c48ac5502c77e9c3665c51b7.html">include</a></li><li class="navelem"><a class="el" href="uvoice__event_8h.html">uvoice_event.h</a></li>
+    <li class="footer">生成于 2021年 四月 23日 星期五 16:41:43 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

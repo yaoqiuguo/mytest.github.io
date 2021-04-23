@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: HaaS AI应用实践之 老板来了</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('ucloud_ai_demo.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">HaaS AI应用实践之 老板来了 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://gitee.com/alios-things/ucloud_ai_demo/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<h1><a class="anchor" id="autotoc_md1709"></a>
+1. 案例简介</h1>
+<p>ucloud_ai_demo是基于云端AI能力实现的AI识别案例，主要有三个部分组成：</p><ol type="1">
+<li>通过采集WiFi摄像头(ESP32)的数据后得到jpeg图像;</li>
+<li>上传至云端OSS，再通过ucloud_ai组件实现视觉智能开放平台对图片识别处理；</li>
+<li>通过LCD屏进行画面显示及识别结果显示。</li>
+</ol>
+<p>该案例中支持了15种AI能力，通过在aiconfig.h中配置AI_MODEL选择对应的AI模型，所有的AI模型类型在aiagent_common.h中定义说明，修改后重新编译即可看到相应的效果。</p>
+<h1><a class="anchor" id="autotoc_md1710"></a>
+2. 基础知识</h1>
+<h2><a class="anchor" id="autotoc_md1711"></a>
+2.1 基础目录结构</h2>
+<div class="fragment"><div class="line">├── helloworld.c   # 该solution核心打印输出代码，入口**application_start**</div>
+<div class="line">├── k_app_config.h # 内核组件的配置开关，优先级低于**k_config.h**</div>
+<div class="line">├── maintask.c     # 系统主任务入口处理，入口**aos_maintask**</div>
+<div class="line">├── Makefile       # aos make编译时入口</div>
+<div class="line">├── package.yaml   # 编译系统配置文件</div>
+<div class="line">└── SConstruct     # Makefile =&gt; Scon =&gt; aostools</div>
+<div class="line"> </div>
+<div class="line">├── linkkit_event.c     # 连接物联网平台时使用的接口</div>
+<div class="line">├── main.c              # demo应用主程序入口，入口**application_start**</div>
+<div class="line">├── maintask.c          # 系统主任务入口处理，入口**aos_maintask**</div>
+<div class="line">├── Makefile            # aos make编译时入口</div>
+<div class="line">├── package.yaml        # 编译系统配置文件</div>
+<div class="line">├── SConstruct          # Makefile =&gt; Scon =&gt; aostools</div>
+<div class="line">└── ucloud_ai_demo.c    # AI识别处理主程序</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1712"></a>
+3. 方案组成</h1>
+<p>整个方案由HaaS100、WiFi摄像头、LCD组成。LCD与HaaS100通过SPI连接，HaaS100通过Http请求获取到JPEG数据最终显示到LCD上。</p>
+<div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/ac7f6d577ee932d49790b0e3970b0ae8.png" alt="" style="max-width:500px;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md1713"></a>
+3.1 WiFi摄像头安装</h2>
+<h3><a class="anchor" id="autotoc_md1714"></a>
+3.1.1 WiFi摄像头选型</h3>
+<p>市面上的WiFi摄像头比较多，在本例中WiFi摄像头采用ESP官方的ESP32-EYE进行适配，ESP32-CAM是ESP32第三方厂商开发的一款低成本方案，应用也比较广泛，开发者也可以选择它作为方案之一，万能的淘宝上有很多卖家，商家也会提供相应的资料，开发者可以根据自己需要进行调试，购买链接如下： ESP32-EYE: <a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.1.150d6a6ftZ6h4K&amp;id=611790371635&amp;ns=1&amp;abbucket=3">https://detail.tmall.com/item.htm?spm=a230r.1.14.1.150d6a6ftZ6h4K&amp;id=611790371635&amp;ns=1&amp;abbucket=3</a></p>
+<p>ESP32-CAM: <a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.1.3f543b21XaGDay&amp;id=581256720864&amp;ns=1&amp;abbucket=3">https://detail.tmall.com/item.htm?spm=a230r.1.14.1.3f543b21XaGDay&amp;id=581256720864&amp;ns=1&amp;abbucket=3</a></p>
+<p><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.33.150d6a6ftZ6h4K&amp;id=586201030146&amp;ns=1&amp;abbucket=3#detail">https://item.taobao.com/item.htm?spm=a230r.1.14.33.150d6a6ftZ6h4K&amp;id=586201030146&amp;ns=1&amp;abbucket=3#detail</a></p>
+<h3><a class="anchor" id="autotoc_md1715"></a>
+3.1.2 ESP32-EYE开发配置</h3>
+<h4><a class="anchor" id="autotoc_md1716"></a>
+3.1.2.1 代码下载</h4>
+<div class="fragment"><div class="line">$git clone --recursive https://github.com/espressif/esp-who.git</div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md1717"></a>
+3.1.2.2 ESP-IDF安装</h4>
+<p>不同的操作系统安装的步骤也有所差异，请参考官网文档进行安装： <a href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/index.html#get-started-set-up-env">https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/index.html#get-started-set-up-env</a></p>
+<h4><a class="anchor" id="autotoc_md1718"></a>
+3.1.2.3 环境变量设置</h4>
+<blockquote class="doxtable">
+<p>这里以Macbook为例进行环境变量设置： </p>
+</blockquote>
+<div class="fragment"><div class="line">$cd ~/esp/esp-idf</div>
+<div class="line">$./install.sh</div>
+<div class="line">$. ./export.sh</div>
+</div><!-- fragment --><p> 注意： 每次重启终端后都需要执行该步骤，否则找不到idf.py命令，或者可以加入到根目录.bashrc中不用每次再输入该命令。</p>
+<h4><a class="anchor" id="autotoc_md1719"></a>
+3.1.2.4 ESP32 EYE网络设置</h4>
+<blockquote class="doxtable">
+<p>SoftAP模式 </p>
+</blockquote>
+<p>默认启动后ESP32 EYE已经开启了SSID为ESP32-Camera的AP，可以使用电脑连接该AP。</p>
+<div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/d0078a4e4bfb521beb04291497d94970.png" alt="" style="max-width:300px;" class="inline"/> </div><p>也可以通过修改sdkconfig来改变ssid/password、station连接数量、AP信道、服务器IP等，然后重新进行编译： </p><div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/bea6f1ff0946804d77c5a01e3d59271c.png" alt="" style="max-width:600px;" class="inline"/> </div><blockquote class="doxtable">
+<p>Station模式 </p>
+</blockquote>
+<p>ESP32也支持station与SoftAP模式共存，比如想让ESP32 EYE接入到SSID为haas_test的局域网中，修改sdkconfig中的ssid/password即可。</p>
+<div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/1101892b41017e3f74b6ec258605b890.png" alt="" style="max-width:600px;" class="inline"/> </div><h4><a class="anchor" id="autotoc_md1720"></a>
+3.1.2.5 分辨率配置</h4>
+<p>因为本案例中使用的LCD是320x240的，摄像头采集的画面也相应的设置为QVGA(320x240)减少传输带宽占用，esp-who/examples/single_chip/camera_web_server/main/app_httpd.c中添加代码： </p><div class="fragment"><div class="line">static esp_err_t capture_handler(httpd_req_t *req)</div>
+<div class="line">{</div>
+<div class="line">    camera_fb_t *fb = NULL;</div>
+<div class="line">    esp_err_t res = ESP_OK;</div>
+<div class="line">    int64_t fr_start = esp_timer_get_time();</div>
+<div class="line"> </div>
+<div class="line">    /*set resolution*/</div>
+<div class="line">    sensor_t *sensor = esp_camera_sensor_get();</div>
+<div class="line">    sensor-&gt;set_framesize(sensor, (framesize_t)5);/*QVGA: 320 x 240*/</div>
+<div class="line">    if (res == 0) {</div>
+<div class="line">        app_mdns_update_framesize(5);/*QVGA*/</div>
+<div class="line">    }</div>
+<div class="line">    ......</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md1721"></a>
+3.1.2.6 代码编译</h4>
+<p>ESP32-EYE的代码中提供了多个Demo，使用camera_web_server来建立一个web服务器，该Demo中摄像头采集的数据以jpeg格式提供，并且提供了以http请求的方式获取jpeg图像数据。编译需要进入到Demo的目录中： </p><div class="fragment"><div class="line">$ cd examples/single_chip/camera_web_server/</div>
+<div class="line">$ idf.py build</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md1722"></a>
+3.1.2.7 代码烧录</h4>
+<div class="fragment"><div class="line">$ idf.py -p [port] flash</div>
+</div><!-- fragment --><p> 例如： idf.py -p /dev/cu.SLAB_USBtoUART flash </p>
+<h4><a class="anchor" id="autotoc_md1723"></a>
+3.1.2.8 Log监视器</h4>
+<p>查看串口log，进入到camera_web_server所在目录执行。 </p><div class="fragment"><div class="line">$idf.py -p [port] monitor</div>
+</div><!-- fragment --><p> 例如： idf.py -p /dev/cu.SLAB_USBtoUART monitor</p>
+<div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/cb573d5a42e695269a675ebc5be96c0d.png" alt="" style="max-width:600px" class="inline"/> </div><p>所以camera wifi的IP就是192.168.3.135。</p>
+<h4><a class="anchor" id="autotoc_md1724"></a>
+3.1.2.9 检查摄像头画面采集</h4>
+<p>为了确认ESP32-EYE摄像头是否正常，电脑连接ESP32-EYE的WiFi网络ESP32-Camera，先通过电脑方式查看web界面http://192.168.4.1:80/capture： 抓取当前画面http://192.168.4.1:80/capture：</p>
+<div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/20210127165159696.png" alt="" style="max-width:600px;" class="inline"/> </div><h3><a class="anchor" id="autotoc_md1725"></a>
+3.2 LCD连线</h3>
+<p>使用本测试示例时，需要先连接SPI LCD屏幕。</p>
+<p>LCD购买链接<a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.768d2e8d9D3S7s&amp;id=38842179442&amp;_u=m1tg6s6048c2">https://item.taobao.com/item.htm?spm=a1z09.2.0.0.768d2e8d9D3S7s&amp;id=38842179442&amp;_u=m1tg6s6048c2</a></p>
+<p>请选择购买2.4寸屏。</p>
+<p>HaaS100开发板请务必使用V1.1以上的版本，HaaS100扩展口： </p><div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/b18b27ec7957e010d0380e76ebb33e98.png" alt="" style="max-width:250px;" class="inline"/> </div><p>LCD与HaaS100接线对应pin脚：</p>
+<div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/5b2c8c014991f028978f5743ba22d193.png" alt="" style="max-width:250px;" class="inline"/> </div><h1><a class="anchor" id="autotoc_md1726"></a>
+4. Demo体验</h1>
+<h2><a class="anchor" id="autotoc_md1727"></a>
+4.1 云端功能开通</h2>
+<ol type="1">
+<li>如没有阿里云账号，请登陆<a href="http://www.aliyun.com">阿里云官网</a>开通。</li>
+<li>登陆<a href="https://vision.aliyun.com">视觉智能开放平台</a>免费开通如下功能：</li>
+</ol>
+<p>&emsp;&emsp;&emsp;&emsp;<b><a href="https://vision.aliyun.com/facebody">人脸人体</a></b> &emsp;<b><a href="https://vision.aliyun.com/ocr">文字识别</a></b> &emsp;<b><a href="https://vision.aliyun.com/imageseg">分割抠图</a></b> &emsp;<b><a href="https://vision.aliyun.com/objectdet">目标检测</a></b></p>
+<ol type="1">
+<li>登陆<a href="http://oss.console.aliyun.com">OSS平台</a>创建bucket： <div class="fragment"><div class="line">a. 创建Bucket时地域选择“上海”</div>
+<div class="line">b. 读写权限选择“公共读”</div>
+<div class="line">c. Bucket名称全小写</div>
+</div><!-- fragment --></li>
+</ol>
+<h2><a class="anchor" id="autotoc_md1728"></a>
+4.2 配置OSS信息</h2>
+<p>在solutions/ucloud_ai_demo/package.yaml中替换你的OSS信息</p>
+<div class="fragment"><div class="line">OSS_ACCESS_KEY: &quot;Your-Access-Key&quot;</div>
+<div class="line">OSS_ACCESS_SECRET: &quot;Your-Access-Secret&quot;</div>
+<div class="line">OSS_ENDPOINT: &quot;Your-OSS-Endpoint&quot;    #例如: &quot;oss-cn-shanghai-internal.aliyuncs.com&quot;</div>
+<div class="line">OSS_BUCKET: &quot;Your-OSS-Bucket&quot;        #例如: &quot;cloud-ai-dev&quot;</div>
+<div class="line"> </div>
+<div class="line">OSS_ACCESS_KEY以及OSS_ACCESS_SECRET获取链接: https://usercenter.console.aliyun.com/#/accesskey</div>
+<div class="line">ENDPOINT默认使用“oss-cn-shanghai-internal.aliyuncs.com”，BUCKET请使用你创建好的Bucket名称。</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1729"></a>
+4.3 AI模型配置</h2>
+<p>在components/ai_agent/include/aiconfig.h中配置： </p><div class="fragment"><div class="line"># 配置AI模型为人脸比对</div>
+<div class="line">#define AI_MODEL AI_MODEL_COMPARING_FACEBODY</div>
+</div><!-- fragment --><p> 默认是人脸比对。</p>
+<h2><a class="anchor" id="autotoc_md1730"></a>
+4.4 配置人脸原始对比图像</h2>
+<p>登陆http://oss.console.aliyun.com 上传你的人脸到4.1中创建的bucket中，并替换路径到solutions/ucloud_ai_demo/package.yaml： </p><div class="fragment"><div class="line">MYFACE_PATH: &quot;http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/CompareFace/CompareFace-left1.png&quot;</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1731"></a>
+4.5 WiFi摄像头IP配置</h2>
+<p>wifi camera的http访问地址,用户根据自己摄像头的IP地址进行替换： 在components/ucamera/package.yaml中配置： </p><div class="fragment"><div class="line">WIFICAMERA_URL: &quot;http://192.168.43.166:80/capture&quot;</div>
+</div><!-- fragment --><p>192.168.43.166替换为3.2.1.7中从log获取的WiFi摄像头IP。</p>
+<h2><a class="anchor" id="autotoc_md1732"></a>
+4.6 AliOS Things开发环境搭建</h2>
+<p>案例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
+<h2><a class="anchor" id="autotoc_md1733"></a>
+4.7 案例代码下载</h2>
+<p>该案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。 其中： </p><blockquote class="doxtable">
+<p>选择解决方案: “云端AI案例”或者“ucloud_ai_demo” </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>选择开发板: HaaS100 </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md1734"></a>
+4.8 代码编译、烧录</h2>
+<p>&ndash; 固件编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
+<h3><a class="anchor" id="autotoc_md1735"></a>
+4.8.1 文件件系统烧录</h3>
+<p>本组件例子中使用到到图片及字体分别存放在代码中hardware/chip/haas1000/prebuild/data/目录下ai_demo_image及font目录，除烧录ucloud_ai_demo image外，需烧录littlefs文件系统，请将hardware/chip/haas1000/package.yaml文件中以下代码段的注释打开：</p>
+<div class="fragment"><div class="line">program_data_files:</div>
+<div class="line">  - filename: release/write_flash_tool/ota_bin/littlefs.bin</div>
+<div class="line">    address: 0xB32000</div>
+</div><!-- fragment --><p>&ndash; 固件烧录方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/burn_image.html">《aos-studio使用说明之烧录固件》</a>。</p>
+<h3><a class="anchor" id="autotoc_md1736"></a>
+4.9 打开串口</h3>
+<p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="_haa_s100__quick__start.html">《aos-studio使用说明之查看日志》</a>。</p>
+<h2><a class="anchor" id="autotoc_md1737"></a>
+4.10 网络连接</h2>
+<p>当串口终端打开成功后，可在串口中输入联网命令。因为HaaS100开发板需要连接到云端，因此需要连接到一个可以上外网的路由器，WiFi摄像头(ESP32-EYE)也只能使用Station模式连接到同一台路由器。</p>
+<div class="fragment"><div class="line"># 系统起来后在串口输入配网命令</div>
+<div class="line">netmgr -t wifi -c {ssid} {password}</div>
+</div><!-- fragment --><p> 请将ssid修改为您路由器的WiFi名称，paasword填入路由器的WiFi密码。</p>
+<h2><a class="anchor" id="autotoc_md1738"></a>
+4.11 识别结果响应</h2>
+<p>网络设置后，HaaS100将从摄像头获取图像并通过云端识别后输出置信度的值，人脸位置以及“boss is coming”字样：</p>
+<div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/06a60d5c4ac2ef19bc06a0ac62c76fda.png" alt="" style="max-width:400px;" class="inline"/> </div><h3><a class="anchor" id="autotoc_md1739"></a>
+4.11.1 字幕提醒</h3>
+<p>在HaaS 100的扩展屏上显示“Warning!!!Boss is coming!!!”： </p><div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/f62c4a0057d7c30069d51436e6dbf3cd.gif" alt="" style="max-width:600px;" class="inline"/> </div> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2021年 四月 23日 星期五 16:41:44 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
