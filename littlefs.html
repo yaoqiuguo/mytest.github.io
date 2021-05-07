@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: $title</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('littlefs.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="PageDoc"><div class="contents">
+<div class="textblock"><p><a href="https://gitee.com/alios-things/littlefs/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<h1><a class="anchor" id="autotoc_md578"></a>
+概述</h1>
+<p>littlefs是一个高度完整的嵌入式文件系统，可以用在自身不带坏块处理、磨损平衡等功能的内存芯片上，如裸的NAND Flash芯片；同时littlefs也充分考虑了异常掉电情况下的数据保护。 组件支持以下功能</p><ul>
+<li>掉电安全</li>
+<li>磨损平衡</li>
+<li>体积小</li>
+<li>坏快处理</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md579"></a>
+版权信息</h2>
+<blockquote class="doxtable">
+<p>Apache license v2.0 </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md580"></a>
+目录结构</h2>
+<div class="fragment"><div class="line">littlefs</div>
+<div class="line">├── src</div>
+<div class="line">│   ├── littlefs-v220           #littlefs v220版本源码</div>
+<div class="line">│   └── littlefs_vfs.c          #little VFS虚拟文件操作接口的定义与实现</div>
+<div class="line">├── include</div>
+<div class="line">│   └── littlefs.h              #littlefs 接口</div>
+<div class="line">├── internal</div>
+<div class="line">│   └── lfs_conf.h              # littlefs 配置文件</div>
+<div class="line">├── example</div>
+<div class="line">│    └── littlefs_example.c     # 示例代码</div>
+<div class="line">├── package.yaml                # 编译配置文件</div>
+<div class="line">└─── README.md                  #中文版README</div>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md581"></a>
+依赖组件</h2>
+<ul>
+<li>rhino nftl</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md582"></a>
+常用配置</h1>
+<p>def_config: AOS_COMP_LITTLEFS: 1 LFS_STATIC_OBJECT: 1 LITTLEFS_FORMAT: 1</p>
+<h1><a class="anchor" id="autotoc_md583"></a>
+使用示例</h1>
+<p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
+<h2><a class="anchor" id="autotoc_md584"></a>
+步骤1 创建或打开工程</h2>
+<p><b>打开已有工程</b></p>
+<p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
+<p><b>创建新的工程</b></p>
+<p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
+<h2><a class="anchor" id="autotoc_md585"></a>
+步骤2 添加组件</h2>
+<p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
+<div class="fragment"><div class="line">depends:</div>
+<div class="line">  - littlefs: rel_3.3.0 # helloworld_demo中引入littlefs组件</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md586"></a>
+步骤3 下载组件</h2>
+<p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
+<div class="fragment"><div class="line">aos install littlefs</div>
+</div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/littlefs路径中。</p>
+<h2><a class="anchor" id="autotoc_md587"></a>
+步骤4 添加示例</h2>
+<p>在littlefs组件的package.yaml中添加<a href="https://gitee.com/alios-things/littlefs/tree/rel_3.3.0/example">example示例代码</a>：</p>
+<div class="fragment"><div class="line">source_file:</div>
+<div class="line">  - &quot;src/*.c&quot;</div>
+<div class="line">  - &quot;example/littlefs_example.c&quot; # add fatfs_example.c</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md588"></a>
+步骤5 编译固件</h2>
+<p>在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
+<h2><a class="anchor" id="autotoc_md589"></a>
+步骤6 烧录固件</h2>
+<p>helloworld_demo案例的固件生成后，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/burn_image.html">《aos-studio使用说明之烧录固件》</a>来烧录固件。</p>
+<h2><a class="anchor" id="autotoc_md590"></a>
+步骤7 打开串口</h2>
+<p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/view_log.html">《aos-studio使用说明之查看日志》</a>。</p>
+<p>当串口终端打开成功后，可在串口中输入help来查看已添加的测试命令。</p>
+<h2><a class="anchor" id="autotoc_md591"></a>
+步骤8 测试示例</h2>
+<blockquote class="doxtable">
+<p>CLI命令行输入： </p>
+</blockquote>
+<div class="fragment"><div class="line">littlefs_example</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md592"></a>
+关键日志</h2>
+<blockquote class="doxtable">
+<p>CLI日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">littlefs component example start!</div>
+<div class="line">aos_open fd1=xxx</div>
+<div class="line">aos_write num=xxx</div>
+<div class="line">aos_open fd2=xxx</div>
+<div class="line">aos_lseek position=xxx</div>
+<div class="line">aos_read: haas100 littlefs demo</div>
+<div class="line">littlefs component example end !</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2021年 四月 23日 星期五 16:41:43 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

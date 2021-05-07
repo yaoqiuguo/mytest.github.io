@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: rx8130ce</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('rx8130ce.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">rx8130ce </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://gitee.com/alios-things/rx8130ce/edit/rel_3.3.0/README.md">更正文档</a> &emsp;&emsp;&emsp;&emsp; <a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></p>
+<h1><a class="anchor" id="autotoc_md1467"></a>
+概述</h1>
+<p>RX8130CE是一颗RTC芯片，基于I2C总线进行通信，其内建了32.768KHZ的晶振，功能完备，HaaS100的板上就使用了这颗。本文档描述了该芯片的驱动详情，包括目录结构，依赖情况，API，使用等情况，供用户参考。 组件支持以下功能：</p>
+<ul>
+<li>rx8130ce初始化</li>
+<li>设置时间</li>
+<li>读取时间</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md1468"></a>
+版权信息</h2>
+<blockquote class="doxtable">
+<p>Apache license v2.0 </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md1469"></a>
+目录结构</h2>
+<div class="fragment"><div class="line">├── example</div>
+<div class="line">│   └── rx8130ce_example.c</div>
+<div class="line">├── include</div>
+<div class="line">│   └── rx8130ce.h</div>
+<div class="line">├── internal</div>
+<div class="line">│   └── rtcif.h</div>
+<div class="line">├── package.yaml</div>
+<div class="line">├── README.md</div>
+<div class="line">└── src</div>
+<div class="line">    ├── rtcif.c</div>
+<div class="line">    └── rx8130ce.c</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1470"></a>
+依赖组件</h2>
+<ul>
+<li>base</li>
+<li>vfs</li>
+<li>pca9544</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md1471"></a>
+常用配置</h1>
+<h1><a class="anchor" id="autotoc_md1472"></a>
+API说明</h1>
+<div class="fragment"><div class="line"><span class="comment">/*********************************************************</span></div>
+<div class="line"><span class="comment"> * @fun    rx8130ce_init</span></div>
+<div class="line"><span class="comment"> * @breif  rx8130ce initialization</span></div>
+<div class="line"><span class="comment"> * @param  none</span></div>
+<div class="line"><span class="comment"> * @rtn    0 : on success, EIO : error</span></div>
+<div class="line"><span class="comment"> *********************************************************/</span></div>
+<div class="line"><span class="keywordtype">int</span> rx8130ce_init(<span class="keywordtype">void</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/*********************************************************</span></div>
+<div class="line"><span class="comment"> * @fun    rx8130ce_set_time</span></div>
+<div class="line"><span class="comment"> * @param[in]  buf      the pointer for rx8130ce time</span></div>
+<div class="line"><span class="comment"> * @param[in]  len      the length of time</span></div>
+<div class="line"><span class="comment"> * @rtn    0 : on success, EIO : error</span></div>
+<div class="line"><span class="comment"> *********************************************************/</span></div>
+<div class="line"><span class="keywordtype">int</span> rx8130ce_set_time(<span class="keyword">const</span> <span class="keywordtype">void</span> *buf, uint8_t len);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/*********************************************************</span></div>
+<div class="line"><span class="comment"> * @fun    rx8130ce_get_time</span></div>
+<div class="line"><span class="comment"> * @param[in]  buf      the pointer for rx8130ce time</span></div>
+<div class="line"><span class="comment"> * @param[in]  len      the length of time</span></div>
+<div class="line"><span class="comment"> * @rtn    0 : on success, EIO : error</span></div>
+<div class="line"><span class="comment"> *********************************************************/</span></div>
+<div class="line"><span class="keywordtype">int</span> rx8130ce_get_time(<span class="keywordtype">void</span> *buf, uint8_t len);</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1473"></a>
+使用示例</h1>
+<p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
+<h2><a class="anchor" id="autotoc_md1474"></a>
+步骤1 创建或打开工程</h2>
+<p><b>打开已有工程</b></p>
+<p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
+<p><b>创建新的工程</b></p>
+<p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
+<h2><a class="anchor" id="autotoc_md1475"></a>
+步骤2 添加rx8130ce组件</h2>
+<blockquote class="doxtable">
+<p>helloworld_demo组件的package.yaml中添加 </p>
+</blockquote>
+<div class="fragment"><div class="line">depends:</div>
+<div class="line">  - rx8130ce: rel_3.3.0 # helloworld_demo中引入rx8130ce组件</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1476"></a>
+步骤3 下载组件</h2>
+<p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
+<div class="fragment"><div class="line">aos install rx8130ce</div>
+</div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/drivers/external_device路径中。</p>
+<h2><a class="anchor" id="autotoc_md1477"></a>
+步骤4 添加示例代码</h2>
+<blockquote class="doxtable">
+<p>向rx8130ce组件的package.yaml中添加example </p>
+</blockquote>
+<div class="fragment"><div class="line">source_file:</div>
+<div class="line">  - &quot;src/*.c&quot;</div>
+<div class="line">  - &quot;example/rx8130ce_example.c&quot; # add rx8130ce_example.c</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1478"></a>
+步骤5 编译固件</h2>
+<p>在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
+<h2><a class="anchor" id="autotoc_md1479"></a>
+步骤6 烧录固件</h2>
+<p>helloworld_demo案例的固件生成后，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/burn_image.html">《aos-studio使用说明之烧录固件》</a>来烧录固件。</p>
+<h2><a class="anchor" id="autotoc_md1480"></a>
+步骤7 打开串口</h2>
+<p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="_haa_s100__quick__start.html">《aos-studio使用说明之查看日志》</a>。</p>
+<p>当串口终端打开成功后，可在串口中输入help来查看已添加的测试命令。</p>
+<h2><a class="anchor" id="autotoc_md1481"></a>
+步骤8 RX8130CE示例测试</h2>
+<blockquote class="doxtable">
+<p>CLI命令行输入： </p>
+</blockquote>
+<div class="fragment"><div class="line">rx8130ce_example</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">rx8130ce comp test success!</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2021年 四月 23日 星期五 16:41:44 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

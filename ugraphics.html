@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>物联网操作系统AliOS Things 3.3: ugraphics</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">物联网操作系统AliOS Things 3.3
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('ugraphics.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">ugraphics </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><b><a href="https://gitee.com/alios-things/ugraphics/edit/rel_3.3.0/README.md">更正文档</a></b> &emsp;&emsp;&emsp;&emsp; <b><a href="https://g.alicdn.com/alios-things-3.3/doc/contribute_doc.html">贡献说明</a></b></p>
+<h1><a class="anchor" id="autotoc_md912"></a>
+概述</h1>
+<p>ugraphics组件是基于SDL2封装的接口，支持JPEG/PNG图像解码绘制、点/线/框图像等绘制、图像旋转、RGB格式转换、中英文字符绘制等功能，方便用户进行基础的图像应用开发。</p>
+<h2><a class="anchor" id="autotoc_md913"></a>
+版权信息</h2>
+<blockquote class="doxtable">
+<p>Apache 2.0 License </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md914"></a>
+目录结构</h1>
+<div class="fragment"><div class="line">├── include</div>
+<div class="line">│   ├── ugraphics.h                 # 对外头文件</div>
+<div class="line">│   ├── format</div>
+<div class="line">│   │    └── to_rgb565.h            # rgb格式转换头文件</div>
+<div class="line">│   └── rotate</div>
+<div class="line">│        └── rotate.h               # rotate旋转头文件</div>
+<div class="line">├── package.yaml                    # 编译配置文件</div>
+<div class="line">├── src</div>
+<div class="line">│   ├── ugraphics.c                 # 图像操作函数代码</div>
+<div class="line">│   ├── format</div>
+<div class="line">│   │    └── to_rgb565.c            # rgb格式转换函数代码</div>
+<div class="line">│   ├── jpegdec</div>
+<div class="line">│   │    └── jpegdec.c              # 基于libjpeg实现的图像解码实现</div>
+<div class="line">│   └── rotate</div>
+<div class="line">│        └── rotate.c               # 图像旋转函数代码</div>
+<div class="line">└── example</div>
+<div class="line">    ├── image                       # 测试用例图片资源文件</div>
+<div class="line">    └── ugraphics_example.c         # 测试用例</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md915"></a>
+依赖组件</h2>
+<ul>
+<li>SDL2</li>
+<li>littlefs</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md916"></a>
+常用配置</h1>
+<div class="fragment"><div class="line">def_config:                              # 组件的可配置项</div>
+<div class="line">  AOS_COMP_JPEG: 0                       # 使能jpeg decoder函数接口</div>
+<div class="line">  CONFIG_UGRAPHICS_FORMAT: 0             # 使能format函数接口</div>
+<div class="line">  CONFIG_UGRAPHICS_ROTATE: 0             # 使能rotate旋转函数接口</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>配置是否支持JPEG解码、图像格式转换、图像旋转，默认是关闭的 </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md917"></a>
+API说明</h1>
+<ul>
+<li>参考 <a href="https://g.alicdn.com/alios-things-3.3/doc/group__ugraphics__aos__api.html">ugraphics_aos_api</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md918"></a>
+使用示例</h1>
+<p>组件使用示例相关的代码下载、编译和固件烧录均依赖AliOS Things配套的开发工具 <b>alios-studio</b> ，所以首先需要参考<a href="https://g.alicdn.com/alios-things-3.3/doc/setup_env.html">《aos-studio使用说明之搭建开发环境》</a>，下载安装 <b>alios-studio</b> 。 待开发环境搭建完成后，可以按照以下步骤进行示例的测试。</p>
+<h2><a class="anchor" id="autotoc_md919"></a>
+步骤1 创建或打开工程</h2>
+<p><b>打开已有工程</b></p>
+<p>如果用于测试的案例工程已存在，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/open_project.html">《aos-studio使用说明之打开工程》</a>打开已有工程。</p>
+<p><b>创建新的工程</b></p>
+<p>组件的示例代码可以通过编译链接到AliOS Things的任意案例（solution）来运行，这里选择helloworld_demo案例。helloworld_demo案例相关的源代码下载可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/create_project.html">《aos-studio使用说明之创建工程》</a>。</p>
+<h2><a class="anchor" id="autotoc_md920"></a>
+步骤2 添加组件</h2>
+<p>案例下载完成后，需要在helloworld_demo组件的package.yaml中添加对组件的依赖：</p>
+<div class="fragment"><div class="line">depends:</div>
+<div class="line">  - ugraphics: rel_3.3.0            # helloworld_demo 中引入ugraphics组件</div>
+<div class="line">  - ili9341: rel_3.3.0              # helloworld_demo 中引入ili9341屏幕驱动</div>
+<div class="line"> </div>
+<div class="line">def_config:</div>
+<div class="line">    CLI_IOBOX_ENABLE: 1        # 可选：使能文件系统测试命令，例如ls, ll, mkdir, touch, echo等</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md921"></a>
+步骤3 下载组件</h2>
+<p>在已安装了 <b>alios-studio</b> 的开发环境工具栏中，选择Terminal -&gt; New Terminal启动终端，并且默认工作路径为当前工程的workspace，此时在终端命令行中输入：</p>
+<div class="fragment"><div class="line">aos install ugraphics</div>
+</div><!-- fragment --><p>上述命令执行成功后，组件源码则被下载到了./components/ugraphics路径中。</p>
+<h2><a class="anchor" id="autotoc_md922"></a>
+步骤4 添加示例</h2>
+<p>在ugraphics组件的package.yaml中添加<a href="https://gitee.com/alios-things/ugraphics/tree/rel_3.3.0/example">example示例代码</a>：</p>
+<div class="fragment"><div class="line">source_file:</div>
+<div class="line">  - &quot;example/ugraphics_example.c&quot; # add ugraphics_example.c</div>
+<div class="line"> </div>
+<div class="line">build_config:</div>
+<div class="line"> prebuild_script: cp_resources.py  #编译时cp_resources.py会对资源文件进行拷贝，系统自动打包资源文件到littlefs文件系统中</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md923"></a>
+LCD连线</h3>
+<p>使用本测试示例时，请先连接SPI LCD屏幕。</p>
+<p>LCD购买链接<a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.768d2e8d9D3S7s&amp;id=38842179442&amp;_u=m1tg6s6048c2">https://item.taobao.com/item.htm?spm=a1z09.2.0.0.768d2e8d9D3S7s&amp;id=38842179442&amp;_u=m1tg6s6048c2</a></p>
+<p>请选择购买2.4寸屏。</p>
+<p>HaaS100开发板请务必使用V1.1以上的版本，HaaS100扩展口：</p>
+<div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/b18b27ec7957e010d0380e76ebb33e98.png" alt="" style="max-width:90%;" class="inline"/> </div><p>LCD与HaaS100接线对应pin脚：</p>
+<div align="left" display="flex"> <img src="https://img-blog.csdnimg.cn/img_convert/5b2c8c014991f028978f5743ba22d193.png" alt="" style="max-width:90%;" class="inline"/> </div><h2><a class="anchor" id="autotoc_md924"></a>
+步骤5 编译固件</h2>
+<p>在示例代码已经添加至组件的配置文件，并且helloworld_demo已添加了对该组件的依赖后，就可以编译helloworld_demo案例来生成固件了，具体编译方法可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/build_project.html">《aos-studio使用说明之编译固件》</a>。</p>
+<h2><a class="anchor" id="autotoc_md925"></a>
+步骤6 烧录固件</h2>
+<h3><a class="anchor" id="autotoc_md926"></a>
+文件系统烧录</h3>
+<p>本组件例子中使用到到图片存放在代码中hardware/chip/haas1000/prebuild/data/目录下ugraphics_image目录，除烧录helloworld_demo image外，需烧录littlefs文件系统，请将hardware/chip/haas1000/package.yaml文件中以下代码段的注释打开：</p>
+<div class="fragment"><div class="line">program_data_files:</div>
+<div class="line">  - filename: release/write_flash_tool/ota_bin/littlefs.bin</div>
+<div class="line">    address: 0xB32000</div>
+</div><!-- fragment --><p>上述步骤执行后，可参考<a href="https://g.alicdn.com/alios-things-3.3/doc/burn_image.html">《aos-studio使用说明之烧录固件》</a>来烧录固件。</p>
+<h2><a class="anchor" id="autotoc_md927"></a>
+步骤7 打开串口</h2>
+<p>固件烧录完成后，可以通过串口查看示例的运行结果，打开串口的具体方法可参考<a href="_haa_s100__quick__start.html">《aos-studio使用说明之查看日志》</a>。</p>
+<p>当串口终端打开成功后，可在串口中输入help来查看已添加的测试命令。</p>
+<h2><a class="anchor" id="autotoc_md928"></a>
+步骤8 测试示例</h2>
+<p>测试步骤： </p><div class="fragment"><div class="line">$ ugraphics init # 初始化ugraphics</div>
+<div class="line">$ ugraphics draw {rect|jpg|png|line|string...} # 绘制图像</div>
+</div><!-- fragment --><p>测试步骤： </p><div class="fragment"><div class="line">$ ugraphics init # 初始化ugraphics</div>
+<div class="line">$ ugraphics draw {rect|jpg|png|line|string...} # 绘制图像</div>
+<div class="line"> </div>
+<div class="line">### CLI命令行输入：</div>
+<div class="line">```shell</div>
+<div class="line">ugraphics init # 资源初始化</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">ugraphics init ok!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md929"></a>
+CLI命令行输入：</h3>
+<div class="fragment"><div class="line">ugraphics draw rect # 绘制矩形框</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">ugraphics draw rectangle ok!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md930"></a>
+CLI命令行输入：</h3>
+<div class="fragment"><div class="line">ugraphics draw jpg # 绘制jpeg图片</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">ugraphics draw jpg image ok!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md931"></a>
+CLI命令行输入：</h3>
+<div class="fragment"><div class="line">ugraphics draw png # 绘制png图片</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">ugraphics draw png image ok!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md932"></a>
+CLI命令行输入：</h3>
+<div class="fragment"><div class="line">ugraphics draw line # 绘制线条</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">ugraphics draw line ok!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md933"></a>
+CLI命令行输入：</h3>
+<div class="fragment"><div class="line">ugraphics draw string # 绘制字符串</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">ugraphics draw string ok!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md934"></a>
+CLI命令行输入：</h3>
+<div class="fragment"><div class="line">ugraphics fill rect # 填充矩形框</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">ugraphics fill rectangle ok!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md935"></a>
+CLI命令行输入：</h3>
+<div class="fragment"><div class="line">ugraphics clear # 清屏</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">ugraphics clear screen ok!</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md936"></a>
+CLI命令行输入：</h3>
+<div class="fragment"><div class="line">ugraphics quit # 释放资源</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>CLI关键日志： </p>
+</blockquote>
+<div class="fragment"><div class="line">ugraphics quit ok!</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md937"></a>
+注意事项</h1>
+<p>NA</p>
+<h1><a class="anchor" id="autotoc_md938"></a>
+FAQ</h1>
+<p>NA </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">生成于 2021年 四月 23日 星期五 16:41:44 , 为 物联网操作系统AliOS Things 3.3使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
